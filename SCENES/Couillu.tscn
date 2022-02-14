@@ -99,29 +99,14 @@
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ ExtResource( 19 ), ExtResource( 24 ), ExtResource( 7 ), ExtResource( 14 ), ExtResource( 4 ), ExtResource( 28 ), ExtResource( 16 ), ExtResource( 8 ), ExtResource( 38 ), ExtResource( 34 ), ExtResource( 20 ), ExtResource( 37 ), ExtResource( 39 ), ExtResource( 36 ), ExtResource( 1 ), ExtResource( 32 ) ],
+"frames": [ ExtResource( 59 ), ExtResource( 58 ), ExtResource( 62 ), ExtResource( 47 ), ExtResource( 46 ), ExtResource( 63 ), ExtResource( 55 ), ExtResource( 48 ), ExtResource( 43 ), ExtResource( 64 ), ExtResource( 65 ), ExtResource( 49 ), ExtResource( 73 ) ],
 "loop": false,
-"name": "Slash",
-"speed": 10.0
-}, {
-"frames": [ ExtResource( 94 ), ExtResource( 86 ), ExtResource( 87 ), ExtResource( 95 ), ExtResource( 75 ), ExtResource( 88 ), ExtResource( 89 ), ExtResource( 91 ), ExtResource( 77 ), ExtResource( 78 ) ],
-"loop": false,
-"name": "Crouch",
-"speed": 10.0
-}, {
-"frames": [ ExtResource( 11 ), ExtResource( 26 ), ExtResource( 12 ), ExtResource( 21 ), ExtResource( 18 ), ExtResource( 13 ), ExtResource( 2 ), ExtResource( 17 ) ],
-"loop": true,
-"name": "Walk_backward",
+"name": "jump",
 "speed": 10.0
 }, {
 "frames": [ ExtResource( 79 ), ExtResource( 80 ), ExtResource( 81 ), ExtResource( 72 ), ExtResource( 66 ), ExtResource( 53 ), ExtResource( 41 ), ExtResource( 45 ), ExtResource( 42 ), ExtResource( 57 ), ExtResource( 61 ), ExtResource( 54 ), ExtResource( 56 ), ExtResource( 60 ) ],
 "loop": false,
 "name": "In",
-"speed": 10.0
-}, {
-"frames": [ ExtResource( 9 ), ExtResource( 33 ), ExtResource( 35 ), ExtResource( 15 ), ExtResource( 27 ), ExtResource( 3 ), ExtResource( 23 ), ExtResource( 5 ) ],
-"loop": true,
-"name": "Walk_forward",
 "speed": 10.0
 }, {
 "frames": [ ExtResource( 90 ), ExtResource( 83 ), ExtResource( 93 ), ExtResource( 82 ), ExtResource( 84 ), ExtResource( 76 ), ExtResource( 85 ), ExtResource( 92 ) ],
@@ -134,14 +119,29 @@ animations = [ {
 "name": "Punch",
 "speed": 10.0
 }, {
+"frames": [ ExtResource( 9 ), ExtResource( 33 ), ExtResource( 35 ), ExtResource( 15 ), ExtResource( 27 ), ExtResource( 3 ), ExtResource( 23 ), ExtResource( 5 ) ],
+"loop": true,
+"name": "Walk_forward",
+"speed": 10.0
+}, {
 "frames": [ ExtResource( 10 ), ExtResource( 30 ), ExtResource( 22 ), ExtResource( 25 ), ExtResource( 29 ), ExtResource( 6 ), ExtResource( 31 ) ],
 "loop": false,
 "name": "Slap",
 "speed": 10.0
 }, {
-"frames": [ ExtResource( 59 ), ExtResource( 58 ), ExtResource( 62 ), ExtResource( 47 ), ExtResource( 46 ), ExtResource( 63 ), ExtResource( 55 ), ExtResource( 48 ), ExtResource( 43 ), ExtResource( 64 ), ExtResource( 65 ), ExtResource( 49 ), ExtResource( 73 ) ],
+"frames": [ ExtResource( 19 ), ExtResource( 24 ), ExtResource( 7 ), ExtResource( 14 ), ExtResource( 4 ), ExtResource( 28 ), ExtResource( 16 ), ExtResource( 8 ), ExtResource( 38 ), ExtResource( 34 ), ExtResource( 20 ), ExtResource( 37 ), ExtResource( 39 ), ExtResource( 36 ), ExtResource( 1 ), ExtResource( 32 ) ],
 "loop": false,
-"name": "jump",
+"name": "Slash",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 11 ), ExtResource( 26 ), ExtResource( 12 ), ExtResource( 21 ), ExtResource( 18 ), ExtResource( 13 ), ExtResource( 2 ), ExtResource( 17 ) ],
+"loop": true,
+"name": "Walk_backward",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 94 ), ExtResource( 86 ), ExtResource( 87 ), ExtResource( 95 ), ExtResource( 75 ), ExtResource( 88 ), ExtResource( 89 ), ExtResource( 91 ), ExtResource( 77 ), ExtResource( 78 ) ],
+"loop": false,
+"name": "Crouch",
 "speed": 10.0
 } ]
 
@@ -152,5 +152,5 @@ script = ExtResource( 96 )
 position = Vector2( -0.5, -52.5 )
 frames = SubResource( 1 )
 animation = "Idle"
-frame = 1
+frame = 2
 playing = true

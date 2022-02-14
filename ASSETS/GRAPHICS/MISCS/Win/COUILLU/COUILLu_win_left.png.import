@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/COUILLu_win_left.png-78ab257ee6e7a34b2a22e8301aa7f16b.stex"
+path="res://.import/COUILLU_win_left.png-c1e040864ffaeff598d15bddcf0025ba.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://ASSETS/GRAPHICS/MISCS/Win/COUILLU/COUILLu_win_left.png"
-dest_files=[ "res://.import/COUILLu_win_left.png-78ab257ee6e7a34b2a22e8301aa7f16b.stex" ]
+source_file="res://ASSETS/GRAPHICS/MISCS/Win/COUILLU/COUILLU_win_left.png"
+dest_files=[ "res://.import/COUILLU_win_left.png-c1e040864ffaeff598d15bddcf0025ba.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
@@ -31,5 +31,5 @@ process/invert_color=false
 process/normal_map_invert_y=false
 stream=false
 size_limit=0
-detect_3d=true
+detect_3d=false
 svg/scale=1.0

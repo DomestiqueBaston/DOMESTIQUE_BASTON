@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://ASSETS/GRAPHICS/TITLE SCREEN/Domestique_Baston.png" type="Texture" id=1]
+[ext_resource path="res://ASSETS/SOUNDS/MUSIC/MAIN.wav" type="AudioStream" id=2]
+
+[node name="Title_screen" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Main" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 2 )
+autoplay = true
