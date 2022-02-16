@@ -26,7 +26,7 @@ func _physics_process(_delta):
 		isDoingSomething = true
 		
 	elif Input.is_action_just_pressed("ui_up"):
-		$AnimatedSprite.play("Jump")
+		$AnimatedSprit.eplay("Jump")
 		isDoingSomething = true
 
 	elif Input.is_action_just_pressed("top_right"):
@@ -81,12 +81,12 @@ func _on_AnimatedSprite_animation_finished():
 #func _physics_process(_delta):
 #	if Input.is_action_pressed("ui_right"):
 #		velocity.x = SPEED * 1.5
-#		$AnimatedSprite.play("Walk_forward")
+#		$AnimatedSpriteplay("Walk_forward")
 #	elif Input.is_action_pressed("ui_left"):
 #		velocity.x = -SPEED
-#		$AnimatedSprite.play("Walk_backward")
+#		$AnimatedSpriteplay("Walk_backward")
 #	else:
 #		velocity.x = 0
-#		$AnimatedSprite.play("Idle")
+#		$AnimatedSpriteplay("Idle")
 #
 #	velocity = move_and_slide(velocity, FLOOR)

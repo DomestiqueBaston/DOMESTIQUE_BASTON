@@ -14,10 +14,6 @@ config/name="DOMESTIQUE BASTON"
 run/main_scene="res://SCENES/TEST.tscn"
 config/icon="res://icon.png"
 
-[autoload]
-
-MoveSetManager="*res://SCRIPTS/MoveSetManager.gd"
-
 [display]
 
 window/size/width=305
