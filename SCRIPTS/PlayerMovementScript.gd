@@ -9,7 +9,7 @@ var time = timeTillNextInput
 
 #Boolean
 var wasInputMade = false
-var isCrouching = false
+#var isCrouching = false
 
 #Array
 var usedKeys = []
@@ -20,8 +20,8 @@ var usedKeys = []
 onready var playerAnimTree = $AnimationTree.get("parameters/playback")
 
 #References
-var generalMoveSetAnims = MoveSetManager.nameDictionary["generalMoves"]
-var specificMoveSetAnims = MoveSetManager.nameDictionary["moulueMoves"]
+var generalMoveSetAnims = MoveSetManager.nameDictionary["General"]
+var specificMoveSetAnims = MoveSetManager.nameDictionary
 
 func _ready():
 	pass
@@ -35,6 +35,7 @@ func _input(event):
 			var character = OS.get_scancode_string(event.scancode)
 			
 			#check if the input made is also allowed to be used
+			#Here lies an issue... I (Ferdi) don't know how to handle our controls instead of WASDLP...
 			if "WASDLP".find(character) >= 0:
 				wasInputMade = true
 				time = timeTillNextInput
@@ -52,15 +53,16 @@ func _process(delta):
 			usedKeys.clear()
 			return
 			
-	if (Input.is_action_just_pressed("down")):
-		playerAnimTree.travel(generalMoveSetAnims [5])
-		isCrouching = true
-		return
+#	if (Input.is_action_just_pressed("down")):
+#		playerAnimTree.travel(generalMoveSetAnims [5])
+#		isCrouching = true
+#		return
 	else:
-		playerAnimTree.travel(generalMoveSetAnims[6])
-		isCrouching = false
+		playerAnimTree.travel(generalMoveSetAnims[3])
+#		isCrouching = false
 		return
-	
+
+# _send_combo_attempt() will recieve the "keysUsed" array and will send it to the MoveSetManager
 func _send_combo_attempt(var attempt = []):
 	#If the "attempt" array has only 1 value in ti, chaeck if all of these inputs form an actual combo
 	if (attempt.size() > 1):

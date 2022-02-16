@@ -23,5 +23,7 @@ var moulueMoves ={
 }
 
 var nameDictionary = {
-	"Moulue" : moulueMoves
+	"Moulue" : moulueMoves,
+	
+	"General" : generalMoves
 }

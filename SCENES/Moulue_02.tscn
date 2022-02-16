@@ -1,4 +1,4 @@
-[gd_scene load_steps=62 format=2]
+[gd_scene load_steps=61 format=2]
 
 [ext_resource path="res://ASSETS/GRAPHICS/ANIMATION/Anims_Moulue.png" type="Texture" id=1]
 [ext_resource path="res://SCRIPTS/PlayerMovementScript.gd" type="Script" id=2]
@@ -373,10 +373,6 @@ auto_advance = true
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=58]
 
-[sub_resource type="AnimationNodeStateMachineTransition" id=59]
-switch_mode = 2
-auto_advance = true
-
 [sub_resource type="AnimationNodeStateMachine" id=60]
 states/Crouch/node = SubResource( 19 )
 states/Crouch/position = Vector2( 475, 81.3521 )
@@ -385,7 +381,7 @@ states/Get_hit/position = Vector2( 256, 395.352 )
 states/Idle/node = SubResource( 21 )
 states/Idle/position = Vector2( 393, 232 )
 states/In/node = SubResource( 22 )
-states/In/position = Vector2( -18, 149.352 )
+states/In/position = Vector2( -89, 114.352 )
 states/Insult/node = SubResource( 23 )
 states/Insult/position = Vector2( 775, 383.352 )
 states/Jump/node = SubResource( 24 )
@@ -408,9 +404,9 @@ states/Walk_backward/node = SubResource( 32 )
 states/Walk_backward/position = Vector2( 208, 144 )
 states/Walk_forward/node = SubResource( 33 )
 states/Walk_forward/position = Vector2( 543, 158 )
-transitions = [ "Idle", "Walk_forward", SubResource( 34 ), "Walk_forward", "Idle", SubResource( 35 ), "Idle", "Walk_backward", SubResource( 36 ), "Walk_backward", "Idle", SubResource( 37 ), "Idle", "Jump", SubResource( 38 ), "Jump", "Idle", SubResource( 39 ), "Crouch", "Idle", SubResource( 40 ), "Idle", "Crouch", SubResource( 41 ), "Kick", "Idle", SubResource( 42 ), "Idle", "Kick", SubResource( 43 ), "Idle", "Slash", SubResource( 44 ), "Slash", "Idle", SubResource( 45 ), "Idle", "Slap", SubResource( 46 ), "Slap", "Idle", SubResource( 47 ), "Idle", "Insult", SubResource( 48 ), "Insult", "Idle", SubResource( 49 ), "Trick", "Idle", SubResource( 50 ), "Idle", "Trick", SubResource( 51 ), "Punch", "Idle", SubResource( 52 ), "Idle", "Punch", SubResource( 53 ), "Parry", "Idle", SubResource( 54 ), "Idle", "Parry", SubResource( 55 ), "Get_hit", "Idle", SubResource( 56 ), "Idle", "Get_hit", SubResource( 57 ), "Idle", "Ko", SubResource( 58 ), "In", "Idle", SubResource( 59 ) ]
+transitions = [ "Idle", "Walk_forward", SubResource( 34 ), "Walk_forward", "Idle", SubResource( 35 ), "Idle", "Walk_backward", SubResource( 36 ), "Walk_backward", "Idle", SubResource( 37 ), "Idle", "Jump", SubResource( 38 ), "Jump", "Idle", SubResource( 39 ), "Crouch", "Idle", SubResource( 40 ), "Idle", "Crouch", SubResource( 41 ), "Kick", "Idle", SubResource( 42 ), "Idle", "Kick", SubResource( 43 ), "Idle", "Slash", SubResource( 44 ), "Slash", "Idle", SubResource( 45 ), "Idle", "Slap", SubResource( 46 ), "Slap", "Idle", SubResource( 47 ), "Idle", "Insult", SubResource( 48 ), "Insult", "Idle", SubResource( 49 ), "Trick", "Idle", SubResource( 50 ), "Idle", "Trick", SubResource( 51 ), "Punch", "Idle", SubResource( 52 ), "Idle", "Punch", SubResource( 53 ), "Parry", "Idle", SubResource( 54 ), "Idle", "Parry", SubResource( 55 ), "Get_hit", "Idle", SubResource( 56 ), "Idle", "Get_hit", SubResource( 57 ), "Idle", "Ko", SubResource( 58 ) ]
 start_node = "Idle"
-graph_offset = Vector2( -167, 22.3521 )
+graph_offset = Vector2( -167, 63.8001 )
 
 [sub_resource type="AnimationNodeStateMachinePlayback" id=61]
 

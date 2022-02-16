@@ -5,7 +5,7 @@
 [ext_resource path="res://SCENES/Music.tscn" type="PackedScene" id=4]
 [ext_resource path="res://SCENES/Moulue_02.tscn" type="PackedScene" id=5]
 
-[node name="TEST" type="Node2D"]
+[node name="TEST_02" type="Node2D"]
 
 [node name="Music" parent="." instance=ExtResource( 4 )]
 
