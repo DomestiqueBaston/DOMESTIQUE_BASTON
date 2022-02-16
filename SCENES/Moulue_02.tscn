@@ -1,7 +1,6 @@
-[gd_scene load_steps=61 format=2]
+[gd_scene load_steps=60 format=2]
 
 [ext_resource path="res://ASSETS/GRAPHICS/ANIMATION/Anims_Moulue.png" type="Texture" id=1]
-[ext_resource path="res://SCRIPTS/PlayerMovementScript.gd" type="Script" id=2]
 
 [sub_resource type="Animation" id=6]
 resource_name = "Crouch"
@@ -411,7 +410,6 @@ graph_offset = Vector2( -167, 63.8001 )
 [sub_resource type="AnimationNodeStateMachinePlayback" id=61]
 
 [node name="Moulue" type="KinematicBody2D"]
-script = ExtResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="."]
 texture = ExtResource( 1 )
