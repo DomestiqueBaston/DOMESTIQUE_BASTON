@@ -26,7 +26,7 @@ func _physics_process(_delta):
 		isDoingSomething = true
 		
 	elif Input.is_action_just_pressed("ui_up"):
-		$AnimatedSprit.eplay("Jump")
+		$AnimatedSprite.play("Jump")
 		isDoingSomething = true
 
 	elif Input.is_action_just_pressed("top_right"):
