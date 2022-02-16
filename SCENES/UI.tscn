@@ -1,29 +1,18 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://ASSETS/GRAPHICS/INTERFACE/interface_frame.png" type="Texture" id=1]
+[ext_resource path="res://ASSETS/GRAPHICS/INTERFACE/interface_frame_right.png" type="Texture" id=1]
 [ext_resource path="res://ASSETS/GRAPHICS/INTERFACE/Couillu_small_portrait.png" type="Texture" id=2]
 [ext_resource path="res://ASSETS/GRAPHICS/INTERFACE/energy_bar.png" type="Texture" id=3]
 [ext_resource path="res://ASSETS/GRAPHICS/INTERFACE/Moulue_small_portrait.png" type="Texture" id=4]
+[ext_resource path="res://ASSETS/GRAPHICS/INTERFACE/interface_frame_left.png" type="Texture" id=5]
 
 [node name="UI" type="Node2D"]
 
 [node name="Left" type="Node2D" parent="."]
 position = Vector2( 1, 1 )
 
-[node name="Portrait_Couillu_left" type="Sprite" parent="Left"]
-visible = false
-position = Vector2( 2, 2 )
-texture = ExtResource( 2 )
-centered = false
-
-[node name="Portrait_Moulue_left" type="Sprite" parent="Left"]
-position = Vector2( 21, 18 )
-texture = ExtResource( 4 )
-centered = false
-offset = Vector2( -16, -16 )
-
 [node name="Frame_left" type="Sprite" parent="Left"]
-texture = ExtResource( 1 )
+texture = ExtResource( 5 )
 centered = false
 
 [node name="Energy_left" type="Sprite" parent="Left"]
@@ -31,9 +20,30 @@ position = Vector2( 48, 4 )
 texture = ExtResource( 3 )
 centered = false
 
+[node name="Portrait_Couillu_left" type="Sprite" parent="."]
+visible = false
+position = Vector2( 3, 3 )
+texture = ExtResource( 2 )
+centered = false
+
+[node name="Portrait_Moulue_left" type="Sprite" parent="."]
+position = Vector2( 22, 19 )
+texture = ExtResource( 4 )
+centered = false
+offset = Vector2( -16, -16 )
+
 [node name="Right" type="Node2D" parent="."]
 position = Vector2( 304, 1 )
 scale = Vector2( -1, 1 )
+
+[node name="Frame_right" type="Sprite" parent="Right"]
+texture = ExtResource( 1 )
+centered = false
+
+[node name="Energy_right" type="Sprite" parent="Right"]
+position = Vector2( 48, 4 )
+texture = ExtResource( 3 )
+centered = false
 
 [node name="Portrait_Couillu_right" type="Sprite" parent="Right"]
 position = Vector2( 2, 2 )
@@ -46,12 +56,3 @@ position = Vector2( 21, 18 )
 texture = ExtResource( 4 )
 centered = false
 offset = Vector2( -16, -16 )
-
-[node name="Frame_right" type="Sprite" parent="Right"]
-texture = ExtResource( 1 )
-centered = false
-
-[node name="Energy_right" type="Sprite" parent="Right"]
-position = Vector2( 48, 4 )
-texture = ExtResource( 3 )
-centered = false
