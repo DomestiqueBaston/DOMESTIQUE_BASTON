@@ -11,7 +11,7 @@ config_version=4
 [application]
 
 config/name="DOMESTIQUE BASTON"
-run/main_scene="res://SCENES/TEST.tscn"
+run/main_scene="res://SCENES/BASTON.tscn"
 config/icon="res://icon.png"
 
 [display]
