@@ -20,17 +20,21 @@ func _physics_process(_delta):
 		velocity.x = 0
 		if isDoingSomething == false:
 			$AnimatedSprite.play("Idle")
+			
+	if Input.is_action_pressed("bottom_left") && Input.is_action_pressed("bottom_right") && isDoingSomething == false:
+		$AnimatedSprite.play("Parry")
+		isDoingSomething = true
 		
-	if Input.is_action_just_pressed("ui_down") && isDoingSomething == false:
+	elif Input.is_action_just_pressed("bottom_left") && isDoingSomething == false:
 		$AnimatedSprite.play("Crouch")
 		isDoingSomething = true
 		
-	elif Input.is_action_just_pressed("ui_up") && isDoingSomething == false:
+	elif Input.is_action_just_pressed("bottom_right") && isDoingSomething == false:
 		$AnimatedSprite.play("Jump")
 		isDoingSomething = true
 
-	elif Input.is_action_just_pressed("top_right") && isDoingSomething == false:
-		$AnimatedSprite.play("Parry")
+	elif Input.is_action_pressed("ui_a") && Input.is_action_pressed("ui_b") && isDoingSomething == false:
+		$AnimatedSprite.play("Slap")
 		isDoingSomething = true
 
 	elif Input.is_action_just_pressed("ui_a") && isDoingSomething == false:
@@ -41,20 +45,16 @@ func _physics_process(_delta):
 		$AnimatedSprite.play("Kick")
 		isDoingSomething = true
 
-	elif Input.is_action_just_pressed("ui_y") && isDoingSomething == false:
-		$AnimatedSprite.play("Insult")
+	elif Input.is_action_pressed("ui_x") && Input.is_action_pressed("ui_y") && isDoingSomething == false:
+		$AnimatedSprite.play("Slash")
 		isDoingSomething = true
 
 	elif Input.is_action_just_pressed("ui_x") && isDoingSomething == false:
-		$AnimatedSprite.play("Slap")
+		$AnimatedSprite.play("Insult")
 		isDoingSomething = true
 
-	elif Input.is_action_just_pressed("top_left") && isDoingSomething == false:
+	elif Input.is_action_just_pressed("ui_y") && isDoingSomething == false:
 		$AnimatedSprite.play("Trick")
-		isDoingSomething = true
-
-	elif Input.is_action_just_pressed("bottom_left") && isDoingSomething == false:
-		$AnimatedSprite.play("Slash")
 		isDoingSomething = true
 		
 	velocity = move_and_slide(velocity, FLOOR)
