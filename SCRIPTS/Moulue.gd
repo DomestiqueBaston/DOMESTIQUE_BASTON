@@ -21,39 +21,39 @@ func _physics_process(_delta):
 		if isDoingSomething == false:
 			$AnimatedSprite.play("Idle")
 		
-	if Input.is_action_just_pressed("ui_down"):
+	if Input.is_action_just_pressed("ui_down") && isDoingSomething == false:
 		$AnimatedSprite.play("Crouch")
 		isDoingSomething = true
 		
-	elif Input.is_action_just_pressed("ui_up"):
+	elif Input.is_action_just_pressed("ui_up") && isDoingSomething == false:
 		$AnimatedSprite.play("Jump")
 		isDoingSomething = true
 
-	elif Input.is_action_just_pressed("top_right"):
+	elif Input.is_action_just_pressed("top_right") && isDoingSomething == false:
 		$AnimatedSprite.play("Parry")
 		isDoingSomething = true
 
-	elif Input.is_action_just_pressed("ui_a"):
+	elif Input.is_action_just_pressed("ui_a") && isDoingSomething == false:
 		$AnimatedSprite.play("Punch")
 		isDoingSomething = true
 
-	elif Input.is_action_just_pressed("ui_b"):
+	elif Input.is_action_just_pressed("ui_b") && isDoingSomething == false:
 		$AnimatedSprite.play("Kick")
 		isDoingSomething = true
 
-	elif Input.is_action_just_pressed("ui_y"):
+	elif Input.is_action_just_pressed("ui_y") && isDoingSomething == false:
 		$AnimatedSprite.play("Insult")
 		isDoingSomething = true
 
-	elif Input.is_action_just_pressed("ui_x"):
+	elif Input.is_action_just_pressed("ui_x") && isDoingSomething == false:
 		$AnimatedSprite.play("Slap")
 		isDoingSomething = true
 
-	elif Input.is_action_just_pressed("top_left"):
+	elif Input.is_action_just_pressed("top_left") && isDoingSomething == false:
 		$AnimatedSprite.play("Trick")
 		isDoingSomething = true
 
-	elif Input.is_action_just_pressed("bottom_left"):
+	elif Input.is_action_just_pressed("bottom_left") && isDoingSomething == false:
 		$AnimatedSprite.play("Slash")
 		isDoingSomething = true
 		
