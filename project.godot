@@ -11,8 +11,12 @@ config_version=4
 [application]
 
 config/name="DOMESTIQUE BASTON"
-run/main_scene="res://SCENES/BASTON.tscn"
+run/main_scene="res://SCENES/Title_screen.tscn"
 config/icon="res://icon.png"
+
+[autoload]
+
+MusicController="*res://SCENES/MusicController.tscn"
 
 [display]
 

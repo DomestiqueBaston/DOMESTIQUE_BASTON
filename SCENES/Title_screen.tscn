@@ -1,18 +1,26 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://ASSETS/GRAPHICS/TITLE SCREEN/Domestique_Baston.png" type="Texture" id=1]
-[ext_resource path="res://ASSETS/SOUNDS/MUSIC/MAIN.wav" type="AudioStream" id=2]
+[ext_resource path="res://SCENES/Fade_scene.tscn" type="PackedScene" id=2]
+[ext_resource path="res://ASSETS/GRAPHICS/TITLE SCREEN/Fond_noir.png" type="Texture" id=3]
+[ext_resource path="res://SCRIPTS/Title_screen.gd" type="Script" id=4]
 
 [node name="Title_screen" type="Node2D"]
+script = ExtResource( 4 )
 
 [node name="TextureRect" type="TextureRect" parent="."]
 margin_right = 40.0
 margin_bottom = 40.0
-texture = ExtResource( 1 )
+texture = ExtResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Main" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 2 )
-autoplay = true
+[node name="Sprite" type="Sprite" parent="."]
+z_index = 1
+texture = ExtResource( 1 )
+centered = false
+
+[node name="TransitionScreen" parent="." instance=ExtResource( 2 )]
+
+[connection signal="transitioned" from="TransitionScreen" to="." method="_on_TransitionScreen_transitioned"]
