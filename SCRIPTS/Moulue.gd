@@ -21,15 +21,15 @@ func _physics_process(_delta):
 		if isDoingSomething == false:
 			$AnimatedSprite.play("Idle")
 			
-	if Input.is_action_pressed("bottom_left") && Input.is_action_pressed("bottom_right") && isDoingSomething == false:
+	if Input.is_action_pressed("top_left") && Input.is_action_pressed("top_right") && isDoingSomething == false:
 		$AnimatedSprite.play("Parry")
 		isDoingSomething = true
 		
-	elif Input.is_action_just_pressed("bottom_left") && isDoingSomething == false:
+	elif Input.is_action_just_pressed("top_left") && isDoingSomething == false:
 		$AnimatedSprite.play("Crouch")
 		isDoingSomething = true
 		
-	elif Input.is_action_just_pressed("bottom_right") && isDoingSomething == false:
+	elif Input.is_action_just_pressed("top_right") && isDoingSomething == false:
 		$AnimatedSprite.play("Jump")
 		isDoingSomething = true
 
