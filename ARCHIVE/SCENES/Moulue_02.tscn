@@ -300,7 +300,6 @@ graph_offset = Vector2( -200, 33.8001 )
 [sub_resource type="AnimationNodeStateMachinePlayback" id=61]
 
 [node name="Moulue_02" type="KinematicBody2D"]
-position = Vector2( 104, 93 )
 script = ExtResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="."]
