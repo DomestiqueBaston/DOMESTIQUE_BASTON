@@ -11,7 +11,10 @@ config_version=4
 [application]
 
 config/name="DOMESTIQUE BASTON"
-config/icon="res://icon.png"
+run/main_scene="res://SCENES/Title_screen.tscn"
+config/icon="res://icon_v02.png"
+config/macos_native_icon="res://icon_v02.png"
+config/windows_native_icon="res://icon_v02.png"
 
 [autoload]
 
@@ -21,6 +24,7 @@ MusicController="*res://SCENES/MusicController.tscn"
 
 window/size/width=305
 window/size/height=111
+window/size/fullscreen=true
 window/size/always_on_top=true
 window/stretch/mode="viewport"
 window/stretch/aspect="keep"
