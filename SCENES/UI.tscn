@@ -20,14 +20,8 @@ position = Vector2( 48, 4 )
 texture = ExtResource( 3 )
 centered = false
 
-[node name="Portrait_Couillu_left" type="Sprite" parent="."]
-visible = false
-position = Vector2( 3, 3 )
-texture = ExtResource( 2 )
-centered = false
-
-[node name="Portrait_Moulue_left" type="Sprite" parent="."]
-position = Vector2( 22, 19 )
+[node name="Portrait_Left" type="Sprite" parent="Left"]
+position = Vector2( 21, 18 )
 texture = ExtResource( 4 )
 centered = false
 offset = Vector2( -16, -16 )
@@ -45,14 +39,7 @@ position = Vector2( 48, 4 )
 texture = ExtResource( 3 )
 centered = false
 
-[node name="Portrait_Couillu_right" type="Sprite" parent="Right"]
+[node name="Portrait_Right" type="Sprite" parent="Right"]
 position = Vector2( 2, 2 )
 texture = ExtResource( 2 )
 centered = false
-
-[node name="Portrait_Moulue_right" type="Sprite" parent="Right"]
-visible = false
-position = Vector2( 21, 18 )
-texture = ExtResource( 4 )
-centered = false
-offset = Vector2( -16, -16 )
