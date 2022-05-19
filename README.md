@@ -8,6 +8,6 @@ In order to limit the amount of work for that project, we found that the idea of
 
 It's scheduled to be released as a free/open source project by a French/Dutch team of good willing people! At this point of development, we still don't know under what kind of license it'll be distributed but for very sure a non commercial one.
 
-Depending on the time and energy we have when "v1.0" will be released we'll eventually add features to that game but, and that's the point of the open source thing, don't wait for us and feel free to add what ever you want to that game. We'd be trilled to see what you'll be coming up with...
+Depending on the time and energy we have when "v1.0" will be released we'll eventually add features to that game but, and that's the point of the open source thing, don't wait for us and feel free to add whatever you want to that game. We'd be trilled to see what you'll be coming up with...
 
 The team
