@@ -8,28 +8,6 @@
 
 config_version=4
 
-_global_script_classes=[ {
-"base": "AnimationPlayer",
-"class": "NetworkAnimationPlayer",
-"language": "GDScript",
-"path": "res://addons/godot-rollback-netcode/NetworkAnimationPlayer.gd"
-}, {
-"base": "Node",
-"class": "NetworkRandomNumberGenerator",
-"language": "GDScript",
-"path": "res://addons/godot-rollback-netcode/NetworkRandomNumberGenerator.gd"
-}, {
-"base": "Node",
-"class": "NetworkTimer",
-"language": "GDScript",
-"path": "res://addons/godot-rollback-netcode/NetworkTimer.gd"
-} ]
-_global_script_class_icons={
-"NetworkAnimationPlayer": "",
-"NetworkRandomNumberGenerator": "",
-"NetworkTimer": ""
-}
-
 [application]
 
 config/name="DOMESTIQUE BASTON"
@@ -43,20 +21,20 @@ config/windows_native_icon="res://icon_v02.png"
 MusicController="*res://SCENES/MusicController.tscn"
 CharacterSelectionManager="*res://SCRIPTS/Managers/CharacterSelectionManager.gd"
 MoveSetManager="*res://SCRIPTS/Managers/MoveSetManager.gd"
-SyncManager="res://addons/godot-rollback-netcode/SyncManager.gd"
 
 [display]
 
 window/size/width=305
 window/size/height=111
-window/size/fullscreen=true
 window/size/always_on_top=true
+window/size/test_width=915
+window/size/test_height=333
 window/stretch/mode="viewport"
 window/stretch/aspect="keep"
 
 [editor_plugins]
 
-enabled=PoolStringArray( "res://addons/godot-rollback-netcode/plugin.cfg" )
+enabled=PoolStringArray(  )
 
 [importer_defaults]
 

@@ -1,6 +1,6 @@
 [gd_scene load_steps=31 format=2]
 
-[ext_resource path="res://ASSETS/GRAPHICS/ANIMATION/Anims_Moulue.png" type="Texture" id=1]
+[ext_resource path="res://ASSETS/GRAPHICS/ANIMATION/MOULUE/Anims_Moulue.png" type="Texture" id=1]
 [ext_resource path="res://SCRIPTS/Characters/Moulue_02.gd" type="Script" id=2]
 
 [sub_resource type="Animation" id=6]
@@ -288,14 +288,14 @@ auto_advance = true
 states/Idle/node = SubResource( 21 )
 states/Idle/position = Vector2( 379, 240 )
 states/Punch/node = SubResource( 28 )
-states/Punch/position = Vector2( 412, 392.352 )
+states/Punch/position = Vector2( 379, 333.352 )
 states/Walk_backward/node = SubResource( 32 )
-states/Walk_backward/position = Vector2( 136, 105 )
+states/Walk_backward/position = Vector2( 280, 146 )
 states/Walk_forward/node = SubResource( 33 )
-states/Walk_forward/position = Vector2( 626, 89 )
+states/Walk_forward/position = Vector2( 487, 169 )
 transitions = [ "Idle", "Walk_forward", SubResource( 34 ), "Walk_forward", "Idle", SubResource( 35 ), "Idle", "Walk_backward", SubResource( 36 ), "Walk_backward", "Idle", SubResource( 37 ), "Punch", "Idle", SubResource( 52 ), "Idle", "Punch", SubResource( 53 ) ]
 start_node = "Idle"
-graph_offset = Vector2( -200, 33.8001 )
+graph_offset = Vector2( -246, 109.8 )
 
 [sub_resource type="AnimationNodeStateMachinePlayback" id=61]
 
