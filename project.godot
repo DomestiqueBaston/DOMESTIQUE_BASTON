@@ -156,6 +156,17 @@ sync_debug={
  ]
 }
 
+[layer_names]
+
+2d_physics/layer_1="Moulue_Body"
+2d_physics/layer_2="Moulue_Roll"
+2d_physics/layer_3="Moulue_Defense"
+2d_physics/layer_4="Moulue_Move"
+2d_physics/layer_5="Couillu_Body"
+2d_physics/layer_6="Couillu_Bottle"
+2d_physics/layer_7="Couillu_Defense"
+2d_physics/layer_8="Couillu_Move"
+
 [physics]
 
 common/enable_pause_aware_picking=true
