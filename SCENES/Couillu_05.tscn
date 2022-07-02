@@ -219,6 +219,16 @@ tracks/16/keys = {
 "update": 1,
 "values": [ false, false ]
 }
+tracks/17/type = "audio"
+tracks/17/path = NodePath("FXs")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/keys = {
+"clips": [  ],
+"times": PoolRealArray(  )
+}
 
 [sub_resource type="Animation" id=14]
 resource_name = "Get_hit"
@@ -426,6 +436,16 @@ tracks/16/keys = {
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
 "values": [ false, false ]
+}
+tracks/17/type = "audio"
+tracks/17/path = NodePath("FXs")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/keys = {
+"clips": [  ],
+"times": PoolRealArray(  )
 }
 
 [sub_resource type="Animation" id=1]
@@ -636,6 +656,16 @@ tracks/16/keys = {
 "update": 1,
 "values": [ false, false ]
 }
+tracks/17/type = "audio"
+tracks/17/path = NodePath("FXs")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/keys = {
+"clips": [  ],
+"times": PoolRealArray(  )
+}
 
 [sub_resource type="Animation" id=17]
 resource_name = "In"
@@ -843,6 +873,16 @@ tracks/16/keys = {
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
 "values": [ true, true ]
+}
+tracks/17/type = "audio"
+tracks/17/path = NodePath("FXs")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/keys = {
+"clips": [  ],
+"times": PoolRealArray(  )
 }
 
 [sub_resource type="Animation" id=15]
@@ -1052,6 +1092,16 @@ tracks/16/keys = {
 "update": 1,
 "values": [ false, false ]
 }
+tracks/17/type = "audio"
+tracks/17/path = NodePath("FXs")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/keys = {
+"clips": [  ],
+"times": PoolRealArray(  )
+}
 
 [sub_resource type="Animation" id=7]
 resource_name = "Jump"
@@ -1260,6 +1310,16 @@ tracks/16/keys = {
 "update": 1,
 "values": [ false, false ]
 }
+tracks/17/type = "audio"
+tracks/17/path = NodePath("FXs")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/keys = {
+"clips": [  ],
+"times": PoolRealArray(  )
+}
 
 [sub_resource type="Animation" id=10]
 resource_name = "Kick"
@@ -1466,6 +1526,16 @@ tracks/16/keys = {
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
 "values": [ false, false ]
+}
+tracks/17/type = "audio"
+tracks/17/path = NodePath("FXs")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/keys = {
+"clips": [  ],
+"times": PoolRealArray(  )
 }
 
 [sub_resource type="Animation" id=16]
@@ -1675,6 +1745,16 @@ tracks/16/keys = {
 "update": 1,
 "values": [ false, false ]
 }
+tracks/17/type = "audio"
+tracks/17/path = NodePath("FXs")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/keys = {
+"clips": [  ],
+"times": PoolRealArray(  )
+}
 
 [sub_resource type="Animation" id=12]
 resource_name = "Parry"
@@ -1883,6 +1963,16 @@ tracks/16/keys = {
 "update": 1,
 "values": [ false, false ]
 }
+tracks/17/type = "audio"
+tracks/17/path = NodePath("FXs")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/keys = {
+"clips": [  ],
+"times": PoolRealArray(  )
+}
 
 [sub_resource type="Animation" id=8]
 resource_name = "Punch"
@@ -2090,6 +2180,16 @@ tracks/16/keys = {
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
 "values": [ false, false ]
+}
+tracks/17/type = "audio"
+tracks/17/path = NodePath("FXs")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/keys = {
+"clips": [  ],
+"times": PoolRealArray(  )
 }
 
 [sub_resource type="Animation" id=9]
@@ -2506,6 +2606,16 @@ tracks/16/keys = {
 "update": 1,
 "values": [ false, false ]
 }
+tracks/17/type = "audio"
+tracks/17/path = NodePath("FXs")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/keys = {
+"clips": [  ],
+"times": PoolRealArray(  )
+}
 
 [sub_resource type="Animation" id=11]
 resource_name = "Slash"
@@ -2714,6 +2824,16 @@ tracks/16/keys = {
 "update": 1,
 "values": [ false, false ]
 }
+tracks/17/type = "audio"
+tracks/17/path = NodePath("FXs")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/keys = {
+"clips": [  ],
+"times": PoolRealArray(  )
+}
 
 [sub_resource type="Animation" id=13]
 resource_name = "Trick"
@@ -2920,6 +3040,16 @@ tracks/16/keys = {
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
 "values": [ false, false ]
+}
+tracks/17/type = "audio"
+tracks/17/path = NodePath("FXs")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/keys = {
+"clips": [  ],
+"times": PoolRealArray(  )
 }
 
 [sub_resource type="Animation" id=5]
@@ -3130,6 +3260,16 @@ tracks/16/keys = {
 "update": 1,
 "values": [ false, false ]
 }
+tracks/17/type = "audio"
+tracks/17/path = NodePath("FXs")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/keys = {
+"clips": [  ],
+"times": PoolRealArray(  )
+}
 
 [sub_resource type="Animation" id=3]
 resource_name = "Walk_forward"
@@ -3339,6 +3479,16 @@ tracks/16/keys = {
 "update": 1,
 "values": [ false, false ]
 }
+tracks/17/type = "audio"
+tracks/17/path = NodePath("FXs")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/keys = {
+"clips": [  ],
+"times": PoolRealArray(  )
+}
 
 [sub_resource type="AnimationNodeAnimation" id=62]
 animation = "Crouch"
@@ -3538,7 +3688,7 @@ texture = ExtResource( 1 )
 offset = Vector2( -0.5, -53.5 )
 hframes = 13
 vframes = 13
-frame = 16
+frame = 150
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 autoplay = "Idle"
@@ -3562,4 +3712,7 @@ anims/Walk_forward = SubResource( 3 )
 [node name="AnimationTree" type="AnimationTree" parent="."]
 tree_root = SubResource( 60 )
 anim_player = NodePath("../AnimationPlayer")
+active = true
 parameters/playback = SubResource( 61 )
+
+[node name="FXs" type="AudioStreamPlayer2D" parent="."]
