@@ -76,7 +76,7 @@ tracks/4/keys = {
 "values": [ false, false ]
 }
 tracks/5/type = "value"
-tracks/5/path = NodePath("Area2D_Roll/RollCollider:position")
+tracks/5/path = NodePath("Area2D_Roll/AttackCollider:position")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/imported = false
@@ -88,7 +88,7 @@ tracks/5/keys = {
 "values": [ Vector2( -18, -34 ), Vector2( -24, -24 ), Vector2( -28, -19 ), Vector2( -29, -17 ), Vector2( -29, -18 ), Vector2( -26, -18 ), Vector2( -26, -13 ), Vector2( -19, -15 ), Vector2( -18, -15 ) ]
 }
 tracks/6/type = "value"
-tracks/6/path = NodePath("Area2D_Roll/RollCollider:rotation_degrees")
+tracks/6/path = NodePath("Area2D_Roll/AttackCollider:rotation_degrees")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/imported = false
@@ -100,7 +100,7 @@ tracks/6/keys = {
 "values": [ -45.68, 85.2379, 88.4408, 88.4408, 97.1124, 6.21806, -46.3549, -35.1831, -37.0 ]
 }
 tracks/7/type = "value"
-tracks/7/path = NodePath("Area2D_Roll/RollCollider:scale")
+tracks/7/path = NodePath("Area2D_Roll/AttackCollider:scale")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/imported = false
@@ -112,7 +112,7 @@ tracks/7/keys = {
 "values": [ Vector2( 1, 1 ), Vector2( 1, 1.09128 ), Vector2( 1, 1.09128 ), Vector2( 1, 1 ) ]
 }
 tracks/8/type = "value"
-tracks/8/path = NodePath("Area2D_Roll/RollCollider:disabled")
+tracks/8/path = NodePath("Area2D_Roll/AttackCollider:disabled")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/imported = false
@@ -294,7 +294,7 @@ tracks/4/keys = {
 "values": [ true, true ]
 }
 tracks/5/type = "value"
-tracks/5/path = NodePath("Area2D_Roll/RollCollider:position")
+tracks/5/path = NodePath("Area2D_Roll/AttackCollider:position")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/imported = false
@@ -306,7 +306,7 @@ tracks/5/keys = {
 "values": [ Vector2( -20, -36 ), Vector2( -28, -38 ), Vector2( -39, -33 ), Vector2( -34, -25 ), Vector2( -23, -13 ), Vector2( -20, -14 ), Vector2( -16, -15 ) ]
 }
 tracks/6/type = "value"
-tracks/6/path = NodePath("Area2D_Roll/RollCollider:rotation_degrees")
+tracks/6/path = NodePath("Area2D_Roll/AttackCollider:rotation_degrees")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/imported = false
@@ -318,7 +318,7 @@ tracks/6/keys = {
 "values": [ 17.4321, 26.9774, 26.2058, 17.1924, 8.62682, -24.8852, -39.6239 ]
 }
 tracks/7/type = "value"
-tracks/7/path = NodePath("Area2D_Roll/RollCollider:scale")
+tracks/7/path = NodePath("Area2D_Roll/AttackCollider:scale")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/imported = false
@@ -330,7 +330,7 @@ tracks/7/keys = {
 "values": [ Vector2( 1, 1 ), Vector2( 1, 1 ), Vector2( 1, 1.07178 ), Vector2( 1, 1.1119 ), Vector2( 1, 1.1119 ), Vector2( 1, 1 ) ]
 }
 tracks/8/type = "value"
-tracks/8/path = NodePath("Area2D_Roll/RollCollider:disabled")
+tracks/8/path = NodePath("Area2D_Roll/AttackCollider:disabled")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/imported = false
@@ -513,7 +513,7 @@ tracks/4/keys = {
 "values": [ false, false ]
 }
 tracks/5/type = "value"
-tracks/5/path = NodePath("Area2D_Roll/RollCollider:position")
+tracks/5/path = NodePath("Area2D_Roll/AttackCollider:position")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/imported = false
@@ -525,7 +525,7 @@ tracks/5/keys = {
 "values": [ Vector2( -16, -18 ), Vector2( -16, -18 ) ]
 }
 tracks/6/type = "value"
-tracks/6/path = NodePath("Area2D_Roll/RollCollider:rotation_degrees")
+tracks/6/path = NodePath("Area2D_Roll/AttackCollider:rotation_degrees")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/imported = false
@@ -537,7 +537,7 @@ tracks/6/keys = {
 "values": [ -37.0, -37.0 ]
 }
 tracks/7/type = "value"
-tracks/7/path = NodePath("Area2D_Roll/RollCollider:scale")
+tracks/7/path = NodePath("Area2D_Roll/AttackCollider:scale")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/imported = false
@@ -549,7 +549,7 @@ tracks/7/keys = {
 "values": [ Vector2( 0.383802, 1 ), Vector2( 0.383802, 1 ) ]
 }
 tracks/8/type = "value"
-tracks/8/path = NodePath("Area2D_Roll/RollCollider:disabled")
+tracks/8/path = NodePath("Area2D_Roll/AttackCollider:disabled")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/imported = false
@@ -683,7 +683,7 @@ tracks/0/keys = {
 "values": [ 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68 ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("Area2D_Roll/RollCollider:position")
+tracks/1/path = NodePath("Area2D_Roll/AttackCollider:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
@@ -695,7 +695,7 @@ tracks/1/keys = {
 "values": [ Vector2( -15, -41 ), Vector2( -15, -41 ) ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("Area2D_Roll/RollCollider:rotation_degrees")
+tracks/2/path = NodePath("Area2D_Roll/AttackCollider:rotation_degrees")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
@@ -707,7 +707,7 @@ tracks/2/keys = {
 "values": [ -37.0, -37.0 ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("Area2D_Roll/RollCollider:scale")
+tracks/3/path = NodePath("Area2D_Roll/AttackCollider:scale")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
@@ -719,7 +719,7 @@ tracks/3/keys = {
 "values": [ Vector2( 1, 1 ), Vector2( 1, 1 ) ]
 }
 tracks/4/type = "value"
-tracks/4/path = NodePath("Area2D_Roll/RollCollider:disabled")
+tracks/4/path = NodePath("Area2D_Roll/AttackCollider:disabled")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/imported = false
@@ -949,7 +949,7 @@ tracks/4/keys = {
 "values": [ false, false ]
 }
 tracks/5/type = "value"
-tracks/5/path = NodePath("Area2D_Roll/RollCollider:position")
+tracks/5/path = NodePath("Area2D_Roll/AttackCollider:position")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/imported = false
@@ -961,7 +961,7 @@ tracks/5/keys = {
 "values": [ Vector2( -13, -49 ), Vector2( -12, -50 ), Vector2( -6, -46 ), Vector2( 1, -45 ), Vector2( 13, -45 ), Vector2( 25, -45 ), Vector2( 53, -45 ), Vector2( 91, -45 ), Vector2( 144, -45 ), Vector2( 213, -45 ), Vector2( 298, -45 ), Vector2( 21, -42 ) ]
 }
 tracks/6/type = "value"
-tracks/6/path = NodePath("Area2D_Roll/RollCollider:rotation_degrees")
+tracks/6/path = NodePath("Area2D_Roll/AttackCollider:rotation_degrees")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/imported = false
@@ -973,7 +973,7 @@ tracks/6/keys = {
 "values": [ 55.3816, 78.7876, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, -46.0228 ]
 }
 tracks/7/type = "value"
-tracks/7/path = NodePath("Area2D_Roll/RollCollider:scale")
+tracks/7/path = NodePath("Area2D_Roll/AttackCollider:scale")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/imported = false
@@ -985,13 +985,13 @@ tracks/7/keys = {
 "values": [ Vector2( 0.663743, 0.600006 ), Vector2( 0.596571, 0.603792 ), Vector2( 0.800001, 0.42 ), Vector2( 0.800001, 0.42 ), Vector2( 0.800001, 0.42 ), Vector2( 0.800001, 0.42 ), Vector2( 0.800001, 0.42 ), Vector2( 0.800001, 0.42 ), Vector2( 0.800001, 0.42 ), Vector2( 0.800001, 0.42 ), Vector2( 0.800001, 0.42 ), Vector2( 1, 1 ) ]
 }
 tracks/8/type = "value"
-tracks/8/path = NodePath("Area2D_Roll/RollCollider:disabled")
+tracks/8/path = NodePath("Area2D_Roll/AttackCollider:disabled")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/imported = false
 tracks/8/enabled = true
 tracks/8/keys = {
-"times": PoolRealArray( 0, 0.4, 0.5, 1, 1.1 ),
+"times": PoolRealArray( 0, 0.5, 0.6, 1, 1.1 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
 "update": 1,
 "values": [ true, true, false, false, true ]
@@ -1167,7 +1167,7 @@ tracks/4/keys = {
 "values": [ false, false ]
 }
 tracks/5/type = "value"
-tracks/5/path = NodePath("Area2D_Roll/RollCollider:position")
+tracks/5/path = NodePath("Area2D_Roll/AttackCollider:position")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/imported = false
@@ -1179,7 +1179,7 @@ tracks/5/keys = {
 "values": [ Vector2( -11, -24 ), Vector2( -11, -24 ) ]
 }
 tracks/6/type = "value"
-tracks/6/path = NodePath("Area2D_Roll/RollCollider:rotation_degrees")
+tracks/6/path = NodePath("Area2D_Roll/AttackCollider:rotation_degrees")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/imported = false
@@ -1191,7 +1191,7 @@ tracks/6/keys = {
 "values": [ 0.0, 0.0 ]
 }
 tracks/7/type = "value"
-tracks/7/path = NodePath("Area2D_Roll/RollCollider:scale")
+tracks/7/path = NodePath("Area2D_Roll/AttackCollider:scale")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/imported = false
@@ -1203,7 +1203,7 @@ tracks/7/keys = {
 "values": [ Vector2( 1, 1.18724 ), Vector2( 1, 1.18724 ) ]
 }
 tracks/8/type = "value"
-tracks/8/path = NodePath("Area2D_Roll/RollCollider:disabled")
+tracks/8/path = NodePath("Area2D_Roll/AttackCollider:disabled")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/imported = false
@@ -1384,7 +1384,7 @@ tracks/4/keys = {
 "values": [ false, false ]
 }
 tracks/5/type = "value"
-tracks/5/path = NodePath("Area2D_Roll/RollCollider:position")
+tracks/5/path = NodePath("Area2D_Roll/AttackCollider:position")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/imported = false
@@ -1396,7 +1396,7 @@ tracks/5/keys = {
 "values": [ Vector2( -8, -10 ), Vector2( 10, -16 ), Vector2( 5, -28 ), Vector2( 1, -28 ), Vector2( 15, -26 ), Vector2( 15, -26 ), Vector2( 16, -25 ), Vector2( 16, -14 ), Vector2( -3, -8 ), Vector2( -7, -8 ) ]
 }
 tracks/6/type = "value"
-tracks/6/path = NodePath("Area2D_Roll/RollCollider:rotation_degrees")
+tracks/6/path = NodePath("Area2D_Roll/AttackCollider:rotation_degrees")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/imported = false
@@ -1408,7 +1408,7 @@ tracks/6/keys = {
 "values": [ 0.0, 49.8183, 14.269, 7.5896, 73.5406, 73.5406, 83.6046, 130.924, 0.0, 0.0 ]
 }
 tracks/7/type = "value"
-tracks/7/path = NodePath("Area2D_Roll/RollCollider:scale")
+tracks/7/path = NodePath("Area2D_Roll/AttackCollider:scale")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/imported = false
@@ -1420,7 +1420,7 @@ tracks/7/keys = {
 "values": [ Vector2( 1.13603, 0.522177 ), Vector2( 1.13603, 0.522177 ), Vector2( 1.13603, 0.609568 ), Vector2( 1.13603, 0.609568 ), Vector2( 0.747168, 0.839583 ), Vector2( 0.747168, 0.839583 ), Vector2( 0.746048, 0.656823 ), Vector2( 0.746048, 0.656823 ) ]
 }
 tracks/8/type = "value"
-tracks/8/path = NodePath("Area2D_Roll/RollCollider:disabled")
+tracks/8/path = NodePath("Area2D_Roll/AttackCollider:disabled")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/imported = false
@@ -1554,7 +1554,7 @@ tracks/0/keys = {
 "values": [ 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92 ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("Area2D_Roll/RollCollider:position")
+tracks/1/path = NodePath("Area2D_Roll/AttackCollider:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
@@ -1566,7 +1566,7 @@ tracks/1/keys = {
 "values": [ Vector2( 21, -41 ), Vector2( 21, -41 ) ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("Area2D_Roll/RollCollider:rotation_degrees")
+tracks/2/path = NodePath("Area2D_Roll/AttackCollider:rotation_degrees")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
@@ -1578,7 +1578,7 @@ tracks/2/keys = {
 "values": [ -44.102, -44.102 ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("Area2D_Roll/RollCollider:scale")
+tracks/3/path = NodePath("Area2D_Roll/AttackCollider:scale")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
@@ -1590,7 +1590,7 @@ tracks/3/keys = {
 "values": [ Vector2( 1, 1 ), Vector2( 1, 1 ) ]
 }
 tracks/4/type = "value"
-tracks/4/path = NodePath("Area2D_Roll/RollCollider:disabled")
+tracks/4/path = NodePath("Area2D_Roll/AttackCollider:disabled")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/imported = false
@@ -1820,7 +1820,7 @@ tracks/4/keys = {
 "values": [ false, false ]
 }
 tracks/5/type = "value"
-tracks/5/path = NodePath("Area2D_Roll/RollCollider:position")
+tracks/5/path = NodePath("Area2D_Roll/AttackCollider:position")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/imported = false
@@ -1832,7 +1832,7 @@ tracks/5/keys = {
 "values": [ Vector2( -12, -15 ), Vector2( -12, -15 ) ]
 }
 tracks/6/type = "value"
-tracks/6/path = NodePath("Area2D_Roll/RollCollider:rotation_degrees")
+tracks/6/path = NodePath("Area2D_Roll/AttackCollider:rotation_degrees")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/imported = false
@@ -1844,7 +1844,7 @@ tracks/6/keys = {
 "values": [ 0.0, 0.0 ]
 }
 tracks/7/type = "value"
-tracks/7/path = NodePath("Area2D_Roll/RollCollider:scale")
+tracks/7/path = NodePath("Area2D_Roll/AttackCollider:scale")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/imported = false
@@ -1856,7 +1856,7 @@ tracks/7/keys = {
 "values": [ Vector2( 1, 1.16276 ), Vector2( 1, 1.16276 ) ]
 }
 tracks/8/type = "value"
-tracks/8/path = NodePath("Area2D_Roll/RollCollider:disabled")
+tracks/8/path = NodePath("Area2D_Roll/AttackCollider:disabled")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/imported = false
@@ -2038,7 +2038,7 @@ tracks/4/keys = {
 "values": [ false, false ]
 }
 tracks/5/type = "value"
-tracks/5/path = NodePath("Area2D_Roll/RollCollider:position")
+tracks/5/path = NodePath("Area2D_Roll/AttackCollider:position")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/imported = false
@@ -2050,7 +2050,7 @@ tracks/5/keys = {
 "values": [ Vector2( -17, -13 ), Vector2( -16, -13 ), Vector2( -15, -15 ), Vector2( -11, -23 ), Vector2( 28, -34 ), Vector2( 4.76837e-07, -46 ), Vector2( -18, -29 ), Vector2( -22, -17 ), Vector2( -21, -13 ), Vector2( -20, -13 ), Vector2( -17, -14 ) ]
 }
 tracks/6/type = "value"
-tracks/6/path = NodePath("Area2D_Roll/RollCollider:rotation_degrees")
+tracks/6/path = NodePath("Area2D_Roll/AttackCollider:rotation_degrees")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/imported = false
@@ -2062,7 +2062,7 @@ tracks/6/keys = {
 "values": [ -58.909, -122.475, -112.298, -85.1864, 0.0, 72.372, 91.7484, -1.39542, 267.94, 248.354, 49.6672 ]
 }
 tracks/7/type = "value"
-tracks/7/path = NodePath("Area2D_Roll/RollCollider:scale")
+tracks/7/path = NodePath("Area2D_Roll/AttackCollider:scale")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/imported = false
@@ -2074,7 +2074,7 @@ tracks/7/keys = {
 "values": [ Vector2( 1, 0.648434 ), Vector2( 0.716149, 0.858993 ), Vector2( 0.716149, 0.858993 ), Vector2( 1.172, 1.36927 ), Vector2( 0.655755, 0.913596 ), Vector2( 0.655755, 0.913596 ), Vector2( 0.655755, 0.913596 ) ]
 }
 tracks/8/type = "value"
-tracks/8/path = NodePath("Area2D_Roll/RollCollider:disabled")
+tracks/8/path = NodePath("Area2D_Roll/AttackCollider:disabled")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/imported = false
@@ -2243,7 +2243,7 @@ tracks/3/keys = {
 "values": [ Vector2( 1, 1 ) ]
 }
 tracks/4/type = "value"
-tracks/4/path = NodePath("Area2D_Roll/RollCollider:position")
+tracks/4/path = NodePath("Area2D_Roll/AttackCollider:position")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/imported = false
@@ -2255,7 +2255,7 @@ tracks/4/keys = {
 "values": [ Vector2( 20.0596, -41.4208 ) ]
 }
 tracks/5/type = "value"
-tracks/5/path = NodePath("Area2D_Roll/RollCollider:rotation_degrees")
+tracks/5/path = NodePath("Area2D_Roll/AttackCollider:rotation_degrees")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/imported = false
@@ -2267,7 +2267,7 @@ tracks/5/keys = {
 "values": [ -37.0 ]
 }
 tracks/6/type = "value"
-tracks/6/path = NodePath("Area2D_Roll/RollCollider:scale")
+tracks/6/path = NodePath("Area2D_Roll/AttackCollider:scale")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/imported = false
@@ -2279,7 +2279,7 @@ tracks/6/keys = {
 "values": [ Vector2( 1, 1 ) ]
 }
 tracks/7/type = "value"
-tracks/7/path = NodePath("Area2D_Roll/RollCollider:disabled")
+tracks/7/path = NodePath("Area2D_Roll/AttackCollider:disabled")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/imported = false
@@ -2415,7 +2415,7 @@ tracks/0/keys = {
 "values": [ 152, 153, 154, 155, 156, 157, 158 ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("Area2D_Roll/RollCollider:position")
+tracks/1/path = NodePath("Area2D_Roll/AttackCollider:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
@@ -2427,7 +2427,7 @@ tracks/1/keys = {
 "values": [ Vector2( -6, -31 ), Vector2( -3, -31 ), Vector2( 21, -45 ), Vector2( 21, -50 ), Vector2( 14, -55 ), Vector2( 1, -46 ), Vector2( -4.99999, -31 ) ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("Area2D_Roll/RollCollider:rotation_degrees")
+tracks/2/path = NodePath("Area2D_Roll/AttackCollider:rotation_degrees")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
@@ -2439,7 +2439,7 @@ tracks/2/keys = {
 "values": [ 59.2791, 59.2791, 46.3678, 71.0405, 42.0733, 42.0733 ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("Area2D_Roll/RollCollider:scale")
+tracks/3/path = NodePath("Area2D_Roll/AttackCollider:scale")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
@@ -2451,7 +2451,7 @@ tracks/3/keys = {
 "values": [ Vector2( 0.61578, 0.851164 ), Vector2( 0.61578, 0.851164 ), Vector2( 0.848477, 0.971356 ), Vector2( 0.772818, 0.787549 ), Vector2( 0.627248, 0.588374 ), Vector2( 0.627248, 0.588374 ) ]
 }
 tracks/4/type = "value"
-tracks/4/path = NodePath("Area2D_Roll/RollCollider:disabled")
+tracks/4/path = NodePath("Area2D_Roll/AttackCollider:disabled")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/imported = false
@@ -2681,7 +2681,7 @@ tracks/4/keys = {
 "values": [ false, false ]
 }
 tracks/5/type = "value"
-tracks/5/path = NodePath("Area2D_Roll/RollCollider:position")
+tracks/5/path = NodePath("Area2D_Roll/AttackCollider:position")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/imported = false
@@ -2693,7 +2693,7 @@ tracks/5/keys = {
 "values": [ Vector2( -16, -13 ), Vector2( -6, -19 ), Vector2( 4, -51 ), Vector2( -6, -75 ), Vector2( -24, -73 ), Vector2( -30, -60 ), Vector2( -26, -53 ), Vector2( 34, -46 ), Vector2( 19, -35 ), Vector2( 17, -35 ), Vector2( 16, -35 ), Vector2( 20, -42 ), Vector2( 18, -46 ), Vector2( 13, -34 ), Vector2( -11, -13 ), Vector2( -15, -13 ) ]
 }
 tracks/6/type = "value"
-tracks/6/path = NodePath("Area2D_Roll/RollCollider:rotation_degrees")
+tracks/6/path = NodePath("Area2D_Roll/AttackCollider:rotation_degrees")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/imported = false
@@ -2705,7 +2705,7 @@ tracks/6/keys = {
 "values": [ 48.8519, 23.572, 110.342, 194.594, 115.76, 77.5173, 40.6699, 18.8056, 31.2443, 31.2443, 69.414, 69.414, 45.0489, 141.319, 48.8519 ]
 }
 tracks/7/type = "value"
-tracks/7/path = NodePath("Area2D_Roll/RollCollider:scale")
+tracks/7/path = NodePath("Area2D_Roll/AttackCollider:scale")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/imported = false
@@ -2717,7 +2717,7 @@ tracks/7/keys = {
 "values": [ Vector2( 0.639585, 0.784735 ), Vector2( 0.639585, 0.784735 ), Vector2( 1.76754, 1.26249 ), Vector2( 1.16088, 0.553501 ), Vector2( 1.16088, 0.553501 ), Vector2( 0.639585, 0.784735 ) ]
 }
 tracks/8/type = "value"
-tracks/8/path = NodePath("Area2D_Roll/RollCollider:disabled")
+tracks/8/path = NodePath("Area2D_Roll/AttackCollider:disabled")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/imported = false
@@ -2898,7 +2898,7 @@ tracks/4/keys = {
 "values": [ false, false ]
 }
 tracks/5/type = "value"
-tracks/5/path = NodePath("Area2D_Roll/RollCollider:position")
+tracks/5/path = NodePath("Area2D_Roll/AttackCollider:position")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/imported = false
@@ -2910,7 +2910,7 @@ tracks/5/keys = {
 "values": [ Vector2( -2, -36 ), Vector2( 8, -44 ), Vector2( 6, -60 ), Vector2( -2, -59 ), Vector2( -2, -59 ), Vector2( 9, -51 ), Vector2( 0.999999, -35 ), Vector2( -6, -32 ) ]
 }
 tracks/6/type = "value"
-tracks/6/path = NodePath("Area2D_Roll/RollCollider:rotation_degrees")
+tracks/6/path = NodePath("Area2D_Roll/AttackCollider:rotation_degrees")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/imported = false
@@ -2922,7 +2922,7 @@ tracks/6/keys = {
 "values": [ -17.4402, -17.4402 ]
 }
 tracks/7/type = "value"
-tracks/7/path = NodePath("Area2D_Roll/RollCollider:scale")
+tracks/7/path = NodePath("Area2D_Roll/AttackCollider:scale")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/imported = false
@@ -2934,7 +2934,7 @@ tracks/7/keys = {
 "values": [ Vector2( 0.836499, 0.879838 ), Vector2( 0.836499, 0.879838 ) ]
 }
 tracks/8/type = "value"
-tracks/8/path = NodePath("Area2D_Roll/RollCollider:disabled")
+tracks/8/path = NodePath("Area2D_Roll/AttackCollider:disabled")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/imported = false
@@ -3117,7 +3117,7 @@ tracks/4/keys = {
 "values": [ false, false ]
 }
 tracks/5/type = "value"
-tracks/5/path = NodePath("Area2D_Roll/RollCollider:position")
+tracks/5/path = NodePath("Area2D_Roll/AttackCollider:position")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/imported = false
@@ -3129,7 +3129,7 @@ tracks/5/keys = {
 "values": [ Vector2( -20, -32 ), Vector2( -20, -32 ) ]
 }
 tracks/6/type = "value"
-tracks/6/path = NodePath("Area2D_Roll/RollCollider:rotation_degrees")
+tracks/6/path = NodePath("Area2D_Roll/AttackCollider:rotation_degrees")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/imported = false
@@ -3141,7 +3141,7 @@ tracks/6/keys = {
 "values": [ 4.40274, 4.40274 ]
 }
 tracks/7/type = "value"
-tracks/7/path = NodePath("Area2D_Roll/RollCollider:scale")
+tracks/7/path = NodePath("Area2D_Roll/AttackCollider:scale")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/imported = false
@@ -3153,7 +3153,7 @@ tracks/7/keys = {
 "values": [ Vector2( 0.868104, 0.774681 ), Vector2( 0.868104, 0.774681 ) ]
 }
 tracks/8/type = "value"
-tracks/8/path = NodePath("Area2D_Roll/RollCollider:disabled")
+tracks/8/path = NodePath("Area2D_Roll/AttackCollider:disabled")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/imported = false
@@ -3336,7 +3336,7 @@ tracks/4/keys = {
 "values": [ false, false ]
 }
 tracks/5/type = "value"
-tracks/5/path = NodePath("Area2D_Roll/RollCollider:position")
+tracks/5/path = NodePath("Area2D_Roll/AttackCollider:position")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/imported = false
@@ -3348,7 +3348,7 @@ tracks/5/keys = {
 "values": [ Vector2( -7, -8 ), Vector2( -8, -8 ), Vector2( -8, -10 ), Vector2( -6, -10 ), Vector2( -5, -10 ), Vector2( -5.66667, -9.33333 ), Vector2( -6.33333, -8.66667 ), Vector2( -7, -8 ) ]
 }
 tracks/6/type = "value"
-tracks/6/path = NodePath("Area2D_Roll/RollCollider:rotation_degrees")
+tracks/6/path = NodePath("Area2D_Roll/AttackCollider:rotation_degrees")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/imported = false
@@ -3360,7 +3360,7 @@ tracks/6/keys = {
 "values": [ 60.3939, 74.5644, 74.5644, 56.7513, 48.0036, 48.0036, 60.3939 ]
 }
 tracks/7/type = "value"
-tracks/7/path = NodePath("Area2D_Roll/RollCollider:scale")
+tracks/7/path = NodePath("Area2D_Roll/AttackCollider:scale")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/imported = false
@@ -3372,7 +3372,7 @@ tracks/7/keys = {
 "values": [ Vector2( 0.812641, 0.913012 ), Vector2( 0.812641, 0.913012 ) ]
 }
 tracks/8/type = "value"
-tracks/8/path = NodePath("Area2D_Roll/RollCollider:disabled")
+tracks/8/path = NodePath("Area2D_Roll/AttackCollider:disabled")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/imported = false
@@ -3659,7 +3659,7 @@ shape = SubResource( 94 )
 collision_layer = 32
 collision_mask = 5
 
-[node name="RollCollider" type="CollisionShape2D" parent="Area2D_Roll"]
+[node name="AttackCollider" type="CollisionShape2D" parent="Area2D_Roll"]
 position = Vector2( 20.0596, -41.4208 )
 rotation = -0.645772
 shape = SubResource( 93 )
@@ -3688,7 +3688,7 @@ texture = ExtResource( 1 )
 offset = Vector2( -0.5, -53.5 )
 hframes = 13
 vframes = 13
-frame = 150
+frame = 106
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 autoplay = "Idle"
@@ -3712,7 +3712,6 @@ anims/Walk_forward = SubResource( 3 )
 [node name="AnimationTree" type="AnimationTree" parent="."]
 tree_root = SubResource( 60 )
 anim_player = NodePath("../AnimationPlayer")
-active = true
 parameters/playback = SubResource( 61 )
 
 [node name="FXs" type="AudioStreamPlayer2D" parent="."]
