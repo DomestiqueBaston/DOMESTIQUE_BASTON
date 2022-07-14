@@ -2,7 +2,9 @@
 
 [ext_resource path="res://ASSETS/GRAPHICS/MISCS/Fight/Fight.png" type="Texture" id=1]
 
-[node name="Fight" type="TextureRect"]
+[node name="Fight" type="Node2D"]
+
+[node name="Fight" type="TextureRect" parent="."]
 margin_right = 40.0
 margin_bottom = 40.0
 texture = ExtResource( 1 )

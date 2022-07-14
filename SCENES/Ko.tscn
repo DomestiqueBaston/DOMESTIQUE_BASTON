@@ -2,10 +2,9 @@
 
 [ext_resource path="res://ASSETS/GRAPHICS/MISCS/KO/KO.png" type="Texture" id=1]
 
-[node name="Ko" type="TextureRect"]
+[node name="KO" type="Node2D"]
+
+[node name="Ko" type="TextureRect" parent="."]
 margin_right = 40.0
 margin_bottom = 40.0
 texture = ExtResource( 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}

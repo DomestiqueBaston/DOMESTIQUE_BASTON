@@ -2,10 +2,9 @@
 
 [ext_resource path="res://ASSETS/GRAPHICS/MISCS/Credits/Credits.png" type="Texture" id=1]
 
-[node name="Credits" type="TextureRect"]
+[node name="Credits" type="Node2D"]
+
+[node name="Credits" type="TextureRect" parent="."]
 margin_right = 40.0
 margin_bottom = 40.0
 texture = ExtResource( 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
