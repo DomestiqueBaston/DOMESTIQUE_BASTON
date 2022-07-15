@@ -1,10 +1,16 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://ASSETS/GRAPHICS/MISCS/Credits/Credits.png" type="Texture" id=1]
+[ext_resource path="res://ASSETS/GRAPHICS/MISCS/FOND.png" type="Texture" id=2]
 
 [node name="Credits" type="Node2D"]
 
-[node name="Credits" type="TextureRect" parent="."]
+[node name="FOND" type="TextureRect" parent="."]
 margin_right = 40.0
 margin_bottom = 40.0
+texture = ExtResource( 2 )
+
+[node name="Credits" type="TextureRect" parent="FOND"]
+margin_right = 305.0
+margin_bottom = 111.0
 texture = ExtResource( 1 )
