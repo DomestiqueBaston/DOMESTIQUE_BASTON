@@ -3687,7 +3687,7 @@ texture = ExtResource( 1 )
 offset = Vector2( -0.5, -53.5 )
 hframes = 13
 vframes = 13
-frame = 117
+frame = 10
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 autoplay = "Idle"
@@ -3711,6 +3711,7 @@ anims/Walk_forward = SubResource( 3 )
 [node name="AnimationTree" type="AnimationTree" parent="."]
 tree_root = SubResource( 60 )
 anim_player = NodePath("../AnimationPlayer")
+active = true
 parameters/playback = SubResource( 61 )
 
 [node name="FXs" type="AudioStreamPlayer2D" parent="."]
