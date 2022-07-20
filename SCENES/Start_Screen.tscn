@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://ASSETS/GRAPHICS/MISCS/Start Screen/Choix_off.png" type="Texture" id=1]
 [ext_resource path="res://ASSETS/GRAPHICS/MISCS/Start Screen/Changer_on.png" type="Texture" id=2]
 [ext_resource path="res://ASSETS/GRAPHICS/MISCS/Start Screen/Reglons_on.png" type="Texture" id=3]
 [ext_resource path="res://ASSETS/GRAPHICS/MISCS/Start Screen/Pondu_on.png" type="Texture" id=4]
 [ext_resource path="res://ASSETS/GRAPHICS/MISCS/Start Screen/Decarrer_on.png" type="Texture" id=5]
+[ext_resource path="res://SCRIPTS/World/Start_screen.gd" type="Script" id=6]
 
 [node name="Start" type="Node2D"]
 
@@ -12,27 +13,49 @@
 margin_right = 305.0
 margin_bottom = 111.0
 texture = ExtResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
 
-[node name="Reglons_ON" type="TextureRect" parent="StartOFF"]
-visible = false
+[node name="Control" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+script = ExtResource( 6 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Reglons_ON" type="TextureRect" parent="Control"]
 margin_right = 305.0
 margin_bottom = 111.0
 texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
 
-[node name="Changer_ON" type="TextureRect" parent="StartOFF"]
-visible = false
+[node name="Changer_ON" type="TextureRect" parent="Control"]
+modulate = Color( 1, 1, 1, 0 )
 margin_right = 305.0
 margin_bottom = 111.0
 texture = ExtResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
 
-[node name="Pondu_ON" type="TextureRect" parent="StartOFF"]
-visible = false
+[node name="Pondu_ON" type="TextureRect" parent="Control"]
+modulate = Color( 1, 1, 1, 0 )
 margin_right = 305.0
 margin_bottom = 111.0
 texture = ExtResource( 4 )
+__meta__ = {
+"_edit_lock_": true
+}
 
-[node name="Decarrer_ON" type="TextureRect" parent="StartOFF"]
-visible = false
+[node name="Decarrer_ON" type="TextureRect" parent="Control"]
+modulate = Color( 1, 1, 1, 0 )
 margin_right = 305.0
 margin_bottom = 111.0
 texture = ExtResource( 5 )
+__meta__ = {
+"_edit_lock_": true
+}
