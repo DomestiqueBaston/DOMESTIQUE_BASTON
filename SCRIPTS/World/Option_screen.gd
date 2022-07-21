@@ -1,7 +1,6 @@
 extends Control
 
 
-
 var previous_vpos := 0
 var current_vpos := 0
 var previous_hpos := 0
@@ -18,7 +17,8 @@ func _physics_process(_delta):
 		check_previous_boundaries()
 		current_vpos += 1
 		check_current_boundaries()
-		recreate_node_names()
+		previous_node = str(previous_vpos) + "_" + str(current_hpos)
+		current_node = str(current_vpos) + "_" + str(current_hpos)
 		turn_on_off()
 
 	elif (Input.is_action_just_pressed("ui_up")):
@@ -26,7 +26,8 @@ func _physics_process(_delta):
 		check_previous_boundaries()
 		current_vpos -= 1
 		check_current_boundaries()
-		recreate_node_names()
+		previous_node = str(previous_vpos) + "_" + str(current_hpos)
+		current_node = str(current_vpos) + "_" + str(current_hpos)
 		turn_on_off()
 
 	if (Input.is_action_just_pressed("ui_right")):
@@ -34,7 +35,8 @@ func _physics_process(_delta):
 		check_previous_boundaries()
 		current_hpos += 1
 		check_current_boundaries()
-		recreate_node_names()
+		previous_node = str(current_vpos) + "_" + str(previous_hpos)
+		current_node = str(current_vpos) + "_" + str(current_hpos)
 		turn_on_off()
 
 	elif (Input.is_action_just_pressed("ui_left")):
@@ -42,7 +44,8 @@ func _physics_process(_delta):
 		check_previous_boundaries()
 		current_hpos -= 1
 		check_current_boundaries()
-		recreate_node_names()
+		previous_node = str(current_vpos) + "_" + str(previous_hpos)
+		current_node = str(current_vpos) + "_" + str(current_hpos)
 		turn_on_off()
 
 func check_previous_boundaries():
@@ -64,12 +67,8 @@ func check_current_boundaries():
 		current_hpos = 3
 	elif current_hpos > 3:
 		current_hpos = 0
-		
-func recreate_node_names():
-	previous_node = str(previous_vpos) + "_" + str(previous_hpos)
-	current_node = str(current_vpos) + "_" + str(current_hpos)
 
 func turn_on_off():
+	get_node(previous_node).modulate = Color(1,1,1,0)
+	get_node(current_node).modulate = Color(1,1,1,1)
 	print (str(previous_node) + " - " + str(current_node))
-#	get_node(previous_node).modulate = Color(1,1,1,0)
-#	get_node(current_node).modulate = Color(1,1,1,1)

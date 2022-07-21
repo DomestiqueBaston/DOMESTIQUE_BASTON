@@ -1,5 +1,6 @@
 extends Control
 
+
 var current_pos := 0
 var previous_pos := 0
 var current_node := "Reglons_ON"
