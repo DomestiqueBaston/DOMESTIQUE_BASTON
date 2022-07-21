@@ -71,4 +71,3 @@ func check_current_boundaries():
 func turn_on_off():
 	get_node(previous_node).modulate = Color(1,1,1,0)
 	get_node(current_node).modulate = Color(1,1,1,1)
-	print (str(previous_node) + " - " + str(current_node))
