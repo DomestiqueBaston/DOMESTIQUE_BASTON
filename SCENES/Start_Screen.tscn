@@ -25,7 +25,7 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="Reglons_ON" type="TextureRect" parent="Control"]
+[node name="0" type="TextureRect" parent="Control"]
 margin_right = 305.0
 margin_bottom = 111.0
 texture = ExtResource( 3 )
@@ -33,7 +33,7 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="Changer_ON" type="TextureRect" parent="Control"]
+[node name="1" type="TextureRect" parent="Control"]
 modulate = Color( 1, 1, 1, 0 )
 margin_right = 305.0
 margin_bottom = 111.0
@@ -42,7 +42,7 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="Pondu_ON" type="TextureRect" parent="Control"]
+[node name="2" type="TextureRect" parent="Control"]
 modulate = Color( 1, 1, 1, 0 )
 margin_right = 305.0
 margin_bottom = 111.0
@@ -51,7 +51,7 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="Decarrer_ON" type="TextureRect" parent="Control"]
+[node name="3" type="TextureRect" parent="Control"]
 modulate = Color( 1, 1, 1, 0 )
 margin_right = 305.0
 margin_bottom = 111.0
