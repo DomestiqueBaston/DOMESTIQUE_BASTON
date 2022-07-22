@@ -5,6 +5,7 @@ var previous_vpos := 0
 var current_vpos := 0
 var previous_hpos := 0
 var current_hpos := 0
+
 var current_node := "0_0"
 var previous_node := ""
 
@@ -30,7 +31,7 @@ func _physics_process(_delta):
 		current_node = str(current_vpos) + "_" + str(current_hpos)
 		turn_on_off()
 
-	if (Input.is_action_just_pressed("ui_right")):
+	elif (Input.is_action_just_pressed("ui_right")):
 		previous_hpos = current_hpos
 		check_previous_boundaries()
 		current_hpos += 1
