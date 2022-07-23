@@ -1,6 +1,6 @@
 extends Control
 
-
+# Navigation
 var previous_vpos := 0
 var current_vpos := 0
 var previous_hpos := 0
@@ -8,6 +8,13 @@ var current_hpos := 0
 
 var current_node := "0_0"
 var previous_node := ""
+
+#status
+var old_commentaires := 2
+var old_bruitages := 2
+var old_musique := 2
+
+var old_node := ""
 
 func _ready():
 	pass
@@ -49,6 +56,82 @@ func _physics_process(_delta):
 		current_node = str(current_vpos) + "_" + str(current_hpos)
 		turn_on_off()
 
+	elif (Input.is_action_just_pressed("ui_a")):
+		if current_vpos == 0:
+			if current_hpos == 0:
+				if get_node(current_node).modulate.a != 1:
+					get_node("0_" + str(old_commentaires)).modulate.a = 0
+					get_node(current_node).modulate.a = 1
+					old_commentaires = 0
+					
+			elif current_hpos == 1:
+				if get_node(current_node).modulate.a != 1:
+					get_node("0_" + str(old_commentaires)).modulate.a = 0
+					get_node(current_node).modulate.a = 1
+					old_commentaires = 1
+					
+			elif current_hpos == 2:
+				if get_node(current_node).modulate.a != 1:
+					get_node("0_" + str(old_commentaires)).modulate.a = 0
+					get_node(current_node).modulate.a = 1
+					old_commentaires = 2
+					
+			elif current_hpos == 3:
+				if get_node(current_node).modulate.a != 1:
+					get_node(current_node).modulate.a = 1
+					get_node("0_" + str(old_commentaires)).modulate.a = 0
+					old_commentaires = 3
+					
+		elif current_vpos == 1:
+			if current_hpos == 0:
+				if get_node(current_node).modulate.a != 1:
+					get_node("1_" + str(old_bruitages)).modulate.a = 0
+					get_node(current_node).modulate.a = 1
+					old_bruitages = 0
+					
+			elif current_hpos == 1:
+				if get_node(current_node).modulate.a != 1:
+					get_node("1_" + str(old_bruitages)).modulate.a = 0
+					get_node(current_node).modulate.a = 1
+					old_bruitages = 1
+					
+			elif current_hpos == 2:
+				if get_node(current_node).modulate.a != 1:
+					get_node("1_" + str(old_bruitages)).modulate.a = 0
+					get_node(current_node).modulate.a = 1
+					old_bruitages = 2
+					
+			elif current_hpos == 3:
+				if get_node(current_node).modulate.a != 1:
+					get_node(current_node).modulate.a = 1
+					get_node("1_" + str(old_bruitages)).modulate.a = 0
+					old_bruitages = 3
+					
+		elif current_vpos == 2:
+			if current_hpos == 0:
+				if get_node(current_node).modulate.a != 1:
+					get_node("2_" + str(old_musique)).modulate.a = 0
+					get_node(current_node).modulate.a = 1
+					old_musique = 0
+					
+			elif current_hpos == 1:
+				if get_node(current_node).modulate.a != 1:
+					get_node("2_" + str(old_musique)).modulate.a = 0
+					get_node(current_node).modulate.a = 1
+					old_musique = 1
+					
+			elif current_hpos == 2:
+				if get_node(current_node).modulate.a != 1:
+					get_node("2_" + str(old_musique)).modulate.a = 0
+					get_node(current_node).modulate.a = 1
+					old_musique = 2
+					
+			elif current_hpos == 3:
+				if get_node(current_node).modulate.a != 1:
+					get_node(current_node).modulate.a = 1
+					get_node("2_" + str(old_musique)).modulate.a = 0
+					old_musique = 3
+				
 func check_previous_boundaries():
 	if previous_vpos < 0:
 		previous_vpos = 2
@@ -70,5 +153,10 @@ func check_current_boundaries():
 		current_hpos = 0
 
 func turn_on_off():
-	get_node(previous_node).modulate = Color(1,1,1,0)
-	get_node(current_node).modulate = Color(1,1,1,1)
+	if get_node(previous_node).modulate.a == 1:
+		get_node(current_node).modulate.a = 0.5
+	elif get_node(current_node).modulate.a == 1:
+		get_node(previous_node).modulate.a = 0
+	else:
+		get_node(previous_node).modulate.a = 0
+		get_node(current_node).modulate.a = 0.5

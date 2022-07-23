@@ -42,7 +42,7 @@ func check_previous_boundaries():
 		previous_pos = 0
 
 func turn_on_off():
-	get_node(previous_node).modulate = Color(1,1,1,0)
-	get_node(current_node).modulate = Color(1,1,1,1)
+	get_node(previous_node).modulate.a = 0
+	get_node(current_node).modulate.a = 1
 
 
