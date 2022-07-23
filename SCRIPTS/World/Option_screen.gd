@@ -153,7 +153,9 @@ func check_current_boundaries():
 		current_hpos = 0
 
 func turn_on_off():
-	if get_node(previous_node).modulate.a == 1:
+	if get_node(previous_node).modulate.a == 1 and get_node(current_node).modulate.a == 1:
+		pass
+	elif get_node(previous_node).modulate.a == 1:
 		get_node(current_node).modulate.a = 0.5
 	elif get_node(current_node).modulate.a == 1:
 		get_node(previous_node).modulate.a = 0
