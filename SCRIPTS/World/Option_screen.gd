@@ -10,9 +10,9 @@ var current_node := "0_0"
 var previous_node := ""
 
 #status
-var old_commentaires := 2
-var old_bruitages := 2
-var old_musique := 2
+var commentaires := 2
+var bruitages := 2
+var musique := 2
 
 var old_node := ""
 
@@ -60,77 +60,77 @@ func _physics_process(_delta):
 		if current_vpos == 0:
 			if current_hpos == 0:
 				if get_node(current_node).modulate.a != 1:
-					get_node("0_" + str(old_commentaires)).modulate.a = 0
+					get_node("0_" + str(commentaires)).modulate.a = 0
 					get_node(current_node).modulate.a = 1
-					old_commentaires = 0
+					commentaires = 0
 					
 			elif current_hpos == 1:
 				if get_node(current_node).modulate.a != 1:
-					get_node("0_" + str(old_commentaires)).modulate.a = 0
+					get_node("0_" + str(commentaires)).modulate.a = 0
 					get_node(current_node).modulate.a = 1
-					old_commentaires = 1
+					commentaires = 1
 					
 			elif current_hpos == 2:
 				if get_node(current_node).modulate.a != 1:
-					get_node("0_" + str(old_commentaires)).modulate.a = 0
+					get_node("0_" + str(commentaires)).modulate.a = 0
 					get_node(current_node).modulate.a = 1
-					old_commentaires = 2
+					commentaires = 2
 					
 			elif current_hpos == 3:
 				if get_node(current_node).modulate.a != 1:
 					get_node(current_node).modulate.a = 1
-					get_node("0_" + str(old_commentaires)).modulate.a = 0
-					old_commentaires = 3
+					get_node("0_" + str(commentaires)).modulate.a = 0
+					commentaires = 3
 					
 		elif current_vpos == 1:
 			if current_hpos == 0:
 				if get_node(current_node).modulate.a != 1:
-					get_node("1_" + str(old_bruitages)).modulate.a = 0
+					get_node("1_" + str(bruitages)).modulate.a = 0
 					get_node(current_node).modulate.a = 1
-					old_bruitages = 0
+					bruitages = 0
 					
 			elif current_hpos == 1:
 				if get_node(current_node).modulate.a != 1:
-					get_node("1_" + str(old_bruitages)).modulate.a = 0
+					get_node("1_" + str(bruitages)).modulate.a = 0
 					get_node(current_node).modulate.a = 1
-					old_bruitages = 1
+					bruitages = 1
 					
 			elif current_hpos == 2:
 				if get_node(current_node).modulate.a != 1:
-					get_node("1_" + str(old_bruitages)).modulate.a = 0
+					get_node("1_" + str(bruitages)).modulate.a = 0
 					get_node(current_node).modulate.a = 1
-					old_bruitages = 2
+					bruitages = 2
 					
 			elif current_hpos == 3:
 				if get_node(current_node).modulate.a != 1:
 					get_node(current_node).modulate.a = 1
-					get_node("1_" + str(old_bruitages)).modulate.a = 0
-					old_bruitages = 3
+					get_node("1_" + str(bruitages)).modulate.a = 0
+					bruitages = 3
 					
 		elif current_vpos == 2:
 			if current_hpos == 0:
 				if get_node(current_node).modulate.a != 1:
-					get_node("2_" + str(old_musique)).modulate.a = 0
+					get_node("2_" + str(musique)).modulate.a = 0
 					get_node(current_node).modulate.a = 1
-					old_musique = 0
+					musique = 0
 					
 			elif current_hpos == 1:
 				if get_node(current_node).modulate.a != 1:
-					get_node("2_" + str(old_musique)).modulate.a = 0
+					get_node("2_" + str(musique)).modulate.a = 0
 					get_node(current_node).modulate.a = 1
-					old_musique = 1
+					musique = 1
 					
 			elif current_hpos == 2:
 				if get_node(current_node).modulate.a != 1:
-					get_node("2_" + str(old_musique)).modulate.a = 0
+					get_node("2_" + str(musique)).modulate.a = 0
 					get_node(current_node).modulate.a = 1
-					old_musique = 2
+					musique = 2
 					
 			elif current_hpos == 3:
 				if get_node(current_node).modulate.a != 1:
 					get_node(current_node).modulate.a = 1
-					get_node("2_" + str(old_musique)).modulate.a = 0
-					old_musique = 3
+					get_node("2_" + str(musique)).modulate.a = 0
+					musique = 3
 				
 func check_previous_boundaries():
 	if previous_vpos < 0:
