@@ -57,80 +57,7 @@ func _physics_process(_delta):
 		turn_on_off()
 
 	elif (Input.is_action_just_pressed("ui_a")):
-		if current_vpos == 0:
-			if current_hpos == 0:
-				if get_node(current_node).modulate.a != 1:
-					get_node("0_" + str(commentaires)).modulate.a = 0
-					get_node(current_node).modulate.a = 1
-					commentaires = 0
-					
-			elif current_hpos == 1:
-				if get_node(current_node).modulate.a != 1:
-					get_node("0_" + str(commentaires)).modulate.a = 0
-					get_node(current_node).modulate.a = 1
-					commentaires = 1
-					
-			elif current_hpos == 2:
-				if get_node(current_node).modulate.a != 1:
-					get_node("0_" + str(commentaires)).modulate.a = 0
-					get_node(current_node).modulate.a = 1
-					commentaires = 2
-					
-			elif current_hpos == 3:
-				if get_node(current_node).modulate.a != 1:
-					get_node(current_node).modulate.a = 1
-					get_node("0_" + str(commentaires)).modulate.a = 0
-					commentaires = 3
-					
-		elif current_vpos == 1:
-			if current_hpos == 0:
-				if get_node(current_node).modulate.a != 1:
-					get_node("1_" + str(bruitages)).modulate.a = 0
-					get_node(current_node).modulate.a = 1
-					bruitages = 0
-					
-			elif current_hpos == 1:
-				if get_node(current_node).modulate.a != 1:
-					get_node("1_" + str(bruitages)).modulate.a = 0
-					get_node(current_node).modulate.a = 1
-					bruitages = 1
-					
-			elif current_hpos == 2:
-				if get_node(current_node).modulate.a != 1:
-					get_node("1_" + str(bruitages)).modulate.a = 0
-					get_node(current_node).modulate.a = 1
-					bruitages = 2
-					
-			elif current_hpos == 3:
-				if get_node(current_node).modulate.a != 1:
-					get_node(current_node).modulate.a = 1
-					get_node("1_" + str(bruitages)).modulate.a = 0
-					bruitages = 3
-					
-		elif current_vpos == 2:
-			if current_hpos == 0:
-				if get_node(current_node).modulate.a != 1:
-					get_node("2_" + str(musique)).modulate.a = 0
-					get_node(current_node).modulate.a = 1
-					musique = 0
-					
-			elif current_hpos == 1:
-				if get_node(current_node).modulate.a != 1:
-					get_node("2_" + str(musique)).modulate.a = 0
-					get_node(current_node).modulate.a = 1
-					musique = 1
-					
-			elif current_hpos == 2:
-				if get_node(current_node).modulate.a != 1:
-					get_node("2_" + str(musique)).modulate.a = 0
-					get_node(current_node).modulate.a = 1
-					musique = 2
-					
-			elif current_hpos == 3:
-				if get_node(current_node).modulate.a != 1:
-					get_node(current_node).modulate.a = 1
-					get_node("2_" + str(musique)).modulate.a = 0
-					musique = 3
+		validation()
 				
 func check_previous_boundaries():
 	if previous_vpos < 0:
@@ -151,6 +78,19 @@ func check_current_boundaries():
 		current_hpos = 3
 	elif current_hpos > 3:
 		current_hpos = 0
+
+func validation():
+	if get_node(current_node).modulate.a != 1:
+		get_node(current_node).modulate.a = 1
+		if current_vpos == 0:
+			get_node("0_" + str(commentaires)).modulate.a = 0
+			commentaires = current_hpos
+		elif current_vpos == 1:
+			get_node("1_" + str(bruitages)).modulate.a = 0
+			bruitages = current_hpos
+		elif current_vpos == 2:
+			get_node("2_" + str(musique)).modulate.a = 0
+			musique = current_hpos
 
 func turn_on_off():
 	if get_node(previous_node).modulate.a == 1 and get_node(current_node).modulate.a == 1:
