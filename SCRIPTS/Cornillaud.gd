@@ -1,9 +1,5 @@
 extends Node2D
 
-func _ready():
-	CharacterSelectionManager.player = preload("res://SCENES/Moulue.tscn")
-	CharacterSelectionManager.opponent = preload("res://SCENES/Couillu.tscn")
-
 func _physics_process(_delta):
 	if Input.is_action_just_pressed("ui_right") or Input.is_action_just_pressed("ui_left"):
 		if $AnimatedSprite.animation == "C_M":
