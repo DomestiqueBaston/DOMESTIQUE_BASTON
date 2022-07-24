@@ -12,9 +12,8 @@ func _ready():
 	print(gameOpponent.name, " ", gameOpponent.position, " ", gamePlayer.name)
 	SetUpScene()
 
-func _physics_process(_delta):
-#	$TransitionScreen.transition()
-	if Input.is_action_pressed("ui_a") && Input.is_action_pressed("ui_b") && Input.is_action_pressed("ui_x") && Input.is_action_pressed("ui_y"):
+func _input(event):
+	if event.is_action_pressed("ui_cancel"):
 		get_tree().quit()
 
 func SetUpScene():
