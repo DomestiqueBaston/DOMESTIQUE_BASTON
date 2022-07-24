@@ -34,7 +34,7 @@ __meta__ = {
 }
 
 [node name="0_0" type="TextureRect" parent="Control"]
-modulate = Color( 1, 1, 1, 0.498039 )
+modulate = Color( 1, 1, 1, 0.666667 )
 margin_right = 305.0
 margin_bottom = 111.0
 texture = ExtResource( 7 )
