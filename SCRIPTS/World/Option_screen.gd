@@ -102,7 +102,6 @@ func turn_on_off():
 		get_node(current_node).modulate.a = 0.666
 	elif get_node(current_node).modulate.a == 1:
 		get_node(current_node).modulate = Color(0.4,0.5,0.5)
-#		get_node(previous_node).modulate.a = 0
 		get_node(previous_node).modulate = Color(1,1,1,0)
 	else:
 		get_node(previous_node).modulate.a = 0
