@@ -81,8 +81,7 @@ func check_current_boundaries():
 
 func validation():
 	if get_node(current_node).modulate.a != 1:
-		get_node(current_node).modulate.a = 1
-		get_node(current_node).modulate = Color(0.4,0.5,0.5)
+		get_node(current_node).modulate = Color(0.45,0.5,0.5,1)
 		if current_vpos == 0:
 			get_node("0_" + str(commentaires)).modulate.a = 0
 			commentaires = current_hpos
@@ -96,12 +95,12 @@ func validation():
 func turn_on_off():
 	if get_node(previous_node).modulate.a == 1 and get_node(current_node).modulate.a == 1:
 		get_node(previous_node).modulate = Color(1,1,1)
-		get_node(current_node).modulate = Color(0.4,0.5,0.5)
+		get_node(current_node).modulate = Color(0.45,0.5,0.5)
 	elif get_node(previous_node).modulate.a == 1:
 		get_node(previous_node).modulate = Color(1,1,1)
 		get_node(current_node).modulate.a = 0.666
 	elif get_node(current_node).modulate.a == 1:
-		get_node(current_node).modulate = Color(0.4,0.5,0.5)
+		get_node(current_node).modulate = Color(0.45,0.5,0.5)
 		get_node(previous_node).modulate = Color(1,1,1,0)
 	else:
 		get_node(previous_node).modulate.a = 0
