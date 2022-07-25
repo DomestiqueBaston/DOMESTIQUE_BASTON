@@ -9,4 +9,5 @@ func _physics_process(_delta):
 		$TransitionScreen.transition()
 		
 func _on_TransitionScreen_transitioned():
-	get_tree().change_scene("res://SCENES/Cornillaud.tscn")
+	# warning-ignore:return_value_discarded
+	get_tree().change_scene("res://SCENES/Start_Screen.tscn")

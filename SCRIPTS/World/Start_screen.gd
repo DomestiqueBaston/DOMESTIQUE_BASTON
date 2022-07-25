@@ -1,6 +1,12 @@
 extends Control
 
 
+var reglons = "res://SCENES/Cornillaud.tscn"
+var changer = "res://SCENES/Option_screen.tscn"
+var chasse = "res://SCENES/Credits.tscn"
+var choice = ""
+
+
 var current_pos := 0
 var previous_pos := 0
 var current_node := "Reglons_ON"
@@ -28,6 +34,17 @@ func _physics_process(_delta):
 		previous_node = str(previous_pos)
 		current_node = str(current_pos)
 		turn_on_off()
+		
+	elif (Input.is_action_just_pressed("ui_a")):
+		if current_pos == 0:
+			choice = reglons
+		elif current_pos == 1:
+			choice = changer
+		elif current_pos == 2:
+			choice = chasse
+		else:
+			get_tree().quit()
+		get_node("../TransitionScreen").transition()
 
 func check_current_boundaries():
 	if current_pos < 0:
@@ -45,4 +62,7 @@ func turn_on_off():
 	get_node(previous_node).modulate.a = 0
 	get_node(current_node).modulate.a = 1
 
+func _on_TransitionScreen_transitioned():
+	# warning-ignore:return_value_discarded
+	get_tree().change_scene(choice)
 

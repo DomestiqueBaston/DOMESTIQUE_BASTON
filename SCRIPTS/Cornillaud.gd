@@ -1,5 +1,9 @@
 extends Node2D
 
+var baston = "res://SCENES/BASTON.tscn"
+var retour = "res://SCENES/Start_Screen.tscn"
+var choice = ""
+
 func _physics_process(_delta):
 	if Input.is_action_just_pressed("ui_right") or Input.is_action_just_pressed("ui_left"):
 		if $AnimatedSprite.animation == "C_M":
@@ -12,6 +16,7 @@ func _physics_process(_delta):
 			CharacterSelectionManager.opponent = preload("res://SCENES/Couillu.tscn")
 			
 	elif Input.is_action_just_pressed("ui_a"):
+		choice = baston
 		MusicController.stop_music()
 		$TransitionScreen.transition()
 		
@@ -22,6 +27,10 @@ func _physics_process(_delta):
 	elif Input.is_action_just_pressed("top_left"):
 		$TransitionScreen.transition()
 		get_tree().change_scene("res://SCENES/Moulue_cds.tscn")
-		
+	
+	elif Input.is_action_just_pressed("ui_x"):
+		choice = retour
+		$TransitionScreen.transition()
+
 func _on_TransitionScreen_transitioned():
-	get_tree().change_scene("res://SCENES/BASTON.tscn")
+	get_tree().change_scene(choice)

@@ -1,5 +1,6 @@
 extends Control
 
+
 # Navigation
 var previous_vpos := 0
 var current_vpos := 0
@@ -58,7 +59,10 @@ func _physics_process(_delta):
 
 	elif (Input.is_action_just_pressed("ui_a")):
 		validation()
-				
+	
+	elif (Input.is_action_just_pressed("ui_x")):
+		get_node("../TransitionScreen").transition()
+		
 func check_previous_boundaries():
 	if previous_vpos < 0:
 		previous_vpos = 2
@@ -105,3 +109,7 @@ func turn_on_off():
 	else:
 		get_node(previous_node).modulate.a = 0
 		get_node(current_node).modulate.a = 0.5
+
+func _on_TransitionScreen_transitioned():
+	# warning-ignore:return_value_discarded
+	get_tree().change_scene("res://SCENES/Start_Screen.tscn")
