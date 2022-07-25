@@ -17,14 +17,14 @@
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ ExtResource( 7 ), ExtResource( 8 ), ExtResource( 11 ), ExtResource( 2 ), ExtResource( 4 ), ExtResource( 10 ) ],
-"loop": false,
-"name": "C_M",
-"speed": 15.0
-}, {
 "frames": [ ExtResource( 9 ), ExtResource( 3 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 12 ), ExtResource( 13 ) ],
 "loop": false,
 "name": "M_C",
+"speed": 15.0
+}, {
+"frames": [ ExtResource( 7 ), ExtResource( 8 ), ExtResource( 11 ), ExtResource( 2 ), ExtResource( 4 ), ExtResource( 10 ) ],
+"loop": false,
+"name": "C_M",
 "speed": 15.0
 } ]
 
