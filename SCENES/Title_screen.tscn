@@ -56,8 +56,8 @@ tracks/0/keys = {
 script = ExtResource( 4 )
 
 [node name="BlackRect" type="TextureRect" parent="."]
-margin_right = 40.0
-margin_bottom = 40.0
+margin_right = 305.0
+margin_bottom = 111.0
 texture = ExtResource( 3 )
 
 [node name="Title" type="TextureRect" parent="."]

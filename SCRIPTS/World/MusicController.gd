@@ -13,5 +13,6 @@ func stop_music():
 	
 func play_music():
 	$Music.stream = main_music
+	$Music.volume_db = SoundLevels.normal_level
 	$Music.play()
 

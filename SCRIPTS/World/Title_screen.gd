@@ -3,6 +3,7 @@ extends Node2D
 
 func _ready():
 	MusicController.play_music()
+	$Title/AudioStreamPlayer.volume_db = SoundLevels.normal_level
 
 func _physics_process(_delta):
 	if Input.is_action_just_pressed("ui_a"):

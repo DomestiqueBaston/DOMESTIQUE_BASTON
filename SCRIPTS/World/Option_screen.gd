@@ -7,18 +7,21 @@ var current_vpos := 0
 var previous_hpos := 0
 var current_hpos := 0
 
-var current_node := "0_0"
 var previous_node := ""
+var current_node := "0_0"
 
-#status
-var commentaires := 2
-var bruitages := 2
-var musique := 2
+var line_name = ""
 
-var old_node := ""
+
 
 func _ready():
-	pass
+	get_node("0_" + str(SoundLevels.commentaires)).modulate = SoundLevels.violet
+	if get_node("0_0").modulate == Color(1,1,1):
+		get_node("0_0").modulate = SoundLevels.black
+	else:
+		get_node("0_0").modulate = SoundLevels.half
+	get_node("1_" + str(SoundLevels.bruitages)).modulate = SoundLevels.violet
+	get_node("2_" + str(SoundLevels.musique)).modulate = SoundLevels.violet
 
 func _physics_process(_delta):
 	if (Input.is_action_just_pressed("ui_down")):
@@ -83,33 +86,53 @@ func check_current_boundaries():
 	elif current_hpos > 3:
 		current_hpos = 0
 
+# Validation of level values
 func validation():
 	if get_node(current_node).modulate.a != 1:
-		get_node(current_node).modulate = Color(0.45,0.5,0.5,1)
+		get_node(current_node).modulate = SoundLevels.black
 		if current_vpos == 0:
-			get_node("0_" + str(commentaires)).modulate.a = 0
-			commentaires = current_hpos
+			get_node("0_" + str(SoundLevels.commentaires)).modulate = SoundLevels.white
+			SoundLevels.commentaires = current_hpos
+			line_name = "commentaires_value"
+			change_sound_level()
 		elif current_vpos == 1:
-			get_node("1_" + str(bruitages)).modulate.a = 0
-			bruitages = current_hpos
-		elif current_vpos == 2:
-			get_node("2_" + str(musique)).modulate.a = 0
-			musique = current_hpos
-
+			get_node("1_" + str(SoundLevels.bruitages)).modulate = SoundLevels.white
+			SoundLevels.bruitages = current_hpos
+			line_name = "bruitages_value"
+			change_sound_level()
+		else:
+			get_node("2_" + str(SoundLevels.musique)).modulate = SoundLevels.white
+			SoundLevels.musique = current_hpos
+			line_name = "musique_value"
+			change_sound_level()
+			get_node('/root/MusicController/Music').volume_db = SoundLevels.musique_value
+			
+# Cursor color management
 func turn_on_off():
 	if get_node(previous_node).modulate.a == 1 and get_node(current_node).modulate.a == 1:
-		get_node(previous_node).modulate = Color(1,1,1)
-		get_node(current_node).modulate = Color(0.45,0.5,0.5)
+		get_node(previous_node).modulate = SoundLevels.violet
+		get_node(current_node).modulate = SoundLevels.black
 	elif get_node(previous_node).modulate.a == 1:
-		get_node(previous_node).modulate = Color(1,1,1)
-		get_node(current_node).modulate.a = 0.5
+		get_node(previous_node).modulate = SoundLevels.violet
+		get_node(current_node).modulate = SoundLevels.half
 	elif get_node(current_node).modulate.a == 1:
-		get_node(current_node).modulate = Color(0.45,0.5,0.5)
-		get_node(previous_node).modulate = Color(1,1,1,0)
+		get_node(current_node).modulate = SoundLevels.black
+		get_node(previous_node).modulate = SoundLevels.white
 	else:
-		get_node(previous_node).modulate.a = 0
-		get_node(current_node).modulate.a = 0.5
+		get_node(previous_node).modulate = SoundLevels.white
+		get_node(current_node).modulate = SoundLevels.half
 
 func _on_TransitionScreen_transitioned():
 	# warning-ignore:return_value_discarded
 	get_tree().change_scene("res://SCENES/Start_Screen.tscn")
+	
+func change_sound_level():
+	if current_hpos == 0:
+		SoundLevels.set(line_name, SoundLevels.no_sound_level)
+	elif current_hpos == 1:
+		SoundLevels.set(line_name, SoundLevels.half_level)
+	elif current_hpos == 2:
+		SoundLevels.set(line_name, SoundLevels.normal_level)
+	else:
+		SoundLevels.set(line_name, SoundLevels.more_than_full_level)
+		

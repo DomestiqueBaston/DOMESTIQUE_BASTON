@@ -11,4 +11,5 @@ func _physics_process(_delta) -> void:
 
 
 func _on_TransitionScreen_transitioned() -> void:
+# warning-ignore:return_value_discarded
 	get_tree().change_scene("res://SCENES/Start_Screen.tscn")

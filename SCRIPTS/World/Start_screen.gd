@@ -2,7 +2,7 @@ extends Control
 
 
 var reglons = "res://SCENES/Cornillaud.tscn"
-var changer = "res://SCENES/Option_screen.tscn"
+var changer = "res://SCENES/Option_Screen.tscn"
 var chasse = "res://SCENES/Credits.tscn"
 var choice = ""
 
