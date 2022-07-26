@@ -19,3 +19,12 @@ const no_sound_level: float = -80.0
 var commentaires_value: float = 0.0
 var bruitages_value: float = 0.0
 var musique_value: float = 0.0
+
+var truth = true
+	
+
+func _input(event):
+	if (Input.is_action_just_pressed('full_screen')):
+		OS.window_fullscreen = truth
+		truth = !truth
+
