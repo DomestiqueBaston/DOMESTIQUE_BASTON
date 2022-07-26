@@ -9,7 +9,7 @@
 
 [sub_resource type="Animation" id=1]
 resource_name = "Bourre"
-length = 20.6
+length = 30.0
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:modulate")
 tracks/0/interp = 1
@@ -17,7 +17,7 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 20, 20.1, 20.2, 20.3, 20.4, 20.5 ),
+"times": PoolRealArray( 0, 29.4, 29.5, 29.6, 29.7, 29.8, 29.9 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
 "update": 1,
 "values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0.501961 ), Color( 1, 1, 1, 0.12549 ), Color( 1, 1, 1, 0.752941 ), Color( 1, 1, 1, 0.501961 ), Color( 1, 1, 1, 1 ) ]
@@ -34,7 +34,7 @@ tracks/1/keys = {
 "start_offset": 0.0,
 "stream": ExtResource( 6 )
 } ],
-"times": PoolRealArray( 20 )
+"times": PoolRealArray( 29.4 )
 }
 
 [sub_resource type="Animation" id=2]
