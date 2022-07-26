@@ -14,6 +14,7 @@ func whole_music():
 
 func play(clip: AudioStream):
 	$Bernard.stream = clip
+	$Bernard.volume_db = SoundLevels.musique_value
 	$Bernard.play()
 
 
