@@ -22,10 +22,10 @@ func _physics_process(_delta):
 		MusicController.stop_music()
 		$TransitionScreen.transition()
 		
-	elif Input.is_action_just_pressed("top_right"):
+	elif Input.is_action_just_pressed("ui_b"):
 		get_tree().change_scene("res://SCENES/Couillu_cds.tscn")
 		
-	elif Input.is_action_just_pressed("top_left"):
+	elif Input.is_action_just_pressed("ui_y"):
 		get_tree().change_scene("res://SCENES/Moulue_cds.tscn")
 	
 	elif Input.is_action_just_pressed("ui_x"):

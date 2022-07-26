@@ -5,9 +5,14 @@ func _ready():
 	MusicController.play_music()
 	$Title/AudioStreamPlayer.volume_db = SoundLevels.normal_level
 
-func _physics_process(_delta):
-	if Input.is_action_just_pressed("ui_a"):
-		$TransitionScreen.transition()
+func _input(event):
+	if event is InputEventKey and event.pressed:
+		if (Input.is_key_pressed(KEY_ALT)):
+			pass
+		elif (Input.is_key_pressed(KEY_ENTER)):
+			pass
+		else:
+			$TransitionScreen.transition()
 		
 func _on_TransitionScreen_transitioned():
 	# warning-ignore:return_value_discarded
