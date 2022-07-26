@@ -13,6 +13,8 @@ func _input(event):
 			pass
 		else:
 			$TransitionScreen.transition()
+	elif event is InputEventJoypadButton and event.pressed:
+		$TransitionScreen.transition()
 		
 func _on_TransitionScreen_transitioned():
 	# warning-ignore:return_value_discarded
