@@ -14,6 +14,7 @@ var line_name = ""
 
 
 
+
 func _ready():
 	get_node("0_" + str(SoundLevels.commentaires)).modulate = SoundLevels.violet
 	if get_node("0_0").modulate == Color(1,1,1):
