@@ -26,7 +26,7 @@ onready var animatedSprite = $AnimatedSprite
 
 onready var gameRef = get_parent()
 
-onready var player = get_parent().get_node(gameRef.gamePlayer.name)
+onready var player = get_parent().get_startscreen_node(gameRef.gamePlayer.name)
 
 func _ready():
 	m_gKeys = generalMoves.keys()

@@ -17,7 +17,7 @@ config/windows_native_icon="res://icon_v02_tous_formats.ico"
 
 [autoload]
 
-SoundLevels="*res://SCRIPTS/SoundLevels.gd"
+PreloadScript01="*res://SCRIPTS/PreloadScript01.gd"
 MusicController="*res://SCENES/MusicController.tscn"
 CharacterSelectionManager="*res://SCRIPTS/Managers/CharacterSelectionManager.gd"
 MoveSetManager="*res://SCRIPTS/Managers/MoveSetManager.gd"

@@ -3,7 +3,7 @@ extends Node2D
 
 func _ready():
 	MusicController.play_music()
-	$Title/AudioStreamPlayer.volume_db = SoundLevels.normal_level
+	$Title/AudioStreamPlayer.volume_db = PreloadScript01.normal_level
 
 func _input(event):
 	if event is InputEventKey and event.pressed:

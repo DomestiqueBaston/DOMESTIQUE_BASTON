@@ -6,7 +6,7 @@ var moulue = "res://SCENES/Moulue_cds.tscn"
 var couillu = "res://SCENES/Couillu_cds.tscn"
 var choice = ""
 
-func _physics_process(_delta):
+func _input(_event):
 	if Input.is_action_just_pressed("ui_right") or Input.is_action_just_pressed("ui_left"):
 		if $AnimatedSprite.animation == "C_M":
 			$AnimatedSprite.play("M_C")
@@ -35,3 +35,4 @@ func _physics_process(_delta):
 func _on_TransitionScreen_transitioned():
 # warning-ignore:return_value_discarded
 	get_tree().change_scene(choice)
+	

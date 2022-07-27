@@ -16,15 +16,15 @@ var line_name = ""
 
 
 func _ready():
-	get_node("0_" + str(SoundLevels.commentaires)).modulate = SoundLevels.violet
+	get_node("0_" + str(PreloadScript01.commentaires)).modulate = PreloadScript01.violet
 	if get_node("0_0").modulate == Color(1,1,1):
-		get_node("0_0").modulate = SoundLevels.black
+		get_node("0_0").modulate = PreloadScript01.black
 	else:
-		get_node("0_0").modulate = SoundLevels.half
-	get_node("1_" + str(SoundLevels.bruitages)).modulate = SoundLevels.violet
-	get_node("2_" + str(SoundLevels.musique)).modulate = SoundLevels.violet
+		get_node("0_0").modulate = PreloadScript01.half
+	get_node("1_" + str(PreloadScript01.bruitages)).modulate = PreloadScript01.violet
+	get_node("2_" + str(PreloadScript01.musique)).modulate = PreloadScript01.violet
 
-func _physics_process(_delta):
+func _input(_event):
 	if (Input.is_action_just_pressed("ui_down")):
 		previous_vpos = current_vpos
 		check_previous_boundaries()
@@ -90,38 +90,38 @@ func check_current_boundaries():
 # Validation of level values
 func validation():
 	if get_node(current_node).modulate.a != 1:
-		get_node(current_node).modulate = SoundLevels.black
+		get_node(current_node).modulate = PreloadScript01.black
 		if current_vpos == 0:
-			get_node("0_" + str(SoundLevels.commentaires)).modulate = SoundLevels.white
-			SoundLevels.commentaires = current_hpos
+			get_node("0_" + str(PreloadScript01.commentaires)).modulate = PreloadScript01.white
+			PreloadScript01.commentaires = current_hpos
 			line_name = "commentaires_value"
 			change_sound_level()
 		elif current_vpos == 1:
-			get_node("1_" + str(SoundLevels.bruitages)).modulate = SoundLevels.white
-			SoundLevels.bruitages = current_hpos
+			get_node("1_" + str(PreloadScript01.bruitages)).modulate = PreloadScript01.white
+			PreloadScript01.bruitages = current_hpos
 			line_name = "bruitages_value"
 			change_sound_level()
 		else:
-			get_node("2_" + str(SoundLevels.musique)).modulate = SoundLevels.white
-			SoundLevels.musique = current_hpos
+			get_node("2_" + str(PreloadScript01.musique)).modulate = PreloadScript01.white
+			PreloadScript01.musique = current_hpos
 			line_name = "musique_value"
 			change_sound_level()
-			get_node('/root/MusicController/Music').volume_db = SoundLevels.musique_value
+			get_node('/root/MusicController/Music').volume_db = PreloadScript01.musique_value
 			
 # Cursor color management
 func turn_on_off():
 	if get_node(previous_node).modulate.a == 1 and get_node(current_node).modulate.a == 1:
-		get_node(previous_node).modulate = SoundLevels.violet
-		get_node(current_node).modulate = SoundLevels.black
+		get_node(previous_node).modulate = PreloadScript01.violet
+		get_node(current_node).modulate = PreloadScript01.black
 	elif get_node(previous_node).modulate.a == 1:
-		get_node(previous_node).modulate = SoundLevels.violet
-		get_node(current_node).modulate = SoundLevels.half
+		get_node(previous_node).modulate = PreloadScript01.violet
+		get_node(current_node).modulate = PreloadScript01.half
 	elif get_node(current_node).modulate.a == 1:
-		get_node(current_node).modulate = SoundLevels.black
-		get_node(previous_node).modulate = SoundLevels.white
+		get_node(current_node).modulate = PreloadScript01.black
+		get_node(previous_node).modulate = PreloadScript01.white
 	else:
-		get_node(previous_node).modulate = SoundLevels.white
-		get_node(current_node).modulate = SoundLevels.half
+		get_node(previous_node).modulate = PreloadScript01.white
+		get_node(current_node).modulate = PreloadScript01.half
 
 func _on_TransitionScreen_transitioned():
 	# warning-ignore:return_value_discarded
@@ -129,11 +129,10 @@ func _on_TransitionScreen_transitioned():
 	
 func change_sound_level():
 	if current_hpos == 0:
-		SoundLevels.set(line_name, SoundLevels.no_sound_level)
+		PreloadScript01.set(line_name, PreloadScript01.no_sound_level)
 	elif current_hpos == 1:
-		SoundLevels.set(line_name, SoundLevels.half_level)
+		PreloadScript01.set(line_name, PreloadScript01.half_level)
 	elif current_hpos == 2:
-		SoundLevels.set(line_name, SoundLevels.normal_level)
+		PreloadScript01.set(line_name, PreloadScript01.normal_level)
 	else:
-		SoundLevels.set(line_name, SoundLevels.more_than_full_level)
-		
+		PreloadScript01.set(line_name, PreloadScript01.more_than_full_level)

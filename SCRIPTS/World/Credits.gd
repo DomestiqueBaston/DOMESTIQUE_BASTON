@@ -5,7 +5,7 @@ extends Node2D
 func _ready() -> void:
 	pass
 	
-func _physics_process(_delta) -> void:
+func _input(_event):
 	if Input.is_action_just_pressed("ui_x"):
 		$TransitionScreen.transition()
 
