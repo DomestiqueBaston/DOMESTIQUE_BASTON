@@ -11,7 +11,7 @@ var previous_node := "3"
 const white = Color(1,1,1,0)
 const black = Color(0.45,0.5,0.5,1)
 const violet = Color(1,1,1,1)
-const half = Color(1,1,1,0.5)
+const half = Color(1,0.55,0.84,0.5)
 
 #Sound levels
 const more_than_full_level: float = 7.5

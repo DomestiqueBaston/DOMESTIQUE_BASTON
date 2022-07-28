@@ -26,20 +26,28 @@ func _input(_event):
 		$TransitionScreen.transition()
 		
 	elif Input.is_action_just_pressed("ui_b"):
-		if couillu_alpha == 0.0:
+		if moulue_alpha == 1.0:
+			pass
+		elif couillu_alpha == 0.0:
+			moulue_alpha = 0.0
 			couillu_alpha = 1.0
 			play_validation()
-		else:
+		elif couillu_alpha == 1.0:
 			couillu_alpha = 0.0
+			moulue_alpha = 0.0
 			play_cancel()
 		$Couillu_cds.modulate.a = couillu_alpha
 		
 	elif Input.is_action_just_pressed("ui_y"):
-		if moulue_alpha == 0.0:
+		if couillu_alpha == 1.0:
+			pass
+		elif moulue_alpha == 0.0:
+			couillu_alpha = 0.0
 			moulue_alpha = 1.0
 			play_validation()
-		else:
+		elif moulue_alpha == 1.0:
 			moulue_alpha = 0.0
+			couillu_alpha = 0.0
 			play_cancel()
 		$Moulue_cds.modulate.a = moulue_alpha
 	
