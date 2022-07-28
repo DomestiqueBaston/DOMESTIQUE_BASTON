@@ -1,34 +1,29 @@
 extends Node2D
-
-onready var gamePlayer = CharacterSelectionManager.player.instance()
-onready var gameOpponent = CharacterSelectionManager.opponent.instance()
-
-var playerScript = preload("res://SCRIPTS/Characters/Player1.gd")
-
 export (Array) var portraits
 
-onready var portraitLeft = get_node("UI/Left/Portrait_Left") 
-onready var portraitRight = get_node("UI/Right/Portrait_Right") 
-
 func _ready():
-	print(gameOpponent.name, " ", gameOpponent.position, " ", gamePlayer.name)
-	SetUpScene()
+	var portraitLeft = get_node("UI/Left/Portrait_Left") 
+	var portraitRight = get_node("UI/Right/Portrait_Right") 
+
+	if CharacterSelectionManager.player == "Moulue":
+		$Moulue.player_number = Player.PlayerNumber.ONE
+		$Moulue.position = Vector2(49, 108)
+		$Moulue.scale = Vector2(1, 1)
+		$Couillu.player_number = Player.PlayerNumber.TWO
+		$Couillu.position = Vector2(232, 108)
+		$Couillu.scale = Vector2(-1, 1)
+		portraitLeft.texture = portraits[0]
+		portraitRight.texture = portraits[1]
+	else:
+		$Couillu.player_number = Player.PlayerNumber.ONE
+		$Couillu.position = Vector2(49, 108)
+		$Couillu.scale = Vector2(1, 1)
+		$Moulue.player_number = Player.PlayerNumber.TWO
+		$Moulue.position = Vector2(232, 108)
+		$Moulue.scale = Vector2(-1, 1)
+		portraitLeft.texture = portraits[1]
+		portraitRight.texture = portraits[0]
 
 func _input(event):
 	if event.is_action_pressed("ui_cancel"):
 		get_tree().quit()
-
-func SetUpScene():
-	gamePlayer.position = Vector2(49, 108)
-	gamePlayer.set_script(playerScript)
-	call_deferred("add_child", gamePlayer)
-	
-	gameOpponent.position = Vector2(232, 108)
-	call_deferred("add_child", gameOpponent)
-	
-	if(gamePlayer.name == "Moulue"):
-		portraitLeft.texture = portraits[0]
-		portraitRight.texture = portraits[1]
-	elif(gamePlayer.name == "Couillu"):
-		portraitLeft.texture = portraits[1]
-		portraitRight.texture = portraits[0]
