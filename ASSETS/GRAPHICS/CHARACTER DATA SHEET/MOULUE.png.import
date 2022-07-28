@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/MOULUE_v02.png-374bd425488172c2bc2239ed3de2a30b.stex"
+path="res://.import/MOULUE.png-4f5d98cce319770805461002ec4d2c12.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://ASSETS/GRAPHICS/CHARACTER DATA SHEET/MOULUE_v02.png"
-dest_files=[ "res://.import/MOULUE_v02.png-374bd425488172c2bc2239ed3de2a30b.stex" ]
+source_file="res://ASSETS/GRAPHICS/CHARACTER DATA SHEET/MOULUE.png"
+dest_files=[ "res://.import/MOULUE.png-4f5d98cce319770805461002ec4d2c12.stex" ]
 
 [params]
 

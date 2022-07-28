@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/COUILLU_v02.png-4e84b4a0c556a93f6e1e8d682955e83c.stex"
+path="res://.import/COUILLU.png-1b17e0eb3121be529ef6c610af31152b.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://ASSETS/GRAPHICS/CHARACTER DATA SHEET/COUILLU_v02.png"
-dest_files=[ "res://.import/COUILLU_v02.png-4e84b4a0c556a93f6e1e8d682955e83c.stex" ]
+source_file="res://ASSETS/GRAPHICS/CHARACTER DATA SHEET/COUILLU.png"
+dest_files=[ "res://.import/COUILLU.png-1b17e0eb3121be529ef6c610af31152b.stex" ]
 
 [params]
 
