@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://SCRIPTS/Cornillaud.gd" type="Script" id=1]
 [ext_resource path="res://ASSETS/GRAPHICS/CHARACTER SELECTION/A/character_selection_A_3.png" type="Texture" id=2]
@@ -16,6 +16,9 @@
 [ext_resource path="res://SCENES/Fade_scene.tscn" type="PackedScene" id=14]
 [ext_resource path="res://ASSETS/SOUNDS/EFFECTS/validation.wav" type="AudioStream" id=15]
 [ext_resource path="res://ASSETS/SOUNDS/EFFECTS/cancel.wav" type="AudioStream" id=16]
+[ext_resource path="res://ASSETS/SOUNDS/EFFECTS/slide.wav" type="AudioStream" id=17]
+[ext_resource path="res://ASSETS/GRAPHICS/CHARACTER DATA SHEET/MOULUE.png" type="Texture" id=18]
+[ext_resource path="res://ASSETS/GRAPHICS/CHARACTER DATA SHEET/COUILLU.png" type="Texture" id=19]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -39,11 +42,26 @@ stream = ExtResource( 15 )
 [node name="AudioCancel" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 16 )
 
+[node name="AudioSlide" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 17 )
+
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 1 )
 animation = "C_M"
 frame = 5
 centered = false
+
+[node name="Moulue_cds" type="TextureRect" parent="."]
+modulate = Color( 1, 1, 1, 0 )
+margin_right = 40.0
+margin_bottom = 40.0
+texture = ExtResource( 18 )
+
+[node name="Couillu_cds" type="TextureRect" parent="."]
+modulate = Color( 1, 1, 1, 0 )
+margin_right = 40.0
+margin_bottom = 40.0
+texture = ExtResource( 19 )
 
 [node name="TransitionScreen" parent="." instance=ExtResource( 14 )]
 

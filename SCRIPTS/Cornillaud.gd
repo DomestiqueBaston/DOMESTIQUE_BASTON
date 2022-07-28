@@ -5,6 +5,8 @@ var retour = "res://SCENES/Start_Screen.tscn"
 var moulue = "res://SCENES/Moulue_cds.tscn"
 var couillu = "res://SCENES/Couillu_cds.tscn"
 var choice = ""
+var moulue_alpha = 0.0
+var couillu_alpha = 0.0
 
 func _input(_event):
 	if Input.is_action_just_pressed("ui_right") or Input.is_action_just_pressed("ui_left"):
@@ -12,7 +14,7 @@ func _input(_event):
 			$AnimatedSprite.play("M_C")
 		else:
 			$AnimatedSprite.play("C_M")
-		play_validation()
+		play_slide()
 		var tmp = CharacterSelectionManager.player
 		CharacterSelectionManager.player = CharacterSelectionManager.opponent
 		CharacterSelectionManager.opponent = tmp
@@ -24,14 +26,22 @@ func _input(_event):
 		$TransitionScreen.transition()
 		
 	elif Input.is_action_just_pressed("ui_b"):
-		play_validation()
-		yield($AudioValid, "finished")
-		get_tree().change_scene("res://SCENES/Couillu_cds.tscn")
+		if couillu_alpha == 0.0:
+			couillu_alpha = 1.0
+			play_validation()
+		else:
+			couillu_alpha = 0.0
+			play_cancel()
+		$Couillu_cds.modulate.a = couillu_alpha
 		
 	elif Input.is_action_just_pressed("ui_y"):
-		play_validation()
-		yield($AudioValid, "finished")
-		get_tree().change_scene("res://SCENES/Moulue_cds.tscn")
+		if moulue_alpha == 0.0:
+			moulue_alpha = 1.0
+			play_validation()
+		else:
+			moulue_alpha = 0.0
+			play_cancel()
+		$Moulue_cds.modulate.a = moulue_alpha
 	
 	elif Input.is_action_just_pressed("ui_x"):
 		choice = retour
@@ -50,3 +60,8 @@ func play_cancel():
 	$AudioCancel.volume_db = PreloadScript01.bruitages_value
 	$AudioCancel.play()
 	yield($AudioCancel, "finished")
+	
+func play_slide():
+	$AudioSlide.volume_db = PreloadScript01.bruitages_value
+	$AudioSlide.play()
+	
