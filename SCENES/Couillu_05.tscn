@@ -476,7 +476,6 @@ tracks/18/keys = {
 [sub_resource type="Animation" id=1]
 resource_name = "Idle"
 length = 0.8
-loop = true
 tracks/0/type = "value"
 tracks/0/path = NodePath("Character:frame")
 tracks/0/interp = 1

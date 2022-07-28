@@ -1,7 +1,4 @@
 extends Node
 
-var player = preload("res://SCENES/Moulue.tscn")
-var opponent = preload("res://SCENES/Couillu.tscn")
-
-var playerScript = preload("res://SCRIPTS/Characters/Moulue.gd")
-var aiScript = preload("res://SCRIPTS/Characters/Couillu.gd")
+var player = preload("res://SCENES/Moulue_05.tscn")
+var opponent = preload("res://SCENES/Couillu_05.tscn")

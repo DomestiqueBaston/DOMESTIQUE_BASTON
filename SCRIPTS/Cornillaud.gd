@@ -10,12 +10,11 @@ func _input(_event):
 	if Input.is_action_just_pressed("ui_right") or Input.is_action_just_pressed("ui_left"):
 		if $AnimatedSprite.animation == "C_M":
 			$AnimatedSprite.play("M_C")
-			CharacterSelectionManager.player = preload("res://SCENES/Couillu.tscn")
-			CharacterSelectionManager.opponent = preload("res://SCENES/Moulue.tscn")
 		else:
 			$AnimatedSprite.play("C_M")
-			CharacterSelectionManager.player = preload("res://SCENES/Moulue.tscn")
-			CharacterSelectionManager.opponent = preload("res://SCENES/Couillu.tscn")
+		var tmp = CharacterSelectionManager.player
+		CharacterSelectionManager.player = CharacterSelectionManager.opponent
+		CharacterSelectionManager.opponent = tmp
 			
 	elif Input.is_action_just_pressed("ui_a"):
 		choice = baston
