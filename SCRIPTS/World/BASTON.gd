@@ -2,27 +2,29 @@ extends Node2D
 export (Array) var portraits
 
 func _ready():
-	var portraitLeft = get_node("UI/Left/Portrait_Left") 
-	var portraitRight = get_node("UI/Right/Portrait_Right") 
+	var portrait_left = get_node("UI/Left/Portrait_Left")
+	var portrait_right = get_node("UI/Right/Portrait_Right")
+	var player1
+	var player2
+	var player1_portrait_index
 
 	if CharacterSelectionManager.player == "Moulue":
-		$Moulue.player_number = Player.PlayerNumber.ONE
-		$Moulue.position = Vector2(49, 108)
-		$Moulue.scale = Vector2(1, 1)
-		$Couillu.player_number = Player.PlayerNumber.TWO
-		$Couillu.position = Vector2(232, 108)
-		$Couillu.scale = Vector2(-1, 1)
-		portraitLeft.texture = portraits[0]
-		portraitRight.texture = portraits[1]
+		player1 = $Moulue
+		player2 = $Couillu
+		player1_portrait_index = 0
 	else:
-		$Couillu.player_number = Player.PlayerNumber.ONE
-		$Couillu.position = Vector2(49, 108)
-		$Couillu.scale = Vector2(1, 1)
-		$Moulue.player_number = Player.PlayerNumber.TWO
-		$Moulue.position = Vector2(232, 108)
-		$Moulue.scale = Vector2(-1, 1)
-		portraitLeft.texture = portraits[1]
-		portraitRight.texture = portraits[0]
+		player1 = $Couillu
+		player2 = $Moulue
+		player1_portrait_index = 1
+	
+	player1.player_number = Player.PlayerNumber.ONE
+	player1.position = Vector2(49, 108)
+	player1.scale = Vector2(1, 1)
+	player2.player_number = Player.PlayerNumber.TWO
+	player2.position = Vector2(232, 108)
+	player2.scale = Vector2(-1, 1)
+	portrait_left.texture = portraits[player1_portrait_index]
+	portrait_right.texture = portraits[1 - player1_portrait_index]
 
 func _input(event):
 	if event.is_action_pressed("ui_cancel"):
