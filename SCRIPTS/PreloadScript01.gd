@@ -20,9 +20,9 @@ const half_level: float = -7.5
 const no_sound_level: float = -80.0
 
 #Option Screen variables
-var commentaires_value: float = 0.0
-var bruitages_value: float = 0.0
-var musique_value: float = 0.0
+var commentaires_value = normal_level
+var bruitages_value = normal_level
+var musique_value = normal_level
 
 var commentaires := 2
 var bruitages := 2

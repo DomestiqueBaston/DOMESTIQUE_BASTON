@@ -65,6 +65,7 @@ func _input(_event):
 		validation()
 	
 	elif (Input.is_action_just_pressed("ui_x")):
+		play_cancel()
 		get_node("../TransitionScreen").transition()
 		
 func check_previous_boundaries():
@@ -96,16 +97,19 @@ func validation():
 			PreloadScript01.commentaires = current_hpos
 			line_name = "commentaires_value"
 			change_sound_level()
+			play_validation()
 		elif current_vpos == 1:
 			get_node("1_" + str(PreloadScript01.bruitages)).modulate = PreloadScript01.white
 			PreloadScript01.bruitages = current_hpos
 			line_name = "bruitages_value"
 			change_sound_level()
+			play_validation()
 		else:
 			get_node("2_" + str(PreloadScript01.musique)).modulate = PreloadScript01.white
 			PreloadScript01.musique = current_hpos
 			line_name = "musique_value"
 			change_sound_level()
+			play_validation()
 			get_node('/root/MusicController/Music').volume_db = PreloadScript01.musique_value
 			
 # Cursor color management
@@ -136,3 +140,12 @@ func change_sound_level():
 		PreloadScript01.set(line_name, PreloadScript01.normal_level)
 	else:
 		PreloadScript01.set(line_name, PreloadScript01.more_than_full_level)
+
+func play_validation():
+	$AudioValid.volume_db = PreloadScript01.bruitages_value
+	$AudioValid.play()
+	
+func play_cancel():
+	$AudioCancel.volume_db = PreloadScript01.bruitages_value
+	$AudioCancel.play()
+	yield($AudioCancel, "finished")

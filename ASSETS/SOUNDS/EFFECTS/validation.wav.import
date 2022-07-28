@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/validation.wav-b145ad0071871ab59f28e004f053c5ad.sample"
+
+[deps]
+
+source_file="res://ASSETS/SOUNDS/EFFECTS/validation.wav"
+dest_files=[ "res://.import/validation.wav-b145ad0071871ab59f28e004f053c5ad.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

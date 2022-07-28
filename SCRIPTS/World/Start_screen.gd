@@ -34,16 +34,19 @@ func _input(_event):
 		if PreloadScript01.current_pos == 0:
 			choice = reglons
 			PreloadScript01.current_node = "0"
-			
+			play_valid()
 		elif PreloadScript01.current_pos == 1:
 			choice = changer
 			PreloadScript01.current_node = "1"
-			
+			play_valid()
 		elif PreloadScript01.current_pos == 2:
 			choice = chasse
 			PreloadScript01.current_node = "2"
-			
+			play_valid()
 		else:
+			$AudioCancel.volume_db = PreloadScript01.bruitages_value
+			$AudioCancel.play()
+			yield($AudioCancel, "finished")
 			get_tree().quit()
 		get_node("../TransitionScreen").transition()
 
@@ -66,3 +69,7 @@ func turn_on_off():
 func _on_TransitionScreen_transitioned():
 	# warning-ignore:return_value_discarded
 	get_tree().change_scene(choice)
+
+func play_valid():
+	$AudioValid.volume_db = PreloadScript01.bruitages_value
+	$AudioValid.play()
