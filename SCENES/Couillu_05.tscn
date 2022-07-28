@@ -476,7 +476,6 @@ tracks/18/keys = {
 [sub_resource type="Animation" id=1]
 resource_name = "Idle"
 length = 0.8
-loop = true
 tracks/0/type = "value"
 tracks/0/path = NodePath("Character:frame")
 tracks/0/interp = 1
@@ -3893,7 +3892,7 @@ texture = ExtResource( 1 )
 offset = Vector2( -0.5, -53.5 )
 hframes = 13
 vframes = 13
-frame = 146
+frame = 151
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 autoplay = "Idle"
