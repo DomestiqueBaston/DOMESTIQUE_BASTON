@@ -1,4 +1,4 @@
 extends Node
 
-var player = "Moulue"
-var opponent = "Couillu"
+var player1 = "Moulue"
+var player2 = "Couillu"

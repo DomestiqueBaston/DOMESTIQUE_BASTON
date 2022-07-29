@@ -8,7 +8,7 @@ func _ready():
 	var player2
 	var player1_portrait_index
 
-	if CharacterSelectionManager.player == "Moulue":
+	if CharacterSelectionManager.player1 == "Moulue":
 		player1 = $Moulue
 		player2 = $Couillu
 		player1_portrait_index = 0
