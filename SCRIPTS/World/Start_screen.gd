@@ -19,6 +19,7 @@ func _input(_event):
 		check_current_boundaries()
 		PreloadScript01.previous_node = str(PreloadScript01.previous_pos)
 		PreloadScript01.current_node = str(PreloadScript01.current_pos)
+		play_wooowdown()
 		turn_on_off()
 
 	elif (Input.is_action_just_pressed("ui_up")):
@@ -28,6 +29,7 @@ func _input(_event):
 		check_current_boundaries()
 		PreloadScript01.previous_node = str(PreloadScript01.previous_pos)
 		PreloadScript01.current_node = str(PreloadScript01.current_pos)
+		play_wooow()
 		turn_on_off()
 		
 	elif (Input.is_action_just_pressed("ui_a")):
@@ -73,3 +75,11 @@ func _on_TransitionScreen_transitioned():
 func play_valid():
 	$AudioValid.volume_db = PreloadScript01.bruitages_value
 	$AudioValid.play()
+	
+func play_wooow():
+	$AudioWooow.volume_db = PreloadScript01.bruitages_value
+	$AudioWooow.play()
+	
+func play_wooowdown():
+	$AudioWooowDown.volume_db = PreloadScript01.bruitages_value
+	$AudioWooowDown.play()

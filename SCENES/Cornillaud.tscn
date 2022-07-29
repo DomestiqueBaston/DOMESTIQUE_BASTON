@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://SCRIPTS/Cornillaud.gd" type="Script" id=1]
 [ext_resource path="res://ASSETS/GRAPHICS/CHARACTER SELECTION/A/character_selection_A_3.png" type="Texture" id=2]
@@ -19,17 +19,20 @@
 [ext_resource path="res://ASSETS/SOUNDS/EFFECTS/slide.wav" type="AudioStream" id=17]
 [ext_resource path="res://ASSETS/GRAPHICS/CHARACTER DATA SHEET/MOULUE.png" type="Texture" id=18]
 [ext_resource path="res://ASSETS/GRAPHICS/CHARACTER DATA SHEET/COUILLU.png" type="Texture" id=19]
+[ext_resource path="res://ASSETS/SOUNDS/EFFECTS/woow_down.wav" type="AudioStream" id=20]
+[ext_resource path="res://ASSETS/SOUNDS/EFFECTS/woow.wav" type="AudioStream" id=21]
+[ext_resource path="res://ASSETS/SOUNDS/EFFECTS/counterslide.wav" type="AudioStream" id=22]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ ExtResource( 7 ), ExtResource( 8 ), ExtResource( 11 ), ExtResource( 2 ), ExtResource( 4 ), ExtResource( 10 ) ],
-"loop": false,
-"name": "C_M",
-"speed": 15.0
-}, {
 "frames": [ ExtResource( 9 ), ExtResource( 3 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 12 ), ExtResource( 13 ) ],
 "loop": false,
 "name": "M_C",
+"speed": 15.0
+}, {
+"frames": [ ExtResource( 7 ), ExtResource( 8 ), ExtResource( 11 ), ExtResource( 2 ), ExtResource( 4 ), ExtResource( 10 ) ],
+"loop": false,
+"name": "C_M",
 "speed": 15.0
 } ]
 
@@ -44,6 +47,15 @@ stream = ExtResource( 16 )
 
 [node name="AudioSlide" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 17 )
+
+[node name="AudioCounterSlide" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 22 )
+
+[node name="AudioWooow" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 21 )
+
+[node name="AudioWooowDown" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 20 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 1 )

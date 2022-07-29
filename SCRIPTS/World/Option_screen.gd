@@ -32,6 +32,7 @@ func _input(_event):
 		check_current_boundaries()
 		previous_node = str(previous_vpos) + "_" + str(current_hpos)
 		current_node = str(current_vpos) + "_" + str(current_hpos)
+		play_wooowdown()
 		turn_on_off()
 
 	elif (Input.is_action_just_pressed("ui_up")):
@@ -41,6 +42,7 @@ func _input(_event):
 		check_current_boundaries()
 		previous_node = str(previous_vpos) + "_" + str(current_hpos)
 		current_node = str(current_vpos) + "_" + str(current_hpos)
+		play_wooowdown()
 		turn_on_off()
 
 	elif (Input.is_action_just_pressed("ui_right")):
@@ -50,6 +52,7 @@ func _input(_event):
 		check_current_boundaries()
 		previous_node = str(current_vpos) + "_" + str(previous_hpos)
 		current_node = str(current_vpos) + "_" + str(current_hpos)
+		play_wooowdown()
 		turn_on_off()
 
 	elif (Input.is_action_just_pressed("ui_left")):
@@ -59,6 +62,7 @@ func _input(_event):
 		check_current_boundaries()
 		previous_node = str(current_vpos) + "_" + str(previous_hpos)
 		current_node = str(current_vpos) + "_" + str(current_hpos)
+		play_wooow()
 		turn_on_off()
 
 	elif (Input.is_action_just_pressed("ui_a")):
@@ -146,6 +150,15 @@ func play_validation():
 	$AudioValid.play()
 	
 func play_cancel():
+	
 	$AudioCancel.volume_db = PreloadScript01.bruitages_value
 	$AudioCancel.play()
 	yield($AudioCancel, "finished")
+
+func play_wooow():
+	$AudioWooow.volume_db = PreloadScript01.bruitages_value
+	$AudioWooow.play()
+	
+func play_wooowdown():
+	$AudioWooowDown.volume_db = PreloadScript01.bruitages_value
+	$AudioWooowDown.play()

@@ -12,9 +12,10 @@ func _input(_event):
 	if Input.is_action_just_pressed("ui_right") or Input.is_action_just_pressed("ui_left"):
 		if $AnimatedSprite.animation == "C_M":
 			$AnimatedSprite.play("M_C")
+			play_counterslide()
 		else:
 			$AnimatedSprite.play("C_M")
-		play_slide()
+			play_slide()
 		var tmp = CharacterSelectionManager.player
 		CharacterSelectionManager.player = CharacterSelectionManager.opponent
 		CharacterSelectionManager.opponent = tmp
@@ -73,3 +74,6 @@ func play_slide():
 	$AudioSlide.volume_db = PreloadScript01.bruitages_value
 	$AudioSlide.play()
 	
+func play_counterslide():
+	$AudioCounterSlide.volume_db = PreloadScript01.bruitages_value
+	$AudioCounterSlide.play()
