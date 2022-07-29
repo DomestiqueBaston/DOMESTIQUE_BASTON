@@ -21,7 +21,7 @@ texture = ExtResource( 3 )
 centered = false
 
 [node name="Portrait_Left" type="Sprite" parent="Left"]
-position = Vector2( 21, 18 )
+position = Vector2( 18, 18 )
 texture = ExtResource( 4 )
 centered = false
 offset = Vector2( -16, -16 )
