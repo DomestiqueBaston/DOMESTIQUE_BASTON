@@ -1,6 +1,6 @@
 [gd_scene load_steps=24 format=2]
 
-[ext_resource path="res://SCRIPTS/Cornillaud.gd" type="Script" id=1]
+[ext_resource path="res://SCRIPTS/World/Cornillaud.gd" type="Script" id=1]
 [ext_resource path="res://ASSETS/GRAPHICS/CHARACTER SELECTION/A/character_selection_A_3.png" type="Texture" id=2]
 [ext_resource path="res://ASSETS/GRAPHICS/CHARACTER SELECTION/B/character_selection_B_1.png" type="Texture" id=3]
 [ext_resource path="res://ASSETS/GRAPHICS/CHARACTER SELECTION/A/character_selection_A_4.png" type="Texture" id=4]
