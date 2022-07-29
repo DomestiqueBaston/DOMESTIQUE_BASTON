@@ -30,6 +30,12 @@ var musique := 2
 
 #full screen
 var truth = true
+
+# winners
+var moulue_win_left = false
+var moulue_win_right = false
+var couillu_win_left = false
+var couillu_win_right = false
 	
 
 func _input(_event):

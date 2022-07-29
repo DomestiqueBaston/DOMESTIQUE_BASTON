@@ -1,11 +1,13 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://ASSETS/GRAPHICS/MISCS/Win/MOULUE/MOULUE_win_left.png" type="Texture" id=1]
 [ext_resource path="res://ASSETS/GRAPHICS/MISCS/Win/COUILLU/COUILLU_win_left.png" type="Texture" id=2]
 [ext_resource path="res://ASSETS/GRAPHICS/MISCS/Win/COUILLU/COUILLU_win_right.png" type="Texture" id=3]
 [ext_resource path="res://ASSETS/GRAPHICS/MISCS/Win/MOULUE/MOULUE_win_right.png" type="Texture" id=4]
+[ext_resource path="res://SCRIPTS/World/Win_Screen.gd" type="Script" id=5]
 
 [node name="Win" type="Node2D"]
+script = ExtResource( 5 )
 
 [node name="Moulue_Win_left" type="TextureRect" parent="."]
 modulate = Color( 1, 1, 1, 0 )
