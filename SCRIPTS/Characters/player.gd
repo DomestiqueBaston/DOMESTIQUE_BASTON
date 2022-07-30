@@ -16,15 +16,21 @@ var ui_actions = [
 
 const FLOOR = Vector2.UP
 
-var animation
+var anim_node
 var busy = false
 
 func _ready():
-	animation = $AnimationPlayer
-	animation.connect("animation_finished", self, "_on_animation_finished")
+	anim_node = $AnimationPlayer
+	anim_node.connect("animation_finished", self, "_on_animation_finished")
 
 func _input(event):
-	if busy or not event.is_action_type() or not event.is_pressed():
+	
+	# We are only interested in action press events. And if the player is doing
+	# anything other than walking or playing a "trick", he/she cannot be
+	# interrupted.
+
+	if (not event.is_action_type() or not event.is_pressed()
+		or (busy and anim_node.current_animation != "Trick")):
 		return
 
 	var my_actions = ui_actions[player_number]
@@ -55,7 +61,7 @@ func _input(event):
 				anim_name = "Parry"
 
 	if not anim_name.empty():
-		animation.play(anim_name)
+		anim_node.play(anim_name)
 		busy = true
 
 func _physics_process(_delta):
@@ -64,12 +70,12 @@ func _physics_process(_delta):
 		var my_actions = ui_actions[player_number]
 		if Input.is_action_pressed(my_actions[FORWARD]):
 			velocity.x = forward_speed
-			animation.play("Walk_forward")
+			anim_node.play("Walk_forward")
 		elif Input.is_action_pressed(my_actions[BACKWARD]):
 			velocity.x = -backward_speed
-			animation.play("Walk_backward")
+			anim_node.play("Walk_backward")
 		else:
-			animation.play("Idle")
+			anim_node.play("Idle")
 		if player_number == TWO:
 			velocity.x = -velocity.x
 	velocity = move_and_slide(velocity, FLOOR)
