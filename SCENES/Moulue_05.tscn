@@ -1,7 +1,8 @@
-[gd_scene load_steps=66 format=2]
+[gd_scene load_steps=67 format=2]
 
 [ext_resource path="res://ASSETS/GRAPHICS/ANIMATION/MOULUE/Anims_Moulue.png" type="Texture" id=1]
 [ext_resource path="res://ASSETS/GRAPHICS/ANIMATION/MOULUE/Anims_Moulue_Shadows.png" type="Texture" id=2]
+[ext_resource path="res://SCRIPTS/Characters/player.gd" type="Script" id=3]
 
 [sub_resource type="RectangleShape2D" id=94]
 extents = Vector2( 10.2679, 52.7084 )
@@ -3840,7 +3841,9 @@ graph_offset = Vector2( -220, 54.8 )
 [sub_resource type="AnimationNodeStateMachinePlayback" id=61]
 
 [node name="Moulue" type="KinematicBody2D"]
+position = Vector2( 157, 111 )
 collision_mask = 32
+script = ExtResource( 3 )
 
 [node name="BodyCollider" type="CollisionShape2D" parent="."]
 position = Vector2( 10, -33 )

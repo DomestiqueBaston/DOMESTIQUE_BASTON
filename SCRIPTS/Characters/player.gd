@@ -5,6 +5,9 @@ class_name Player
 enum PlayerNumber { ONE, TWO }
 export(PlayerNumber) var player_number = PlayerNumber.ONE
 
+export var forward_speed = 75
+export var backward_speed = 50
+
 enum { FORWARD, BACKWARD, UP, DOWN, A, B }
 
 var ui_actions = [
@@ -12,8 +15,6 @@ var ui_actions = [
 	[ "P2_left", "P2_right", "P2_up", "P2_down", "P2_a", "P2_b"],
 ]
 
-const MAX_VELOCITY = 75
-const MIN_VELOCITY = -50
 const FLOOR = Vector2.UP
 
 var animation
@@ -64,10 +65,10 @@ func _physics_process(delta):
 	if not busy:
 		var my_actions = ui_actions[player_number]
 		if Input.is_action_pressed(my_actions[FORWARD]):
-			velocity.x = MAX_VELOCITY
+			velocity.x = forward_speed
 			animation.play("Walk_forward")
 		elif Input.is_action_pressed(my_actions[BACKWARD]):
-			velocity.x = MIN_VELOCITY
+			velocity.x = -backward_speed
 			animation.play("Walk_backward")
 		else:
 			animation.play("Idle")
