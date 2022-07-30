@@ -3844,6 +3844,7 @@ graph_offset = Vector2( -220, 54.8 )
 position = Vector2( 157, 111 )
 collision_mask = 32
 script = ExtResource( 3 )
+backward_speed = 45
 
 [node name="BodyCollider" type="CollisionShape2D" parent="."]
 position = Vector2( 10, -33 )
