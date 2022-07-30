@@ -17,8 +17,8 @@
 [ext_resource path="res://SCENES/Fade_scene.tscn" type="PackedScene" id=15]
 [ext_resource path="res://ASSETS/SOUNDS/EFFECTS/validation.wav" type="AudioStream" id=16]
 [ext_resource path="res://ASSETS/SOUNDS/EFFECTS/cancel.wav" type="AudioStream" id=17]
-[ext_resource path="res://ASSETS/SOUNDS/EFFECTS/woow_down.wav" type="AudioStream" id=18]
-[ext_resource path="res://ASSETS/SOUNDS/EFFECTS/woow.wav" type="AudioStream" id=19]
+[ext_resource path="res://ASSETS/SOUNDS/EFFECTS/wooow_down.wav" type="AudioStream" id=18]
+[ext_resource path="res://ASSETS/SOUNDS/EFFECTS/wooow.wav" type="AudioStream" id=19]
 
 [node name="Options" type="Node2D"]
 

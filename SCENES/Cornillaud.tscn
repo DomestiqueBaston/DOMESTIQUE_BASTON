@@ -19,8 +19,8 @@
 [ext_resource path="res://ASSETS/SOUNDS/EFFECTS/slide.wav" type="AudioStream" id=17]
 [ext_resource path="res://ASSETS/GRAPHICS/CHARACTER DATA SHEET/MOULUE.png" type="Texture" id=18]
 [ext_resource path="res://ASSETS/GRAPHICS/CHARACTER DATA SHEET/COUILLU.png" type="Texture" id=19]
-[ext_resource path="res://ASSETS/SOUNDS/EFFECTS/woow_down.wav" type="AudioStream" id=20]
-[ext_resource path="res://ASSETS/SOUNDS/EFFECTS/woow.wav" type="AudioStream" id=21]
+[ext_resource path="res://ASSETS/SOUNDS/EFFECTS/wooow_down.wav" type="AudioStream" id=20]
+[ext_resource path="res://ASSETS/SOUNDS/EFFECTS/wooow.wav" type="AudioStream" id=21]
 [ext_resource path="res://ASSETS/SOUNDS/EFFECTS/counterslide.wav" type="AudioStream" id=22]
 
 [sub_resource type="SpriteFrames" id=1]

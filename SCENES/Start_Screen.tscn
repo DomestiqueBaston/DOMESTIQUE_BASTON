@@ -9,8 +9,8 @@
 [ext_resource path="res://ASSETS/SOUNDS/EFFECTS/validation.wav" type="AudioStream" id=7]
 [ext_resource path="res://SCENES/Fade_scene.tscn" type="PackedScene" id=8]
 [ext_resource path="res://ASSETS/SOUNDS/EFFECTS/cancel.wav" type="AudioStream" id=9]
-[ext_resource path="res://ASSETS/SOUNDS/EFFECTS/woow.wav" type="AudioStream" id=10]
-[ext_resource path="res://ASSETS/SOUNDS/EFFECTS/woow_down.wav" type="AudioStream" id=11]
+[ext_resource path="res://ASSETS/SOUNDS/EFFECTS/wooow_down.wav" type="AudioStream" id=10]
+[ext_resource path="res://ASSETS/SOUNDS/EFFECTS/wooow.wav" type="AudioStream" id=11]
 
 [node name="Start" type="Node2D"]
 
@@ -37,10 +37,10 @@ stream = ExtResource( 7 )
 stream = ExtResource( 9 )
 
 [node name="AudioWooow" type="AudioStreamPlayer2D" parent="Control"]
-stream = ExtResource( 10 )
+stream = ExtResource( 11 )
 
 [node name="AudioWooowDown" type="AudioStreamPlayer2D" parent="Control"]
-stream = ExtResource( 11 )
+stream = ExtResource( 10 )
 
 [node name="0" type="TextureRect" parent="Control"]
 modulate = Color( 1, 1, 1, 0 )
