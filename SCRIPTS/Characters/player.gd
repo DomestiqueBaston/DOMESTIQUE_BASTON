@@ -2,14 +2,13 @@ extends KinematicBody2D
 
 class_name Player
 
-enum PlayerNumber { ONE, TWO }
-export(PlayerNumber) var player_number = PlayerNumber.ONE
+enum { ONE, TWO }
+export(int, "One", "Two") var player_number = ONE
 
 export var forward_speed = 75
 export var backward_speed = 50
 
 enum { FORWARD, BACKWARD, UP, DOWN, A, B }
-
 var ui_actions = [
 	[ "P1_right", "P1_left", "P1_up", "P1_down", "P1_a", "P1_b"],
 	[ "P2_left", "P2_right", "P2_up", "P2_down", "P2_a", "P2_b"],
@@ -18,7 +17,6 @@ var ui_actions = [
 const FLOOR = Vector2.UP
 
 var animation
-var velocity = Vector2()
 var busy = false
 
 func _ready():
@@ -60,7 +58,7 @@ func _input(event):
 		animation.play(anim_name)
 		busy = true
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	var velocity = Vector2()
 	if not busy:
 		var my_actions = ui_actions[player_number]
@@ -72,7 +70,7 @@ func _physics_process(delta):
 			animation.play("Walk_backward")
 		else:
 			animation.play("Idle")
-		if player_number == PlayerNumber.TWO:
+		if player_number == TWO:
 			velocity.x = -velocity.x
 	velocity = move_and_slide(velocity, FLOOR)
 

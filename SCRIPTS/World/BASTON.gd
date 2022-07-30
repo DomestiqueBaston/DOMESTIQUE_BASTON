@@ -17,10 +17,10 @@ func _ready():
 		player2 = $Moulue
 		player1_portrait_index = 1
 	
-	player1.player_number = Player.PlayerNumber.ONE
+	player1.player_number = Player.ONE
 	player1.position = Vector2(49, 108)
 	player1.scale = Vector2(1, 1)
-	player2.player_number = Player.PlayerNumber.TWO
+	player2.player_number = Player.TWO
 	player2.position = Vector2(232, 108)
 	player2.scale = Vector2(-1, 1)
 	portrait_left.texture = portraits[player1_portrait_index]

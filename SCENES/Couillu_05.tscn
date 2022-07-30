@@ -3841,6 +3841,8 @@ graph_offset = Vector2( -189, 71.8 )
 [sub_resource type="AnimationNodeStateMachinePlayback" id=61]
 
 [node name="Couillu" type="KinematicBody2D"]
+position = Vector2( 157, 108 )
+scale = Vector2( -1, 1 )
 collision_layer = 16
 collision_mask = 2
 script = ExtResource( 3 )
@@ -3849,12 +3851,10 @@ forward_speed = 60
 backward_speed = 35
 
 [node name="BodyCollider" type="CollisionShape2D" parent="."]
-visible = false
 position = Vector2( 10, -33 )
 shape = SubResource( 94 )
 
 [node name="Area2D_Roll" type="Area2D" parent="."]
-visible = false
 collision_layer = 32
 collision_mask = 5
 
@@ -3865,7 +3865,6 @@ shape = SubResource( 93 )
 disabled = true
 
 [node name="Area2D_Defense" type="Area2D" parent="."]
-visible = false
 collision_layer = 64
 collision_mask = 2
 
@@ -3876,7 +3875,6 @@ scale = Vector2( 0.447916, 1.2828 )
 shape = SubResource( 95 )
 
 [node name="Area2D_Move" type="Area2D" parent="."]
-visible = false
 collision_layer = 128
 collision_mask = 8
 
@@ -3893,8 +3891,6 @@ vframes = 13
 frame = 16
 
 [node name="Character" type="Sprite" parent="."]
-position = Vector2( 157, 111 )
-scale = Vector2( -1, 1 )
 texture = ExtResource( 1 )
 offset = Vector2( -0.5, -53.5 )
 hframes = 13
