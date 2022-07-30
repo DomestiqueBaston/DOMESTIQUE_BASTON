@@ -30,7 +30,7 @@ func _input(event):
 	var my_actions = ui_actions[player_number]
 	var anim_name = ""
 
-	if Input.is_action_pressed(my_actions[A]):
+	if Input.is_action_pressed(my_actions[B]):
 		if Input.is_action_pressed(my_actions[FORWARD]):
 			if Input.is_action_pressed(my_actions[UP]):
 				anim_name = "Insult"
@@ -38,7 +38,7 @@ func _input(event):
 				anim_name = "Trick"
 			else:
 				anim_name = "Slash"
-	elif Input.is_action_pressed(my_actions[B]):
+	elif Input.is_action_pressed(my_actions[A]):
 		if Input.is_action_pressed(my_actions[FORWARD]):
 			if Input.is_action_pressed(my_actions[UP]):
 				anim_name = "Slap"
