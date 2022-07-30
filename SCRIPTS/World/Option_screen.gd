@@ -25,7 +25,7 @@ func _ready():
 	get_node("2_" + str(PreloadScript01.musique)).modulate = PreloadScript01.violet
 
 func _input(_event):
-	if (Input.is_action_just_pressed("ui_down")):
+	if (Input.is_action_just_pressed('P1_down')) or (Input.is_action_just_pressed('P2_down')):
 		previous_vpos = current_vpos
 		check_previous_boundaries()
 		current_vpos += 1
@@ -35,7 +35,7 @@ func _input(_event):
 		play_wooowdown()
 		turn_on_off()
 
-	elif (Input.is_action_just_pressed("ui_up")):
+	elif (Input.is_action_just_pressed('P1_up')) or (Input.is_action_just_pressed('P2_up')):
 		previous_vpos = current_vpos
 		check_previous_boundaries()
 		current_vpos -= 1
@@ -45,7 +45,7 @@ func _input(_event):
 		play_wooowdown()
 		turn_on_off()
 
-	elif (Input.is_action_just_pressed("ui_right")):
+	elif (Input.is_action_just_pressed('P1_right')) or (Input.is_action_just_pressed('P2_right')):
 		previous_hpos = current_hpos
 		check_previous_boundaries()
 		current_hpos += 1
@@ -55,7 +55,7 @@ func _input(_event):
 		play_wooowdown()
 		turn_on_off()
 
-	elif (Input.is_action_just_pressed("ui_left")):
+	elif (Input.is_action_just_pressed('P1_left')) or (Input.is_action_just_pressed('P2_left')):
 		previous_hpos = current_hpos
 		check_previous_boundaries()
 		current_hpos -= 1
@@ -65,10 +65,10 @@ func _input(_event):
 		play_wooow()
 		turn_on_off()
 
-	elif (Input.is_action_just_pressed("ui_a")):
+	elif (Input.is_action_just_pressed('P1_a')) or (Input.is_action_just_pressed('P2_a')):
 		validation()
 	
-	elif (Input.is_action_just_pressed("ui_x")):
+	elif (Input.is_action_just_pressed('P1_x')) or (Input.is_action_just_pressed('P2_x')):
 		play_cancel()
 		get_node("../TransitionScreen").transition()
 		

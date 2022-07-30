@@ -6,7 +6,7 @@ func _ready() -> void:
 	pass
 	
 func _input(_event):
-	if Input.is_action_just_pressed("ui_x"):
+	if Input.is_action_just_pressed("P1_x") or Input.is_action_just_pressed("P2_x"):
 		play_cancel()
 		$TransitionScreen.transition()
 
