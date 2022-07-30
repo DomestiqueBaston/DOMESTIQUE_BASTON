@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/wooow.wav-afa8e63c9d11bb4a2f6b4f6a51f1d822.sample"
+
+[deps]
+
+source_file="res://ASSETS/SOUNDS/EFFECTS/wooow.wav"
+dest_files=[ "res://.import/wooow.wav-afa8e63c9d11bb4a2f6b4f6a51f1d822.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
