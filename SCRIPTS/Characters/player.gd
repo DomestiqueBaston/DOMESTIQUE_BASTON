@@ -24,13 +24,13 @@ func _ready():
 	animation.connect("animation_finished", self, "_on_animation_finished")
 
 func _input(event):
-	if busy:
+	if busy or not event.is_action_type() or not event.is_pressed():
 		return
 
 	var my_actions = ui_actions[player_number]
 	var anim_name = ""
 
-	if event.is_action_pressed(my_actions[A]):
+	if Input.is_action_pressed(my_actions[A]):
 		if Input.is_action_pressed(my_actions[FORWARD]):
 			if Input.is_action_pressed(my_actions[UP]):
 				anim_name = "Insult"
@@ -38,7 +38,7 @@ func _input(event):
 				anim_name = "Trick"
 			else:
 				anim_name = "Slash"
-	elif event.is_action_pressed(my_actions[B]):
+	elif Input.is_action_pressed(my_actions[B]):
 		if Input.is_action_pressed(my_actions[FORWARD]):
 			if Input.is_action_pressed(my_actions[UP]):
 				anim_name = "Slap"
