@@ -12,9 +12,8 @@ var ui_actions = [
 	[ "P2_left", "P2_right", "P2_up", "P2_down", "P2_a", "P2_b"],
 ]
 
-const MAX_SPEED = 75
-const MIN_SPEED = -50
-const ACCEL = 400
+const MAX_VELOCITY = 75
+const MIN_VELOCITY = -50
 const FLOOR = Vector2.UP
 
 var animation
@@ -61,38 +60,19 @@ func _input(event):
 		busy = true
 
 func _physics_process(delta):
+	var velocity = Vector2()
 	if not busy:
 		var my_actions = ui_actions[player_number]
-		var accel = ACCEL * delta
-		if player_number == PlayerNumber.TWO:
-			velocity.x = -velocity.x
-
 		if Input.is_action_pressed(my_actions[FORWARD]):
-			velocity.x += accel
-			if velocity.x > MAX_SPEED:
-				velocity.x = MAX_SPEED
+			velocity.x = MAX_VELOCITY
+			animation.play("Walk_forward")
 		elif Input.is_action_pressed(my_actions[BACKWARD]):
-			velocity.x -= accel
-			if velocity.x < MIN_SPEED:
-				velocity.x = MIN_SPEED
-		else:
-			if velocity.x > accel:
-				velocity.x -= accel
-			elif velocity.x < -accel:
-				velocity.x += accel
-			else:
-				velocity.x = 0
-
-		if velocity.x > 0:
-			animation.play("Walk_forward", -1, velocity.x / MAX_SPEED)
-		elif velocity.x < 0:
-			animation.play("Walk_backward", -1, velocity.x / MIN_SPEED)
+			velocity.x = MIN_VELOCITY
+			animation.play("Walk_backward")
 		else:
 			animation.play("Idle")
-
 		if player_number == PlayerNumber.TWO:
 			velocity.x = -velocity.x
-
 	velocity = move_and_slide(velocity, FLOOR)
 
 func _on_animation_finished(_anim_name):
