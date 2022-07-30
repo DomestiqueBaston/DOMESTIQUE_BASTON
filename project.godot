@@ -22,6 +22,7 @@ _global_script_class_icons={
 
 config/name="DOMESTIQUE BASTON"
 run/main_scene="res://SCENES/Title_screen.tscn"
+boot_splash/image="res://ASSETS/GRAPHICS/MISCS/Splash_Screen.png"
 config/icon="res://icon_v02.png"
 config/windows_native_icon="res://DB.ico"
 
