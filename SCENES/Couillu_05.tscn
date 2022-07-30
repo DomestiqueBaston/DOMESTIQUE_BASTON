@@ -3841,6 +3841,8 @@ graph_offset = Vector2( -189, 71.8 )
 [sub_resource type="AnimationNodeStateMachinePlayback" id=61]
 
 [node name="Couillu" type="KinematicBody2D"]
+position = Vector2( 157, 108 )
+scale = Vector2( -1, 1 )
 collision_layer = 16
 collision_mask = 2
 script = ExtResource( 3 )
