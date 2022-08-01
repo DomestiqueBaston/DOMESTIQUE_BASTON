@@ -16,5 +16,6 @@ func play(clip: AudioStream):
 	$Bernard.stream = clip
 	$Bernard.volume_db = PreloadScript01.musique_value
 	$Bernard.play()
-
-
+	
+func stop():
+	$Bernard.stop()

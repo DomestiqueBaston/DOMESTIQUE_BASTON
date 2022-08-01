@@ -28,4 +28,17 @@ func _ready():
 
 func _input(event):
 	if event.is_action_pressed("ui_cancel"):
-		get_tree().quit()
+#		get_tree().quit()
+		play_cancel()
+		$Music/Bernard.stop()
+		yield($AudioCancel, "finished")
+		MusicController.play_music()
+		$TransitionScreen.transition()
+
+func play_cancel():
+	$AudioCancel.volume_db = PreloadScript01.bruitages_value
+	$AudioCancel.play()
+
+func _on_TransitionScreen_transitioned():
+# warning-ignore:return_value_discarded
+	get_tree().change_scene("res://SCENES/Start_Screen.tscn")
