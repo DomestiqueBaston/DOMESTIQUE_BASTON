@@ -25,19 +25,19 @@ func _ready():
 	player2.scale = Vector2(-1, 1)
 	portrait_left.texture = portraits[player1_portrait_index]
 	portrait_right.texture = portraits[1 - player1_portrait_index]
-	
-	
-	
-# If it is very boring to be so long to quit, just get the "get_tree().quit()" back on!
 
 func _input(event):
 	if event.is_action_pressed("ui_cancel"):
-#		get_tree().quit()
-		play_cancel()
-		$Music/Bernard.stop()
-		yield($AudioCancel, "finished")
-		MusicController.play_music()
-		$TransitionScreen.transition()
+		play_cancel() #just for "fun" while coding
+		$Music/Bernard.stop() #just for "fun" while coding
+		yield($AudioCancel, "finished") #just for "fun" while coding
+		get_tree().quit()
+#		to get the next 5 lines back, remove the 4 previous lines
+#		play_cancel()
+#		$Music/Bernard.stop()
+#		yield($AudioCancel, "finished")
+#		MusicController.play_music()
+#		$TransitionScreen.transition()
 
 func play_cancel():
 	$AudioCancel.volume_db = PreloadScript01.bruitages_value
