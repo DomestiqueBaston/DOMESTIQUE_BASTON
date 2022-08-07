@@ -14,14 +14,22 @@ var ui_actions = [
 	[ "P2_left", "P2_right", "P2_up", "P2_down", "P2_a", "P2_b"],
 ]
 
-const FLOOR = Vector2.UP
-
 var anim_node
+var opponent_anim_node
 var busy = false
+var attack_processed = false
+var backup_distance = 0
 
 func _ready():
 	anim_node = $AnimationPlayer
 	anim_node.connect("animation_finished", self, "_on_animation_finished")
+	var parent = get_parent()
+	for index in parent.get_child_count():
+		var sib = parent.get_child(index)
+		if sib != self and sib.get_script() == get_script():
+			opponent_anim_node = sib.get_node("AnimationPlayer")
+			opponent_anim_node.connect("animation_finished", self, "_on_opponent_animation_finished")
+			break
 
 func _input(event):
 	
@@ -64,8 +72,9 @@ func _input(event):
 		anim_node.play(anim_name)
 		busy = true
 
-func _physics_process(_delta):
+func _physics_process(delta):
 	var velocity = Vector2()
+
 	if not busy:
 		var my_actions = ui_actions[player_number]
 		if Input.is_action_pressed(my_actions[FORWARD]):
@@ -78,7 +87,29 @@ func _physics_process(_delta):
 			anim_node.play("Idle")
 		if player_number == TWO:
 			velocity.x = -velocity.x
-	velocity = move_and_slide(velocity, FLOOR)
+
+	if backup_distance > 0:
+		if player_number == ONE:
+			position.x -= backup_distance
+		else:
+			position.x += backup_distance
+		backup_distance = 0
+
+	velocity = move_and_collide(velocity * delta)
 
 func _on_animation_finished(_anim_name):
 	busy = false
+
+func _on_opponent_animation_finished(anim_name):
+	attack_processed = false
+
+func _on_body_hit(_area_rid, _area, _area_shape_index, _local_shape_index):
+	if not attack_processed:
+		attack_processed = true
+		print(name, " has been hit: ", opponent_anim_node.current_animation)
+		backup_distance += 20
+
+func _on_defense_hit(_area_rid, _area, _area_shape_index, _local_shape_index):
+	if not attack_processed:
+		attack_processed = true
+		print(name, " has thwarted a hit: ", opponent_anim_node.current_animation)

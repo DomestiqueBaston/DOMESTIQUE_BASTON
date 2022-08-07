@@ -4,6 +4,9 @@
 [ext_resource path="res://ASSETS/GRAPHICS/ANIMATION/COUILLU/Anims_Couillu_Shadows.png" type="Texture" id=2]
 [ext_resource path="res://SCRIPTS/Characters/player.gd" type="Script" id=3]
 
+[sub_resource type="RectangleShape2D" id=96]
+extents = Vector2( 22, 36 )
+
 [sub_resource type="RectangleShape2D" id=94]
 extents = Vector2( 10.2679, 52.7084 )
 
@@ -11,9 +14,6 @@ extents = Vector2( 10.2679, 52.7084 )
 extents = Vector2( 8.78314, 11.1025 )
 
 [sub_resource type="RectangleShape2D" id=95]
-
-[sub_resource type="RectangleShape2D" id=96]
-extents = Vector2( 22, 36 )
 
 [sub_resource type="Animation" id=6]
 resource_name = "Crouch"
@@ -30,7 +30,7 @@ tracks/0/keys = {
 "values": [ 16, 17, 18, 19, 20, 21, 22, 23, 24, 25 ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("BodyCollider:position")
+tracks/1/path = NodePath("Area2D_Body/BodyCollider:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
@@ -42,7 +42,7 @@ tracks/1/keys = {
 "values": [ Vector2( -10, -32 ) ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("BodyCollider:rotation_degrees")
+tracks/2/path = NodePath("Area2D_Body/BodyCollider:rotation_degrees")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
@@ -54,7 +54,7 @@ tracks/2/keys = {
 "values": [ 0.0, 0.0 ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("BodyCollider:scale")
+tracks/3/path = NodePath("Area2D_Body/BodyCollider:scale")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
@@ -66,7 +66,7 @@ tracks/3/keys = {
 "values": [ Vector2( 1.12, 0.599999 ) ]
 }
 tracks/4/type = "value"
-tracks/4/path = NodePath("BodyCollider:disabled")
+tracks/4/path = NodePath("Area2D_Body/BodyCollider:disabled")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/imported = false
@@ -174,7 +174,7 @@ tracks/12/keys = {
 "values": [ true, true, false, false, true, true ]
 }
 tracks/13/type = "value"
-tracks/13/path = NodePath("Area2D_Move/MoveCollider:position")
+tracks/13/path = NodePath("MoveCollider:position")
 tracks/13/interp = 1
 tracks/13/loop_wrap = true
 tracks/13/imported = false
@@ -186,7 +186,7 @@ tracks/13/keys = {
 "values": [ Vector2( -10, -36 ), Vector2( -10, -36 ) ]
 }
 tracks/14/type = "value"
-tracks/14/path = NodePath("Area2D_Move/MoveCollider:rotation_degrees")
+tracks/14/path = NodePath("MoveCollider:rotation_degrees")
 tracks/14/interp = 1
 tracks/14/loop_wrap = true
 tracks/14/imported = false
@@ -198,7 +198,7 @@ tracks/14/keys = {
 "values": [ 0.0, 0.0 ]
 }
 tracks/15/type = "value"
-tracks/15/path = NodePath("Area2D_Move/MoveCollider:scale")
+tracks/15/path = NodePath("MoveCollider:scale")
 tracks/15/interp = 1
 tracks/15/loop_wrap = true
 tracks/15/imported = false
@@ -210,7 +210,7 @@ tracks/15/keys = {
 "values": [ Vector2( 0.68, 1 ), Vector2( 0.78, 1 ), Vector2( 0.88, 1 ), Vector2( 0.88, 1 ), Vector2( 0.733333, 1 ), Vector2( 0.706666, 1 ), Vector2( 0.68, 1 ) ]
 }
 tracks/16/type = "value"
-tracks/16/path = NodePath("Area2D_Move/MoveCollider:disabled")
+tracks/16/path = NodePath("MoveCollider:disabled")
 tracks/16/interp = 1
 tracks/16/loop_wrap = true
 tracks/16/imported = false
@@ -260,7 +260,7 @@ tracks/0/keys = {
 "values": [ 93, 94, 95, 96, 97, 98, 99 ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("BodyCollider:position")
+tracks/1/path = NodePath("Area2D_Body/BodyCollider:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
@@ -272,7 +272,7 @@ tracks/1/keys = {
 "values": [ Vector2( -10, -31.375 ), Vector2( -10, -31.375 ) ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("BodyCollider:rotation_degrees")
+tracks/2/path = NodePath("Area2D_Body/BodyCollider:rotation_degrees")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
@@ -284,7 +284,7 @@ tracks/2/keys = {
 "values": [ 0.0, 0.0 ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("BodyCollider:scale")
+tracks/3/path = NodePath("Area2D_Body/BodyCollider:scale")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
@@ -296,7 +296,7 @@ tracks/3/keys = {
 "values": [ Vector2( 1.12, 0.599999 ), Vector2( 1.12, 0.599999 ) ]
 }
 tracks/4/type = "value"
-tracks/4/path = NodePath("BodyCollider:disabled")
+tracks/4/path = NodePath("Area2D_Body/BodyCollider:disabled")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/imported = false
@@ -404,7 +404,7 @@ tracks/12/keys = {
 "values": [ true, true ]
 }
 tracks/13/type = "value"
-tracks/13/path = NodePath("Area2D_Move/MoveCollider:position")
+tracks/13/path = NodePath("MoveCollider:position")
 tracks/13/interp = 1
 tracks/13/loop_wrap = true
 tracks/13/imported = false
@@ -416,7 +416,7 @@ tracks/13/keys = {
 "values": [ Vector2( -10, -36 ), Vector2( -10, -36 ) ]
 }
 tracks/14/type = "value"
-tracks/14/path = NodePath("Area2D_Move/MoveCollider:rotation_degrees")
+tracks/14/path = NodePath("MoveCollider:rotation_degrees")
 tracks/14/interp = 1
 tracks/14/loop_wrap = true
 tracks/14/imported = false
@@ -428,7 +428,7 @@ tracks/14/keys = {
 "values": [ 0.0, 0.0 ]
 }
 tracks/15/type = "value"
-tracks/15/path = NodePath("Area2D_Move/MoveCollider:scale")
+tracks/15/path = NodePath("MoveCollider:scale")
 tracks/15/interp = 1
 tracks/15/loop_wrap = true
 tracks/15/imported = false
@@ -440,7 +440,7 @@ tracks/15/keys = {
 "values": [ Vector2( 0.845245, 1 ), Vector2( 1.04524, 1 ), Vector2( 0.978578, 1 ), Vector2( 0.911911, 1 ), Vector2( 0.845245, 1 ), Vector2( 0.785245, 1 ), Vector2( 0.725245, 1 ) ]
 }
 tracks/16/type = "value"
-tracks/16/path = NodePath("Area2D_Move/MoveCollider:disabled")
+tracks/16/path = NodePath("MoveCollider:disabled")
 tracks/16/interp = 1
 tracks/16/loop_wrap = true
 tracks/16/imported = false
@@ -490,7 +490,7 @@ tracks/0/keys = {
 "values": [ 144, 145, 146, 147, 148, 149, 150, 151 ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("BodyCollider:position")
+tracks/1/path = NodePath("Area2D_Body/BodyCollider:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
@@ -502,7 +502,7 @@ tracks/1/keys = {
 "values": [ Vector2( -10, -33 ), Vector2( -10, -33 ) ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("BodyCollider:rotation_degrees")
+tracks/2/path = NodePath("Area2D_Body/BodyCollider:rotation_degrees")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
@@ -514,7 +514,7 @@ tracks/2/keys = {
 "values": [ 0.0, 0.0 ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("BodyCollider:scale")
+tracks/3/path = NodePath("Area2D_Body/BodyCollider:scale")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
@@ -526,7 +526,7 @@ tracks/3/keys = {
 "values": [ Vector2( 1.08, 0.63 ), Vector2( 1.08, 0.63 ) ]
 }
 tracks/4/type = "value"
-tracks/4/path = NodePath("BodyCollider:disabled")
+tracks/4/path = NodePath("Area2D_Body/BodyCollider:disabled")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/imported = false
@@ -634,7 +634,7 @@ tracks/12/keys = {
 "values": [ true, true ]
 }
 tracks/13/type = "value"
-tracks/13/path = NodePath("Area2D_Move/MoveCollider:position")
+tracks/13/path = NodePath("MoveCollider:position")
 tracks/13/interp = 1
 tracks/13/loop_wrap = true
 tracks/13/imported = false
@@ -646,7 +646,7 @@ tracks/13/keys = {
 "values": [ Vector2( -10, -36 ), Vector2( -10, -36 ) ]
 }
 tracks/14/type = "value"
-tracks/14/path = NodePath("Area2D_Move/MoveCollider:rotation_degrees")
+tracks/14/path = NodePath("MoveCollider:rotation_degrees")
 tracks/14/interp = 1
 tracks/14/loop_wrap = true
 tracks/14/imported = false
@@ -658,7 +658,7 @@ tracks/14/keys = {
 "values": [ 0.0, 0.0 ]
 }
 tracks/15/type = "value"
-tracks/15/path = NodePath("Area2D_Move/MoveCollider:scale")
+tracks/15/path = NodePath("MoveCollider:scale")
 tracks/15/interp = 1
 tracks/15/loop_wrap = true
 tracks/15/imported = false
@@ -670,7 +670,7 @@ tracks/15/keys = {
 "values": [ Vector2( 0.720003, 1 ), Vector2( 0.720003, 1 ) ]
 }
 tracks/16/type = "value"
-tracks/16/path = NodePath("Area2D_Move/MoveCollider:disabled")
+tracks/16/path = NodePath("MoveCollider:disabled")
 tracks/16/interp = 1
 tracks/16/loop_wrap = true
 tracks/16/imported = false
@@ -768,7 +768,7 @@ tracks/4/keys = {
 "values": [ true, true ]
 }
 tracks/5/type = "value"
-tracks/5/path = NodePath("BodyCollider:position")
+tracks/5/path = NodePath("Area2D_Body/BodyCollider:position")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/imported = false
@@ -780,7 +780,7 @@ tracks/5/keys = {
 "values": [ Vector2( -12, -32 ), Vector2( -12, -32 ) ]
 }
 tracks/6/type = "value"
-tracks/6/path = NodePath("BodyCollider:rotation_degrees")
+tracks/6/path = NodePath("Area2D_Body/BodyCollider:rotation_degrees")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/imported = false
@@ -792,7 +792,7 @@ tracks/6/keys = {
 "values": [ 0.0, 0.0 ]
 }
 tracks/7/type = "value"
-tracks/7/path = NodePath("BodyCollider:scale")
+tracks/7/path = NodePath("Area2D_Body/BodyCollider:scale")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/imported = false
@@ -804,7 +804,7 @@ tracks/7/keys = {
 "values": [ Vector2( 1.04, 0.605 ), Vector2( 1.04, 0.605 ) ]
 }
 tracks/8/type = "value"
-tracks/8/path = NodePath("BodyCollider:disabled")
+tracks/8/path = NodePath("Area2D_Body/BodyCollider:disabled")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/imported = false
@@ -864,7 +864,7 @@ tracks/12/keys = {
 "values": [ true, true ]
 }
 tracks/13/type = "value"
-tracks/13/path = NodePath("Area2D_Move/MoveCollider:position")
+tracks/13/path = NodePath("MoveCollider:position")
 tracks/13/interp = 1
 tracks/13/loop_wrap = true
 tracks/13/imported = false
@@ -876,7 +876,7 @@ tracks/13/keys = {
 "values": [ Vector2( -11, -36 ), Vector2( -11, -36 ) ]
 }
 tracks/14/type = "value"
-tracks/14/path = NodePath("Area2D_Move/MoveCollider:rotation_degrees")
+tracks/14/path = NodePath("MoveCollider:rotation_degrees")
 tracks/14/interp = 1
 tracks/14/loop_wrap = true
 tracks/14/imported = false
@@ -888,7 +888,7 @@ tracks/14/keys = {
 "values": [ 0.0, 0.0 ]
 }
 tracks/15/type = "value"
-tracks/15/path = NodePath("Area2D_Move/MoveCollider:scale")
+tracks/15/path = NodePath("MoveCollider:scale")
 tracks/15/interp = 1
 tracks/15/loop_wrap = true
 tracks/15/imported = false
@@ -900,7 +900,7 @@ tracks/15/keys = {
 "values": [ Vector2( 0.800003, 1 ), Vector2( 0.800003, 1 ) ]
 }
 tracks/16/type = "value"
-tracks/16/path = NodePath("Area2D_Move/MoveCollider:disabled")
+tracks/16/path = NodePath("MoveCollider:disabled")
 tracks/16/interp = 1
 tracks/16/loop_wrap = true
 tracks/16/imported = false
@@ -950,7 +950,7 @@ tracks/0/keys = {
 "values": [ 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111 ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("BodyCollider:position")
+tracks/1/path = NodePath("Area2D_Body/BodyCollider:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
@@ -962,7 +962,7 @@ tracks/1/keys = {
 "values": [ Vector2( -13, -32 ), Vector2( -12.2, -32 ), Vector2( -11, -32 ), Vector2( -10.6, -32 ), Vector2( -9.8, -32 ), Vector2( -9, -32 ), Vector2( -8.5, -32 ), Vector2( -8, -32 ), Vector2( -9, -32 ), Vector2( -10, -32 ), Vector2( -12, -32 ), Vector2( -13, -32 ) ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("BodyCollider:rotation_degrees")
+tracks/2/path = NodePath("Area2D_Body/BodyCollider:rotation_degrees")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
@@ -974,7 +974,7 @@ tracks/2/keys = {
 "values": [ 0.0, 0.0 ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("BodyCollider:scale")
+tracks/3/path = NodePath("Area2D_Body/BodyCollider:scale")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
@@ -986,7 +986,7 @@ tracks/3/keys = {
 "values": [ Vector2( 1.02, 0.6 ), Vector2( 1.02, 0.6 ) ]
 }
 tracks/4/type = "value"
-tracks/4/path = NodePath("BodyCollider:disabled")
+tracks/4/path = NodePath("Area2D_Body/BodyCollider:disabled")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/imported = false
@@ -1094,7 +1094,7 @@ tracks/12/keys = {
 "values": [ true, true ]
 }
 tracks/13/type = "value"
-tracks/13/path = NodePath("Area2D_Move/MoveCollider:position")
+tracks/13/path = NodePath("MoveCollider:position")
 tracks/13/interp = 1
 tracks/13/loop_wrap = true
 tracks/13/imported = false
@@ -1106,7 +1106,7 @@ tracks/13/keys = {
 "values": [ Vector2( -11, -36 ), Vector2( -10.6667, -36 ), Vector2( -10.3333, -36 ), Vector2( -10, -36 ), Vector2( -9.66667, -36 ), Vector2( -9.33333, -36 ), Vector2( -9, -36 ), Vector2( -9, -36 ), Vector2( -9.66667, -36 ), Vector2( -10.3333, -36 ), Vector2( -11, -36 ) ]
 }
 tracks/14/type = "value"
-tracks/14/path = NodePath("Area2D_Move/MoveCollider:rotation_degrees")
+tracks/14/path = NodePath("MoveCollider:rotation_degrees")
 tracks/14/interp = 1
 tracks/14/loop_wrap = true
 tracks/14/imported = false
@@ -1118,7 +1118,7 @@ tracks/14/keys = {
 "values": [ 0.0, 0.0 ]
 }
 tracks/15/type = "value"
-tracks/15/path = NodePath("Area2D_Move/MoveCollider:scale")
+tracks/15/path = NodePath("MoveCollider:scale")
 tracks/15/interp = 1
 tracks/15/loop_wrap = true
 tracks/15/imported = false
@@ -1130,7 +1130,7 @@ tracks/15/keys = {
 "values": [ Vector2( 0.800003, 1 ), Vector2( 0.800003, 1 ) ]
 }
 tracks/16/type = "value"
-tracks/16/path = NodePath("Area2D_Move/MoveCollider:disabled")
+tracks/16/path = NodePath("MoveCollider:disabled")
 tracks/16/interp = 1
 tracks/16/loop_wrap = true
 tracks/16/imported = false
@@ -1180,7 +1180,7 @@ tracks/0/keys = {
 "values": [ 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38 ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("BodyCollider:position")
+tracks/1/path = NodePath("Area2D_Body/BodyCollider:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
@@ -1192,7 +1192,7 @@ tracks/1/keys = {
 "values": [ Vector2( -11, -31 ), Vector2( -11, -28 ), Vector2( -11, -27 ), Vector2( -10, -34 ), Vector2( -9, -70 ), Vector2( -9, -73 ), Vector2( -9, -73 ), Vector2( -9, -36 ), Vector2( -10, -27 ), Vector2( -10, -28 ), Vector2( -11, -31 ), Vector2( -11, -31 ) ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("BodyCollider:rotation_degrees")
+tracks/2/path = NodePath("Area2D_Body/BodyCollider:rotation_degrees")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
@@ -1204,7 +1204,7 @@ tracks/2/keys = {
 "values": [ 0.0, 0.0 ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("BodyCollider:scale")
+tracks/3/path = NodePath("Area2D_Body/BodyCollider:scale")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
@@ -1216,7 +1216,7 @@ tracks/3/keys = {
 "values": [ Vector2( 1.112, 0.59 ), Vector2( 1.11225, 0.5275 ), Vector2( 1.112, 0.52 ), Vector2( 0.912056, 0.650556 ), Vector2( 0.922, 0.45 ), Vector2( 0.922, 0.5 ), Vector2( 0.922, 0.5 ), Vector2( 0.922, 0.68 ), Vector2( 0.922, 0.51 ), Vector2( 0.922, 0.54 ), Vector2( 1.112, 0.6 ), Vector2( 1.112, 0.6 ) ]
 }
 tracks/4/type = "value"
-tracks/4/path = NodePath("BodyCollider:disabled")
+tracks/4/path = NodePath("Area2D_Body/BodyCollider:disabled")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/imported = false
@@ -1324,7 +1324,7 @@ tracks/12/keys = {
 "values": [ true, true, false, false, true, true ]
 }
 tracks/13/type = "value"
-tracks/13/path = NodePath("Area2D_Move/MoveCollider:position")
+tracks/13/path = NodePath("MoveCollider:position")
 tracks/13/interp = 1
 tracks/13/loop_wrap = true
 tracks/13/imported = false
@@ -1336,7 +1336,7 @@ tracks/13/keys = {
 "values": [ Vector2( -11, -36 ), Vector2( -11, -36 ) ]
 }
 tracks/14/type = "value"
-tracks/14/path = NodePath("Area2D_Move/MoveCollider:rotation_degrees")
+tracks/14/path = NodePath("MoveCollider:rotation_degrees")
 tracks/14/interp = 1
 tracks/14/loop_wrap = true
 tracks/14/imported = false
@@ -1348,7 +1348,7 @@ tracks/14/keys = {
 "values": [ 0.0, 0.0 ]
 }
 tracks/15/type = "value"
-tracks/15/path = NodePath("Area2D_Move/MoveCollider:scale")
+tracks/15/path = NodePath("MoveCollider:scale")
 tracks/15/interp = 1
 tracks/15/loop_wrap = true
 tracks/15/imported = false
@@ -1360,7 +1360,7 @@ tracks/15/keys = {
 "values": [ Vector2( 0.800003, 1 ), Vector2( 0.800003, 1 ) ]
 }
 tracks/16/type = "value"
-tracks/16/path = NodePath("Area2D_Move/MoveCollider:disabled")
+tracks/16/path = NodePath("MoveCollider:disabled")
 tracks/16/interp = 1
 tracks/16/loop_wrap = true
 tracks/16/imported = false
@@ -1409,7 +1409,7 @@ tracks/0/keys = {
 "values": [ 112, 113, 114, 115, 116, 117, 118, 119, 120, 121 ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("BodyCollider:position")
+tracks/1/path = NodePath("Area2D_Body/BodyCollider:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
@@ -1421,7 +1421,7 @@ tracks/1/keys = {
 "values": [ Vector2( -10, -31 ), Vector2( -8, -29 ), Vector2( -8, -30 ), Vector2( -8, -29 ), Vector2( -8, -27 ), Vector2( -8, -27 ), Vector2( -10, -29 ), Vector2( -10, -30 ), Vector2( -10, -31 ) ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("BodyCollider:rotation_degrees")
+tracks/2/path = NodePath("Area2D_Body/BodyCollider:rotation_degrees")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
@@ -1433,7 +1433,7 @@ tracks/2/keys = {
 "values": [ 0.0, -18.8428, -18.515, -17.2538, -18.9986, -22.2012, -25.4038, -18.9986, -9.4993, 0.0 ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("BodyCollider:scale")
+tracks/3/path = NodePath("Area2D_Body/BodyCollider:scale")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
@@ -1445,7 +1445,7 @@ tracks/3/keys = {
 "values": [ Vector2( 1.112, 0.595 ), Vector2( 1.05767, 0.535 ), Vector2( 1.112, 0.5 ), Vector2( 1.112, 0.5 ), Vector2( 1.00244, 0.464034 ), Vector2( 1.00244, 0.464034 ), Vector2( 1.057, 0.57 ), Vector2( 1.112, 0.58 ) ]
 }
 tracks/4/type = "value"
-tracks/4/path = NodePath("BodyCollider:disabled")
+tracks/4/path = NodePath("Area2D_Body/BodyCollider:disabled")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/imported = false
@@ -1553,7 +1553,7 @@ tracks/12/keys = {
 "values": [ true, true ]
 }
 tracks/13/type = "value"
-tracks/13/path = NodePath("Area2D_Move/MoveCollider:position")
+tracks/13/path = NodePath("MoveCollider:position")
 tracks/13/interp = 1
 tracks/13/loop_wrap = true
 tracks/13/imported = false
@@ -1565,7 +1565,7 @@ tracks/13/keys = {
 "values": [ Vector2( -11, -36 ), Vector2( -9.5, -36 ), Vector2( -8, -36 ), Vector2( -8.5, -36 ), Vector2( -9, -36 ), Vector2( -9, -36 ), Vector2( -10, -36 ), Vector2( -11, -36 ) ]
 }
 tracks/14/type = "value"
-tracks/14/path = NodePath("Area2D_Move/MoveCollider:rotation_degrees")
+tracks/14/path = NodePath("MoveCollider:rotation_degrees")
 tracks/14/interp = 1
 tracks/14/loop_wrap = true
 tracks/14/imported = false
@@ -1577,7 +1577,7 @@ tracks/14/keys = {
 "values": [ 0.0, 0.0 ]
 }
 tracks/15/type = "value"
-tracks/15/path = NodePath("Area2D_Move/MoveCollider:scale")
+tracks/15/path = NodePath("MoveCollider:scale")
 tracks/15/interp = 1
 tracks/15/loop_wrap = true
 tracks/15/imported = false
@@ -1589,7 +1589,7 @@ tracks/15/keys = {
 "values": [ Vector2( 0.680003, 1 ), Vector2( 0.620003, 1 ), Vector2( 0.560003, 1 ), Vector2( 0.580003, 1 ), Vector2( 0.600004, 1 ), Vector2( 0.600004, 1 ), Vector2( 0.640004, 1 ), Vector2( 0.680004, 1 ) ]
 }
 tracks/16/type = "value"
-tracks/16/path = NodePath("Area2D_Move/MoveCollider:disabled")
+tracks/16/path = NodePath("MoveCollider:disabled")
 tracks/16/interp = 1
 tracks/16/loop_wrap = true
 tracks/16/imported = false
@@ -1687,7 +1687,7 @@ tracks/4/keys = {
 "values": [ true, true ]
 }
 tracks/5/type = "value"
-tracks/5/path = NodePath("BodyCollider:position")
+tracks/5/path = NodePath("Area2D_Body/BodyCollider:position")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/imported = false
@@ -1699,7 +1699,7 @@ tracks/5/keys = {
 "values": [ Vector2( 10.25, -32.75 ), Vector2( 10.25, -32.75 ) ]
 }
 tracks/6/type = "value"
-tracks/6/path = NodePath("BodyCollider:rotation_degrees")
+tracks/6/path = NodePath("Area2D_Body/BodyCollider:rotation_degrees")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/imported = false
@@ -1711,7 +1711,7 @@ tracks/6/keys = {
 "values": [ 0.0, 0.0 ]
 }
 tracks/7/type = "value"
-tracks/7/path = NodePath("BodyCollider:scale")
+tracks/7/path = NodePath("Area2D_Body/BodyCollider:scale")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/imported = false
@@ -1723,7 +1723,7 @@ tracks/7/keys = {
 "values": [ Vector2( 1.112, 0.62 ), Vector2( 1.112, 0.62 ) ]
 }
 tracks/8/type = "value"
-tracks/8/path = NodePath("BodyCollider:disabled")
+tracks/8/path = NodePath("Area2D_Body/BodyCollider:disabled")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/imported = false
@@ -1783,7 +1783,7 @@ tracks/12/keys = {
 "values": [ true, true ]
 }
 tracks/13/type = "value"
-tracks/13/path = NodePath("Area2D_Move/MoveCollider:position")
+tracks/13/path = NodePath("MoveCollider:position")
 tracks/13/interp = 1
 tracks/13/loop_wrap = true
 tracks/13/imported = false
@@ -1795,7 +1795,7 @@ tracks/13/keys = {
 "values": [ Vector2( -23, -45 ), Vector2( -20, -45 ), Vector2( -16, -45 ), Vector2( -9, -45 ), Vector2( -9, -45 ), Vector2( -9.5, -45 ), Vector2( -10, -45 ), Vector2( -2, -45 ), Vector2( -1, -45 ), Vector2( -1.19209e-07, -45 ), Vector2( -1.19209e-07, -45 ) ]
 }
 tracks/14/type = "value"
-tracks/14/path = NodePath("Area2D_Move/MoveCollider:rotation_degrees")
+tracks/14/path = NodePath("MoveCollider:rotation_degrees")
 tracks/14/interp = 1
 tracks/14/loop_wrap = true
 tracks/14/imported = false
@@ -1807,7 +1807,7 @@ tracks/14/keys = {
 "values": [ 0.0, 0.0, 0.0 ]
 }
 tracks/15/type = "value"
-tracks/15/path = NodePath("Area2D_Move/MoveCollider:scale")
+tracks/15/path = NodePath("MoveCollider:scale")
 tracks/15/interp = 1
 tracks/15/loop_wrap = true
 tracks/15/imported = false
@@ -1819,7 +1819,7 @@ tracks/15/keys = {
 "values": [ Vector2( 1.4, 1.24 ), Vector2( 1.492, 1.24 ), Vector2( 1.51734, 1.24 ), Vector2( 1.54267, 1.24 ), Vector2( 1.528, 1.24 ), Vector2( 1.624, 1.24 ), Vector2( 1.72, 1.24 ), Vector2( 2.12, 1.24 ), Vector2( 2.12, 1.24 ) ]
 }
 tracks/16/type = "value"
-tracks/16/path = NodePath("Area2D_Move/MoveCollider:disabled")
+tracks/16/path = NodePath("MoveCollider:disabled")
 tracks/16/interp = 1
 tracks/16/loop_wrap = true
 tracks/16/imported = false
@@ -1869,7 +1869,7 @@ tracks/0/keys = {
 "values": [ 122, 123, 124, 125, 126, 127, 128, 129, 130, 131, 132, 133 ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("BodyCollider:position")
+tracks/1/path = NodePath("Area2D_Body/BodyCollider:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
@@ -1881,7 +1881,7 @@ tracks/1/keys = {
 "values": [ Vector2( -12, -33 ), Vector2( -10, -33 ), Vector2( -10, -32 ), Vector2( -12, -31 ), Vector2( -16, -30 ), Vector2( -18, -29 ), Vector2( -18, -29 ), Vector2( -17.6667, -28.6667 ), Vector2( -17.3333, -28.3333 ), Vector2( -17, -28 ), Vector2( -15, -33 ), Vector2( -12, -33 ) ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("BodyCollider:rotation_degrees")
+tracks/2/path = NodePath("Area2D_Body/BodyCollider:rotation_degrees")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
@@ -1893,7 +1893,7 @@ tracks/2/keys = {
 "values": [ 0.0, -7.34752, -8.33819, -4.08753, -16.9054, -30.4234, -29.6848, -31.5572, -33.4295, -35.3019, -27.1824, 0.0 ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("BodyCollider:scale")
+tracks/3/path = NodePath("Area2D_Body/BodyCollider:scale")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
@@ -1905,7 +1905,7 @@ tracks/3/keys = {
 "values": [ Vector2( 0.800002, 0.62 ), Vector2( 0.708643, 0.616527 ), Vector2( 0.755794, 0.60377 ), Vector2( 0.802946, 0.591013 ), Vector2( 0.850097, 0.578256 ), Vector2( 0.837573, 0.582823 ), Vector2( 0.825049, 0.587391 ), Vector2( 0.830182, 0.578008 ), Vector2( 0.835316, 0.568624 ), Vector2( 0.84045, 0.55924 ), Vector2( 0.84, 0.55 ), Vector2( 0.872, 0.62 ) ]
 }
 tracks/4/type = "value"
-tracks/4/path = NodePath("BodyCollider:disabled")
+tracks/4/path = NodePath("Area2D_Body/BodyCollider:disabled")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/imported = false
@@ -2013,7 +2013,7 @@ tracks/12/keys = {
 "values": [ true, true, false, false, true, true ]
 }
 tracks/13/type = "value"
-tracks/13/path = NodePath("Area2D_Move/MoveCollider:position")
+tracks/13/path = NodePath("MoveCollider:position")
 tracks/13/interp = 1
 tracks/13/loop_wrap = true
 tracks/13/imported = false
@@ -2025,7 +2025,7 @@ tracks/13/keys = {
 "values": [ Vector2( -11, -36 ), Vector2( -11, -36 ) ]
 }
 tracks/14/type = "value"
-tracks/14/path = NodePath("Area2D_Move/MoveCollider:rotation_degrees")
+tracks/14/path = NodePath("MoveCollider:rotation_degrees")
 tracks/14/interp = 1
 tracks/14/loop_wrap = true
 tracks/14/imported = false
@@ -2037,7 +2037,7 @@ tracks/14/keys = {
 "values": [ 0.0, 0.0 ]
 }
 tracks/15/type = "value"
-tracks/15/path = NodePath("Area2D_Move/MoveCollider:scale")
+tracks/15/path = NodePath("MoveCollider:scale")
 tracks/15/interp = 1
 tracks/15/loop_wrap = true
 tracks/15/imported = false
@@ -2049,7 +2049,7 @@ tracks/15/keys = {
 "values": [ Vector2( 0.640003, 1 ), Vector2( 0.640003, 1 ) ]
 }
 tracks/16/type = "value"
-tracks/16/path = NodePath("Area2D_Move/MoveCollider:disabled")
+tracks/16/path = NodePath("MoveCollider:disabled")
 tracks/16/interp = 1
 tracks/16/loop_wrap = true
 tracks/16/imported = false
@@ -2099,7 +2099,7 @@ tracks/0/keys = {
 "values": [ 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79 ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("BodyCollider:position")
+tracks/1/path = NodePath("Area2D_Body/BodyCollider:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
@@ -2111,7 +2111,7 @@ tracks/1/keys = {
 "values": [ Vector2( -12, -31 ), Vector2( -11, -31 ), Vector2( -8, -31 ), Vector2( -6, -33 ), Vector2( -8, -33 ), Vector2( -7, -33 ), Vector2( -6, -33 ), Vector2( -7, -33 ), Vector2( -9, -32 ), Vector2( -10.5, -31 ), Vector2( -12, -31 ) ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("BodyCollider:rotation_degrees")
+tracks/2/path = NodePath("Area2D_Body/BodyCollider:rotation_degrees")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
@@ -2123,7 +2123,7 @@ tracks/2/keys = {
 "values": [ 0.0, 0.0, 0.0, 0.0, -10.7981, -9.97035, -7.47776, -4.98517, -2.49259, 0.0 ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("BodyCollider:scale")
+tracks/3/path = NodePath("Area2D_Body/BodyCollider:scale")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
@@ -2135,7 +2135,7 @@ tracks/3/keys = {
 "values": [ Vector2( 0.8, 0.59 ), Vector2( 0.8, 0.59 ), Vector2( 0.8, 0.59 ), Vector2( 0.8, 0.62 ), Vector2( 0.68, 0.62 ), Vector2( 0.682125, 0.62 ), Vector2( 0.628565, 0.62 ), Vector2( 0.765546, 0.62 ), Vector2( 0.677, 0.59 ), Vector2( 0.738, 0.58 ), Vector2( 0.8, 0.59 ) ]
 }
 tracks/4/type = "value"
-tracks/4/path = NodePath("BodyCollider:disabled")
+tracks/4/path = NodePath("Area2D_Body/BodyCollider:disabled")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/imported = false
@@ -2243,7 +2243,7 @@ tracks/12/keys = {
 "values": [ true, true ]
 }
 tracks/13/type = "value"
-tracks/13/path = NodePath("Area2D_Move/MoveCollider:position")
+tracks/13/path = NodePath("MoveCollider:position")
 tracks/13/interp = 1
 tracks/13/loop_wrap = true
 tracks/13/imported = false
@@ -2255,7 +2255,7 @@ tracks/13/keys = {
 "values": [ Vector2( -11, -36 ), Vector2( -10.5, -36 ), Vector2( -10, -36 ), Vector2( -9.5, -36 ), Vector2( -9, -36 ), Vector2( -8.5, -36 ), Vector2( -8, -36 ), Vector2( -9, -36 ), Vector2( -10, -36 ), Vector2( -11, -36 ), Vector2( -11, -36 ) ]
 }
 tracks/14/type = "value"
-tracks/14/path = NodePath("Area2D_Move/MoveCollider:rotation_degrees")
+tracks/14/path = NodePath("MoveCollider:rotation_degrees")
 tracks/14/interp = 1
 tracks/14/loop_wrap = true
 tracks/14/imported = false
@@ -2267,7 +2267,7 @@ tracks/14/keys = {
 "values": [ 0.0, 0.0 ]
 }
 tracks/15/type = "value"
-tracks/15/path = NodePath("Area2D_Move/MoveCollider:scale")
+tracks/15/path = NodePath("MoveCollider:scale")
 tracks/15/interp = 1
 tracks/15/loop_wrap = true
 tracks/15/imported = false
@@ -2279,7 +2279,7 @@ tracks/15/keys = {
 "values": [ Vector2( 0.800003, 1 ), Vector2( 0.800003, 1 ) ]
 }
 tracks/16/type = "value"
-tracks/16/path = NodePath("Area2D_Move/MoveCollider:disabled")
+tracks/16/path = NodePath("MoveCollider:disabled")
 tracks/16/interp = 1
 tracks/16/loop_wrap = true
 tracks/16/imported = false
@@ -2316,7 +2316,7 @@ tracks/18/keys = {
 [sub_resource type="Animation" id=9]
 length = 0.001
 tracks/0/type = "value"
-tracks/0/path = NodePath("BodyCollider:disabled")
+tracks/0/path = NodePath("Area2D_Body/BodyCollider:disabled")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -2328,7 +2328,7 @@ tracks/0/keys = {
 "values": [ false ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("BodyCollider:rotation_degrees")
+tracks/1/path = NodePath("Area2D_Body/BodyCollider:rotation_degrees")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
@@ -2340,7 +2340,7 @@ tracks/1/keys = {
 "values": [ 0.0 ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("BodyCollider:position")
+tracks/2/path = NodePath("Area2D_Body/BodyCollider:position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
@@ -2352,7 +2352,7 @@ tracks/2/keys = {
 "values": [ Vector2( 10, -33 ) ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("BodyCollider:scale")
+tracks/3/path = NodePath("Area2D_Body/BodyCollider:scale")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
@@ -2472,7 +2472,7 @@ tracks/12/keys = {
 "values": [ Vector2( 0.447916, 1.2828 ) ]
 }
 tracks/13/type = "value"
-tracks/13/path = NodePath("Area2D_Move/MoveCollider:position")
+tracks/13/path = NodePath("MoveCollider:position")
 tracks/13/interp = 1
 tracks/13/loop_wrap = true
 tracks/13/imported = false
@@ -2484,7 +2484,7 @@ tracks/13/keys = {
 "values": [ Vector2( 4, -36 ) ]
 }
 tracks/14/type = "value"
-tracks/14/path = NodePath("Area2D_Move/MoveCollider:rotation_degrees")
+tracks/14/path = NodePath("MoveCollider:rotation_degrees")
 tracks/14/interp = 1
 tracks/14/loop_wrap = true
 tracks/14/imported = false
@@ -2496,7 +2496,7 @@ tracks/14/keys = {
 "values": [ 0.0 ]
 }
 tracks/15/type = "value"
-tracks/15/path = NodePath("Area2D_Move/MoveCollider:scale")
+tracks/15/path = NodePath("MoveCollider:scale")
 tracks/15/interp = 1
 tracks/15/loop_wrap = true
 tracks/15/imported = false
@@ -2508,7 +2508,7 @@ tracks/15/keys = {
 "values": [ Vector2( 1, 1 ) ]
 }
 tracks/16/type = "value"
-tracks/16/path = NodePath("Area2D_Move/MoveCollider:disabled")
+tracks/16/path = NodePath("MoveCollider:disabled")
 tracks/16/interp = 1
 tracks/16/loop_wrap = true
 tracks/16/imported = false
@@ -2596,7 +2596,7 @@ tracks/4/keys = {
 "values": [ true, true, false, false, true, true ]
 }
 tracks/5/type = "value"
-tracks/5/path = NodePath("BodyCollider:position")
+tracks/5/path = NodePath("Area2D_Body/BodyCollider:position")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/imported = false
@@ -2608,7 +2608,7 @@ tracks/5/keys = {
 "values": [ Vector2( -9, -31 ), Vector2( -9, -32 ), Vector2( -9, -32 ), Vector2( -9, -32 ), Vector2( -9, -32 ), Vector2( -9, -31 ) ]
 }
 tracks/6/type = "value"
-tracks/6/path = NodePath("BodyCollider:rotation_degrees")
+tracks/6/path = NodePath("Area2D_Body/BodyCollider:rotation_degrees")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/imported = false
@@ -2620,7 +2620,7 @@ tracks/6/keys = {
 "values": [ 0.0, 0.0, 0.0 ]
 }
 tracks/7/type = "value"
-tracks/7/path = NodePath("BodyCollider:scale")
+tracks/7/path = NodePath("Area2D_Body/BodyCollider:scale")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/imported = false
@@ -2632,7 +2632,7 @@ tracks/7/keys = {
 "values": [ Vector2( 0.8, 0.59 ), Vector2( 0.8, 0.6 ), Vector2( 0.8, 0.615 ), Vector2( 0.8, 0.615 ), Vector2( 0.8, 0.6 ), Vector2( 0.8, 0.59 ) ]
 }
 tracks/8/type = "value"
-tracks/8/path = NodePath("BodyCollider:disabled")
+tracks/8/path = NodePath("Area2D_Body/BodyCollider:disabled")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/imported = false
@@ -2692,7 +2692,7 @@ tracks/12/keys = {
 "values": [ true, true ]
 }
 tracks/13/type = "value"
-tracks/13/path = NodePath("Area2D_Move/MoveCollider:position")
+tracks/13/path = NodePath("MoveCollider:position")
 tracks/13/interp = 1
 tracks/13/loop_wrap = true
 tracks/13/imported = false
@@ -2704,7 +2704,7 @@ tracks/13/keys = {
 "values": [ Vector2( -11, -36 ), Vector2( -11, -36 ) ]
 }
 tracks/14/type = "value"
-tracks/14/path = NodePath("Area2D_Move/MoveCollider:rotation_degrees")
+tracks/14/path = NodePath("MoveCollider:rotation_degrees")
 tracks/14/interp = 1
 tracks/14/loop_wrap = true
 tracks/14/imported = false
@@ -2716,7 +2716,7 @@ tracks/14/keys = {
 "values": [ 0.0, 0.0 ]
 }
 tracks/15/type = "value"
-tracks/15/path = NodePath("Area2D_Move/MoveCollider:scale")
+tracks/15/path = NodePath("MoveCollider:scale")
 tracks/15/interp = 1
 tracks/15/loop_wrap = true
 tracks/15/imported = false
@@ -2728,7 +2728,7 @@ tracks/15/keys = {
 "values": [ Vector2( 0.800003, 1 ), Vector2( 0.800003, 1 ) ]
 }
 tracks/16/type = "value"
-tracks/16/path = NodePath("Area2D_Move/MoveCollider:disabled")
+tracks/16/path = NodePath("MoveCollider:disabled")
 tracks/16/interp = 1
 tracks/16/loop_wrap = true
 tracks/16/imported = false
@@ -2778,7 +2778,7 @@ tracks/0/keys = {
 "values": [ 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54 ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("BodyCollider:position")
+tracks/1/path = NodePath("Area2D_Body/BodyCollider:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
@@ -2790,7 +2790,7 @@ tracks/1/keys = {
 "values": [ Vector2( -11, -32 ), Vector2( -11, -33 ), Vector2( -11, -33 ), Vector2( -11, -32 ), Vector2( -12, -31 ), Vector2( -13, -30 ), Vector2( -11, -30 ), Vector2( 2, -28 ), Vector2( 5, -28 ), Vector2( 5, -28 ), Vector2( 4, -27 ), Vector2( 1, -27 ), Vector2( -3, -29 ), Vector2( -7, -30 ), Vector2( -11, -30 ), Vector2( -11, -31 ) ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("BodyCollider:rotation_degrees")
+tracks/2/path = NodePath("Area2D_Body/BodyCollider:rotation_degrees")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
@@ -2802,7 +2802,7 @@ tracks/2/keys = {
 "values": [ 0.0, 0.0, 28.0698, 28.0698, 24.1213, 12.5914, 0.0, 0.0 ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("BodyCollider:scale")
+tracks/3/path = NodePath("Area2D_Body/BodyCollider:scale")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
@@ -2814,7 +2814,7 @@ tracks/3/keys = {
 "values": [ Vector2( 0.8, 0.6 ), Vector2( 0.8, 0.63 ), Vector2( 0.8, 0.62 ), Vector2( 0.8, 0.6 ), Vector2( 0.8, 0.59 ), Vector2( 0.8, 0.57 ), Vector2( 0.8, 0.57 ), Vector2( 0.8, 0.53 ), Vector2( 0.8, 0.53 ), Vector2( 0.8, 0.57 ), Vector2( 0.8, 0.58 ), Vector2( 0.8, 0.59 ) ]
 }
 tracks/4/type = "value"
-tracks/4/path = NodePath("BodyCollider:disabled")
+tracks/4/path = NodePath("Area2D_Body/BodyCollider:disabled")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/imported = false
@@ -2922,7 +2922,7 @@ tracks/12/keys = {
 "values": [ true, true ]
 }
 tracks/13/type = "value"
-tracks/13/path = NodePath("Area2D_Move/MoveCollider:position")
+tracks/13/path = NodePath("MoveCollider:position")
 tracks/13/interp = 1
 tracks/13/loop_wrap = true
 tracks/13/imported = false
@@ -2934,7 +2934,7 @@ tracks/13/keys = {
 "values": [ Vector2( -11, -36 ), Vector2( -11, -36 ), Vector2( -9, -36 ), Vector2( -1, -36 ), Vector2( 1, -36 ), Vector2( 1, -36 ), Vector2( 0, -36 ), Vector2( -1, -36 ), Vector2( -2, -36 ), Vector2( -6, -36 ), Vector2( -11, -36 ), Vector2( -11, -36 ) ]
 }
 tracks/14/type = "value"
-tracks/14/path = NodePath("Area2D_Move/MoveCollider:rotation_degrees")
+tracks/14/path = NodePath("MoveCollider:rotation_degrees")
 tracks/14/interp = 1
 tracks/14/loop_wrap = true
 tracks/14/imported = false
@@ -2946,7 +2946,7 @@ tracks/14/keys = {
 "values": [ 0.0, 0.0 ]
 }
 tracks/15/type = "value"
-tracks/15/path = NodePath("Area2D_Move/MoveCollider:scale")
+tracks/15/path = NodePath("MoveCollider:scale")
 tracks/15/interp = 1
 tracks/15/loop_wrap = true
 tracks/15/imported = false
@@ -2958,7 +2958,7 @@ tracks/15/keys = {
 "values": [ Vector2( 0.800001, 1 ), Vector2( 0.800001, 1 ), Vector2( 0.920002, 1 ), Vector2( 0.920002, 1 ), Vector2( 0.880002, 1 ), Vector2( 0.840003, 1 ), Vector2( 0.800003, 1 ) ]
 }
 tracks/16/type = "value"
-tracks/16/path = NodePath("Area2D_Move/MoveCollider:disabled")
+tracks/16/path = NodePath("MoveCollider:disabled")
 tracks/16/interp = 1
 tracks/16/loop_wrap = true
 tracks/16/imported = false
@@ -3007,7 +3007,7 @@ tracks/0/keys = {
 "values": [ 134, 135, 136, 137, 138, 139, 140, 141, 142, 143 ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("BodyCollider:position")
+tracks/1/path = NodePath("Area2D_Body/BodyCollider:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
@@ -3019,7 +3019,7 @@ tracks/1/keys = {
 "values": [ Vector2( -10, -31 ), Vector2( -11, -31 ), Vector2( -11, -31 ), Vector2( -11, -31 ) ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("BodyCollider:rotation_degrees")
+tracks/2/path = NodePath("Area2D_Body/BodyCollider:rotation_degrees")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
@@ -3031,7 +3031,7 @@ tracks/2/keys = {
 "values": [ 0.0, -7.46108, -12.039, -12.039, -9.55974, -12.0994, 0.0 ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("BodyCollider:scale")
+tracks/3/path = NodePath("Area2D_Body/BodyCollider:scale")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
@@ -3043,7 +3043,7 @@ tracks/3/keys = {
 "values": [ Vector2( 0.8, 0.59 ), Vector2( 0.8, 0.59 ) ]
 }
 tracks/4/type = "value"
-tracks/4/path = NodePath("BodyCollider:disabled")
+tracks/4/path = NodePath("Area2D_Body/BodyCollider:disabled")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/imported = false
@@ -3151,7 +3151,7 @@ tracks/12/keys = {
 "values": [ true, true ]
 }
 tracks/13/type = "value"
-tracks/13/path = NodePath("Area2D_Move/MoveCollider:position")
+tracks/13/path = NodePath("MoveCollider:position")
 tracks/13/interp = 1
 tracks/13/loop_wrap = true
 tracks/13/imported = false
@@ -3163,7 +3163,7 @@ tracks/13/keys = {
 "values": [ Vector2( -11, -36 ), Vector2( -11, -36 ) ]
 }
 tracks/14/type = "value"
-tracks/14/path = NodePath("Area2D_Move/MoveCollider:rotation_degrees")
+tracks/14/path = NodePath("MoveCollider:rotation_degrees")
 tracks/14/interp = 1
 tracks/14/loop_wrap = true
 tracks/14/imported = false
@@ -3175,7 +3175,7 @@ tracks/14/keys = {
 "values": [ 0.0, 0.0 ]
 }
 tracks/15/type = "value"
-tracks/15/path = NodePath("Area2D_Move/MoveCollider:scale")
+tracks/15/path = NodePath("MoveCollider:scale")
 tracks/15/interp = 1
 tracks/15/loop_wrap = true
 tracks/15/imported = false
@@ -3187,7 +3187,7 @@ tracks/15/keys = {
 "values": [ Vector2( 0.800001, 1 ), Vector2( 0.800001, 1 ) ]
 }
 tracks/16/type = "value"
-tracks/16/path = NodePath("Area2D_Move/MoveCollider:disabled")
+tracks/16/path = NodePath("MoveCollider:disabled")
 tracks/16/interp = 1
 tracks/16/loop_wrap = true
 tracks/16/imported = false
@@ -3238,7 +3238,7 @@ tracks/0/keys = {
 "values": [ 8, 9, 10, 11, 12, 13, 14, 15 ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("BodyCollider:position")
+tracks/1/path = NodePath("Area2D_Body/BodyCollider:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
@@ -3250,7 +3250,7 @@ tracks/1/keys = {
 "values": [ Vector2( -8, -30 ), Vector2( -8, -30 ) ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("BodyCollider:rotation_degrees")
+tracks/2/path = NodePath("Area2D_Body/BodyCollider:rotation_degrees")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
@@ -3262,7 +3262,7 @@ tracks/2/keys = {
 "values": [ 40.5632, 40.5632 ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("BodyCollider:scale")
+tracks/3/path = NodePath("Area2D_Body/BodyCollider:scale")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
@@ -3274,7 +3274,7 @@ tracks/3/keys = {
 "values": [ Vector2( 0.972, 0.58 ), Vector2( 0.972, 0.58 ) ]
 }
 tracks/4/type = "value"
-tracks/4/path = NodePath("BodyCollider:disabled")
+tracks/4/path = NodePath("Area2D_Body/BodyCollider:disabled")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/imported = false
@@ -3382,7 +3382,7 @@ tracks/12/keys = {
 "values": [ true, true ]
 }
 tracks/13/type = "value"
-tracks/13/path = NodePath("Area2D_Move/MoveCollider:position")
+tracks/13/path = NodePath("MoveCollider:position")
 tracks/13/interp = 1
 tracks/13/loop_wrap = true
 tracks/13/imported = false
@@ -3394,7 +3394,7 @@ tracks/13/keys = {
 "values": [ Vector2( -7, -36 ), Vector2( -7, -36 ) ]
 }
 tracks/14/type = "value"
-tracks/14/path = NodePath("Area2D_Move/MoveCollider:rotation_degrees")
+tracks/14/path = NodePath("MoveCollider:rotation_degrees")
 tracks/14/interp = 1
 tracks/14/loop_wrap = true
 tracks/14/imported = false
@@ -3406,7 +3406,7 @@ tracks/14/keys = {
 "values": [ 0.0, 0.0 ]
 }
 tracks/15/type = "value"
-tracks/15/path = NodePath("Area2D_Move/MoveCollider:scale")
+tracks/15/path = NodePath("MoveCollider:scale")
 tracks/15/interp = 1
 tracks/15/loop_wrap = true
 tracks/15/imported = false
@@ -3418,7 +3418,7 @@ tracks/15/keys = {
 "values": [ Vector2( 1.28, 1 ), Vector2( 1.28, 1 ) ]
 }
 tracks/16/type = "value"
-tracks/16/path = NodePath("Area2D_Move/MoveCollider:disabled")
+tracks/16/path = NodePath("MoveCollider:disabled")
 tracks/16/interp = 1
 tracks/16/loop_wrap = true
 tracks/16/imported = false
@@ -3469,7 +3469,7 @@ tracks/0/keys = {
 "values": [ 0, 1, 2, 3, 4, 5, 6, 7 ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("BodyCollider:position")
+tracks/1/path = NodePath("Area2D_Body/BodyCollider:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
@@ -3481,7 +3481,7 @@ tracks/1/keys = {
 "values": [ Vector2( -1, -30 ), Vector2( -1, -30 ) ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("BodyCollider:rotation_degrees")
+tracks/2/path = NodePath("Area2D_Body/BodyCollider:rotation_degrees")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
@@ -3493,7 +3493,7 @@ tracks/2/keys = {
 "values": [ -12.7374, -12.7374 ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("BodyCollider:scale")
+tracks/3/path = NodePath("Area2D_Body/BodyCollider:scale")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
@@ -3505,7 +3505,7 @@ tracks/3/keys = {
 "values": [ Vector2( 1.01, 0.58 ), Vector2( 1.01, 0.58 ) ]
 }
 tracks/4/type = "value"
-tracks/4/path = NodePath("BodyCollider:disabled")
+tracks/4/path = NodePath("Area2D_Body/BodyCollider:disabled")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/imported = false
@@ -3613,7 +3613,7 @@ tracks/12/keys = {
 "values": [ true, true ]
 }
 tracks/13/type = "value"
-tracks/13/path = NodePath("Area2D_Move/MoveCollider:position")
+tracks/13/path = NodePath("MoveCollider:position")
 tracks/13/interp = 1
 tracks/13/loop_wrap = true
 tracks/13/imported = false
@@ -3625,7 +3625,7 @@ tracks/13/keys = {
 "values": [ Vector2( -3, -36 ), Vector2( -3, -36 ) ]
 }
 tracks/14/type = "value"
-tracks/14/path = NodePath("Area2D_Move/MoveCollider:rotation_degrees")
+tracks/14/path = NodePath("MoveCollider:rotation_degrees")
 tracks/14/interp = 1
 tracks/14/loop_wrap = true
 tracks/14/imported = false
@@ -3637,7 +3637,7 @@ tracks/14/keys = {
 "values": [ 0.0, 0.0 ]
 }
 tracks/15/type = "value"
-tracks/15/path = NodePath("Area2D_Move/MoveCollider:scale")
+tracks/15/path = NodePath("MoveCollider:scale")
 tracks/15/interp = 1
 tracks/15/loop_wrap = true
 tracks/15/imported = false
@@ -3649,7 +3649,7 @@ tracks/15/keys = {
 "values": [ Vector2( 0.799999, 1 ), Vector2( 0.799999, 1 ) ]
 }
 tracks/16/type = "value"
-tracks/16/path = NodePath("Area2D_Move/MoveCollider:disabled")
+tracks/16/path = NodePath("MoveCollider:disabled")
 tracks/16/interp = 1
 tracks/16/loop_wrap = true
 tracks/16/imported = false
@@ -3840,15 +3840,22 @@ graph_offset = Vector2( -136.616, 71.8 )
 
 [node name="Couillu" type="KinematicBody2D"]
 position = Vector2( 157, 108 )
-scale = Vector2( -1, 1 )
-collision_layer = 16
-collision_mask = 2
+collision_layer = 128
+collision_mask = 8
 script = ExtResource( 3 )
 player_number = 1
 forward_speed = 60
 backward_speed = 35
 
-[node name="BodyCollider" type="CollisionShape2D" parent="."]
+[node name="MoveCollider" type="CollisionShape2D" parent="."]
+position = Vector2( 4, -36 )
+shape = SubResource( 96 )
+
+[node name="Area2D_Body" type="Area2D" parent="."]
+collision_layer = 16
+collision_mask = 2
+
+[node name="BodyCollider" type="CollisionShape2D" parent="Area2D_Body"]
 position = Vector2( 10, -33 )
 shape = SubResource( 94 )
 
@@ -3871,14 +3878,6 @@ position = Vector2( 11, -34 )
 rotation = -0.2374
 scale = Vector2( 0.447916, 1.2828 )
 shape = SubResource( 95 )
-
-[node name="Area2D_Move" type="Area2D" parent="."]
-collision_layer = 128
-collision_mask = 8
-
-[node name="MoveCollider" type="CollisionShape2D" parent="Area2D_Move"]
-position = Vector2( 4, -36 )
-shape = SubResource( 96 )
 
 [node name="Shadow" type="Sprite" parent="."]
 modulate = Color( 1, 0.490196, 1, 0.490196 )
@@ -3921,3 +3920,6 @@ active = true
 parameters/playback = SubResource( 61 )
 
 [node name="FXs" type="AudioStreamPlayer2D" parent="."]
+
+[connection signal="area_shape_entered" from="Area2D_Body" to="." method="_on_body_hit"]
+[connection signal="area_shape_entered" from="Area2D_Defense" to="." method="_on_defense_hit"]
