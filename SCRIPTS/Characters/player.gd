@@ -14,6 +14,14 @@ var ui_actions = [
 	[ "P2_left", "P2_right", "P2_up", "P2_down", "P2_a", "P2_b"],
 ]
 
+var attack_damage = {
+	"Slap": 4,
+	"Punch": 8,
+	"Kick": 14,
+	"Slash": 22,
+	"Insult": 6
+}
+
 var anim_node
 var opponent_anim_node
 var busy = false
@@ -30,6 +38,20 @@ func _ready():
 			opponent_anim_node = sib.get_node("AnimationPlayer")
 			opponent_anim_node.connect("animation_finished", self, "_on_opponent_animation_finished")
 			break
+
+func get_damage_for_attack(attack):
+	var points = attack_damage.get(attack)
+	return 0 if points == null else points
+
+func is_defense_right_for_attack(defense, attack):
+	if defense == "Crouch":
+		return attack in ["Insult", "Slap"]
+	elif defense == "Jump":
+		return attack in ["Insult", "Kick"]
+	elif defense == "Parry":
+		return attack in ["Slash", "Slap", "Punch"]
+	else:
+		return false
 
 func _input(event):
 	
@@ -101,15 +123,27 @@ func _on_animation_finished(_anim_name):
 	busy = false
 
 func _on_opponent_animation_finished(anim_name):
-	attack_processed = false
+	if attack_processed:
+		attack_processed = false
+	elif get_damage_for_attack(anim_name) > 0:
+		print(name, " was NOT hit by ", anim_name)
 
 func _on_body_hit(_area_rid, _area, _area_shape_index, _local_shape_index):
 	if not attack_processed:
+		var attack = opponent_anim_node.current_animation
 		attack_processed = true
-		print(name, " has been hit: ", opponent_anim_node.current_animation)
+		print(name, " was hit by ", attack, ", damage: ",
+			  get_damage_for_attack(attack), " points")
 		backup_distance += 20
 
 func _on_defense_hit(_area_rid, _area, _area_shape_index, _local_shape_index):
 	if not attack_processed:
+		var attack = opponent_anim_node.current_animation
+		var defense = anim_node.current_animation
 		attack_processed = true
-		print(name, " has thwarted a hit: ", opponent_anim_node.current_animation)
+		if is_defense_right_for_attack(defense, attack):
+			print(name, " thwarted ", attack, ", no damage")
+		else:
+			print(name, " thwarted ", attack, ", damage: ",
+				  get_damage_for_attack(attack) / 2, " points")
+			backup_distance += 10
