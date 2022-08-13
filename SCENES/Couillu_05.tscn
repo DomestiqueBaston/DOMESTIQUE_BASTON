@@ -198,46 +198,34 @@ tracks/14/keys = {
 "values": [ 0.0, 0.0 ]
 }
 tracks/15/type = "value"
-tracks/15/path = NodePath("MoveCollider:scale")
+tracks/15/path = NodePath("MoveCollider:disabled")
 tracks/15/interp = 1
 tracks/15/loop_wrap = true
 tracks/15/imported = false
 tracks/15/enabled = true
 tracks/15/keys = {
-"times": PoolRealArray( 0, 0.1, 0.2, 0.6, 0.7, 0.8, 0.9 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
-"update": 1,
-"values": [ Vector2( 0.68, 1 ), Vector2( 0.78, 1 ), Vector2( 0.88, 1 ), Vector2( 0.88, 1 ), Vector2( 0.733333, 1 ), Vector2( 0.706666, 1 ), Vector2( 0.68, 1 ) ]
-}
-tracks/16/type = "value"
-tracks/16/path = NodePath("MoveCollider:disabled")
-tracks/16/interp = 1
-tracks/16/loop_wrap = true
-tracks/16/imported = false
-tracks/16/enabled = true
-tracks/16/keys = {
 "times": PoolRealArray( 0, 0.9 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
 "values": [ false, false ]
 }
-tracks/17/type = "audio"
-tracks/17/path = NodePath("FXs")
+tracks/16/type = "audio"
+tracks/16/path = NodePath("FXs")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/keys = {
+"clips": [  ],
+"times": PoolRealArray(  )
+}
+tracks/17/type = "value"
+tracks/17/path = NodePath("Shadow:frame")
 tracks/17/interp = 1
 tracks/17/loop_wrap = true
 tracks/17/imported = false
 tracks/17/enabled = true
 tracks/17/keys = {
-"clips": [  ],
-"times": PoolRealArray(  )
-}
-tracks/18/type = "value"
-tracks/18/path = NodePath("Shadow:frame")
-tracks/18/interp = 1
-tracks/18/loop_wrap = true
-tracks/18/imported = false
-tracks/18/enabled = true
-tracks/18/keys = {
 "times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 1,
@@ -428,46 +416,34 @@ tracks/14/keys = {
 "values": [ 0.0, 0.0 ]
 }
 tracks/15/type = "value"
-tracks/15/path = NodePath("MoveCollider:scale")
+tracks/15/path = NodePath("MoveCollider:disabled")
 tracks/15/interp = 1
 tracks/15/loop_wrap = true
 tracks/15/imported = false
 tracks/15/enabled = true
 tracks/15/keys = {
-"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
-"update": 1,
-"values": [ Vector2( 0.845245, 1 ), Vector2( 1.04524, 1 ), Vector2( 0.978578, 1 ), Vector2( 0.911911, 1 ), Vector2( 0.845245, 1 ), Vector2( 0.785245, 1 ), Vector2( 0.725245, 1 ) ]
-}
-tracks/16/type = "value"
-tracks/16/path = NodePath("MoveCollider:disabled")
-tracks/16/interp = 1
-tracks/16/loop_wrap = true
-tracks/16/imported = false
-tracks/16/enabled = true
-tracks/16/keys = {
 "times": PoolRealArray( 0, 0.6 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
 "values": [ false, false ]
 }
-tracks/17/type = "audio"
-tracks/17/path = NodePath("FXs")
+tracks/16/type = "audio"
+tracks/16/path = NodePath("FXs")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/keys = {
+"clips": [  ],
+"times": PoolRealArray(  )
+}
+tracks/17/type = "value"
+tracks/17/path = NodePath("Shadow:frame")
 tracks/17/interp = 1
 tracks/17/loop_wrap = true
 tracks/17/imported = false
 tracks/17/enabled = true
 tracks/17/keys = {
-"clips": [  ],
-"times": PoolRealArray(  )
-}
-tracks/18/type = "value"
-tracks/18/path = NodePath("Shadow:frame")
-tracks/18/interp = 1
-tracks/18/loop_wrap = true
-tracks/18/imported = false
-tracks/18/enabled = true
-tracks/18/keys = {
 "times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
 "update": 1,
@@ -658,7 +634,7 @@ tracks/14/keys = {
 "values": [ 0.0, 0.0 ]
 }
 tracks/15/type = "value"
-tracks/15/path = NodePath("MoveCollider:scale")
+tracks/15/path = NodePath("MoveCollider:disabled")
 tracks/15/interp = 1
 tracks/15/loop_wrap = true
 tracks/15/imported = false
@@ -667,37 +643,25 @@ tracks/15/keys = {
 "times": PoolRealArray( 0, 0.7 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
-"values": [ Vector2( 0.720003, 1 ), Vector2( 0.720003, 1 ) ]
+"values": [ false, false ]
 }
-tracks/16/type = "value"
-tracks/16/path = NodePath("MoveCollider:disabled")
+tracks/16/type = "audio"
+tracks/16/path = NodePath("FXs")
 tracks/16/interp = 1
 tracks/16/loop_wrap = true
 tracks/16/imported = false
 tracks/16/enabled = true
 tracks/16/keys = {
-"times": PoolRealArray( 0, 0.7 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 1,
-"values": [ false, false ]
+"clips": [  ],
+"times": PoolRealArray(  )
 }
-tracks/17/type = "audio"
-tracks/17/path = NodePath("FXs")
+tracks/17/type = "value"
+tracks/17/path = NodePath("Shadow:frame")
 tracks/17/interp = 1
 tracks/17/loop_wrap = true
 tracks/17/imported = false
 tracks/17/enabled = true
 tracks/17/keys = {
-"clips": [  ],
-"times": PoolRealArray(  )
-}
-tracks/18/type = "value"
-tracks/18/path = NodePath("Shadow:frame")
-tracks/18/interp = 1
-tracks/18/loop_wrap = true
-tracks/18/imported = false
-tracks/18/enabled = true
-tracks/18/keys = {
 "times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 1,
@@ -888,7 +852,7 @@ tracks/14/keys = {
 "values": [ 0.0, 0.0 ]
 }
 tracks/15/type = "value"
-tracks/15/path = NodePath("MoveCollider:scale")
+tracks/15/path = NodePath("MoveCollider:disabled")
 tracks/15/interp = 1
 tracks/15/loop_wrap = true
 tracks/15/imported = false
@@ -897,37 +861,25 @@ tracks/15/keys = {
 "times": PoolRealArray( 0, 1.3 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
-"values": [ Vector2( 0.800003, 1 ), Vector2( 0.800003, 1 ) ]
+"values": [ true, true ]
 }
-tracks/16/type = "value"
-tracks/16/path = NodePath("MoveCollider:disabled")
+tracks/16/type = "audio"
+tracks/16/path = NodePath("FXs")
 tracks/16/interp = 1
 tracks/16/loop_wrap = true
 tracks/16/imported = false
 tracks/16/enabled = true
 tracks/16/keys = {
-"times": PoolRealArray( 0, 1.3 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 1,
-"values": [ true, true ]
+"clips": [  ],
+"times": PoolRealArray(  )
 }
-tracks/17/type = "audio"
-tracks/17/path = NodePath("FXs")
+tracks/17/type = "value"
+tracks/17/path = NodePath("Shadow:frame")
 tracks/17/interp = 1
 tracks/17/loop_wrap = true
 tracks/17/imported = false
 tracks/17/enabled = true
 tracks/17/keys = {
-"clips": [  ],
-"times": PoolRealArray(  )
-}
-tracks/18/type = "value"
-tracks/18/path = NodePath("Shadow:frame")
-tracks/18/interp = 1
-tracks/18/loop_wrap = true
-tracks/18/imported = false
-tracks/18/enabled = true
-tracks/18/keys = {
 "times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1, 1.2, 1.3 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 1,
@@ -1118,7 +1070,7 @@ tracks/14/keys = {
 "values": [ 0.0, 0.0 ]
 }
 tracks/15/type = "value"
-tracks/15/path = NodePath("MoveCollider:scale")
+tracks/15/path = NodePath("MoveCollider:disabled")
 tracks/15/interp = 1
 tracks/15/loop_wrap = true
 tracks/15/imported = false
@@ -1127,37 +1079,25 @@ tracks/15/keys = {
 "times": PoolRealArray( 0, 1.1 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
-"values": [ Vector2( 0.800003, 1 ), Vector2( 0.800003, 1 ) ]
+"values": [ false, false ]
 }
-tracks/16/type = "value"
-tracks/16/path = NodePath("MoveCollider:disabled")
+tracks/16/type = "audio"
+tracks/16/path = NodePath("FXs")
 tracks/16/interp = 1
 tracks/16/loop_wrap = true
 tracks/16/imported = false
 tracks/16/enabled = true
 tracks/16/keys = {
-"times": PoolRealArray( 0, 1.1 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 1,
-"values": [ false, false ]
+"clips": [  ],
+"times": PoolRealArray(  )
 }
-tracks/17/type = "audio"
-tracks/17/path = NodePath("FXs")
+tracks/17/type = "value"
+tracks/17/path = NodePath("Shadow:frame")
 tracks/17/interp = 1
 tracks/17/loop_wrap = true
 tracks/17/imported = false
 tracks/17/enabled = true
 tracks/17/keys = {
-"clips": [  ],
-"times": PoolRealArray(  )
-}
-tracks/18/type = "value"
-tracks/18/path = NodePath("Shadow:frame")
-tracks/18/interp = 1
-tracks/18/loop_wrap = true
-tracks/18/imported = false
-tracks/18/enabled = true
-tracks/18/keys = {
 "times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 1,
@@ -1348,7 +1288,7 @@ tracks/14/keys = {
 "values": [ 0.0, 0.0 ]
 }
 tracks/15/type = "value"
-tracks/15/path = NodePath("MoveCollider:scale")
+tracks/15/path = NodePath("MoveCollider:disabled")
 tracks/15/interp = 1
 tracks/15/loop_wrap = true
 tracks/15/imported = false
@@ -1357,37 +1297,25 @@ tracks/15/keys = {
 "times": PoolRealArray( 0, 1.2 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
-"values": [ Vector2( 0.800003, 1 ), Vector2( 0.800003, 1 ) ]
+"values": [ false, false ]
 }
-tracks/16/type = "value"
-tracks/16/path = NodePath("MoveCollider:disabled")
+tracks/16/type = "audio"
+tracks/16/path = NodePath("FXs")
 tracks/16/interp = 1
 tracks/16/loop_wrap = true
 tracks/16/imported = false
 tracks/16/enabled = true
 tracks/16/keys = {
-"times": PoolRealArray( 0, 1.2 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 1,
-"values": [ false, false ]
+"clips": [  ],
+"times": PoolRealArray(  )
 }
-tracks/17/type = "audio"
-tracks/17/path = NodePath("FXs")
+tracks/17/type = "value"
+tracks/17/path = NodePath("Shadow:frame")
 tracks/17/interp = 1
 tracks/17/loop_wrap = true
 tracks/17/imported = false
 tracks/17/enabled = true
 tracks/17/keys = {
-"clips": [  ],
-"times": PoolRealArray(  )
-}
-tracks/18/type = "value"
-tracks/18/path = NodePath("Shadow:frame")
-tracks/18/interp = 1
-tracks/18/loop_wrap = true
-tracks/18/imported = false
-tracks/18/enabled = true
-tracks/18/keys = {
 "times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1, 1.2 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 1,
@@ -1577,46 +1505,34 @@ tracks/14/keys = {
 "values": [ 0.0, 0.0 ]
 }
 tracks/15/type = "value"
-tracks/15/path = NodePath("MoveCollider:scale")
+tracks/15/path = NodePath("MoveCollider:disabled")
 tracks/15/interp = 1
 tracks/15/loop_wrap = true
 tracks/15/imported = false
 tracks/15/enabled = true
 tracks/15/keys = {
-"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.7, 0.8, 0.9 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
-"update": 1,
-"values": [ Vector2( 0.680003, 1 ), Vector2( 0.620003, 1 ), Vector2( 0.560003, 1 ), Vector2( 0.580003, 1 ), Vector2( 0.600004, 1 ), Vector2( 0.600004, 1 ), Vector2( 0.640004, 1 ), Vector2( 0.680004, 1 ) ]
-}
-tracks/16/type = "value"
-tracks/16/path = NodePath("MoveCollider:disabled")
-tracks/16/interp = 1
-tracks/16/loop_wrap = true
-tracks/16/imported = false
-tracks/16/enabled = true
-tracks/16/keys = {
 "times": PoolRealArray( 0, 0.9 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
 "values": [ false, false ]
 }
-tracks/17/type = "audio"
-tracks/17/path = NodePath("FXs")
+tracks/16/type = "audio"
+tracks/16/path = NodePath("FXs")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/keys = {
+"clips": [  ],
+"times": PoolRealArray(  )
+}
+tracks/17/type = "value"
+tracks/17/path = NodePath("Shadow:frame")
 tracks/17/interp = 1
 tracks/17/loop_wrap = true
 tracks/17/imported = false
 tracks/17/enabled = true
 tracks/17/keys = {
-"clips": [  ],
-"times": PoolRealArray(  )
-}
-tracks/18/type = "value"
-tracks/18/path = NodePath("Shadow:frame")
-tracks/18/interp = 1
-tracks/18/loop_wrap = true
-tracks/18/imported = false
-tracks/18/enabled = true
-tracks/18/keys = {
 "times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 1,
@@ -1792,7 +1708,7 @@ tracks/13/keys = {
 "times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.2 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 1,
-"values": [ Vector2( -23, -45 ), Vector2( -20, -45 ), Vector2( -16, -45 ), Vector2( -9, -45 ), Vector2( -9, -45 ), Vector2( -9.5, -45 ), Vector2( -10, -45 ), Vector2( -2, -45 ), Vector2( -1, -45 ), Vector2( -1.19209e-07, -45 ), Vector2( -1.19209e-07, -45 ) ]
+"values": [ Vector2( -23, -45 ), Vector2( -20, -45 ), Vector2( -14, -45 ), Vector2( -7, -45 ), Vector2( -9, -45 ), Vector2( -13.5, -45 ), Vector2( -4, -45 ), Vector2( 8, -45 ), Vector2( 12, -45 ), Vector2( 14, -45 ), Vector2( 14, -45 ) ]
 }
 tracks/14/type = "value"
 tracks/14/path = NodePath("MoveCollider:rotation_degrees")
@@ -1801,52 +1717,40 @@ tracks/14/loop_wrap = true
 tracks/14/imported = false
 tracks/14/enabled = true
 tracks/14/keys = {
-"times": PoolRealArray( 0, 0.5, 1.2 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
+"times": PoolRealArray( 0, 1.2 ),
+"transitions": PoolRealArray( 1, 1 ),
 "update": 1,
-"values": [ 0.0, 0.0, 0.0 ]
+"values": [ 0.0, 0.0 ]
 }
 tracks/15/type = "value"
-tracks/15/path = NodePath("MoveCollider:scale")
+tracks/15/path = NodePath("MoveCollider:disabled")
 tracks/15/interp = 1
 tracks/15/loop_wrap = true
 tracks/15/imported = false
 tracks/15/enabled = true
 tracks/15/keys = {
-"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 1.2 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
-"update": 1,
-"values": [ Vector2( 1.4, 1.24 ), Vector2( 1.492, 1.24 ), Vector2( 1.51734, 1.24 ), Vector2( 1.54267, 1.24 ), Vector2( 1.528, 1.24 ), Vector2( 1.624, 1.24 ), Vector2( 1.72, 1.24 ), Vector2( 2.12, 1.24 ), Vector2( 2.12, 1.24 ) ]
-}
-tracks/16/type = "value"
-tracks/16/path = NodePath("MoveCollider:disabled")
-tracks/16/interp = 1
-tracks/16/loop_wrap = true
-tracks/16/imported = false
-tracks/16/enabled = true
-tracks/16/keys = {
 "times": PoolRealArray( 0, 1.2 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
 "values": [ false, false ]
 }
-tracks/17/type = "audio"
-tracks/17/path = NodePath("FXs")
+tracks/16/type = "audio"
+tracks/16/path = NodePath("FXs")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/keys = {
+"clips": [  ],
+"times": PoolRealArray(  )
+}
+tracks/17/type = "value"
+tracks/17/path = NodePath("Shadow:frame")
 tracks/17/interp = 1
 tracks/17/loop_wrap = true
 tracks/17/imported = false
 tracks/17/enabled = true
 tracks/17/keys = {
-"clips": [  ],
-"times": PoolRealArray(  )
-}
-tracks/18/type = "value"
-tracks/18/path = NodePath("Shadow:frame")
-tracks/18/interp = 1
-tracks/18/loop_wrap = true
-tracks/18/imported = false
-tracks/18/enabled = true
-tracks/18/keys = {
 "times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1, 1.2 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 1,
@@ -2037,7 +1941,7 @@ tracks/14/keys = {
 "values": [ 0.0, 0.0 ]
 }
 tracks/15/type = "value"
-tracks/15/path = NodePath("MoveCollider:scale")
+tracks/15/path = NodePath("MoveCollider:disabled")
 tracks/15/interp = 1
 tracks/15/loop_wrap = true
 tracks/15/imported = false
@@ -2046,37 +1950,25 @@ tracks/15/keys = {
 "times": PoolRealArray( 0, 1.1 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
-"values": [ Vector2( 0.640003, 1 ), Vector2( 0.640003, 1 ) ]
+"values": [ false, false ]
 }
-tracks/16/type = "value"
-tracks/16/path = NodePath("MoveCollider:disabled")
+tracks/16/type = "audio"
+tracks/16/path = NodePath("FXs")
 tracks/16/interp = 1
 tracks/16/loop_wrap = true
 tracks/16/imported = false
 tracks/16/enabled = true
 tracks/16/keys = {
-"times": PoolRealArray( 0, 1.1 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 1,
-"values": [ false, false ]
+"clips": [  ],
+"times": PoolRealArray(  )
 }
-tracks/17/type = "audio"
-tracks/17/path = NodePath("FXs")
+tracks/17/type = "value"
+tracks/17/path = NodePath("Shadow:frame")
 tracks/17/interp = 1
 tracks/17/loop_wrap = true
 tracks/17/imported = false
 tracks/17/enabled = true
 tracks/17/keys = {
-"clips": [  ],
-"times": PoolRealArray(  )
-}
-tracks/18/type = "value"
-tracks/18/path = NodePath("Shadow:frame")
-tracks/18/interp = 1
-tracks/18/loop_wrap = true
-tracks/18/imported = false
-tracks/18/enabled = true
-tracks/18/keys = {
 "times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 1,
@@ -2267,7 +2159,7 @@ tracks/14/keys = {
 "values": [ 0.0, 0.0 ]
 }
 tracks/15/type = "value"
-tracks/15/path = NodePath("MoveCollider:scale")
+tracks/15/path = NodePath("MoveCollider:disabled")
 tracks/15/interp = 1
 tracks/15/loop_wrap = true
 tracks/15/imported = false
@@ -2276,37 +2168,25 @@ tracks/15/keys = {
 "times": PoolRealArray( 0, 1 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
-"values": [ Vector2( 0.800003, 1 ), Vector2( 0.800003, 1 ) ]
+"values": [ false, false ]
 }
-tracks/16/type = "value"
-tracks/16/path = NodePath("MoveCollider:disabled")
+tracks/16/type = "audio"
+tracks/16/path = NodePath("FXs")
 tracks/16/interp = 1
 tracks/16/loop_wrap = true
 tracks/16/imported = false
 tracks/16/enabled = true
 tracks/16/keys = {
-"times": PoolRealArray( 0, 1 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 1,
-"values": [ false, false ]
+"clips": [  ],
+"times": PoolRealArray(  )
 }
-tracks/17/type = "audio"
-tracks/17/path = NodePath("FXs")
+tracks/17/type = "value"
+tracks/17/path = NodePath("Shadow:frame")
 tracks/17/interp = 1
 tracks/17/loop_wrap = true
 tracks/17/imported = false
 tracks/17/enabled = true
 tracks/17/keys = {
-"clips": [  ],
-"times": PoolRealArray(  )
-}
-tracks/18/type = "value"
-tracks/18/path = NodePath("Shadow:frame")
-tracks/18/interp = 1
-tracks/18/loop_wrap = true
-tracks/18/imported = false
-tracks/18/enabled = true
-tracks/18/keys = {
 "times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 1,
@@ -2716,7 +2596,7 @@ tracks/14/keys = {
 "values": [ 0.0, 0.0 ]
 }
 tracks/15/type = "value"
-tracks/15/path = NodePath("MoveCollider:scale")
+tracks/15/path = NodePath("MoveCollider:disabled")
 tracks/15/interp = 1
 tracks/15/loop_wrap = true
 tracks/15/imported = false
@@ -2725,37 +2605,25 @@ tracks/15/keys = {
 "times": PoolRealArray( 0, 0.6 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
-"values": [ Vector2( 0.800003, 1 ), Vector2( 0.800003, 1 ) ]
+"values": [ false, false ]
 }
-tracks/16/type = "value"
-tracks/16/path = NodePath("MoveCollider:disabled")
+tracks/16/type = "audio"
+tracks/16/path = NodePath("FXs")
 tracks/16/interp = 1
 tracks/16/loop_wrap = true
 tracks/16/imported = false
 tracks/16/enabled = true
 tracks/16/keys = {
-"times": PoolRealArray( 0, 0.6 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 1,
-"values": [ false, false ]
+"clips": [  ],
+"times": PoolRealArray(  )
 }
-tracks/17/type = "audio"
-tracks/17/path = NodePath("FXs")
+tracks/17/type = "value"
+tracks/17/path = NodePath("Shadow:frame")
 tracks/17/interp = 1
 tracks/17/loop_wrap = true
 tracks/17/imported = false
 tracks/17/enabled = true
 tracks/17/keys = {
-"clips": [  ],
-"times": PoolRealArray(  )
-}
-tracks/18/type = "value"
-tracks/18/path = NodePath("Shadow:frame")
-tracks/18/interp = 1
-tracks/18/loop_wrap = true
-tracks/18/imported = false
-tracks/18/enabled = true
-tracks/18/keys = {
 "times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
 "update": 1,
@@ -2931,7 +2799,7 @@ tracks/13/keys = {
 "times": PoolRealArray( 0, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1, 1.2, 1.3, 1.4, 1.5 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 1,
-"values": [ Vector2( -11, -36 ), Vector2( -11, -36 ), Vector2( -9, -36 ), Vector2( -1, -36 ), Vector2( 1, -36 ), Vector2( 1, -36 ), Vector2( 0, -36 ), Vector2( -1, -36 ), Vector2( -2, -36 ), Vector2( -6, -36 ), Vector2( -11, -36 ), Vector2( -11, -36 ) ]
+"values": [ Vector2( -11, -36 ), Vector2( -11, -36 ), Vector2( -7, -36 ), Vector2( 3, -36 ), Vector2( 7, -36 ), Vector2( 7, -36 ), Vector2( 6, -36 ), Vector2( -1, -36 ), Vector2( -6, -36 ), Vector2( -10, -36 ), Vector2( -11, -36 ), Vector2( -11, -36 ) ]
 }
 tracks/14/type = "value"
 tracks/14/path = NodePath("MoveCollider:rotation_degrees")
@@ -2946,46 +2814,34 @@ tracks/14/keys = {
 "values": [ 0.0, 0.0 ]
 }
 tracks/15/type = "value"
-tracks/15/path = NodePath("MoveCollider:scale")
+tracks/15/path = NodePath("MoveCollider:disabled")
 tracks/15/interp = 1
 tracks/15/loop_wrap = true
 tracks/15/imported = false
 tracks/15/enabled = true
 tracks/15/keys = {
-"times": PoolRealArray( 0, 0.6, 0.7, 1.2, 1.3, 1.4, 1.5 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
-"update": 1,
-"values": [ Vector2( 0.800001, 1 ), Vector2( 0.800001, 1 ), Vector2( 0.920002, 1 ), Vector2( 0.920002, 1 ), Vector2( 0.880002, 1 ), Vector2( 0.840003, 1 ), Vector2( 0.800003, 1 ) ]
-}
-tracks/16/type = "value"
-tracks/16/path = NodePath("MoveCollider:disabled")
-tracks/16/interp = 1
-tracks/16/loop_wrap = true
-tracks/16/imported = false
-tracks/16/enabled = true
-tracks/16/keys = {
 "times": PoolRealArray( 0, 1.5 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
 "values": [ false, false ]
 }
-tracks/17/type = "audio"
-tracks/17/path = NodePath("FXs")
+tracks/16/type = "audio"
+tracks/16/path = NodePath("FXs")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/keys = {
+"clips": [  ],
+"times": PoolRealArray(  )
+}
+tracks/17/type = "value"
+tracks/17/path = NodePath("Shadow:frame")
 tracks/17/interp = 1
 tracks/17/loop_wrap = true
 tracks/17/imported = false
 tracks/17/enabled = true
 tracks/17/keys = {
-"clips": [  ],
-"times": PoolRealArray(  )
-}
-tracks/18/type = "value"
-tracks/18/path = NodePath("Shadow:frame")
-tracks/18/interp = 1
-tracks/18/loop_wrap = true
-tracks/18/imported = false
-tracks/18/enabled = true
-tracks/18/keys = {
 "times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1, 1.2, 1.3, 1.4, 1.5 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 1,
@@ -3175,7 +3031,7 @@ tracks/14/keys = {
 "values": [ 0.0, 0.0 ]
 }
 tracks/15/type = "value"
-tracks/15/path = NodePath("MoveCollider:scale")
+tracks/15/path = NodePath("MoveCollider:disabled")
 tracks/15/interp = 1
 tracks/15/loop_wrap = true
 tracks/15/imported = false
@@ -3184,37 +3040,25 @@ tracks/15/keys = {
 "times": PoolRealArray( 0, 0.9 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
-"values": [ Vector2( 0.800001, 1 ), Vector2( 0.800001, 1 ) ]
+"values": [ false, false ]
 }
-tracks/16/type = "value"
-tracks/16/path = NodePath("MoveCollider:disabled")
+tracks/16/type = "audio"
+tracks/16/path = NodePath("FXs")
 tracks/16/interp = 1
 tracks/16/loop_wrap = true
 tracks/16/imported = false
 tracks/16/enabled = true
 tracks/16/keys = {
-"times": PoolRealArray( 0, 0.9 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 1,
-"values": [ false, false ]
+"clips": [  ],
+"times": PoolRealArray(  )
 }
-tracks/17/type = "audio"
-tracks/17/path = NodePath("FXs")
+tracks/17/type = "value"
+tracks/17/path = NodePath("Shadow:frame")
 tracks/17/interp = 1
 tracks/17/loop_wrap = true
 tracks/17/imported = false
 tracks/17/enabled = true
 tracks/17/keys = {
-"clips": [  ],
-"times": PoolRealArray(  )
-}
-tracks/18/type = "value"
-tracks/18/path = NodePath("Shadow:frame")
-tracks/18/interp = 1
-tracks/18/loop_wrap = true
-tracks/18/imported = false
-tracks/18/enabled = true
-tracks/18/keys = {
 "times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 1,
@@ -3406,7 +3250,7 @@ tracks/14/keys = {
 "values": [ 0.0, 0.0 ]
 }
 tracks/15/type = "value"
-tracks/15/path = NodePath("MoveCollider:scale")
+tracks/15/path = NodePath("MoveCollider:disabled")
 tracks/15/interp = 1
 tracks/15/loop_wrap = true
 tracks/15/imported = false
@@ -3415,37 +3259,25 @@ tracks/15/keys = {
 "times": PoolRealArray( 0, 0.7 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
-"values": [ Vector2( 1.28, 1 ), Vector2( 1.28, 1 ) ]
+"values": [ false, false ]
 }
-tracks/16/type = "value"
-tracks/16/path = NodePath("MoveCollider:disabled")
+tracks/16/type = "audio"
+tracks/16/path = NodePath("FXs")
 tracks/16/interp = 1
 tracks/16/loop_wrap = true
 tracks/16/imported = false
 tracks/16/enabled = true
 tracks/16/keys = {
-"times": PoolRealArray( 0, 0.7 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 1,
-"values": [ false, false ]
+"clips": [  ],
+"times": PoolRealArray(  )
 }
-tracks/17/type = "audio"
-tracks/17/path = NodePath("FXs")
+tracks/17/type = "value"
+tracks/17/path = NodePath("Shadow:frame")
 tracks/17/interp = 1
 tracks/17/loop_wrap = true
 tracks/17/imported = false
 tracks/17/enabled = true
 tracks/17/keys = {
-"clips": [  ],
-"times": PoolRealArray(  )
-}
-tracks/18/type = "value"
-tracks/18/path = NodePath("Shadow:frame")
-tracks/18/interp = 1
-tracks/18/loop_wrap = true
-tracks/18/imported = false
-tracks/18/enabled = true
-tracks/18/keys = {
 "times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 1,
@@ -3637,7 +3469,7 @@ tracks/14/keys = {
 "values": [ 0.0, 0.0 ]
 }
 tracks/15/type = "value"
-tracks/15/path = NodePath("MoveCollider:scale")
+tracks/15/path = NodePath("MoveCollider:disabled")
 tracks/15/interp = 1
 tracks/15/loop_wrap = true
 tracks/15/imported = false
@@ -3646,37 +3478,25 @@ tracks/15/keys = {
 "times": PoolRealArray( 0, 0.7 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
-"values": [ Vector2( 0.799999, 1 ), Vector2( 0.799999, 1 ) ]
+"values": [ false, false ]
 }
-tracks/16/type = "value"
-tracks/16/path = NodePath("MoveCollider:disabled")
+tracks/16/type = "audio"
+tracks/16/path = NodePath("FXs")
 tracks/16/interp = 1
 tracks/16/loop_wrap = true
 tracks/16/imported = false
 tracks/16/enabled = true
 tracks/16/keys = {
-"times": PoolRealArray( 0, 0.7 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 1,
-"values": [ false, false ]
+"clips": [  ],
+"times": PoolRealArray(  )
 }
-tracks/17/type = "audio"
-tracks/17/path = NodePath("FXs")
+tracks/17/type = "value"
+tracks/17/path = NodePath("Shadow:frame")
 tracks/17/interp = 1
 tracks/17/loop_wrap = true
 tracks/17/imported = false
 tracks/17/enabled = true
 tracks/17/keys = {
-"clips": [  ],
-"times": PoolRealArray(  )
-}
-tracks/18/type = "value"
-tracks/18/path = NodePath("Shadow:frame")
-tracks/18/interp = 1
-tracks/18/loop_wrap = true
-tracks/18/imported = false
-tracks/18/enabled = true
-tracks/18/keys = {
 "times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 1,
@@ -3892,7 +3712,7 @@ texture = ExtResource( 1 )
 offset = Vector2( -0.5, -53.5 )
 hframes = 13
 vframes = 13
-frame = 151
+frame = 20
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 autoplay = "Idle"
