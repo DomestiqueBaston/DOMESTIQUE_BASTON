@@ -122,10 +122,8 @@ func _physics_process(delta):
 	if retreat_distance > 0:
 		if retreat_distance > RETREAT_SPEED * delta:
 			velocity.x -= RETREAT_SPEED
-			retreat_distance -= RETREAT_SPEED * delta
 		else:
 			velocity.x -= retreat_distance / delta
-			retreat_distance = 0
 
 	if not busy:
 		var my_actions = ui_actions[player_number]
@@ -143,7 +141,13 @@ func _physics_process(delta):
 	if velocity.x != 0:
 		if player_number == TWO:
 			velocity.x = -velocity.x
-		velocity = move_and_collide(velocity * delta)
+		var x0 = position.x
+		var _collision = move_and_collide(velocity * delta)
+		if retreat_distance > 0:
+			var dist = x0 - position.x
+			if player_number == TWO:
+				dist = -dist
+			retreat_distance = max(retreat_distance - dist, 0)
 
 func _on_animation_finished(_anim_name):
 	busy = false
