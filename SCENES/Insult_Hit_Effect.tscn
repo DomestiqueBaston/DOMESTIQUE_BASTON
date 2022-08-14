@@ -42,6 +42,7 @@ hframes = 6
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 root_node = NodePath("../Sprite")
+autoplay = "Hit_Effect"
 anims/Hit_Effect = SubResource( 1 )
 anims/RESET = SubResource( 2 )
 
