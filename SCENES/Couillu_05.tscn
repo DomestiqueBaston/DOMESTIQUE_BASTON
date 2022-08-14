@@ -3712,7 +3712,7 @@ texture = ExtResource( 1 )
 offset = Vector2( -0.5, -53.5 )
 hframes = 13
 vframes = 13
-frame = 93
+frame = 69
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 autoplay = "Idle"
