@@ -165,9 +165,9 @@ func _on_body_hit(_area_rid, _area, _area_shape_index, _local_shape_index):
 	if (damage > 0):
 		print(name, " was hit by ", attack, ", damage: ", damage, " points")
 		if attack == "Insult":
-			play_hit_effect(false)
-		else:
 			play_hit_effect(true)
+		else:
+			play_hit_effect(false)
 			remaining_retreat_distance += retreat_distance
 
 func _on_defense_hit(_area_rid, _area, _area_shape_index, _local_shape_index):
@@ -183,16 +183,18 @@ func _on_defense_hit(_area_rid, _area, _area_shape_index, _local_shape_index):
 			  get_damage_for_attack(attack) / 2, " points")
 		if attack != "Insult":
 			remaining_retreat_distance += retreat_distance / 2.0
-	if defense == "Parry":
+	if defense == "Parry" and attack != "Insult":
 		play_miss_effect()
 
-func play_hit_effect(_with_sound):
-	var effect = preload("res://SCENES/Hit_Effect.tscn").instance()
-	get_tree().get_current_scene().add_child(effect)
-	effect.position = get_node("Area2D_Body/BodyCollider").global_position
-	if player_number == ONE:
-		effect.scale = Vector2(-1, 1)
-	effect.play_and_delete()
+func play_hit_effect(sound_only):
+	# TODO: sound
+	if not sound_only:
+		var effect = preload("res://SCENES/Hit_Effect.tscn").instance()
+		get_tree().get_current_scene().add_child(effect)
+		effect.position = get_node("Area2D_Body/BodyCollider").global_position
+		if player_number == ONE:
+			effect.scale = Vector2(-1, 1)
+		effect.play_and_delete()
 
 func play_miss_effect():
 	var effect = preload("res://SCENES/Miss_Effect.tscn").instance()
