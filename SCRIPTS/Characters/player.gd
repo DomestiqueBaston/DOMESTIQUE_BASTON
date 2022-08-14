@@ -165,9 +165,9 @@ func _on_body_hit(_area_rid, _area, _area_shape_index, _local_shape_index):
 	if (damage > 0):
 		print(name, " was hit by ", attack, ", damage: ", damage, " points")
 		if attack == "Insult":
-			play_hit_effect(true)
+			play_insult_hit_effect()
 		else:
-			play_hit_effect(false)
+			play_hit_effect()
 			remaining_retreat_distance += retreat_distance
 
 func _on_defense_hit(_area_rid, _area, _area_shape_index, _local_shape_index):
@@ -183,23 +183,41 @@ func _on_defense_hit(_area_rid, _area, _area_shape_index, _local_shape_index):
 			  get_damage_for_attack(attack) / 2, " points")
 		if attack != "Insult":
 			remaining_retreat_distance += retreat_distance / 2.0
-	if defense == "Parry" and attack != "Insult":
-		play_miss_effect()
+	if defense == "Parry":
+		if attack == "Insult":
+			play_insult_miss_effect()
+		else:
+			play_miss_effect()
 
-func play_hit_effect(sound_only):
-	# TODO: sound
-	if not sound_only:
-		var effect = preload("res://SCENES/Hit_Effect.tscn").instance()
-		get_tree().get_current_scene().add_child(effect)
-		effect.position = get_node("Area2D_Body/BodyCollider").global_position
-		if player_number == ONE:
-			effect.scale = Vector2(-1, 1)
-		effect.play_and_delete()
+func play_effect_once(scene, flip, pos):
+	var effect = scene.instance()
+	get_tree().current_scene.add_child(effect)
+	effect.position = pos
+	if flip:
+		effect.scale = Vector2(-1, 1)
+	var anim = effect.get_node("AnimationPlayer")
+	anim.connect("animation_finished", self, "delete_effect", [ effect ])
+	anim.play()
+
+func delete_effect(_anim_name, effect):
+	effect.queue_free()
+
+func play_hit_effect():
+	play_effect_once(
+		preload("res://SCENES/Hit_Effect.tscn"), player_number == ONE,
+		get_node("Area2D_Body/BodyCollider").global_position)
+
+func play_insult_hit_effect():
+	play_effect_once(
+		preload("res://SCENES/Insult_Hit_Effect.tscn"), player_number == ONE,
+		get_node("Area2D_Body/BodyCollider").global_position)
 
 func play_miss_effect():
-	var effect = preload("res://SCENES/Miss_Effect.tscn").instance()
-	get_tree().get_current_scene().add_child(effect)
-	effect.position = get_node("Area2D_Defense/DefenseCollider").global_position
-	if player_number == ONE:
-		effect.scale = Vector2(-1, 1)
-	effect.play_and_delete()
+	play_effect_once(
+		preload("res://SCENES/Miss_Effect.tscn"), player_number == ONE,
+		get_node("Area2D_Defense/DefenseCollider").global_position)
+
+func play_insult_miss_effect():
+	play_effect_once(
+		preload("res://SCENES/Insult_Miss_Effect.tscn"), player_number == ONE,
+		get_node("Area2D_Defense/DefenseCollider").global_position)
