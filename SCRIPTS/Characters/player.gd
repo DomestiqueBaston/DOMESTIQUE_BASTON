@@ -13,10 +13,10 @@ export var forward_speed = 75
 export var backward_speed = 50
 
 # distance player is pushed backwards by a successful attack
-const RETREAT_DISTANCE = 10
+export var retreat_distance = 10
 
 # speed at which player retreats after a successful attack, in pixels/second
-const RETREAT_SPEED = 100
+export var retreat_speed = 100
 
 # logical actions and corresponding input map actions for each player
 enum { FORWARD, BACKWARD, UP, DOWN, A, B }
@@ -47,7 +47,7 @@ var busy = false
 var attack_processed = false
 
 # distance player has to retreat as a result of a recent hit
-var retreat_distance = 0
+var remaining_retreat_distance = 0
 
 func _ready():
 	anim_node = $AnimationPlayer
@@ -119,11 +119,11 @@ func _input(event):
 func _physics_process(delta):
 	var velocity = Vector2()
 
-	if retreat_distance > 0:
-		if retreat_distance > RETREAT_SPEED * delta:
-			velocity.x -= RETREAT_SPEED
+	if remaining_retreat_distance > 0:
+		if remaining_retreat_distance > retreat_speed * delta:
+			velocity.x -= retreat_speed
 		else:
-			velocity.x -= retreat_distance / delta
+			velocity.x -= remaining_retreat_distance / delta
 
 	if not busy:
 		var my_actions = ui_actions[player_number]
@@ -143,11 +143,9 @@ func _physics_process(delta):
 			velocity.x = -velocity.x
 		var x0 = position.x
 		var _collision = move_and_collide(velocity * delta)
-		if retreat_distance > 0:
-			var dist = x0 - position.x
-			if player_number == TWO:
-				dist = -dist
-			retreat_distance = max(retreat_distance - dist, 0)
+		if remaining_retreat_distance > 0:
+			remaining_retreat_distance = max(
+				remaining_retreat_distance - abs(x0 - position.x), 0)
 
 func _on_animation_finished(_anim_name):
 	busy = false
@@ -159,24 +157,47 @@ func _on_opponent_animation_finished(anim_name):
 		print(name, " was NOT hit by ", anim_name)
 
 func _on_body_hit(_area_rid, _area, _area_shape_index, _local_shape_index):
-	if not attack_processed:
-		attack_processed = true
-		var attack = opponent_anim_node.current_animation
-		var damage = get_damage_for_attack(attack)
-		if (damage > 0):
-			print(name, " was hit by ", attack, ", damage: ", damage, " points")
-			if attack != "Insult":
-				retreat_distance += RETREAT_DISTANCE
+	if attack_processed:
+		return
+	attack_processed = true
+	var attack = opponent_anim_node.current_animation
+	var damage = get_damage_for_attack(attack)
+	if (damage > 0):
+		print(name, " was hit by ", attack, ", damage: ", damage, " points")
+		if attack == "Insult":
+			play_hit_effect(false)
+		else:
+			play_hit_effect(true)
+			remaining_retreat_distance += retreat_distance
 
 func _on_defense_hit(_area_rid, _area, _area_shape_index, _local_shape_index):
-	if not attack_processed:
-		attack_processed = true
-		var attack = opponent_anim_node.current_animation
-		var defense = anim_node.current_animation
-		if is_defense_right_for_attack(defense, attack):
-			print(name, " thwarted ", attack, ", no damage")
-		else:
-			print(name, " thwarted ", attack, ", damage: ",
-				  get_damage_for_attack(attack) / 2, " points")
-			if attack != "Insult":
-				retreat_distance += RETREAT_DISTANCE / 2.0
+	if attack_processed:
+		return
+	attack_processed = true
+	var attack = opponent_anim_node.current_animation
+	var defense = anim_node.current_animation
+	if is_defense_right_for_attack(defense, attack):
+		print(name, " thwarted ", attack, ", no damage")
+	else:
+		print(name, " thwarted ", attack, ", damage: ",
+			  get_damage_for_attack(attack) / 2, " points")
+		if attack != "Insult":
+			remaining_retreat_distance += retreat_distance / 2.0
+	if defense == "Parry":
+		play_miss_effect()
+
+func play_hit_effect(_with_sound):
+	var effect = preload("res://SCENES/Hit_Effect.tscn").instance()
+	get_tree().get_current_scene().add_child(effect)
+	effect.position = get_node("Area2D_Body/BodyCollider").global_position
+	if player_number == ONE:
+		effect.scale = Vector2(-1, 1)
+	effect.play_and_delete()
+
+func play_miss_effect():
+	var effect = preload("res://SCENES/Miss_Effect.tscn").instance()
+	get_tree().get_current_scene().add_child(effect)
+	effect.position = get_node("Area2D_Defense/DefenseCollider").global_position
+	if player_number == ONE:
+		effect.scale = Vector2(-1, 1)
+	effect.play_and_delete()
