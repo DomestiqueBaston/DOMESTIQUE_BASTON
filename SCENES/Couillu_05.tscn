@@ -619,7 +619,7 @@ tracks/13/keys = {
 "times": PoolRealArray( 0, 0.7 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
-"values": [ Vector2( -10, -36 ), Vector2( -10, -36 ) ]
+"values": [ Vector2( -16, -36 ), Vector2( -16, -36 ) ]
 }
 tracks/14/type = "value"
 tracks/14/path = NodePath("MoveCollider:rotation_degrees")
@@ -3712,7 +3712,7 @@ texture = ExtResource( 1 )
 offset = Vector2( -0.5, -53.5 )
 hframes = 13
 vframes = 13
-frame = 20
+frame = 144
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 autoplay = "Idle"
