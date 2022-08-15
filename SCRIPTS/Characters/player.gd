@@ -201,11 +201,11 @@ func _on_defense_hit(_area_rid, _area, _area_shape_index, _local_shape_index):
 		else:
 			play_miss_effect()
 
-func play_effect_once(scene, flip, pos):
+func play_effect_once(scene, pos):
 	var effect = scene.instance()
 	get_tree().current_scene.add_child(effect)
 	effect.position = pos
-	if flip:
+	if player_number == ONE:
 		effect.scale = Vector2(-1, 1)
 	var anim = effect.get_node("AnimationPlayer")
 	anim.connect("animation_finished", self, "delete_effect", [ effect ])
@@ -216,20 +216,20 @@ func delete_effect(_anim_name, effect):
 
 func play_hit_effect():
 	play_effect_once(
-		preload("res://SCENES/Hit_Effect.tscn"), player_number == ONE,
+		preload("res://SCENES/Hit_Effect.tscn"),
 		get_node("Area2D_Body/BodyCollider").global_position)
 
 func play_insult_hit_effect():
 	play_effect_once(
-		preload("res://SCENES/Insult_Hit_Effect.tscn"), player_number == ONE,
+		preload("res://SCENES/Insult_Hit_Effect.tscn"),
 		get_node("Area2D_Body/BodyCollider").global_position)
 
 func play_miss_effect():
 	play_effect_once(
-		preload("res://SCENES/Miss_Effect.tscn"), player_number == ONE,
+		preload("res://SCENES/Miss_Effect.tscn"),
 		get_node("Area2D_Defense/DefenseCollider").global_position)
 
 func play_insult_miss_effect():
 	play_effect_once(
-		preload("res://SCENES/Insult_Miss_Effect.tscn"), player_number == ONE,
+		preload("res://SCENES/Insult_Miss_Effect.tscn"),
 		get_node("Area2D_Defense/DefenseCollider").global_position)
