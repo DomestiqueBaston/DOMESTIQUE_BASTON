@@ -36,10 +36,10 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.6, 0.7, 0.8, 0.9 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 1,
-"values": [ Vector2( -10, -32 ) ]
+"values": [ Vector2( 11, -32 ), Vector2( 11, -27 ), Vector2( 11, -16 ), Vector2( 11, -15 ), Vector2( 11, -15 ), Vector2( 8, -27 ), Vector2( 11, -31 ), Vector2( 11, -32 ) ]
 }
 tracks/2/type = "value"
 tracks/2/path = NodePath("Area2D_Body/BodyCollider:rotation_degrees")
@@ -60,10 +60,10 @@ tracks/3/loop_wrap = true
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.6, 0.7, 0.8, 0.9 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 1,
-"values": [ Vector2( 1.12, 0.599999 ) ]
+"values": [ Vector2( 1.12, 0.599999 ), Vector2( 1.12, 0.5 ), Vector2( 1.12, 0.27 ), Vector2( 1.12, 0.28 ), Vector2( 1.12, 0.28 ), Vector2( 1.12, 0.5 ), Vector2( 1.12, 0.59 ), Vector2( 1.12, 0.6 ) ]
 }
 tracks/4/type = "value"
 tracks/4/path = NodePath("Area2D_Body/BodyCollider:disabled")
@@ -84,10 +84,10 @@ tracks/5/loop_wrap = true
 tracks/5/imported = false
 tracks/5/enabled = true
 tracks/5/keys = {
-"times": PoolRealArray( 0, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 1,
-"values": [ Vector2( -18, -34 ), Vector2( -24, -24 ), Vector2( -28, -19 ), Vector2( -29, -17 ), Vector2( -29, -18 ), Vector2( -26, -18 ), Vector2( -26, -13 ), Vector2( -19, -15 ), Vector2( -18, -15 ) ]
+"values": [ Vector2( 3, -34 ), Vector2( 6.99999, -17 ), Vector2( -2, -25 ), Vector2( -8, -17 ), Vector2( -12, -16 ), Vector2( -9.00001, -14 ), Vector2( -8, -15 ), Vector2( -3, -11 ), Vector2( 1, -17 ), Vector2( 2, -15 ) ]
 }
 tracks/6/type = "value"
 tracks/6/path = NodePath("Area2D_Roll/AttackCollider:rotation_degrees")
@@ -135,7 +135,7 @@ tracks/9/keys = {
 "times": PoolRealArray( 0, 0.1, 0.2, 0.6, 0.7, 0.8, 0.9 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
 "update": 1,
-"values": [ Vector2( -11, -30 ), Vector2( -15, -40 ), Vector2( -15, -56 ), Vector2( -15, -56 ), Vector2( -12, -27 ), Vector2( -10, -27 ), Vector2( -15, -33 ) ]
+"values": [ Vector2( 10, -30 ), Vector2( 6, -40 ), Vector2( 6, -56 ), Vector2( 6, -56 ), Vector2( 9, -27 ), Vector2( 11, -27 ), Vector2( 6, -33 ) ]
 }
 tracks/10/type = "value"
 tracks/10/path = NodePath("Area2D_Defense/DefenseCollider:rotation_degrees")
@@ -182,8 +182,8 @@ tracks/13/enabled = true
 tracks/13/keys = {
 "times": PoolRealArray( 0, 0.1, 0.2, 0.6, 0.7, 0.8, 0.9 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
-"update": 0,
-"values": [ Vector2( -18, -36 ), Vector2( -16, -36 ), Vector2( -14, -36 ), Vector2( -14, -36 ), Vector2( -16.6667, -36 ), Vector2( -18, -36 ), Vector2( -18, -36 ) ]
+"update": 1,
+"values": [ Vector2( 3, -36 ), Vector2( 5, -36 ), Vector2( 7, -36 ), Vector2( 7, -36 ), Vector2( 4.333, -36 ), Vector2( 3, -36 ), Vector2( 3, -36 ) ]
 }
 tracks/14/type = "value"
 tracks/14/path = NodePath("MoveCollider:rotation_degrees")
@@ -257,7 +257,7 @@ tracks/1/keys = {
 "times": PoolRealArray( 0, 0.6 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
-"values": [ Vector2( -10, -31.375 ), Vector2( -10, -31.375 ) ]
+"values": [ Vector2( 11, -31.375 ), Vector2( 11, -31.375 ) ]
 }
 tracks/2/type = "value"
 tracks/2/path = NodePath("Area2D_Body/BodyCollider:rotation_degrees")
@@ -305,7 +305,7 @@ tracks/5/keys = {
 "times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
 "update": 1,
-"values": [ Vector2( -20, -36 ), Vector2( -28, -38 ), Vector2( -39, -33 ), Vector2( -34, -25 ), Vector2( -23, -13 ), Vector2( -20, -14 ), Vector2( -16, -15 ) ]
+"values": [ Vector2( 1, -36 ), Vector2( -7, -38 ), Vector2( -18, -33 ), Vector2( -13, -25 ), Vector2( -2, -13 ), Vector2( 1, -14 ), Vector2( 5, -15 ) ]
 }
 tracks/6/type = "value"
 tracks/6/path = NodePath("Area2D_Roll/AttackCollider:rotation_degrees")
@@ -353,7 +353,7 @@ tracks/9/keys = {
 "times": PoolRealArray( 0, 0.6 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
-"values": [ Vector2( -14, -33 ), Vector2( -14, -33 ) ]
+"values": [ Vector2( 7, -33 ), Vector2( 7, -33 ) ]
 }
 tracks/10/type = "value"
 tracks/10/path = NodePath("Area2D_Defense/DefenseCollider:rotation_degrees")
@@ -401,7 +401,7 @@ tracks/13/keys = {
 "times": PoolRealArray( 0, 0.6 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
-"values": [ Vector2( -18, -36 ), Vector2( -18, -36 ) ]
+"values": [ Vector2( 3, -36 ), Vector2( 3, -36 ) ]
 }
 tracks/14/type = "value"
 tracks/14/path = NodePath("MoveCollider:rotation_degrees")
@@ -475,7 +475,7 @@ tracks/1/keys = {
 "times": PoolRealArray( 0, 0.7 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
-"values": [ Vector2( -10, -33 ), Vector2( -10, -33 ) ]
+"values": [ Vector2( 11, -33 ), Vector2( 11, -33 ) ]
 }
 tracks/2/type = "value"
 tracks/2/path = NodePath("Area2D_Body/BodyCollider:rotation_degrees")
@@ -523,7 +523,7 @@ tracks/5/keys = {
 "times": PoolRealArray( 0, 0.7 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
-"values": [ Vector2( -16, -18 ), Vector2( -16, -18 ) ]
+"values": [ Vector2( 5, -18 ), Vector2( 5, -18 ) ]
 }
 tracks/6/type = "value"
 tracks/6/path = NodePath("Area2D_Roll/AttackCollider:rotation_degrees")
@@ -571,7 +571,7 @@ tracks/9/keys = {
 "times": PoolRealArray( 0, 0.7 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
-"values": [ Vector2( -13, -26 ), Vector2( -13, -26 ) ]
+"values": [ Vector2( 8, -26 ), Vector2( 8, -26 ) ]
 }
 tracks/10/type = "value"
 tracks/10/path = NodePath("Area2D_Defense/DefenseCollider:rotation_degrees")
@@ -619,7 +619,7 @@ tracks/13/keys = {
 "times": PoolRealArray( 0, 0.7 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
-"values": [ Vector2( -18, -36 ), Vector2( -18, -36 ) ]
+"values": [ Vector2( 3, -36 ), Vector2( 3, -36 ) ]
 }
 tracks/14/type = "value"
 tracks/14/path = NodePath("MoveCollider:rotation_degrees")
@@ -693,7 +693,7 @@ tracks/1/keys = {
 "times": PoolRealArray( 0, 1.3 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
-"values": [ Vector2( -15, -41 ), Vector2( -15, -41 ) ]
+"values": [ Vector2( 6, -41 ), Vector2( 6, -41 ) ]
 }
 tracks/2/type = "value"
 tracks/2/path = NodePath("Area2D_Roll/AttackCollider:rotation_degrees")
@@ -741,7 +741,7 @@ tracks/5/keys = {
 "times": PoolRealArray( 0, 1.3 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
-"values": [ Vector2( -12, -32 ), Vector2( -12, -32 ) ]
+"values": [ Vector2( 9, -32 ), Vector2( 9, -32 ) ]
 }
 tracks/6/type = "value"
 tracks/6/path = NodePath("Area2D_Body/BodyCollider:rotation_degrees")
@@ -789,7 +789,7 @@ tracks/9/keys = {
 "times": PoolRealArray( 0, 1.3 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
-"values": [ Vector2( -14, -30 ), Vector2( -14, -30 ) ]
+"values": [ Vector2( 7, -30 ), Vector2( 7, -30 ) ]
 }
 tracks/10/type = "value"
 tracks/10/path = NodePath("Area2D_Defense/DefenseCollider:rotation_degrees")
@@ -837,7 +837,7 @@ tracks/13/keys = {
 "times": PoolRealArray( 0, 1.3 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
-"values": [ Vector2( -18, -36 ), Vector2( -18, -36 ) ]
+"values": [ Vector2( 3, -36 ), Vector2( 3, -36 ) ]
 }
 tracks/14/type = "value"
 tracks/14/path = NodePath("MoveCollider:rotation_degrees")
@@ -911,7 +911,7 @@ tracks/1/keys = {
 "times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 1,
-"values": [ Vector2( -13, -32 ), Vector2( -12.2, -32 ), Vector2( -11, -32 ), Vector2( -10.6, -32 ), Vector2( -9.8, -32 ), Vector2( -9, -32 ), Vector2( -8.5, -32 ), Vector2( -8, -32 ), Vector2( -9, -32 ), Vector2( -10, -32 ), Vector2( -12, -32 ), Vector2( -13, -32 ) ]
+"values": [ Vector2( 8, -32 ), Vector2( 8.8, -32 ), Vector2( 10, -32 ), Vector2( 10.4, -32 ), Vector2( 11.2, -32 ), Vector2( 12, -32 ), Vector2( 12.5, -32 ), Vector2( 13, -32 ), Vector2( 12, -32 ), Vector2( 11, -32 ), Vector2( 9, -32 ), Vector2( 8, -32 ) ]
 }
 tracks/2/type = "value"
 tracks/2/path = NodePath("Area2D_Body/BodyCollider:rotation_degrees")
@@ -959,7 +959,7 @@ tracks/5/keys = {
 "times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 1,
-"values": [ Vector2( -13, -49 ), Vector2( -12, -50 ), Vector2( -6, -46 ), Vector2( 1, -45 ), Vector2( 13, -45 ), Vector2( 25, -45 ), Vector2( 53, -45 ), Vector2( 91, -45 ), Vector2( 144, -45 ), Vector2( 213, -45 ), Vector2( 298, -45 ), Vector2( 21, -42 ) ]
+"values": [ Vector2( 8, -49 ), Vector2( 9, -50 ), Vector2( 15, -46 ), Vector2( 22, -45 ), Vector2( 34, -45 ), Vector2( 46, -45 ), Vector2( 74, -45 ), Vector2( 112, -45 ), Vector2( 165, -45 ), Vector2( 234, -45 ), Vector2( 319, -45 ), Vector2( 42, -42 ) ]
 }
 tracks/6/type = "value"
 tracks/6/path = NodePath("Area2D_Roll/AttackCollider:rotation_degrees")
@@ -1007,7 +1007,7 @@ tracks/9/keys = {
 "times": PoolRealArray( 0, 1.1 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
-"values": [ Vector2( -11, -30 ), Vector2( -11, -30 ) ]
+"values": [ Vector2( 10, -30 ), Vector2( 10, -30 ) ]
 }
 tracks/10/type = "value"
 tracks/10/path = NodePath("Area2D_Defense/DefenseCollider:rotation_degrees")
@@ -1055,7 +1055,7 @@ tracks/13/keys = {
 "times": PoolRealArray( 0, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.1 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 1,
-"values": [ Vector2( -18, -36 ), Vector2( -18, -36 ), Vector2( -17.25, -36 ), Vector2( -16.5, -36 ), Vector2( -15.75, -36 ), Vector2( -15, -36 ), Vector2( -18, -36 ), Vector2( -18, -36 ) ]
+"values": [ Vector2( 3, -36 ), Vector2( 3, -36 ), Vector2( 3.75, -36 ), Vector2( 4.5, -36 ), Vector2( 5.25, -36 ), Vector2( 6, -36 ), Vector2( 3, -36 ), Vector2( 3, -36 ) ]
 }
 tracks/14/type = "value"
 tracks/14/path = NodePath("MoveCollider:rotation_degrees")
@@ -1129,7 +1129,7 @@ tracks/1/keys = {
 "times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.7, 0.8, 0.9, 1, 1.1, 1.2 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 1,
-"values": [ Vector2( -11, -31 ), Vector2( -11, -28 ), Vector2( -11, -27 ), Vector2( -10, -34 ), Vector2( -9, -70 ), Vector2( -9, -73 ), Vector2( -9, -73 ), Vector2( -9, -36 ), Vector2( -10, -27 ), Vector2( -10, -28 ), Vector2( -11, -31 ), Vector2( -11, -31 ) ]
+"values": [ Vector2( 10, -31 ), Vector2( 10, -28 ), Vector2( 10, -27 ), Vector2( 11, -34 ), Vector2( 12, -70 ), Vector2( 12, -73 ), Vector2( 12, -73 ), Vector2( 12, -36 ), Vector2( 11, -27 ), Vector2( 11, -28 ), Vector2( 10, -31 ), Vector2( 10, -31 ) ]
 }
 tracks/2/type = "value"
 tracks/2/path = NodePath("Area2D_Body/BodyCollider:rotation_degrees")
@@ -1177,7 +1177,7 @@ tracks/5/keys = {
 "times": PoolRealArray( 0, 1.2 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
-"values": [ Vector2( -11, -24 ), Vector2( -11, -24 ) ]
+"values": [ Vector2( 10, -24 ), Vector2( 10, -24 ) ]
 }
 tracks/6/type = "value"
 tracks/6/path = NodePath("Area2D_Roll/AttackCollider:rotation_degrees")
@@ -1225,7 +1225,7 @@ tracks/9/keys = {
 "times": PoolRealArray( 0, 0.3, 0.4, 1.2 ),
 "transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 1,
-"values": [ Vector2( -11, -13 ), Vector2( -11, -13 ), Vector2( -9, -23 ), Vector2( -9, -23 ) ]
+"values": [ Vector2( 10, -13 ), Vector2( 10, -13 ), Vector2( 12, -23 ), Vector2( 12, -23 ) ]
 }
 tracks/10/type = "value"
 tracks/10/path = NodePath("Area2D_Defense/DefenseCollider:rotation_degrees")
@@ -1273,7 +1273,7 @@ tracks/13/keys = {
 "times": PoolRealArray( 0, 1.2 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
-"values": [ Vector2( -18, -36 ), Vector2( -18, -36 ) ]
+"values": [ Vector2( 3, -36 ), Vector2( 3, -36 ) ]
 }
 tracks/14/type = "value"
 tracks/14/path = NodePath("MoveCollider:rotation_degrees")
@@ -1343,10 +1343,10 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.6, 0.7, 0.8, 0.9 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 0.1, 0.6, 0.7, 0.9 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
 "update": 1,
-"values": [ Vector2( -10, -31 ), Vector2( -8, -29 ), Vector2( -8, -30 ), Vector2( -8, -29 ), Vector2( -8, -27 ), Vector2( -8, -27 ), Vector2( -10, -29 ), Vector2( -10, -30 ), Vector2( -10, -31 ) ]
+"values": [ Vector2( 11, -31 ), Vector2( 13, -29 ), Vector2( 13, -29 ), Vector2( 11, -29 ), Vector2( 11, -29 ) ]
 }
 tracks/2/type = "value"
 tracks/2/path = NodePath("Area2D_Body/BodyCollider:rotation_degrees")
@@ -1394,7 +1394,7 @@ tracks/5/keys = {
 "times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 1,
-"values": [ Vector2( -8, -10 ), Vector2( 10, -16 ), Vector2( 5, -28 ), Vector2( 1, -28 ), Vector2( 15, -26 ), Vector2( 15, -26 ), Vector2( 16, -25 ), Vector2( 16, -14 ), Vector2( -3, -8 ), Vector2( -7, -8 ) ]
+"values": [ Vector2( 13, -10 ), Vector2( 31, -16 ), Vector2( 26, -28 ), Vector2( 22, -28 ), Vector2( 36, -26 ), Vector2( 36, -26 ), Vector2( 37, -25 ), Vector2( 38, -15 ), Vector2( 18, -8 ), Vector2( 14, -8 ) ]
 }
 tracks/6/type = "value"
 tracks/6/path = NodePath("Area2D_Roll/AttackCollider:rotation_degrees")
@@ -1442,7 +1442,7 @@ tracks/9/keys = {
 "times": PoolRealArray( 0, 0.9 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
-"values": [ Vector2( -10, -20 ), Vector2( -10, -20 ) ]
+"values": [ Vector2( 11, -20 ), Vector2( 11, -20 ) ]
 }
 tracks/10/type = "value"
 tracks/10/path = NodePath("Area2D_Defense/DefenseCollider:rotation_degrees")
@@ -1490,7 +1490,7 @@ tracks/13/keys = {
 "times": PoolRealArray( 0, 0.9 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
-"values": [ Vector2( -18, -36 ), Vector2( -18, -36 ) ]
+"values": [ Vector2( 3, -36 ), Vector2( 3, -36 ) ]
 }
 tracks/14/type = "value"
 tracks/14/path = NodePath("MoveCollider:rotation_degrees")
@@ -1564,7 +1564,7 @@ tracks/1/keys = {
 "times": PoolRealArray( 0, 1.2 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
-"values": [ Vector2( 21, -41 ), Vector2( 21, -41 ) ]
+"values": [ Vector2( 42, -41 ), Vector2( 42, -41 ) ]
 }
 tracks/2/type = "value"
 tracks/2/path = NodePath("Area2D_Roll/AttackCollider:rotation_degrees")
@@ -1612,7 +1612,7 @@ tracks/5/keys = {
 "times": PoolRealArray( 0, 1.2 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
-"values": [ Vector2( 10.25, -32.75 ), Vector2( 10.25, -32.75 ) ]
+"values": [ Vector2( 31.25, -32.75 ), Vector2( 31.25, -32.75 ) ]
 }
 tracks/6/type = "value"
 tracks/6/path = NodePath("Area2D_Body/BodyCollider:rotation_degrees")
@@ -1660,7 +1660,7 @@ tracks/9/keys = {
 "times": PoolRealArray( 0, 1.2 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
-"values": [ Vector2( 5, -20 ), Vector2( 5, -20 ) ]
+"values": [ Vector2( 26, -20 ), Vector2( 26, -20 ) ]
 }
 tracks/10/type = "value"
 tracks/10/path = NodePath("Area2D_Defense/DefenseCollider:rotation_degrees")
@@ -1708,7 +1708,7 @@ tracks/13/keys = {
 "times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.2 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 1,
-"values": [ Vector2( -23, -45 ), Vector2( -20, -45 ), Vector2( -14, -45 ), Vector2( -7, -45 ), Vector2( -9, -45 ), Vector2( -13.5, -45 ), Vector2( -4, -45 ), Vector2( 8, -45 ), Vector2( 12, -45 ), Vector2( 14, -45 ), Vector2( 14, -45 ) ]
+"values": [ Vector2( -2, -45 ), Vector2( 1, -45 ), Vector2( 7, -45 ), Vector2( 14, -45 ), Vector2( 12, -45 ), Vector2( 7.5, -45 ), Vector2( 17, -45 ), Vector2( 29, -45 ), Vector2( 33, -45 ), Vector2( 35, -45 ), Vector2( 35, -45 ) ]
 }
 tracks/14/type = "value"
 tracks/14/path = NodePath("MoveCollider:rotation_degrees")
@@ -1782,7 +1782,7 @@ tracks/1/keys = {
 "times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 1,
-"values": [ Vector2( -12, -33 ), Vector2( -10, -33 ), Vector2( -10, -32 ), Vector2( -12, -31 ), Vector2( -16, -30 ), Vector2( -18, -29 ), Vector2( -18, -29 ), Vector2( -17.6667, -28.6667 ), Vector2( -17.3333, -28.3333 ), Vector2( -17, -28 ), Vector2( -15, -33 ), Vector2( -12, -33 ) ]
+"values": [ Vector2( 9, -33 ), Vector2( 11, -33 ), Vector2( 11, -32 ), Vector2( 9, -31 ), Vector2( 5, -30 ), Vector2( 3, -29 ), Vector2( 3, -29 ), Vector2( 3.333, -28.667 ), Vector2( 3.667, -28.333 ), Vector2( 4, -28 ), Vector2( 6, -33 ), Vector2( 9, -33 ) ]
 }
 tracks/2/type = "value"
 tracks/2/path = NodePath("Area2D_Body/BodyCollider:rotation_degrees")
@@ -1830,7 +1830,7 @@ tracks/5/keys = {
 "times": PoolRealArray( 0, 1.1 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
-"values": [ Vector2( -12, -15 ), Vector2( -12, -15 ) ]
+"values": [ Vector2( 9, -15 ), Vector2( 9, -15 ) ]
 }
 tracks/6/type = "value"
 tracks/6/path = NodePath("Area2D_Roll/AttackCollider:rotation_degrees")
@@ -1875,10 +1875,10 @@ tracks/9/loop_wrap = true
 tracks/9/imported = false
 tracks/9/enabled = true
 tracks/9/keys = {
-"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.7, 0.8, 0.9, 1, 1.1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 1,
-"values": [ Vector2( -16, -17 ), Vector2( -9, -30 ), Vector2( -2, -38 ), Vector2( -3, -40 ), Vector2( 2, -34 ), Vector2( 2, -34 ), Vector2( 2, -34 ), Vector2( 2, -34 ), Vector2( 0.999999, -36 ), Vector2( -5, -36 ), Vector2( -11, -21 ), Vector2( -14, -16 ) ]
+"values": [ Vector2( 5, -17 ), Vector2( 12, -30 ), Vector2( 19, -38 ), Vector2( 18, -40 ), Vector2( 23, -34 ), Vector2( 23, -34 ), Vector2( 22, -36 ), Vector2( 16, -36 ), Vector2( 10, -21 ), Vector2( 7, -16 ) ]
 }
 tracks/10/type = "value"
 tracks/10/path = NodePath("Area2D_Defense/DefenseCollider:rotation_degrees")
@@ -1926,7 +1926,7 @@ tracks/13/keys = {
 "times": PoolRealArray( 0, 0.3, 0.4, 0.5, 0.8, 0.9, 1, 1.1 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 1,
-"values": [ Vector2( -18, -36 ), Vector2( -18, -36 ), Vector2( -20.6667, -36 ), Vector2( -23, -36 ), Vector2( -23, -36 ), Vector2( -22, -36 ), Vector2( -20, -36 ), Vector2( -18, -36 ) ]
+"values": [ Vector2( 3, -36 ), Vector2( 3, -36 ), Vector2( 0.333, -36 ), Vector2( -2, -36 ), Vector2( -2, -36 ), Vector2( -1, -36 ), Vector2( 1, -36 ), Vector2( 3, -36 ) ]
 }
 tracks/14/type = "value"
 tracks/14/path = NodePath("MoveCollider:rotation_degrees")
@@ -2000,7 +2000,7 @@ tracks/1/keys = {
 "times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 1,
-"values": [ Vector2( -12, -31 ), Vector2( -11, -31 ), Vector2( -8, -31 ), Vector2( -6, -33 ), Vector2( -8, -33 ), Vector2( -7, -33 ), Vector2( -6, -33 ), Vector2( -7, -33 ), Vector2( -9, -32 ), Vector2( -10.5, -31 ), Vector2( -12, -31 ) ]
+"values": [ Vector2( 9, -31 ), Vector2( 10, -31 ), Vector2( 13, -31 ), Vector2( 15, -33 ), Vector2( 13, -33 ), Vector2( 14, -33 ), Vector2( 15, -33 ), Vector2( 14, -33 ), Vector2( 12, -32 ), Vector2( 10.5, -31 ), Vector2( 9, -31 ) ]
 }
 tracks/2/type = "value"
 tracks/2/path = NodePath("Area2D_Body/BodyCollider:rotation_degrees")
@@ -2009,10 +2009,10 @@ tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0, 0.1, 0.2, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 1,
-"values": [ 0.0, 0.0, 0.0, 0.0, -10.7981, -9.97035, -7.47776, -4.98517, -2.49259, 0.0 ]
+"values": [ 0.0, 0.0, -10.7981, -9.97035, -7.47776, -4.98517, -2.49259, 0.0 ]
 }
 tracks/3/type = "value"
 tracks/3/path = NodePath("Area2D_Body/BodyCollider:scale")
@@ -2021,10 +2021,10 @@ tracks/3/loop_wrap = true
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/keys = {
-"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 1,
-"values": [ Vector2( 0.8, 0.59 ), Vector2( 0.8, 0.59 ), Vector2( 0.8, 0.59 ), Vector2( 0.8, 0.62 ), Vector2( 0.68, 0.62 ), Vector2( 0.682125, 0.62 ), Vector2( 0.628565, 0.62 ), Vector2( 0.765546, 0.62 ), Vector2( 0.677, 0.59 ), Vector2( 0.738, 0.58 ), Vector2( 0.8, 0.59 ) ]
+"values": [ Vector2( 0.8, 0.59 ), Vector2( 0.8, 0.59 ), Vector2( 0.8, 0.62 ), Vector2( 0.68, 0.62 ), Vector2( 0.682125, 0.62 ), Vector2( 0.628565, 0.62 ), Vector2( 0.765546, 0.62 ), Vector2( 0.677, 0.59 ), Vector2( 0.738, 0.58 ), Vector2( 0.8, 0.59 ) ]
 }
 tracks/4/type = "value"
 tracks/4/path = NodePath("Area2D_Body/BodyCollider:disabled")
@@ -2048,7 +2048,7 @@ tracks/5/keys = {
 "times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 1,
-"values": [ Vector2( -17, -13 ), Vector2( -16, -13 ), Vector2( -15, -15 ), Vector2( -11, -23 ), Vector2( 26, -34 ), Vector2( 4.76837e-07, -46 ), Vector2( -18, -29 ), Vector2( -22, -17 ), Vector2( -21, -13 ), Vector2( -20, -13 ), Vector2( -17, -14 ) ]
+"values": [ Vector2( 4, -13 ), Vector2( 5, -13 ), Vector2( 6, -15 ), Vector2( 10, -23 ), Vector2( 47, -34 ), Vector2( 21, -46 ), Vector2( 3, -29 ), Vector2( -1, -17 ), Vector2( 0, -13 ), Vector2( -20, -13 ), Vector2( 4, -14 ) ]
 }
 tracks/6/type = "value"
 tracks/6/path = NodePath("Area2D_Roll/AttackCollider:rotation_degrees")
@@ -2096,7 +2096,7 @@ tracks/9/keys = {
 "times": PoolRealArray( 0, 1 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
-"values": [ Vector2( -11, -22 ), Vector2( -11, -22 ) ]
+"values": [ Vector2( 10, -22 ), Vector2( 10, -22 ) ]
 }
 tracks/10/type = "value"
 tracks/10/path = NodePath("Area2D_Defense/DefenseCollider:rotation_degrees")
@@ -2144,7 +2144,7 @@ tracks/13/keys = {
 "times": PoolRealArray( 0, 1 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
-"values": [ Vector2( -18, -36 ), Vector2( -18, -36 ) ]
+"values": [ Vector2( 3, -36 ), Vector2( 3, -36 ) ]
 }
 tracks/14/type = "value"
 tracks/14/path = NodePath("MoveCollider:rotation_degrees")
@@ -2437,7 +2437,7 @@ tracks/1/keys = {
 "times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
 "update": 1,
-"values": [ Vector2( -6, -31 ), Vector2( -3, -31 ), Vector2( 21, -45 ), Vector2( 21, -50 ), Vector2( 14, -55 ), Vector2( 1, -46 ), Vector2( -4.99999, -31 ) ]
+"values": [ Vector2( 15, -31 ), Vector2( 18, -31 ), Vector2( 42, -45 ), Vector2( 42, -50 ), Vector2( 35, -55 ), Vector2( 22, -46 ), Vector2( 16, -31 ) ]
 }
 tracks/2/type = "value"
 tracks/2/path = NodePath("Area2D_Roll/AttackCollider:rotation_degrees")
@@ -2482,10 +2482,10 @@ tracks/5/loop_wrap = true
 tracks/5/imported = false
 tracks/5/enabled = true
 tracks/5/keys = {
-"times": PoolRealArray( 0, 0.1, 0.5, 0.6 ),
-"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 0.6 ),
+"transitions": PoolRealArray( 1, 1 ),
 "update": 1,
-"values": [ Vector2( -9, -31 ), Vector2( -9, -32 ), Vector2( -9, -32 ), Vector2( -9, -31 ) ]
+"values": [ Vector2( 12, -31 ), Vector2( 12, -31 ) ]
 }
 tracks/6/type = "value"
 tracks/6/path = NodePath("Area2D_Body/BodyCollider:rotation_degrees")
@@ -2533,7 +2533,7 @@ tracks/9/keys = {
 "times": PoolRealArray( 0, 0.6 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
-"values": [ Vector2( -9, -34 ), Vector2( -9, -34 ) ]
+"values": [ Vector2( 12, -34 ), Vector2( 12, -34 ) ]
 }
 tracks/10/type = "value"
 tracks/10/path = NodePath("Area2D_Defense/DefenseCollider:rotation_degrees")
@@ -2581,7 +2581,7 @@ tracks/13/keys = {
 "times": PoolRealArray( 0, 0.6 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
-"values": [ Vector2( -18, -36 ), Vector2( -18, -36 ) ]
+"values": [ Vector2( 3, -36 ), Vector2( 3, -36 ) ]
 }
 tracks/14/type = "value"
 tracks/14/path = NodePath("MoveCollider:rotation_degrees")
@@ -2655,7 +2655,7 @@ tracks/1/keys = {
 "times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1, 1.2, 1.3, 1.4, 1.5 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 1,
-"values": [ Vector2( -11, -32 ), Vector2( -11, -33 ), Vector2( -11, -33 ), Vector2( -11, -32 ), Vector2( -12, -31 ), Vector2( -13, -30 ), Vector2( -11, -30 ), Vector2( 2, -28 ), Vector2( 5, -28 ), Vector2( 5, -28 ), Vector2( 4, -27 ), Vector2( 1, -27 ), Vector2( -3, -29 ), Vector2( -7, -30 ), Vector2( -11, -30 ), Vector2( -11, -31 ) ]
+"values": [ Vector2( 10, -32 ), Vector2( 10, -33 ), Vector2( 10, -33 ), Vector2( 10, -32 ), Vector2( 9, -31 ), Vector2( 8, -30 ), Vector2( 10, -30 ), Vector2( 23, -28 ), Vector2( 26, -28 ), Vector2( 26, -28 ), Vector2( 25, -27 ), Vector2( 22, -27 ), Vector2( 18, -29 ), Vector2( 14, -30 ), Vector2( 10, -30 ), Vector2( 10, -31 ) ]
 }
 tracks/2/type = "value"
 tracks/2/path = NodePath("Area2D_Body/BodyCollider:rotation_degrees")
@@ -2703,7 +2703,7 @@ tracks/5/keys = {
 "times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1, 1.2, 1.3, 1.4, 1.5 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 1,
-"values": [ Vector2( -16, -13 ), Vector2( -6, -19 ), Vector2( 4, -51 ), Vector2( -6, -75 ), Vector2( -24, -73 ), Vector2( -30, -60 ), Vector2( -26, -53 ), Vector2( 36, -45 ), Vector2( 19, -35 ), Vector2( 17, -35 ), Vector2( 16, -35 ), Vector2( 20, -42 ), Vector2( 18, -46 ), Vector2( 13, -34 ), Vector2( -11, -13 ), Vector2( -15, -13 ) ]
+"values": [ Vector2( 5, -13 ), Vector2( 15, -19 ), Vector2( 25, -51 ), Vector2( 15, -75 ), Vector2( -3, -73 ), Vector2( -9, -60 ), Vector2( -5, -53 ), Vector2( 57, -45 ), Vector2( 40, -35 ), Vector2( 38, -35 ), Vector2( 37, -35 ), Vector2( 41, -42 ), Vector2( 39, -46 ), Vector2( 34, -34 ), Vector2( 10, -13 ), Vector2( 6, -13 ) ]
 }
 tracks/6/type = "value"
 tracks/6/path = NodePath("Area2D_Roll/AttackCollider:rotation_degrees")
@@ -2751,7 +2751,7 @@ tracks/9/keys = {
 "times": PoolRealArray( 0, 1.5 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
-"values": [ Vector2( -12, -26 ), Vector2( -12, -26 ) ]
+"values": [ Vector2( 9, -26 ), Vector2( 9, -26 ) ]
 }
 tracks/10/type = "value"
 tracks/10/path = NodePath("Area2D_Defense/DefenseCollider:rotation_degrees")
@@ -2799,7 +2799,7 @@ tracks/13/keys = {
 "times": PoolRealArray( 0, 0.5, 0.6, 0.7, 1, 1.1, 1.2, 1.3, 1.4, 1.5 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 1,
-"values": [ Vector2( -18, -36 ), Vector2( -18, -36 ), Vector2( -12.3333, -36 ), Vector2( 5, -36 ), Vector2( 5, -36 ), Vector2( -0.75, -36 ), Vector2( -7.5, -36 ), Vector2( -13.25, -36 ), Vector2( -18, -36 ), Vector2( -18, -36 ) ]
+"values": [ Vector2( 3, -36 ), Vector2( 3, -36 ), Vector2( 8.667, -36 ), Vector2( 26, -36 ), Vector2( 26, -36 ), Vector2( 20.25, -36 ), Vector2( 13.5, -36 ), Vector2( 7.75, -36 ), Vector2( 3, -36 ), Vector2( 3, -36 ) ]
 }
 tracks/14/type = "value"
 tracks/14/path = NodePath("MoveCollider:rotation_degrees")
@@ -2872,7 +2872,7 @@ tracks/1/keys = {
 "times": PoolRealArray( 0, 0.1, 0.8, 0.9 ),
 "transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 1,
-"values": [ Vector2( -10, -31 ), Vector2( -11, -31 ), Vector2( -11, -31 ), Vector2( -11, -31 ) ]
+"values": [ Vector2( 11, -31 ), Vector2( 10, -31 ), Vector2( 10, -31 ), Vector2( 11, -31 ) ]
 }
 tracks/2/type = "value"
 tracks/2/path = NodePath("Area2D_Body/BodyCollider:rotation_degrees")
@@ -2881,10 +2881,10 @@ tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0, 0.1, 0.2, 0.6, 0.7, 0.8, 0.9 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 0.1, 0.2, 0.7, 0.8, 0.9 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
 "update": 1,
-"values": [ 0.0, -7.46108, -12.039, -12.039, -9.55974, -12.0994, 0.0 ]
+"values": [ 0.0, -7.46108, -12.039, -12.039, -11.0, 0.0 ]
 }
 tracks/3/type = "value"
 tracks/3/path = NodePath("Area2D_Body/BodyCollider:scale")
@@ -2920,7 +2920,7 @@ tracks/5/keys = {
 "times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.6, 0.7, 0.8, 0.9 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 1,
-"values": [ Vector2( -2, -36 ), Vector2( 8, -44 ), Vector2( 6, -60 ), Vector2( -2, -59 ), Vector2( -2, -59 ), Vector2( 9, -51 ), Vector2( 0.999999, -35 ), Vector2( -6, -32 ) ]
+"values": [ Vector2( 19, -36 ), Vector2( 29, -44 ), Vector2( 27, -60 ), Vector2( 19, -59 ), Vector2( 19, -59 ), Vector2( 30, -51 ), Vector2( 22, -35 ), Vector2( 15, -32 ) ]
 }
 tracks/6/type = "value"
 tracks/6/path = NodePath("Area2D_Roll/AttackCollider:rotation_degrees")
@@ -2968,7 +2968,7 @@ tracks/9/keys = {
 "times": PoolRealArray( 0, 0.9 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
-"values": [ Vector2( -10, -29 ), Vector2( -10, -29 ) ]
+"values": [ Vector2( 11, -29 ), Vector2( 11, -29 ) ]
 }
 tracks/10/type = "value"
 tracks/10/path = NodePath("Area2D_Defense/DefenseCollider:rotation_degrees")
@@ -3016,7 +3016,7 @@ tracks/13/keys = {
 "times": PoolRealArray( 0, 0.9 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
-"values": [ Vector2( -18, -36 ), Vector2( -18, -36 ) ]
+"values": [ Vector2( 3, -36 ), Vector2( 3, -36 ) ]
 }
 tracks/14/type = "value"
 tracks/14/path = NodePath("MoveCollider:rotation_degrees")
@@ -3091,7 +3091,7 @@ tracks/1/keys = {
 "times": PoolRealArray( 0, 0.7 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
-"values": [ Vector2( -8, -30 ), Vector2( -8, -30 ) ]
+"values": [ Vector2( 13, -30 ), Vector2( 13, -30 ) ]
 }
 tracks/2/type = "value"
 tracks/2/path = NodePath("Area2D_Body/BodyCollider:rotation_degrees")
@@ -3139,7 +3139,7 @@ tracks/5/keys = {
 "times": PoolRealArray( 0, 0.7 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
-"values": [ Vector2( -20, -32 ), Vector2( -20, -32 ) ]
+"values": [ Vector2( 1, -32 ), Vector2( 1, -32 ) ]
 }
 tracks/6/type = "value"
 tracks/6/path = NodePath("Area2D_Roll/AttackCollider:rotation_degrees")
@@ -3187,7 +3187,7 @@ tracks/9/keys = {
 "times": PoolRealArray( 0, 0.7 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
-"values": [ Vector2( -9, -29 ), Vector2( -9, -29 ) ]
+"values": [ Vector2( 12, -29 ), Vector2( 12, -29 ) ]
 }
 tracks/10/type = "value"
 tracks/10/path = NodePath("Area2D_Defense/DefenseCollider:rotation_degrees")
@@ -3235,7 +3235,7 @@ tracks/13/keys = {
 "times": PoolRealArray( 0, 0.7 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
-"values": [ Vector2( -9, -36 ), Vector2( -9, -36 ) ]
+"values": [ Vector2( 12, -36 ), Vector2( 12, -36 ) ]
 }
 tracks/14/type = "value"
 tracks/14/path = NodePath("MoveCollider:rotation_degrees")
@@ -3310,7 +3310,7 @@ tracks/1/keys = {
 "times": PoolRealArray( 0, 0.7 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
-"values": [ Vector2( -9, -30 ), Vector2( -9, -30 ) ]
+"values": [ Vector2( 12, -30 ), Vector2( 12, -30 ) ]
 }
 tracks/2/type = "value"
 tracks/2/path = NodePath("Area2D_Body/BodyCollider:rotation_degrees")
@@ -3358,7 +3358,7 @@ tracks/5/keys = {
 "times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 1,
-"values": [ Vector2( -15, -8 ), Vector2( -16, -8 ), Vector2( -16, -10 ), Vector2( -14, -10 ), Vector2( -13, -10 ), Vector2( -13.6667, -9.33333 ), Vector2( -14.3333, -8.66667 ), Vector2( -15, -8 ) ]
+"values": [ Vector2( 6, -8 ), Vector2( 5, -8 ), Vector2( 5, -10 ), Vector2( 7, -10 ), Vector2( 8, -10 ), Vector2( 7.333, -9.333 ), Vector2( 6.667, -8.667 ), Vector2( 6, -8 ) ]
 }
 tracks/6/type = "value"
 tracks/6/path = NodePath("Area2D_Roll/AttackCollider:rotation_degrees")
@@ -3406,7 +3406,7 @@ tracks/9/keys = {
 "times": PoolRealArray( 0, 0.7 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
-"values": [ Vector2( -8, -27 ), Vector2( -8, -27 ) ]
+"values": [ Vector2( 13, -27 ), Vector2( 13, -27 ) ]
 }
 tracks/10/type = "value"
 tracks/10/path = NodePath("Area2D_Defense/DefenseCollider:rotation_degrees")
@@ -3454,7 +3454,7 @@ tracks/13/keys = {
 "times": PoolRealArray( 0, 0.7 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
-"values": [ Vector2( -17, -36 ), Vector2( -17, -36 ) ]
+"values": [ Vector2( 4, -36 ), Vector2( 4, -36 ) ]
 }
 tracks/14/type = "value"
 tracks/14/path = NodePath("MoveCollider:rotation_degrees")
@@ -3712,7 +3712,7 @@ texture = ExtResource( 1 )
 offset = Vector2( -0.5, -53.5 )
 hframes = 13
 vframes = 13
-frame = 46
+frame = 7
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 autoplay = "Idle"
