@@ -271,6 +271,7 @@ P2_y={
 2d_physics/layer_6="Couillu_Bottle"
 2d_physics/layer_7="Couillu_Defense"
 2d_physics/layer_8="Couillu_Move"
+2d_physics/layer_9="Walls"
 
 [physics]
 
