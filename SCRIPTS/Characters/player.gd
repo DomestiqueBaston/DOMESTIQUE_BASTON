@@ -140,13 +140,24 @@ func _physics_process(delta):
 		else:
 			anim_node.play("Idle")
 
+	# while retreating, turn off collision detection with the opponent but not
+	# with the walls, which are layer 9
+
+	var save_layer = collision_layer
+	var save_mask = collision_mask
+
+	if retreating:
+		set_collision_layer(0)
+		set_collision_mask(0x100)
+
 	if velocity.x != 0:
 		if player_number == TWO:
 			velocity.x = -velocity.x
-		if retreating:
-			position.x += velocity.x * delta
-		else:
-			var _collision = move_and_collide(velocity * delta)
+		var _collision = move_and_collide(velocity * delta)
+
+	if retreating:
+		set_collision_layer(save_layer)
+		set_collision_mask(save_mask)
 
 func _on_animation_finished(_anim_name):
 	busy = false
