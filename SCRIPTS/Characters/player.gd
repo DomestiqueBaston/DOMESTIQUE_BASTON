@@ -118,22 +118,24 @@ func _input(event):
 
 func _physics_process(delta):
 	var velocity = Vector2()
+	var retreating = false
 
 	if remaining_retreat_distance > 0:
 		if remaining_retreat_distance > retreat_speed * delta:
 			velocity.x -= retreat_speed
+			remaining_retreat_distance -= retreat_speed * delta
 		else:
 			velocity.x -= remaining_retreat_distance / delta
+			remaining_retreat_distance = 0
+		retreating = true
 
 	if not busy:
 		var my_actions = ui_actions[player_number]
 		if Input.is_action_pressed(my_actions[FORWARD]):
 			velocity.x += forward_speed
+			anim_node.play("Walk_forward")
 		elif Input.is_action_pressed(my_actions[BACKWARD]):
 			velocity.x -= backward_speed
-		if velocity.x > 0:
-			anim_node.play("Walk_forward")
-		elif velocity.x < 0:
 			anim_node.play("Walk_backward")
 		else:
 			anim_node.play("Idle")
@@ -141,11 +143,10 @@ func _physics_process(delta):
 	if velocity.x != 0:
 		if player_number == TWO:
 			velocity.x = -velocity.x
-		var x0 = position.x
-		var _collision = move_and_collide(velocity * delta)
-		if remaining_retreat_distance > 0:
-			remaining_retreat_distance = max(
-				remaining_retreat_distance - abs(x0 - position.x), 0)
+		if retreating:
+			position.x += velocity.x * delta
+		else:
+			var _collision = move_and_collide(velocity * delta)
 
 func _on_animation_finished(_anim_name):
 	busy = false
