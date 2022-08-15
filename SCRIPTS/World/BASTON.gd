@@ -18,10 +18,10 @@ func _ready():
 		player1_portrait_index = 1
 	
 	player1.player_number = Player.ONE
-	player1.position = Vector2(49, 108)
+	player1.position = Vector2(79, 108)
 	player1.scale = Vector2(1, 1)
 	player2.player_number = Player.TWO
-	player2.position = Vector2(232, 108)
+	player2.position = Vector2(202, 108)
 	player2.scale = Vector2(-1, 1)
 	portrait_left.texture = portraits[player1_portrait_index]
 	portrait_right.texture = portraits[1 - player1_portrait_index]
