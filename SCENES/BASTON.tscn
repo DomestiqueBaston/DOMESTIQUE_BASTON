@@ -23,7 +23,6 @@ stream = ExtResource( 8 )
 [node name="Background" parent="." instance=ExtResource( 3 )]
 
 [node name="UI" parent="." instance=ExtResource( 4 )]
-z_index = 100
 
 [node name="Couillu" parent="." instance=ExtResource( 10 )]
 position = Vector2( 232, 108 )
