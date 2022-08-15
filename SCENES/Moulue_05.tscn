@@ -183,7 +183,7 @@ tracks/13/keys = {
 "times": PoolRealArray( 0, 0.9 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
-"values": [ Vector2( 6, -36 ), Vector2( 6, -36 ) ]
+"values": [ Vector2( 4, -36 ), Vector2( 4, -36 ) ]
 }
 tracks/14/type = "value"
 tracks/14/path = NodePath("MoveCollider:rotation_degrees")
@@ -401,7 +401,7 @@ tracks/13/keys = {
 "times": PoolRealArray( 0, 0.6 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
-"values": [ Vector2( 6, -36 ), Vector2( 6, -36 ) ]
+"values": [ Vector2( 4, -36 ), Vector2( 4, -36 ) ]
 }
 tracks/14/type = "value"
 tracks/14/path = NodePath("MoveCollider:rotation_degrees")
@@ -619,7 +619,7 @@ tracks/13/keys = {
 "times": PoolRealArray( 0, 0.5 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
-"values": [ Vector2( 6, -36 ), Vector2( 6, -36 ) ]
+"values": [ Vector2( 4, -36 ), Vector2( 4, -36 ) ]
 }
 tracks/14/type = "value"
 tracks/14/path = NodePath("MoveCollider:rotation_degrees")
@@ -837,7 +837,7 @@ tracks/13/keys = {
 "times": PoolRealArray( 0, 1.5 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
-"values": [ Vector2( 6, -36 ), Vector2( 6, -36 ) ]
+"values": [ Vector2( 4, -36 ), Vector2( 4, -36 ) ]
 }
 tracks/14/type = "value"
 tracks/14/path = NodePath("MoveCollider:rotation_degrees")
@@ -1055,7 +1055,7 @@ tracks/13/keys = {
 "times": PoolRealArray( 0, 1.1 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
-"values": [ Vector2( 6, -36 ), Vector2( 6, -36 ) ]
+"values": [ Vector2( 4, -36 ), Vector2( 4, -36 ) ]
 }
 tracks/14/type = "value"
 tracks/14/path = NodePath("MoveCollider:rotation_degrees")
@@ -1273,7 +1273,7 @@ tracks/13/keys = {
 "times": PoolRealArray( 0, 1.2 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
-"values": [ Vector2( 6, -36 ), Vector2( 6, -36 ) ]
+"values": [ Vector2( 4, -36 ), Vector2( 4, -36 ) ]
 }
 tracks/14/type = "value"
 tracks/14/path = NodePath("MoveCollider:rotation_degrees")
@@ -1490,7 +1490,7 @@ tracks/13/keys = {
 "times": PoolRealArray( 0, 0.9 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
-"values": [ Vector2( 6, -36 ), Vector2( 6, -36 ) ]
+"values": [ Vector2( 4, -36 ), Vector2( 4, -36 ) ]
 }
 tracks/14/type = "value"
 tracks/14/path = NodePath("MoveCollider:rotation_degrees")
@@ -1926,7 +1926,7 @@ tracks/13/keys = {
 "times": PoolRealArray( 0, 0.1, 0.2, 0.7, 0.8, 0.9, 1, 1.1 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 1,
-"values": [ Vector2( 6, -36 ), Vector2( -3.5, -36 ), Vector2( -13, -36 ), Vector2( -13, -36 ), Vector2( -7.91667, -36 ), Vector2( -0.333331, -36 ), Vector2( 5.25, -36 ), Vector2( 6, -36 ) ]
+"values": [ Vector2( 4, -36 ), Vector2( -5.5, -36 ), Vector2( -15, -36 ), Vector2( -15, -36 ), Vector2( -9.91667, -36 ), Vector2( -2.33333, -36 ), Vector2( 3.25, -36 ), Vector2( 4, -36 ) ]
 }
 tracks/14/type = "value"
 tracks/14/path = NodePath("MoveCollider:rotation_degrees")
@@ -2144,7 +2144,7 @@ tracks/13/keys = {
 "times": PoolRealArray( 0, 1 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
-"values": [ Vector2( 6, -36 ), Vector2( 6, -36 ) ]
+"values": [ Vector2( 4, -36 ), Vector2( 4, -36 ) ]
 }
 tracks/14/type = "value"
 tracks/14/path = NodePath("MoveCollider:rotation_degrees")
@@ -2581,7 +2581,7 @@ tracks/13/keys = {
 "times": PoolRealArray( 0, 0.7 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
-"values": [ Vector2( 6, -36 ), Vector2( 6, -36 ) ]
+"values": [ Vector2( 4, -36 ), Vector2( 4, -36 ) ]
 }
 tracks/14/type = "value"
 tracks/14/path = NodePath("MoveCollider:rotation_degrees")
@@ -2799,7 +2799,7 @@ tracks/13/keys = {
 "times": PoolRealArray( 0, 1.5 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
-"values": [ Vector2( 6, -36 ), Vector2( 6, -36 ) ]
+"values": [ Vector2( 4, -36 ), Vector2( 4, -36 ) ]
 }
 tracks/14/type = "value"
 tracks/14/path = NodePath("MoveCollider:rotation_degrees")
@@ -3016,7 +3016,7 @@ tracks/13/keys = {
 "times": PoolRealArray( 0, 0.9 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
-"values": [ Vector2( 6, -36 ), Vector2( 6, -36 ) ]
+"values": [ Vector2( 4, -36 ), Vector2( 4, -36 ) ]
 }
 tracks/14/type = "value"
 tracks/14/path = NodePath("MoveCollider:rotation_degrees")
@@ -3235,7 +3235,7 @@ tracks/13/keys = {
 "times": PoolRealArray( 0, 0.7 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
-"values": [ Vector2( 8, -36 ), Vector2( 8, -36 ) ]
+"values": [ Vector2( 6, -36 ), Vector2( 6, -36 ) ]
 }
 tracks/14/type = "value"
 tracks/14/path = NodePath("MoveCollider:rotation_degrees")
@@ -3454,7 +3454,7 @@ tracks/13/keys = {
 "times": PoolRealArray( 0, 0.7 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
-"values": [ Vector2( 4, -36 ), Vector2( 4, -36 ) ]
+"values": [ Vector2( 2, -36 ), Vector2( 2, -36 ) ]
 }
 tracks/14/type = "value"
 tracks/14/path = NodePath("MoveCollider:rotation_degrees")
@@ -3708,7 +3708,6 @@ texture = ExtResource( 1 )
 offset = Vector2( -0.5, -53.5 )
 hframes = 13
 vframes = 13
-frame = 120
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 autoplay = "Idle"
