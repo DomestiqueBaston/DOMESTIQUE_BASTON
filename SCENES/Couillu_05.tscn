@@ -3700,7 +3700,7 @@ scale = Vector2( 0.447916, 1.2828 )
 shape = SubResource( 95 )
 
 [node name="Shadow" type="Sprite" parent="."]
-modulate = Color( 1, 0.490196, 1, 0.490196 )
+modulate = Color( 0.0588235, 0, 0.392157, 0.501961 )
 texture = ExtResource( 2 )
 offset = Vector2( -0.5, -53.5 )
 hframes = 13
@@ -3712,7 +3712,7 @@ texture = ExtResource( 1 )
 offset = Vector2( -0.5, -53.5 )
 hframes = 13
 vframes = 13
-frame = 7
+frame = 151
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 autoplay = "Idle"
