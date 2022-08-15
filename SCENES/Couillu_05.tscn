@@ -3664,8 +3664,8 @@ collision_layer = 128
 collision_mask = 8
 script = ExtResource( 3 )
 player_number = 1
-forward_speed = 60
-backward_speed = 35
+forward_speed = 65
+backward_speed = 37
 
 [node name="MoveCollider" type="CollisionShape2D" parent="."]
 position = Vector2( 4, -36 )
@@ -3712,7 +3712,7 @@ texture = ExtResource( 1 )
 offset = Vector2( -0.5, -53.5 )
 hframes = 13
 vframes = 13
-frame = 151
+frame = 158
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 autoplay = "Idle"
