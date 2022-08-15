@@ -9,7 +9,7 @@
 [node name="UI" type="Node2D"]
 
 [node name="Left" type="Node2D" parent="."]
-position = Vector2( 1, 1 )
+position = Vector2( 2, 2 )
 
 [node name="Frame_left" type="Sprite" parent="Left"]
 texture = ExtResource( 5 )
@@ -27,7 +27,7 @@ centered = false
 offset = Vector2( -16, -16 )
 
 [node name="Right" type="Node2D" parent="."]
-position = Vector2( 304, 1 )
+position = Vector2( 303, 2 )
 scale = Vector2( -1, 1 )
 
 [node name="Frame_right" type="Sprite" parent="Right"]
