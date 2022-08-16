@@ -253,5 +253,4 @@ func play_get_hit_animation():
 		anim_node.play("Get_hit")
 		busy = true
 	else:
-		# TODO: flash white
-		pass
+		$Flasher.play("Flash")

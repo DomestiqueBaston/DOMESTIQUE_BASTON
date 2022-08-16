@@ -1,4 +1,4 @@
-[gd_scene load_steps=67 format=2]
+[gd_scene load_steps=68 format=2]
 
 [ext_resource path="res://ASSETS/GRAPHICS/ANIMATION/COUILLU/Anims_Couillu.png" type="Texture" id=1]
 [ext_resource path="res://ASSETS/GRAPHICS/ANIMATION/COUILLU/Anims_Couillu_Shadows.png" type="Texture" id=2]
@@ -3658,6 +3658,22 @@ graph_offset = Vector2( -136.616, 71.8 )
 
 [sub_resource type="AnimationNodeStateMachinePlayback" id=61]
 
+[sub_resource type="Animation" id=98]
+resource_name = "Flash"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/path = NodePath("Character:self_modulate")
+tracks/0/interp = 0
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 100, 100, 100, 1 ), Color( 1, 1, 1, 1 ), Color( 100, 100, 100, 1 ), Color( 1, 1, 1, 1 ) ]
+}
+
 [node name="Couillu" type="KinematicBody2D"]
 position = Vector2( 157, 108 )
 collision_layer = 128
@@ -3712,7 +3728,7 @@ texture = ExtResource( 1 )
 offset = Vector2( -0.5, -53.5 )
 hframes = 13
 vframes = 13
-frame = 7
+frame = 151
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 autoplay = "Idle"
@@ -3740,6 +3756,9 @@ active = true
 parameters/playback = SubResource( 61 )
 
 [node name="FXs" type="AudioStreamPlayer2D" parent="."]
+
+[node name="Flasher" type="AnimationPlayer" parent="."]
+anims/Flash = SubResource( 98 )
 
 [connection signal="area_shape_entered" from="Area2D_Body" to="." method="_on_body_hit"]
 [connection signal="area_shape_entered" from="Area2D_Defense" to="." method="_on_defense_hit"]
