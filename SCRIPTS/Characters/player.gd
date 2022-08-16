@@ -40,7 +40,7 @@ var anim_node
 # the opponent's AnimationPlayer node
 var opponent_anim_node
 
-# true => player is doing something other than moving or idling
+# true => player is doing something other than walking or idling
 var busy = false
 
 # true => opponent's move has been detected and either hit home or thwarted
@@ -174,8 +174,9 @@ func _on_body_hit(_area_rid, _area, _area_shape_index, _local_shape_index):
 	attack_processed = true
 	var attack = opponent_anim_node.current_animation
 	var damage = get_damage_for_attack(attack)
-	if (damage > 0):
+	if damage > 0:
 		print(name, " was hit by ", attack, ", damage: ", damage, " points")
+		play_get_hit_animation()
 		if attack == "Insult":
 			play_insult_hit_effect()
 		else:
@@ -193,6 +194,7 @@ func _on_defense_hit(_area_rid, _area, _area_shape_index, _local_shape_index):
 	else:
 		print(name, " thwarted ", attack, ", damage: ",
 			  get_damage_for_attack(attack) / 2, " points")
+		play_get_hit_animation()
 		if attack != "Insult":
 			remaining_retreat_distance += retreat_distance / 2.0
 	if defense == "Parry":
@@ -233,3 +235,23 @@ func play_insult_miss_effect():
 	play_effect_once(
 		preload("res://SCENES/Insult_Miss_Effect.tscn"),
 		get_node("Area2D_Defense/DefenseCollider").global_position)
+
+func play_get_hit_animation():
+	var defense = anim_node.current_animation
+	var play_it = true
+
+	if defense == "Jump":
+		var frame = anim_node.current_animation_position * 10
+		if frame >= 4 and frame < 8:
+			play_it = false
+	elif defense == "Crouch":
+		var frame = anim_node.current_animation_position * 10
+		if frame >= 2 and frame < 7:
+			play_it = false
+
+	if play_it:
+		anim_node.play("Get_hit")
+		busy = true
+	else:
+		# TODO: flash white
+		pass
