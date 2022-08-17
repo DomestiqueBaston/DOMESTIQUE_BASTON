@@ -75,15 +75,32 @@ func is_defense_right_for_attack(defense, attack):
 	else:
 		return false
 
+# Returns the current frame number in the animation being played. This is the
+# current animation position (in seconds) multiplied by 10, because the
+# animation sequences are at 10 frames per second, so it is a real number.
+#
+func current_anim_frame():
+	return anim_node.current_animation_position * 10
+
 func _input(event):
 	
-	# We are only interested in action press events. And if the player is doing
-	# anything other than walking or playing a "trick", he/she cannot be
-	# interrupted.
+	# We are only interested in action press events.
 
-	if (not event.is_action_type() or not event.is_pressed()
-		or (busy and anim_node.current_animation != "Trick")):
+	if not event.is_action_type() or not event.is_pressed():
 		return
+
+	# Most actions cannot be interrupted, but there are two exceptions: Trick
+	# can always be interrupted, and Get_hit can be interrupted starting at
+	# frame 4 of the animation.
+	
+	if busy:
+		var can_interrupt = false
+		if anim_node.current_animation == "Trick":
+			can_interrupt = true
+		elif anim_node.current_animation == "Get_hit":
+			can_interrupt = (current_anim_frame() >= 4)
+		if not can_interrupt:
+			return
 
 	var my_actions = ui_actions[player_number]
 	var anim_name = ""
@@ -205,12 +222,10 @@ func _on_defense_hit(_area_rid, _area, _area_shape_index, _local_shape_index):
 
 func play_effect_once(scene, pos):
 	var effect = scene.instance()
-	get_tree().current_scene.add_child(effect)
 	effect.position = pos
-	if player_number == ONE:
-		effect.scale = Vector2(-1, 1)
-	var anim = effect.get_node("AnimationPlayer")
-	yield(anim, "animation_finished")
+	effect.scale.x = -1 if player_number == ONE else 1
+	get_tree().current_scene.add_child(effect)
+	yield(effect.get_node("AnimationPlayer"), "animation_finished")
 	effect.queue_free()
 
 func play_hit_effect():
@@ -238,11 +253,11 @@ func play_get_hit_animation():
 	var play_it = true
 
 	if defense == "Jump":
-		var frame = anim_node.current_animation_position * 10
+		var frame = current_anim_frame()
 		if frame >= 4 and frame < 8:
 			play_it = false
 	elif defense == "Crouch":
-		var frame = anim_node.current_animation_position * 10
+		var frame = current_anim_frame()
 		if frame >= 2 and frame < 7:
 			play_it = false
 
