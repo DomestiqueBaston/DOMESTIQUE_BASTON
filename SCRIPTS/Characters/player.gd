@@ -18,6 +18,9 @@ export var retreat_distance = 10
 # speed at which player retreats after a successful attack, in pixels/second
 export var retreat_speed = 100
 
+# distance opponent is pushed backwards if player parries twice in a row
+export var parry_push_back = 25
+
 # logical actions and corresponding input map actions for each player
 enum { FORWARD, BACKWARD, UP, DOWN, A, B }
 var ui_actions = [
@@ -37,6 +40,9 @@ var attack_damage = {
 # this player's AnimationPlayer node
 var anim_node
 
+# the opponent's root node
+var opponent_node
+
 # the opponent's AnimationPlayer node
 var opponent_anim_node
 
@@ -49,13 +55,19 @@ var attack_processed = false
 # distance player has to retreat as a result of a recent hit
 var remaining_retreat_distance = 0
 
+# the last animation that was played (other than walking or idling)
+var last_animation
+
+# the time in milliseconds when last_animation finished
+var last_animation_end_time
+
 func _ready():
 	anim_node = $AnimationPlayer
-	anim_node.connect("animation_finished", self, "_on_animation_finished")
 	var parent = get_parent()
 	for index in parent.get_child_count():
 		var sib = parent.get_child(index)
 		if sib != self and sib.get_script() == get_script():
+			opponent_node = sib
 			opponent_anim_node = sib.get_node("AnimationPlayer")
 			opponent_anim_node.connect(
 				"animation_finished", self, "_on_opponent_animation_finished")
@@ -78,21 +90,21 @@ func is_defense_right_for_attack(defense, attack):
 # Returns the current frame number in the animation being played. This is the
 # current animation position (in seconds) multiplied by 10, because the
 # animation sequences are at 10 frames per second, so it is a real number.
-#
+
 func current_anim_frame():
 	return anim_node.current_animation_position * 10
 
 func _input(event):
 	
-	# We are only interested in action press events.
+	# we are only interested in action press events
 
 	if not event.is_action_type() or not event.is_pressed():
 		return
 
-	# Most actions cannot be interrupted, but there are two exceptions: Trick
+	# most actions cannot be interrupted, but there are two exceptions: Trick
 	# can always be interrupted, and Get_hit can be interrupted starting at
-	# frame 4 of the animation.
-	
+	# frame 4 of the animation
+
 	if busy:
 		var can_interrupt = false
 		if anim_node.current_animation == "Trick":
@@ -103,35 +115,30 @@ func _input(event):
 			return
 
 	var my_actions = ui_actions[player_number]
-	var anim_name = ""
 
 	if Input.is_action_pressed(my_actions[B]):
 		if Input.is_action_pressed(my_actions[FORWARD]):
 			if Input.is_action_pressed(my_actions[UP]):
-				anim_name = "Insult"
+				play_animation("Insult")
 			elif Input.is_action_pressed(my_actions[DOWN]):
-				anim_name = "Trick"
+				play_animation("Trick")
 			else:
-				anim_name = "Slash"
+				play_animation("Slash")
 	elif Input.is_action_pressed(my_actions[A]):
 		if Input.is_action_pressed(my_actions[FORWARD]):
 			if Input.is_action_pressed(my_actions[UP]):
-				anim_name = "Slap"
+				play_animation("Slap")
 			elif Input.is_action_pressed(my_actions[DOWN]):
-				anim_name = "Kick"
+				play_animation("Kick")
 			else:
-				anim_name = "Punch"
+				play_animation("Punch")
 		elif Input.is_action_pressed(my_actions[BACKWARD]):
 			if Input.is_action_pressed(my_actions[UP]):
-				anim_name = "Jump"
+				play_animation("Jump")
 			elif Input.is_action_pressed(my_actions[DOWN]):
-				anim_name = "Crouch"
+				play_animation("Crouch")
 			else:
-				anim_name = "Parry"
-
-	if not anim_name.empty():
-		anim_node.play(anim_name)
-		busy = true
+				play_animation("Parry")
 
 func _physics_process(delta):
 	var velocity = Vector2()
@@ -176,8 +183,28 @@ func _physics_process(delta):
 		set_collision_layer(save_layer)
 		set_collision_mask(save_mask)
 
-func _on_animation_finished(_anim_name):
+# Call this to trigger an animation other than walking or idle. It starts the
+# animation (if it not playing already) and sets the busy flag, which will be
+# reset when the animation finishes.
+
+func play_animation(anim_name):
+
+	# if the player parries twice in a row while under attack, push the
+	# attacker back
+
+	if (anim_name == "Parry" and last_animation == "Parry" and
+		get_damage_for_attack(opponent_anim_node.current_animation) > 0 and
+		(OS.get_ticks_msec() - last_animation_end_time) < 400):
+		opponent_node.retreat(parry_push_back)
+
+	# play the animation with the busy flag set
+
+	anim_node.play(anim_name)
+	busy = true
+	yield(anim_node, "animation_finished")
 	busy = false
+	last_animation = anim_name
+	last_animation_end_time = OS.get_ticks_msec()
 
 func _on_opponent_animation_finished(anim_name):
 	if attack_processed:
@@ -198,7 +225,7 @@ func _on_body_hit(_area_rid, _area, _area_shape_index, _local_shape_index):
 			play_insult_hit_effect()
 		else:
 			play_hit_effect()
-			remaining_retreat_distance += retreat_distance
+			retreat(retreat_distance)
 
 func _on_defense_hit(_area_rid, _area, _area_shape_index, _local_shape_index):
 	if attack_processed:
@@ -213,18 +240,24 @@ func _on_defense_hit(_area_rid, _area, _area_shape_index, _local_shape_index):
 			  get_damage_for_attack(attack) / 2, " points")
 		play_get_hit_animation()
 		if attack != "Insult":
-			remaining_retreat_distance += retreat_distance / 2.0
+			retreat(retreat_distance / 2.0)
 	if defense == "Parry":
 		if attack == "Insult":
 			play_insult_miss_effect()
 		else:
 			play_miss_effect()
 
+# Causes the player to retreat by the given distance (in pixels).
+
+func retreat(dist):
+	remaining_retreat_distance += dist
+	pass
+
 # Adds an instance of the given scene to the tree at the given position, then
 # deletes it when its AnimationPlayer has finished (it is assumed that the
 # AnimationPlayer autoplays). Note that the scene is flipped in X for player
 # one.
-#
+
 func play_effect_once(scene, pos):
 	var effect = scene.instance()
 	effect.position = pos
@@ -253,10 +286,10 @@ func play_insult_miss_effect():
 		preload("res://SCENES/Insult_Miss_Effect.tscn"),
 		get_node("Area2D_Defense/DefenseCollider").global_position)
 
-# Trigger the Get_hit animation unless the player is in the middle of a jump
+# Triggers the Get_hit animation unless the player is in the middle of a jump
 # (i.e. in the air) or a crouch (on the ground). In either of those cases, the
 # player's sprite flashes instead.
-#
+
 func play_get_hit_animation():
 	var defense = anim_node.current_animation
 	var play_it = true
@@ -271,8 +304,7 @@ func play_get_hit_animation():
 			play_it = false
 
 	if play_it:
-		anim_node.play("Get_hit")
-		busy = true
+		play_animation("Get_hit")
 	else:
 		$Flasher.stop()
 		$Flasher.play("Flash")
