@@ -220,6 +220,11 @@ func _on_defense_hit(_area_rid, _area, _area_shape_index, _local_shape_index):
 		else:
 			play_miss_effect()
 
+# Adds an instance of the given scene to the tree at the given position, then
+# deletes it when its AnimationPlayer has finished (it is assumed that the
+# AnimationPlayer autoplays). Note that the scene is flipped in X for player
+# one.
+#
 func play_effect_once(scene, pos):
 	var effect = scene.instance()
 	effect.position = pos
@@ -248,6 +253,10 @@ func play_insult_miss_effect():
 		preload("res://SCENES/Insult_Miss_Effect.tscn"),
 		get_node("Area2D_Defense/DefenseCollider").global_position)
 
+# Trigger the Get_hit animation unless the player is in the middle of a jump
+# (i.e. in the air) or a crouch (on the ground). In either of those cases, the
+# player's sprite flashes instead.
+#
 func play_get_hit_animation():
 	var defense = anim_node.current_animation
 	var play_it = true
