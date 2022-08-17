@@ -210,10 +210,7 @@ func play_effect_once(scene, pos):
 	if player_number == ONE:
 		effect.scale = Vector2(-1, 1)
 	var anim = effect.get_node("AnimationPlayer")
-	anim.connect("animation_finished", self, "delete_effect", [ effect ])
-	anim.play()
-
-func delete_effect(_anim_name, effect):
+	yield(anim, "animation_finished")
 	effect.queue_free()
 
 func play_hit_effect():
@@ -253,4 +250,5 @@ func play_get_hit_animation():
 		anim_node.play("Get_hit")
 		busy = true
 	else:
+		$Flasher.stop()
 		$Flasher.play("Flash")
