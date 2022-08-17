@@ -24,7 +24,7 @@ func _ready():
 	get_node("1_" + str(PreloadScript01.bruitages)).modulate = PreloadScript01.violet
 	get_node("2_" + str(PreloadScript01.musique)).modulate = PreloadScript01.violet
 
-func _input(_event):
+func _input(event):
 	if (Input.is_action_just_pressed('P1_down')) or (Input.is_action_just_pressed('P2_down')):
 		previous_vpos = current_vpos
 		check_previous_boundaries()
@@ -68,9 +68,11 @@ func _input(_event):
 	elif (Input.is_action_just_pressed('P1_a')) or (Input.is_action_just_pressed('P2_a')):
 		validation()
 	
-	elif (Input.is_action_just_pressed('P1_x')) or (Input.is_action_just_pressed('P2_x')):
+#	elif (Input.is_action_just_pressed('P1_b')) or (Input.is_action_just_pressed('P2_b')):
+	elif event is InputEventJoypadButton and event.pressed or InputEventKey and event.pressed:
 		play_cancel()
 		get_node("../TransitionScreen").transition()
+		
 		
 func check_previous_boundaries():
 	if previous_vpos < 0:

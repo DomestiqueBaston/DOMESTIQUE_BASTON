@@ -5,11 +5,11 @@ extends Node2D
 func _ready() -> void:
 	pass
 	
-func _input(_event):
-	if Input.is_action_just_pressed("P1_x") or Input.is_action_just_pressed("P2_x"):
+func _input(event):
+#	if Input.is_action_just_pressed("P1_x") or Input.is_action_just_pressed("P2_x"):
+	if event is InputEventKey and event.pressed or InputEventJoypadButton and event.pressed:
 		play_cancel()
 		$TransitionScreen.transition()
-
 
 func _on_TransitionScreen_transitioned() -> void:
 # warning-ignore:return_value_discarded
