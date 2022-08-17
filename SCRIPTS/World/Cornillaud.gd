@@ -8,7 +8,7 @@ var choice = ""
 var moulue_alpha = 0.0
 var couillu_alpha = 0.0
 
-func _input(_event):
+func _input(event):
 	if Input.is_action_just_pressed('P1_right') or Input.is_action_just_pressed('P1_left') or Input.is_action_just_pressed('P2_right') or Input.is_action_just_pressed('P2_left'):
 		if $AnimatedSprite.animation == "C_M":
 			$AnimatedSprite.play("M_C")
@@ -26,7 +26,7 @@ func _input(_event):
 		MusicController.stop_music()
 		$TransitionScreen.transition()
 		
-	elif Input.is_action_just_pressed('P1_b') or Input.is_action_just_pressed('P2_b'):
+	elif Input.is_action_just_pressed('P1_y') or Input.is_action_just_pressed('P2_y'):
 		if moulue_alpha == 1.0:
 			pass
 		elif couillu_alpha == 0.0:
@@ -39,7 +39,7 @@ func _input(_event):
 			play_cancel()
 		$Couillu_cds.modulate.a = couillu_alpha
 		
-	elif Input.is_action_just_pressed('P1_y') or Input.is_action_just_pressed('P2_y'):
+	elif Input.is_action_just_pressed('P1_x') or Input.is_action_just_pressed('P2_x'):
 		if couillu_alpha == 1.0:
 			pass
 		elif moulue_alpha == 0.0:
@@ -52,7 +52,7 @@ func _input(_event):
 			play_cancel()
 		$Moulue_cds.modulate.a = moulue_alpha
 	
-	elif Input.is_action_just_pressed('P1_x') or Input.is_action_just_pressed('P2_x'):
+	elif event is InputEventJoypadButton and event.pressed or InputEventKey and event.pressed:
 		choice = retour
 		play_cancel()
 		$TransitionScreen.transition()
