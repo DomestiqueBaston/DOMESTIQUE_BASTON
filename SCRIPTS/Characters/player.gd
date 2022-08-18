@@ -188,17 +188,6 @@ func _physics_process(delta):
 ## reset when the animation finishes.
 ##
 func play_animation(anim_name):
-
-	# if the player parries twice in a row while under attack, push the
-	# attacker back
-
-	if (anim_name == "Parry" and last_animation == "Parry" and
-		get_damage_for_attack(opponent_anim_node.current_animation) > 0 and
-		(OS.get_ticks_msec() - last_animation_end_time) < 400):
-		opponent_node.retreat(parry_push_back)
-
-	# play the animation with the busy flag set
-
 	anim_node.play(anim_name)
 	busy = true
 	yield(anim_node, "animation_finished")
@@ -219,6 +208,7 @@ func _on_body_hit(_area_rid, _area, _area_shape_index, _local_shape_index):
 	var attack = opponent_anim_node.current_animation
 	var damage = get_damage_for_attack(attack)
 	if damage > 0:
+		var defense = anim_node.current_animation
 		print(name, " was hit by ", attack, ", damage: ", damage, " points")
 		play_get_hit_animation()
 		if attack == "Insult":
@@ -226,6 +216,8 @@ func _on_body_hit(_area_rid, _area, _area_shape_index, _local_shape_index):
 		else:
 			play_hit_effect()
 			retreat(retreat_distance)
+		if defense == "Parry":
+			check_for_second_parry()
 
 func _on_defense_hit(_area_rid, _area, _area_shape_index, _local_shape_index):
 	if attack_processed:
@@ -246,6 +238,18 @@ func _on_defense_hit(_area_rid, _area, _area_shape_index, _local_shape_index):
 			play_insult_miss_effect()
 		else:
 			play_miss_effect()
+		check_for_second_parry()
+
+## If the last animation was a Parry, and the current Parry started less than
+## half a second later, push the opponent backwards. (It is assumed that the
+## current action is also a Parry, and that we just took or thwarted a hit.)
+##
+func check_for_second_parry():
+	if last_animation == "Parry":
+		var start_time = \
+			OS.get_ticks_msec() - 1000 * anim_node.current_animation_position
+		if start_time - last_animation_end_time < 500:
+			opponent_node.retreat(parry_push_back)
 
 ## Causes the player to retreat by the given distance (in pixels).
 ##
