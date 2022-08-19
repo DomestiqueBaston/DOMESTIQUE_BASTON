@@ -58,6 +58,9 @@ var energy_node
 # true => player is doing something other than walking or idling
 var busy = false
 
+# true => player is dead!
+var dead = false
+
 # true => opponent's move has been detected and either hit home or thwarted
 var attack_processed = false
 
@@ -113,7 +116,7 @@ func _input(event):
 	
 	# we are only interested in action press events
 
-	if not event.is_action_type() or not event.is_pressed():
+	if dead or not event.is_action_type() or not event.is_pressed():
 		return
 
 	# most actions cannot be interrupted, but there are two exceptions: Trick
@@ -175,7 +178,7 @@ func _physics_process(delta):
 			remaining_retreat_distance = 0
 		retreating = true
 
-	if not busy:
+	if not busy and not dead:
 		var my_actions = ui_actions[player_number]
 		if Input.is_action_pressed(my_actions[FORWARD]):
 			velocity.x += forward_speed
@@ -321,11 +324,10 @@ func take_hit(damage):
 	current_energy -= damage
 	if current_energy <= 0:
 		play_animation("Ko")
-		# TODO: what next?
+		dead = true
 		return
-	else:
-		energy_node.set_energy_level(
-			current_energy as float / initial_energy)
+
+	energy_node.set_energy_level(current_energy as float / initial_energy)
 
 	var defense = anim_node.current_animation
 	var play_it = true
