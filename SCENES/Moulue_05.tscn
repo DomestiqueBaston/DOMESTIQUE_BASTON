@@ -3743,39 +3743,35 @@ script = ExtResource( 3 )
 backward_speed = 45
 
 [node name="MoveCollider" type="CollisionShape2D" parent="."]
-position = Vector2( 4, -36 )
+position = Vector2( 8, -36 )
 shape = SubResource( 96 )
 
 [node name="Area2D_Body" type="Area2D" parent="."]
-visible = false
 collision_mask = 32
 
 [node name="BodyCollider" type="CollisionShape2D" parent="Area2D_Body"]
-position = Vector2( 10, -33 )
-scale = Vector2( 1.24, 0.63 )
+position = Vector2( 10.25, -32.75 )
+scale = Vector2( 1.112, 0.62 )
 shape = SubResource( 94 )
+disabled = true
 
 [node name="Area2D_Roll" type="Area2D" parent="."]
-visible = false
 collision_layer = 2
 collision_mask = 80
 
 [node name="AttackCollider" type="CollisionShape2D" parent="Area2D_Roll"]
-position = Vector2( 20, -41 )
-rotation = -0.645772
-scale = Vector2( 0.383802, 1 )
+position = Vector2( 21, -41 )
+rotation = -0.769725
 shape = SubResource( 93 )
 disabled = true
 
 [node name="Area2D_Defense" type="Area2D" parent="."]
-visible = false
 collision_layer = 4
 collision_mask = 32
 
 [node name="DefenseCollider" type="CollisionShape2D" parent="Area2D_Defense"]
-position = Vector2( 8, -30 )
-rotation = -0.2374
-scale = Vector2( 0.447916, 1.2828 )
+position = Vector2( 5, -20 )
+scale = Vector2( 1.40792, 2.01614 )
 shape = SubResource( 95 )
 disabled = true
 
@@ -3785,7 +3781,7 @@ texture = ExtResource( 2 )
 offset = Vector2( -0.5, -53.5 )
 hframes = 13
 vframes = 13
-frame = 13
+frame = 123
 __meta__ = {
 "_edit_lock_": true
 }
@@ -3795,7 +3791,7 @@ texture = ExtResource( 1 )
 offset = Vector2( -0.5, -53.5 )
 hframes = 13
 vframes = 13
-frame = 13
+frame = 123
 __meta__ = {
 "_edit_lock_": true
 }
