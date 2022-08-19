@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://ASSETS/GRAPHICS/INTERFACE/interface_frame_right.png" type="Texture" id=1]
 [ext_resource path="res://ASSETS/GRAPHICS/INTERFACE/Couillu_small_portrait.png" type="Texture" id=2]
@@ -7,12 +7,15 @@
 [ext_resource path="res://ASSETS/GRAPHICS/INTERFACE/interface_frame_left.png" type="Texture" id=5]
 [ext_resource path="res://ASSETS/GRAPHICS/INTERFACE/Negative_Anti_Bar_mask.png" type="Texture" id=6]
 [ext_resource path="res://ASSETS/GRAPHICS/INTERFACE/Bar_mask.png" type="Texture" id=7]
+[ext_resource path="res://SCRIPTS/Left.gd" type="Script" id=8]
+[ext_resource path="res://SCRIPTS/Right.gd" type="Script" id=9]
 
 [node name="UI" type="Node2D"]
 
 [node name="Left" type="Node2D" parent="."]
 light_mask = 512
 position = Vector2( 2, 2 )
+script = ExtResource( 8 )
 
 [node name="Frame_left" type="Sprite" parent="Left"]
 light_mask = 512
@@ -54,6 +57,7 @@ offset = Vector2( -16, -16 )
 light_mask = 16
 position = Vector2( 303, 2 )
 scale = Vector2( -1, 1 )
+script = ExtResource( 9 )
 
 [node name="Frame_right" type="Sprite" parent="Right"]
 light_mask = 16

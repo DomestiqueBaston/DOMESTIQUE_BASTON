@@ -21,6 +21,8 @@ export var retreat_speed = 100
 ## Distance opponent is pushed backwards if player parries twice in a row.
 export var parry_push_back = 25
 
+export var initial_energy = 100
+
 # logical actions and corresponding input map actions for each player
 enum { FORWARD, BACKWARD, UP, DOWN, A, B }
 var ui_actions = [
@@ -45,6 +47,12 @@ var opponent_node
 
 # the opponent's AnimationPlayer node
 var opponent_anim_node
+
+# current energy level (starts at initial_energy)
+var current_energy
+
+# node that show's the player's energy level
+var energy_node
 
 # true => player is doing something other than walking or idling
 var busy = false
@@ -72,6 +80,12 @@ func _ready():
 			opponent_anim_node.connect(
 				"animation_finished", self, "_on_opponent_animation_finished")
 			break
+	if player_number == ONE:
+		energy_node = get_node("../UI/Left")
+	else:
+		energy_node = get_node("../UI/Right")
+	current_energy = initial_energy
+	energy_node.set_energy_level(1)
 
 func get_damage_for_attack(attack):
 	var points = attack_damage.get(attack)
@@ -217,7 +231,7 @@ func _on_body_hit(_area_rid, _area, _area_shape_index, _local_shape_index):
 	if damage > 0:
 		var defense = anim_node.current_animation
 		print(name, " was hit by ", attack, ", damage: ", damage, " points")
-		play_get_hit_animation()
+		take_hit(damage)
 		if attack == "Insult":
 			play_insult_hit_effect()
 		else:
@@ -235,9 +249,9 @@ func _on_defense_hit(_area_rid, _area, _area_shape_index, _local_shape_index):
 	if is_defense_right_for_attack(defense, attack):
 		print(name, " thwarted ", attack, ", no damage")
 	else:
-		print(name, " thwarted ", attack, ", damage: ",
-			  get_damage_for_attack(attack) / 2, " points")
-		play_get_hit_animation()
+		var damage = get_damage_for_attack(attack) / 2
+		print(name, " thwarted ", attack, ", damage: ", damage, " points")
+		take_hit(damage)
 		if attack != "Insult":
 			retreat(retreat_distance / 2.0)
 	if defense == "Parry":
@@ -297,11 +311,21 @@ func play_insult_miss_effect():
 		preload("res://SCENES/Insult_Miss_Effect.tscn"),
 		get_node("Area2D_Defense/DefenseCollider").global_position)
 
+## Subtracts the given number of points from the player's energy level.
 ## Triggers the Get_hit animation unless the player is in the middle of a jump
 ## (in the air) or a crouch (on the ground). In either of those cases, the
 ## player's sprite flashes instead.
 ##
-func play_get_hit_animation():
+func take_hit(damage):
+	current_energy -= damage
+	if current_energy <= 0:
+		play_animation("Ko")
+		# TODO: what next?
+		return
+	else:
+		energy_node.set_energy_level(
+			current_energy as float / initial_energy)
+
 	var defense = anim_node.current_animation
 	var play_it = true
 
