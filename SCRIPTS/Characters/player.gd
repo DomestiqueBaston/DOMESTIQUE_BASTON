@@ -321,13 +321,16 @@ func play_insult_miss_effect():
 ## player's sprite flashes instead.
 ##
 func take_hit(damage):
-	current_energy -= damage
-	if current_energy <= 0:
+	if dead:
+		return
+
+	current_energy = max(0, current_energy - damage)
+	energy_node.set_energy_level(current_energy as float / initial_energy)
+
+	if current_energy == 0:
 		play_animation("Ko")
 		dead = true
 		return
-
-	energy_node.set_energy_level(current_energy as float / initial_energy)
 
 	var defense = anim_node.current_animation
 	var play_it = true
