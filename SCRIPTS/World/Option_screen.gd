@@ -79,7 +79,7 @@ func _input(event):
 			pass
 		else:
 			play_cancel()
-		get_node("../TransitionScreen").transition()
+			get_node("../TransitionScreen").transition()
 		
 func check_previous_boundaries():
 	if previous_vpos < 0:
