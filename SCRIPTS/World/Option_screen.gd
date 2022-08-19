@@ -77,6 +77,9 @@ func _input(event):
 			pass
 		elif (Input.is_key_pressed(KEY_ENTER)):
 			pass
+		else:
+			play_cancel()
+		get_node("../TransitionScreen").transition()
 		
 func check_previous_boundaries():
 	if previous_vpos < 0:
