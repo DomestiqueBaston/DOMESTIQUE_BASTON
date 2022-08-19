@@ -1706,10 +1706,10 @@ tracks/13/loop_wrap = true
 tracks/13/imported = false
 tracks/13/enabled = true
 tracks/13/keys = {
-"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 1,
-"values": [ Vector2( 8, -45 ), Vector2( 7, -45 ), Vector2( 11.7778, -45 ), Vector2( 13.5556, -45 ), Vector2( 9.33333, -45 ), Vector2( 8.16667, -45 ), Vector2( 10, -45 ), Vector2( 11.25, -45 ), Vector2( 11.5, -45 ), Vector2( 11.75, -45 ), Vector2( 11.75, -45 ) ]
+"values": [ Vector2( 8, -36 ), Vector2( -11, -36 ), Vector2( -15, -36 ), Vector2( -22, -36 ), Vector2( -34, -36 ), Vector2( -52, -36 ), Vector2( -58, -36 ), Vector2( -60, -36 ), Vector2( -61, -36 ), Vector2( -61, -36 ) ]
 }
 tracks/14/type = "value"
 tracks/14/path = NodePath("MoveCollider:rotation_degrees")
@@ -1733,7 +1733,7 @@ tracks/15/keys = {
 "times": PoolRealArray( 0, 1 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
-"values": [ true, true ]
+"values": [ false, false ]
 }
 tracks/16/type = "audio"
 tracks/16/path = NodePath("FXs")
@@ -1756,6 +1756,30 @@ tracks/17/keys = {
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 1,
 "values": [ 123, 124, 125, 126, 127, 128, 129, 130, 131, 132, 133 ]
+}
+tracks/18/type = "value"
+tracks/18/path = NodePath("Character:position")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ Vector2( 0, 0 ), Vector2( -5, 0 ), Vector2( -15, 0 ), Vector2( -25, 0 ), Vector2( -35, 0 ), Vector2( -45, 0 ), Vector2( -50, 0 ), Vector2( -50, 0 ) ]
+}
+tracks/19/type = "value"
+tracks/19/path = NodePath("Shadow:position")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ Vector2( 0, 0 ), Vector2( -5, 0 ), Vector2( -15, 0 ), Vector2( -25, 0 ), Vector2( -35, 0 ), Vector2( -45, 0 ), Vector2( -50, 0 ), Vector2( -50, 0 ) ]
 }
 
 [sub_resource type="Animation" id=12]
@@ -2423,6 +2447,30 @@ tracks/18/keys = {
 "transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ 44 ]
+}
+tracks/19/type = "value"
+tracks/19/path = NodePath("Character:position")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+tracks/20/type = "value"
+tracks/20/path = NodePath("Shadow:position")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
 }
 
 [sub_resource type="Animation" id=18]
@@ -3699,31 +3747,37 @@ position = Vector2( 4, -36 )
 shape = SubResource( 96 )
 
 [node name="Area2D_Body" type="Area2D" parent="."]
+visible = false
 collision_mask = 32
 
 [node name="BodyCollider" type="CollisionShape2D" parent="Area2D_Body"]
 position = Vector2( 10, -33 )
+scale = Vector2( 1.24, 0.63 )
 shape = SubResource( 94 )
 
 [node name="Area2D_Roll" type="Area2D" parent="."]
+visible = false
 collision_layer = 2
 collision_mask = 80
 
 [node name="AttackCollider" type="CollisionShape2D" parent="Area2D_Roll"]
-position = Vector2( 20.0596, -41.4208 )
+position = Vector2( 20, -41 )
 rotation = -0.645772
+scale = Vector2( 0.383802, 1 )
 shape = SubResource( 93 )
 disabled = true
 
 [node name="Area2D_Defense" type="Area2D" parent="."]
+visible = false
 collision_layer = 4
 collision_mask = 32
 
 [node name="DefenseCollider" type="CollisionShape2D" parent="Area2D_Defense"]
-position = Vector2( 11, -34 )
+position = Vector2( 8, -30 )
 rotation = -0.2374
 scale = Vector2( 0.447916, 1.2828 )
 shape = SubResource( 95 )
+disabled = true
 
 [node name="Shadow" type="Sprite" parent="."]
 modulate = Color( 0.0588235, 0, 0.392157, 0.501961 )
@@ -3731,16 +3785,24 @@ texture = ExtResource( 2 )
 offset = Vector2( -0.5, -53.5 )
 hframes = 13
 vframes = 13
+frame = 13
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="Character" type="Sprite" parent="."]
 texture = ExtResource( 1 )
 offset = Vector2( -0.5, -53.5 )
 hframes = 13
 vframes = 13
-frame = 44
+frame = 13
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 autoplay = "Idle"
+reset_on_save = false
 anims/Crouch = SubResource( 6 )
 anims/Get_hit = SubResource( 14 )
 anims/Idle = SubResource( 1 )

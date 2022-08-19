@@ -1706,10 +1706,10 @@ tracks/13/loop_wrap = true
 tracks/13/imported = false
 tracks/13/enabled = true
 tracks/13/keys = {
-"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.2 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 1.2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 1,
-"values": [ Vector2( -2, -45 ), Vector2( 1, -45 ), Vector2( 7, -45 ), Vector2( 14, -45 ), Vector2( 12, -45 ), Vector2( 7.5, -45 ), Vector2( 17, -45 ), Vector2( 29, -45 ), Vector2( 33, -45 ), Vector2( 35, -45 ), Vector2( 35, -45 ) ]
+"values": [ Vector2( -2, -36 ), Vector2( -11, -36 ), Vector2( -27, -36 ), Vector2( -53, -36 ), Vector2( -63, -36 ), Vector2( -66, -36 ), Vector2( -68, -36 ), Vector2( -69, -36 ), Vector2( -69, -36 ) ]
 }
 tracks/14/type = "value"
 tracks/14/path = NodePath("MoveCollider:rotation_degrees")
@@ -1733,7 +1733,7 @@ tracks/15/keys = {
 "times": PoolRealArray( 0, 1.2 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
-"values": [ true, true ]
+"values": [ false, false ]
 }
 tracks/16/type = "audio"
 tracks/16/path = NodePath("FXs")
@@ -1756,6 +1756,30 @@ tracks/17/keys = {
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 1,
 "values": [ 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92 ]
+}
+tracks/18/type = "value"
+tracks/18/path = NodePath("Character:position")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 1.2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ Vector2( 0, 0 ), Vector2( -5, 0 ), Vector2( -20, 0 ), Vector2( -55, 0 ), Vector2( -70, 0 ), Vector2( -75, 0 ), Vector2( -75, 0 ) ]
+}
+tracks/19/type = "value"
+tracks/19/path = NodePath("Shadow:position")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 1.2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ Vector2( 0, 0 ), Vector2( -5, 0 ), Vector2( -20, 0 ), Vector2( -55, 0 ), Vector2( -70, 0 ), Vector2( -75, 0 ), Vector2( -75, 0 ) ]
 }
 
 [sub_resource type="Animation" id=12]
@@ -2411,6 +2435,30 @@ tracks/17/keys = {
 "transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ 16 ]
+}
+tracks/18/type = "value"
+tracks/18/path = NodePath("Character:position")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+tracks/19/type = "value"
+tracks/19/path = NodePath("Shadow:position")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
 }
 
 [sub_resource type="Animation" id=18]
@@ -3689,6 +3737,7 @@ position = Vector2( 4, -36 )
 shape = SubResource( 96 )
 
 [node name="Area2D_Body" type="Area2D" parent="."]
+visible = false
 collision_layer = 16
 collision_mask = 2
 
@@ -3697,6 +3746,7 @@ position = Vector2( 10, -33 )
 shape = SubResource( 94 )
 
 [node name="Area2D_Roll" type="Area2D" parent="."]
+visible = false
 collision_layer = 32
 collision_mask = 5
 
@@ -3707,6 +3757,7 @@ shape = SubResource( 93 )
 disabled = true
 
 [node name="Area2D_Defense" type="Area2D" parent="."]
+visible = false
 collision_layer = 64
 collision_mask = 2
 
