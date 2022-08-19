@@ -121,9 +121,16 @@ func _input(event):
 			if Input.is_action_pressed(my_actions[UP]):
 				play_animation("Insult")
 			elif Input.is_action_pressed(my_actions[DOWN]):
-				play_animation("Trick")
-			else:
 				play_animation("Slash")
+			else:
+				play_animation("Trick")
+		elif Input.is_action_pressed(my_actions[BACKWARD]):
+			if Input.is_action_pressed(my_actions[UP]):
+				play_animation("Jump")
+			elif Input.is_action_pressed(my_actions[DOWN]):
+				play_animation("Crouch")
+			else:
+				play_animation("Parry")
 	elif Input.is_action_pressed(my_actions[A]):
 		if Input.is_action_pressed(my_actions[FORWARD]):
 			if Input.is_action_pressed(my_actions[UP]):
