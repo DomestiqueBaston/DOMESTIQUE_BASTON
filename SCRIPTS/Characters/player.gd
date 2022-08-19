@@ -21,6 +21,7 @@ export var retreat_speed = 100
 ## Distance opponent is pushed backwards if player parries twice in a row.
 export var parry_push_back = 25
 
+## Energy points the player starts out with.
 export var initial_energy = 100
 
 # logical actions and corresponding input map actions for each player
