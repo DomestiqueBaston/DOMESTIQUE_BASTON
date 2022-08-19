@@ -3682,7 +3682,7 @@ collision_mask = 264
 script = ExtResource( 3 )
 player_number = 1
 forward_speed = 65
-backward_speed = 37
+backward_speed = 40
 
 [node name="MoveCollider" type="CollisionShape2D" parent="."]
 position = Vector2( 4, -36 )

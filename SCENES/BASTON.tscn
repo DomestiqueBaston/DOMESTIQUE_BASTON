@@ -33,5 +33,3 @@ position = Vector2( 49, 108 )
 [node name="TransitionScreen" parent="." instance=ExtResource( 5 )]
 
 [connection signal="transitioned" from="TransitionScreen" to="." method="_on_TransitionScreen_transitioned"]
-
-[editable path="UI"]

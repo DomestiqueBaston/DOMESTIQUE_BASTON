@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/energy_bar_anti_masque.png-6e9f2352da6d8161fcf5ebef793c229d.stex"
+path="res://.import/Bar_mask.png-e8c67122a77d908944cc907343c68d08.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://ASSETS/GRAPHICS/INTERFACE/energy_bar_anti_masque.png"
-dest_files=[ "res://.import/energy_bar_anti_masque.png-6e9f2352da6d8161fcf5ebef793c229d.stex" ]
+source_file="res://ASSETS/GRAPHICS/INTERFACE/Bar_mask.png"
+dest_files=[ "res://.import/Bar_mask.png-e8c67122a77d908944cc907343c68d08.stex" ]
 
 [params]
 
