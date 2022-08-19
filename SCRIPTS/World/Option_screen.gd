@@ -68,11 +68,15 @@ func _input(event):
 	elif (Input.is_action_just_pressed('P1_a')) or (Input.is_action_just_pressed('P2_a')):
 		validation()
 	
-#	elif (Input.is_action_just_pressed('P1_b')) or (Input.is_action_just_pressed('P2_b')):
-	elif event is InputEventJoypadButton and event.pressed or InputEventKey and event.pressed:
+	elif event is InputEventJoypadButton and event.pressed:
 		play_cancel()
 		get_node("../TransitionScreen").transition()
 		
+	elif event is InputEventKey and event.pressed:
+		if (Input.is_key_pressed(KEY_ALT)):
+			pass
+		elif (Input.is_key_pressed(KEY_ENTER)):
+			pass
 		
 func check_previous_boundaries():
 	if previous_vpos < 0:

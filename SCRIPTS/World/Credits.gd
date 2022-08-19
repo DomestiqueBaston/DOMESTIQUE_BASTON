@@ -6,10 +6,18 @@ func _ready() -> void:
 	pass
 	
 func _input(event):
-#	if Input.is_action_just_pressed("P1_x") or Input.is_action_just_pressed("P2_x"):
-	if event is InputEventKey and event.pressed or InputEventJoypadButton and event.pressed:
+
+	if event is InputEventJoypadButton and event.pressed:
 		play_cancel()
 		$TransitionScreen.transition()
+	elif event is InputEventKey and event.pressed:
+		if (Input.is_key_pressed(KEY_ALT)):
+			pass
+		elif (Input.is_key_pressed(KEY_ENTER)):
+			pass
+		else:
+			play_cancel()
+			$TransitionScreen.transition()
 
 func _on_TransitionScreen_transitioned() -> void:
 # warning-ignore:return_value_discarded

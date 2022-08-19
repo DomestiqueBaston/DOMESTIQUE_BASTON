@@ -11,7 +11,7 @@ func _ready():
 	get_node(PreloadScript01.previous_node).modulate.a = 0
 	get_node(PreloadScript01.current_node).modulate.a = 1
 
-func _input(_event):
+func _input(event):
 	if (Input.is_action_just_pressed('P1_down')) or (Input.is_action_just_pressed('P2_down')):
 		PreloadScript01.previous_pos = PreloadScript01.current_pos
 		check_previous_boundaries()

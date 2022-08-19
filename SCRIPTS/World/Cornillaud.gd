@@ -52,10 +52,20 @@ func _input(event):
 			play_cancel()
 		$Moulue_cds.modulate.a = moulue_alpha
 	
-	elif event is InputEventJoypadButton and event.pressed or InputEventKey and event.pressed:
+	elif event is InputEventJoypadButton and event.pressed:
 		choice = retour
 		play_cancel()
 		$TransitionScreen.transition()
+		
+	elif event is InputEventKey and event.pressed:
+		if (Input.is_key_pressed(KEY_ALT)):
+			pass
+		elif (Input.is_key_pressed(KEY_ENTER)):
+			pass
+		else:
+			play_cancel()
+			$TransitionScreen.transition()
+	
 
 func _on_TransitionScreen_transitioned():
 # warning-ignore:return_value_discarded
