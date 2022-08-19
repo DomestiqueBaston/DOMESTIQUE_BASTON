@@ -7,8 +7,8 @@
 [ext_resource path="res://ASSETS/GRAPHICS/INTERFACE/interface_frame_left.png" type="Texture" id=5]
 [ext_resource path="res://ASSETS/GRAPHICS/INTERFACE/Negative_Anti_Bar_mask.png" type="Texture" id=6]
 [ext_resource path="res://ASSETS/GRAPHICS/INTERFACE/Bar_mask.png" type="Texture" id=7]
-[ext_resource path="res://SCRIPTS/Left.gd" type="Script" id=8]
-[ext_resource path="res://SCRIPTS/Right.gd" type="Script" id=9]
+[ext_resource path="res://SCRIPTS/World/Left.gd" type="Script" id=8]
+[ext_resource path="res://SCRIPTS/World/Right.gd" type="Script" id=9]
 
 [node name="UI" type="Node2D"]
 
