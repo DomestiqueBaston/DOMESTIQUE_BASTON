@@ -16,13 +16,17 @@ func _ready():
 		player1 = $Couillu
 		player2 = $Moulue
 		player1_portrait_index = 1
-	
+
 	player1.player_number = Player.ONE
 	player1.position = Vector2(79, 108)
 	player1.scale = Vector2(1, 1)
+	player1.connect("energy_changed", get_node("UI/Left"), "set_energy_level")
+
 	player2.player_number = Player.TWO
 	player2.position = Vector2(202, 108)
 	player2.scale = Vector2(-1, 1)
+	player2.connect("energy_changed", get_node("UI/Right"), "set_energy_level")
+
 	portrait_left.texture = portraits[player1_portrait_index]
 	portrait_right.texture = portraits[1 - player1_portrait_index]
 

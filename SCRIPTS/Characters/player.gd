@@ -24,6 +24,10 @@ export var parry_push_back = 25
 ## Energy points the player starts out with.
 export var initial_energy = 100
 
+## Signal emitted when the player's energy level changes. Passes a single
+## argument whose value is between 0 (dead) and 1.
+signal energy_changed
+
 # logical actions and corresponding input map actions for each player
 enum { FORWARD, BACKWARD, UP, DOWN, A, B }
 var ui_actions = [
@@ -51,9 +55,6 @@ var opponent_anim_node
 
 # current energy level (starts at initial_energy)
 var current_energy
-
-# node that show's the player's energy level
-var energy_node
 
 # true => player is doing something other than walking or idling
 var busy = false
@@ -84,12 +85,7 @@ func _ready():
 			opponent_anim_node.connect(
 				"animation_finished", self, "_on_opponent_animation_finished")
 			break
-	if player_number == ONE:
-		energy_node = get_node("../UI/Left")
-	else:
-		energy_node = get_node("../UI/Right")
 	current_energy = initial_energy
-	energy_node.set_energy_level(1)
 
 func get_damage_for_attack(attack):
 	var points = attack_damage.get(attack)
@@ -325,7 +321,7 @@ func take_hit(damage):
 		return
 
 	current_energy = max(0, current_energy - damage)
-	energy_node.set_energy_level(current_energy as float / initial_energy)
+	emit_signal("energy_changed", current_energy as float / initial_energy)
 
 	if current_energy == 0:
 		play_animation("Ko")
