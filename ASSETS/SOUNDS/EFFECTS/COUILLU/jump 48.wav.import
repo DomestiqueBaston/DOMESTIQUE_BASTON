@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/jump 48.wav-535431dfb35e103c0815f87c1aafd9ee.sample"
+
+[deps]
+
+source_file="res://ASSETS/SOUNDS/EFFECTS/COUILLU/jump 48.wav"
+dest_files=[ "res://.import/jump 48.wav-535431dfb35e103c0815f87c1aafd9ee.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

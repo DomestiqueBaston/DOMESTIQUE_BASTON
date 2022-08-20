@@ -1,9 +1,24 @@
-[gd_scene load_steps=69 format=2]
+[gd_scene load_steps=84 format=2]
 
 [ext_resource path="res://ASSETS/GRAPHICS/ANIMATION/COUILLU/Anims_Couillu.png" type="Texture" id=1]
 [ext_resource path="res://ASSETS/GRAPHICS/ANIMATION/COUILLU/Anims_Couillu_Shadows.png" type="Texture" id=2]
 [ext_resource path="res://SCRIPTS/Characters/player.gd" type="Script" id=3]
 [ext_resource path="res://SHADERS/Flasher.tres" type="Material" id=4]
+[ext_resource path="res://ASSETS/SOUNDS/EFFECTS/COUILLU/in 48.wav" type="AudioStream" id=5]
+[ext_resource path="res://ASSETS/SOUNDS/EFFECTS/COUILLU/idle 48.wav" type="AudioStream" id=6]
+[ext_resource path="res://ASSETS/SOUNDS/EFFECTS/COUILLU/slash 48.wav" type="AudioStream" id=8]
+[ext_resource path="res://ASSETS/SOUNDS/EFFECTS/COUILLU/walk 48.wav" type="AudioStream" id=9]
+[ext_resource path="res://ASSETS/SOUNDS/EFFECTS/COUILLU/jump 48.wav" type="AudioStream" id=10]
+[ext_resource path="res://ASSETS/SOUNDS/EFFECTS/COUILLU/slap 48.wav" type="AudioStream" id=11]
+[ext_resource path="res://ASSETS/SOUNDS/EFFECTS/COUILLU/walk backward 48.wav" type="AudioStream" id=12]
+[ext_resource path="res://ASSETS/SOUNDS/EFFECTS/COUILLU/parry 48.wav" type="AudioStream" id=13]
+[ext_resource path="res://ASSETS/SOUNDS/EFFECTS/COUILLU/trick 48.wav" type="AudioStream" id=14]
+[ext_resource path="res://ASSETS/SOUNDS/EFFECTS/COUILLU/insult3 48.wav" type="AudioStream" id=16]
+[ext_resource path="res://ASSETS/SOUNDS/EFFECTS/COUILLU/KO 48.wav" type="AudioStream" id=17]
+[ext_resource path="res://ASSETS/SOUNDS/EFFECTS/COUILLU/kick 48.wav" type="AudioStream" id=18]
+[ext_resource path="res://ASSETS/SOUNDS/EFFECTS/COUILLU/punch 48.wav" type="AudioStream" id=19]
+[ext_resource path="res://ASSETS/SOUNDS/EFFECTS/COUILLU/down 48.wav" type="AudioStream" id=20]
+[ext_resource path="res://ASSETS/SOUNDS/EFFECTS/COUILLU/get hit 48.wav" type="AudioStream" id=21]
 
 [sub_resource type="RectangleShape2D" id=96]
 extents = Vector2( 22, 36 )
@@ -217,8 +232,12 @@ tracks/16/loop_wrap = true
 tracks/16/imported = false
 tracks/16/enabled = true
 tracks/16/keys = {
-"clips": [  ],
-"times": PoolRealArray(  )
+"clips": [ {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource( 20 )
+} ],
+"times": PoolRealArray( 0 )
 }
 tracks/17/type = "value"
 tracks/17/path = NodePath("Shadow:frame")
@@ -435,8 +454,12 @@ tracks/16/loop_wrap = true
 tracks/16/imported = false
 tracks/16/enabled = true
 tracks/16/keys = {
-"clips": [  ],
-"times": PoolRealArray(  )
+"clips": [ {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource( 21 )
+} ],
+"times": PoolRealArray( 0 )
 }
 tracks/17/type = "value"
 tracks/17/path = NodePath("Shadow:frame")
@@ -651,10 +674,14 @@ tracks/16/path = NodePath("FXs")
 tracks/16/interp = 1
 tracks/16/loop_wrap = true
 tracks/16/imported = false
-tracks/16/enabled = true
+tracks/16/enabled = false
 tracks/16/keys = {
-"clips": [  ],
-"times": PoolRealArray(  )
+"clips": [ {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource( 6 )
+} ],
+"times": PoolRealArray( 0 )
 }
 tracks/17/type = "value"
 tracks/17/path = NodePath("Shadow:frame")
@@ -871,8 +898,12 @@ tracks/16/loop_wrap = true
 tracks/16/imported = false
 tracks/16/enabled = true
 tracks/16/keys = {
-"clips": [  ],
-"times": PoolRealArray(  )
+"clips": [ {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource( 5 )
+} ],
+"times": PoolRealArray( 0 )
 }
 tracks/17/type = "value"
 tracks/17/path = NodePath("Shadow:frame")
@@ -1089,8 +1120,12 @@ tracks/16/loop_wrap = true
 tracks/16/imported = false
 tracks/16/enabled = true
 tracks/16/keys = {
-"clips": [  ],
-"times": PoolRealArray(  )
+"clips": [ {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource( 16 )
+} ],
+"times": PoolRealArray( 0 )
 }
 tracks/17/type = "value"
 tracks/17/path = NodePath("Shadow:frame")
@@ -1307,8 +1342,12 @@ tracks/16/loop_wrap = true
 tracks/16/imported = false
 tracks/16/enabled = true
 tracks/16/keys = {
-"clips": [  ],
-"times": PoolRealArray(  )
+"clips": [ {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource( 10 )
+} ],
+"times": PoolRealArray( 0 )
 }
 tracks/17/type = "value"
 tracks/17/path = NodePath("Shadow:frame")
@@ -1524,8 +1563,12 @@ tracks/16/loop_wrap = true
 tracks/16/imported = false
 tracks/16/enabled = true
 tracks/16/keys = {
-"clips": [  ],
-"times": PoolRealArray(  )
+"clips": [ {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource( 18 )
+} ],
+"times": PoolRealArray( 0 )
 }
 tracks/17/type = "value"
 tracks/17/path = NodePath("Shadow:frame")
@@ -1742,8 +1785,12 @@ tracks/16/loop_wrap = true
 tracks/16/imported = false
 tracks/16/enabled = true
 tracks/16/keys = {
-"clips": [  ],
-"times": PoolRealArray(  )
+"clips": [ {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource( 17 )
+} ],
+"times": PoolRealArray( 0 )
 }
 tracks/17/type = "value"
 tracks/17/path = NodePath("Shadow:frame")
@@ -1984,8 +2031,12 @@ tracks/16/loop_wrap = true
 tracks/16/imported = false
 tracks/16/enabled = true
 tracks/16/keys = {
-"clips": [  ],
-"times": PoolRealArray(  )
+"clips": [ {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource( 13 )
+} ],
+"times": PoolRealArray( 0 )
 }
 tracks/17/type = "value"
 tracks/17/path = NodePath("Shadow:frame")
@@ -2202,8 +2253,12 @@ tracks/16/loop_wrap = true
 tracks/16/imported = false
 tracks/16/enabled = true
 tracks/16/keys = {
-"clips": [  ],
-"times": PoolRealArray(  )
+"clips": [ {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource( 19 )
+} ],
+"times": PoolRealArray( 0 )
 }
 tracks/17/type = "value"
 tracks/17/path = NodePath("Shadow:frame")
@@ -2663,8 +2718,12 @@ tracks/16/loop_wrap = true
 tracks/16/imported = false
 tracks/16/enabled = true
 tracks/16/keys = {
-"clips": [  ],
-"times": PoolRealArray(  )
+"clips": [ {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource( 11 )
+} ],
+"times": PoolRealArray( 0 )
 }
 tracks/17/type = "value"
 tracks/17/path = NodePath("Shadow:frame")
@@ -2881,8 +2940,12 @@ tracks/16/loop_wrap = true
 tracks/16/imported = false
 tracks/16/enabled = true
 tracks/16/keys = {
-"clips": [  ],
-"times": PoolRealArray(  )
+"clips": [ {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource( 8 )
+} ],
+"times": PoolRealArray( 0 )
 }
 tracks/17/type = "value"
 tracks/17/path = NodePath("Shadow:frame")
@@ -3098,8 +3161,12 @@ tracks/16/loop_wrap = true
 tracks/16/imported = false
 tracks/16/enabled = true
 tracks/16/keys = {
-"clips": [  ],
-"times": PoolRealArray(  )
+"clips": [ {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource( 14 )
+} ],
+"times": PoolRealArray( 0 )
 }
 tracks/17/type = "value"
 tracks/17/path = NodePath("Shadow:frame")
@@ -3317,8 +3384,12 @@ tracks/16/loop_wrap = true
 tracks/16/imported = false
 tracks/16/enabled = true
 tracks/16/keys = {
-"clips": [  ],
-"times": PoolRealArray(  )
+"clips": [ {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource( 12 )
+} ],
+"times": PoolRealArray( 0 )
 }
 tracks/17/type = "value"
 tracks/17/path = NodePath("Shadow:frame")
@@ -3536,8 +3607,12 @@ tracks/16/loop_wrap = true
 tracks/16/imported = false
 tracks/16/enabled = true
 tracks/16/keys = {
-"clips": [  ],
-"times": PoolRealArray(  )
+"clips": [ {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource( 9 )
+} ],
+"times": PoolRealArray( 0 )
 }
 tracks/17/type = "value"
 tracks/17/path = NodePath("Shadow:frame")
@@ -3778,7 +3853,7 @@ texture = ExtResource( 1 )
 offset = Vector2( -0.5, -53.5 )
 hframes = 13
 vframes = 13
-frame = 151
+frame = 16
 __meta__ = {
 "_edit_lock_": true
 }
@@ -3809,6 +3884,7 @@ active = true
 parameters/playback = SubResource( 61 )
 
 [node name="FXs" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 16 )
 
 [node name="Flasher" type="AnimationPlayer" parent="."]
 anims/Flash = SubResource( 98 )

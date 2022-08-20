@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/insulte2 48.wav-b7a6b6bf4c016ed8b50a285cfbb8d149.sample"
+
+[deps]
+
+source_file="res://ASSETS/SOUNDS/EFFECTS/MOULUE/insulte2 48.wav"
+dest_files=[ "res://.import/insulte2 48.wav-b7a6b6bf4c016ed8b50a285cfbb8d149.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

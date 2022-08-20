@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/insult3 48.wav-f0ca9c0d15876fd490400eb40a2cdc7e.sample"
+
+[deps]
+
+source_file="res://ASSETS/SOUNDS/EFFECTS/COUILLU/insult3 48.wav"
+dest_files=[ "res://.import/insult3 48.wav-f0ca9c0d15876fd490400eb40a2cdc7e.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

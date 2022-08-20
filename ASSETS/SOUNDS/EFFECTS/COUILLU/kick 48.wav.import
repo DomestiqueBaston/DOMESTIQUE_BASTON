@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/kick 48.wav-bd4fd081b21ac31f0846c9c17fc148ae.sample"
+
+[deps]
+
+source_file="res://ASSETS/SOUNDS/EFFECTS/COUILLU/kick 48.wav"
+dest_files=[ "res://.import/kick 48.wav-bd4fd081b21ac31f0846c9c17fc148ae.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

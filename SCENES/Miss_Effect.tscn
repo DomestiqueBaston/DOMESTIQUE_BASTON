@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://ASSETS/GRAPHICS/ANIMATION/FXs/Flash_miss.png" type="Texture" id=1]
+[ext_resource path="res://ASSETS/SOUNDS/EFFECTS/Miss_effect.wav" type="AudioStream" id=2]
 
 [sub_resource type="Animation" id=1]
 resource_name = "Miss_Effect"
@@ -46,3 +47,5 @@ anims/Miss_Effect = SubResource( 1 )
 anims/RESET = SubResource( 2 )
 
 [node name="Miss_Sound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 2 )
+autoplay = true
