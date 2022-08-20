@@ -40,8 +40,7 @@ func _input(event):
 		play_cancel()
 		$Music/Bernard.stop()
 		yield($AudioCancel, "finished")
-		CharacterSelectionManager.player1 = "Moulue"
-		CharacterSelectionManager.player2 = "Couillu"
+		CharacterSelectionManager.reset()
 		MusicController.play_music()
 		$TransitionScreen.transition()
 

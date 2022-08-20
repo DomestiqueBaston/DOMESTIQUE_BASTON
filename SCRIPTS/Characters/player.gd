@@ -86,6 +86,7 @@ func _ready():
 				"animation_finished", self, "_on_opponent_animation_finished")
 			break
 	current_energy = initial_energy
+	play_animation("In")
 
 func get_damage_for_attack(attack):
 	var points = attack_damage.get(attack)

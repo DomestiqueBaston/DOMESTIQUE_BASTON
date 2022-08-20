@@ -18,9 +18,7 @@ func _input(event):
 		else:
 			$AnimatedSprite.play("C_M")
 			play_slide()
-		var tmp = CharacterSelectionManager.player1
-		CharacterSelectionManager.player1 = CharacterSelectionManager.player2
-		CharacterSelectionManager.player2 = tmp
+		CharacterSelectionManager.swap()
 			
 	elif Input.is_action_just_pressed('P1_a') or Input.is_action_just_pressed('P2_a'):
 		choice = baston
