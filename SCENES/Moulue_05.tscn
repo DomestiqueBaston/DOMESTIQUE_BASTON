@@ -1,4 +1,4 @@
-[gd_scene load_steps=84 format=2]
+[gd_scene load_steps=83 format=2]
 
 [ext_resource path="res://ASSETS/GRAPHICS/ANIMATION/MOULUE/Anims_Moulue.png" type="Texture" id=1]
 [ext_resource path="res://ASSETS/GRAPHICS/ANIMATION/MOULUE/Anims_Moulue_Shadows.png" type="Texture" id=2]
@@ -11,14 +11,13 @@
 [ext_resource path="res://ASSETS/SOUNDS/EFFECTS/MOULUE/slap 48.wav" type="AudioStream" id=9]
 [ext_resource path="res://ASSETS/SOUNDS/EFFECTS/MOULUE/down 48.wav" type="AudioStream" id=10]
 [ext_resource path="res://ASSETS/SOUNDS/EFFECTS/MOULUE/in 48.wav" type="AudioStream" id=11]
-[ext_resource path="res://ASSETS/SOUNDS/EFFECTS/MOULUE/insulte2 48.wav" type="AudioStream" id=12]
+[ext_resource path="res://ASSETS/SOUNDS/EFFECTS/MOULUE/insulte3 48.wav" type="AudioStream" id=12]
 [ext_resource path="res://ASSETS/SOUNDS/EFFECTS/MOULUE/jump 48.wav" type="AudioStream" id=13]
 [ext_resource path="res://ASSETS/SOUNDS/EFFECTS/MOULUE/kick 48.wav" type="AudioStream" id=14]
 [ext_resource path="res://ASSETS/SOUNDS/EFFECTS/MOULUE/slash 48.wav" type="AudioStream" id=15]
 [ext_resource path="res://ASSETS/SOUNDS/EFFECTS/MOULUE/trick 48.wav" type="AudioStream" id=16]
 [ext_resource path="res://ASSETS/SOUNDS/EFFECTS/MOULUE/walk 48.wav" type="AudioStream" id=17]
 [ext_resource path="res://ASSETS/SOUNDS/EFFECTS/MOULUE/walk backward 48.wav" type="AudioStream" id=18]
-[ext_resource path="res://ASSETS/SOUNDS/EFFECTS/MOULUE/idle 48_v2.wav" type="AudioStream" id=19]
 
 [sub_resource type="RectangleShape2D" id=96]
 extents = Vector2( 22, 36 )
@@ -1121,7 +1120,7 @@ tracks/16/imported = false
 tracks/16/enabled = true
 tracks/16/keys = {
 "clips": [ {
-"end_offset": 0.340008,
+"end_offset": 0.0,
 "start_offset": 0.0,
 "stream": ExtResource( 12 )
 } ],
@@ -3822,7 +3821,7 @@ collision_mask = 32
 
 [node name="BodyCollider" type="CollisionShape2D" parent="Area2D_Body"]
 position = Vector2( 10, -33 )
-scale = Vector2( 1.24, 0.63 )
+scale = Vector2( 1.1, 0.62 )
 shape = SubResource( 94 )
 
 [node name="Area2D_Roll" type="Area2D" parent="."]
@@ -3830,9 +3829,8 @@ collision_layer = 2
 collision_mask = 80
 
 [node name="AttackCollider" type="CollisionShape2D" parent="Area2D_Roll"]
-position = Vector2( 20, -41 )
-rotation = -0.645772
-scale = Vector2( 0.383802, 1 )
+position = Vector2( 21, -42 )
+rotation = -0.803249
 shape = SubResource( 93 )
 disabled = true
 
@@ -3853,7 +3851,7 @@ texture = ExtResource( 2 )
 offset = Vector2( -0.5, -53.5 )
 hframes = 13
 vframes = 13
-frame = 13
+frame = 122
 __meta__ = {
 "_edit_lock_": true
 }
@@ -3863,7 +3861,7 @@ texture = ExtResource( 1 )
 offset = Vector2( -0.5, -53.5 )
 hframes = 13
 vframes = 13
-frame = 13
+frame = 122
 __meta__ = {
 "_edit_lock_": true
 }
@@ -3895,7 +3893,7 @@ active = true
 parameters/playback = SubResource( 61 )
 
 [node name="FXs" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource( 19 )
+stream = ExtResource( 12 )
 
 [node name="Flasher" type="AnimationPlayer" parent="."]
 anims/Flash = SubResource( 98 )
