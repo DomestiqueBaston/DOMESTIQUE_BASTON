@@ -26,7 +26,6 @@ stream = ExtResource( 8 )
 
 [node name="Couillu" parent="." instance=ExtResource( 10 )]
 position = Vector2( 232, 108 )
-initial_energy = 125
 
 [node name="Moulue" parent="." instance=ExtResource( 9 )]
 position = Vector2( 49, 108 )
