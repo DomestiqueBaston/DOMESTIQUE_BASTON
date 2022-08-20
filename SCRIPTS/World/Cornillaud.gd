@@ -10,6 +10,8 @@ var couillu_alpha = 0.0
 
 func _input(event):
 	if Input.is_action_just_pressed('P1_right') or Input.is_action_just_pressed('P1_left') or Input.is_action_just_pressed('P2_right') or Input.is_action_just_pressed('P2_left'):
+		if moulue_alpha == 1.0 or couillu_alpha == 1.0:
+			return
 		if $AnimatedSprite.animation == "C_M":
 			$AnimatedSprite.play("M_C")
 			play_counterslide()
