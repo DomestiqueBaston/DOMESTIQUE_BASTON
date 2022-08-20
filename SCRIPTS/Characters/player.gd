@@ -28,6 +28,10 @@ export var initial_energy = 100
 ## argument whose value is between 0 (dead) and 1.
 signal energy_changed
 
+# the three states of gameplay
+enum { WAITING, PLAYING, DEAD }
+var state = WAITING
+
 # logical actions and corresponding input map actions for each player
 enum { FORWARD, BACKWARD, UP, DOWN, A, B }
 var ui_actions = [
@@ -54,13 +58,10 @@ var opponent_node
 var opponent_anim_node
 
 # current energy level (starts at initial_energy)
-var current_energy
+var current_energy = initial_energy
 
 # true => player is doing something other than walking or idling
 var busy = false
-
-# true => player is dead!
-var dead = false
 
 # true => opponent's move has been detected and either hit home or thwarted
 var attack_processed = false
@@ -74,6 +75,8 @@ var last_animation
 # the time in milliseconds when last_animation finished
 var last_animation_end_time
 
+## Note that the player will Idle until start() is called.
+##
 func _ready():
 	anim_node = $AnimationPlayer
 	var parent = get_parent()
@@ -85,8 +88,25 @@ func _ready():
 			opponent_anim_node.connect(
 				"animation_finished", self, "_on_opponent_animation_finished")
 			break
-	current_energy = initial_energy
-	play_animation("In")
+	
+	# play the In animation, then loop the Idle animation until start() is
+	# called
+
+	set_process_input(false)
+	set_physics_process(false)
+
+	anim_node.play("In")
+	yield(anim_node, "animation_finished")
+	anim_node.get_animation("Idle").loop = true
+	anim_node.play("Idle")
+
+## Start playing. Until this is called, input events and physics are disabled.
+##
+func start():
+	anim_node.get_animation("Idle").loop = false
+	state = PLAYING
+	set_process_input(true)
+	set_physics_process(true)
 
 func get_damage_for_attack(attack):
 	var points = attack_damage.get(attack)
@@ -113,7 +133,7 @@ func _input(event):
 	
 	# we are only interested in action press events
 
-	if dead or not event.is_action_type() or not event.is_pressed():
+	if not event.is_action_type() or not event.is_pressed():
 		return
 
 	# most actions cannot be interrupted, but there are two exceptions: Trick
@@ -175,7 +195,7 @@ func _physics_process(delta):
 			remaining_retreat_distance = 0
 		retreating = true
 
-	if not busy and not dead:
+	if not busy:
 		var my_actions = ui_actions[player_number]
 		if Input.is_action_pressed(my_actions[FORWARD]):
 			velocity.x += forward_speed
@@ -318,7 +338,7 @@ func play_insult_miss_effect():
 ## player's sprite flashes instead.
 ##
 func take_hit(damage):
-	if dead:
+	if state != PLAYING:
 		return
 
 	current_energy = max(0, current_energy - damage)
@@ -326,7 +346,9 @@ func take_hit(damage):
 
 	if current_energy == 0:
 		play_animation("Ko")
-		dead = true
+		state = DEAD
+		set_process_input(false)
+		set_physics_process(false)
 		return
 
 	var defense = anim_node.current_animation
