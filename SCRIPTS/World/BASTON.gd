@@ -36,7 +36,7 @@ func _input(event):
 #		$Music/Bernard.stop() #just for "fun" while coding
 #		yield($AudioCancel, "finished") #just for "fun" while coding
 #		get_tree().quit()
-#		to get the next 7 lines back, remove the 4 previous lines
+#		to get the next 6 lines back, remove the 4 previous lines
 		play_cancel()
 		$Music/Bernard.stop()
 		yield($AudioCancel, "finished")
