@@ -32,18 +32,18 @@ func _ready():
 
 func _input(event):
 	if event.is_action_pressed("ui_cancel"):
-		play_cancel() #just for "fun" while coding
-		$Music/Bernard.stop() #just for "fun" while coding
-		yield($AudioCancel, "finished") #just for "fun" while coding
-		get_tree().quit()
+#		play_cancel() #just for "fun" while coding
+#		$Music/Bernard.stop() #just for "fun" while coding
+#		yield($AudioCancel, "finished") #just for "fun" while coding
+#		get_tree().quit()
 #		to get the next 7 lines back, remove the 4 previous lines
-#		play_cancel()
-#		$Music/Bernard.stop()
-#		yield($AudioCancel, "finished")
-#		CharacterSelectionManager.player1 = "Moulue"
-#		CharacterSelectionManager.player2 = "Couillu"
-#		MusicController.play_music()
-#		$TransitionScreen.transition()
+		play_cancel()
+		$Music/Bernard.stop()
+		yield($AudioCancel, "finished")
+		CharacterSelectionManager.player1 = "Moulue"
+		CharacterSelectionManager.player2 = "Couillu"
+		MusicController.play_music()
+		$TransitionScreen.transition()
 
 func play_cancel():
 	$AudioCancel.volume_db = PreloadScript01.bruitages_value
