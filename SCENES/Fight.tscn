@@ -12,3 +12,4 @@ texture = ExtResource( 1 )
 
 [node name="Fight_Sound" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 2 )
+autoplay = true
