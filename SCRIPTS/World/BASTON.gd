@@ -2,6 +2,9 @@ extends Node2D
 export (Array) var portraits
 
 func _ready():
+
+	# set up the two players, one on the left and one on the right
+
 	var portrait_left = get_node("UI/Left/Portrait_Left")
 	var portrait_right = get_node("UI/Right/Portrait_Right")
 	var player1
@@ -29,6 +32,25 @@ func _ready():
 
 	portrait_left.texture = portraits[player1_portrait_index]
 	portrait_right.texture = portraits[1 - player1_portrait_index]
+
+	# wait one second, display Fight.tscn, wait another second, remove it
+
+	var timer = Timer.new()
+	timer.one_shot = true
+	add_child(timer)
+	timer.start(1)
+	yield(timer, "timeout")
+	var fight = preload("res://SCENES/Fight.tscn").instance()
+	add_child(fight)
+	timer.start(1)
+	yield(timer, "timeout")
+	fight.queue_free()
+	timer.queue_free()
+	
+	# release players
+
+	player1.start()
+	player2.start()
 
 func _input(event):
 	if event.is_action_pressed("ui_cancel"):
