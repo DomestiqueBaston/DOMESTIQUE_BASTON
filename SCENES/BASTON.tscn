@@ -48,4 +48,7 @@ bus = "COMMENTAIRES"
 stream = ExtResource( 13 )
 bus = "COMMENTAIRES"
 
+[connection signal="energy_changed" from="Couillu" to="." method="somebody_took_a_hit" flags=6]
+[connection signal="energy_changed" from="Moulue" to="." method="somebody_took_a_hit" flags=6]
+[connection signal="finished" from="Commentaires_des_voisins_01" to="." method="initial_chatter_finished" flags=6]
 [connection signal="transitioned" from="TransitionScreen" to="." method="_on_TransitionScreen_transitioned"]

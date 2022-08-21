@@ -1,9 +1,10 @@
 extends Node2D
 export (Array) var portraits
 
+enum { PRE_GAME, SILENCE, CHATTER1, CHATTER2, END_GAME }
+var state = PRE_GAME
+
 func _ready():
-	
-	set_process_input(false)
 
 	# set up the two players, one on the left and one on the right
 
@@ -35,7 +36,7 @@ func _ready():
 	portrait_left.texture = portraits[player1_portrait_index]
 	portrait_right.texture = portraits[1 - player1_portrait_index]
 
-	# wait one second, display Fight.tscn, wait another second, remove it
+	# wait 2 seconds, display Fight.tscn, wait 2 seconds, remove it
 
 	var timer = Timer.new()
 	timer.one_shot = true
@@ -48,21 +49,31 @@ func _ready():
 	yield(timer, "timeout")
 	fight.queue_free()
 	timer.queue_free()
-	
-	# release players
-	
+
+	# start gameplay
+
+	state = SILENCE
 	player1.start()
 	player2.start()
-	set_process_input(true)
-	
-	# release neighbors
-	$Commentaires_des_voisins_01.play()
-	yield($Commentaires_des_voisins_01, "finished")
-	$Commentaires_des_voisins_02.play()
-	
+
+# The first time a player takes a hit, the neighbors start to complain.
+#
+func somebody_took_a_hit(_damage):
+	if state == SILENCE:
+		$Commentaires_des_voisins_01.play()
+		state = CHATTER1
+
+# When the first stream of complaints finishes, the second stream begins and
+# loops.
+#
+func initial_chatter_finished():
+	if state == CHATTER1:
+		$Commentaires_des_voisins_02.play()
+		state = CHATTER2
+
 func _input(event):
-	if event.is_action_pressed("ui_cancel"):
-		set_process_input(false)
+	if state > PRE_GAME and state < END_GAME and event.is_action_pressed("ui_cancel"):
+		state = END_GAME
 		$Commentaires_des_voisins_01.stop()
 		$Commentaires_des_voisins_02.stop()
 		play_cancel()
