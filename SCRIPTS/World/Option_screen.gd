@@ -16,13 +16,13 @@ var line_name = ""
 
 
 func _ready():
-	get_node("0_" + str(PreloadScript01.commentaires)).modulate = PreloadScript01.violet
+	get_node("0_" + str(PreloadScript01.commentaires)).modulate = PreloadScript01.VIOLET
 	if get_node("0_0").modulate == Color(1,1,1):
-		get_node("0_0").modulate = PreloadScript01.black
+		get_node("0_0").modulate = PreloadScript01.BLACK
 	else:
-		get_node("0_0").modulate = PreloadScript01.half
-	get_node("1_" + str(PreloadScript01.bruitages)).modulate = PreloadScript01.violet
-	get_node("2_" + str(PreloadScript01.musique)).modulate = PreloadScript01.violet
+		get_node("0_0").modulate = PreloadScript01.HALF
+	get_node("1_" + str(PreloadScript01.bruitages)).modulate = PreloadScript01.VIOLET
+	get_node("2_" + str(PreloadScript01.musique)).modulate = PreloadScript01.VIOLET
 
 func _input(event):
 	if (Input.is_action_just_pressed('P1_down')) or (Input.is_action_just_pressed('P2_down')):
@@ -104,21 +104,21 @@ func check_current_boundaries():
 # Validation of level values
 func validation():
 	if get_node(current_node).modulate.a != 1:
-		get_node(current_node).modulate = PreloadScript01.black
+		get_node(current_node).modulate = PreloadScript01.BLACK
 		if current_vpos == 0:
-			get_node("0_" + str(PreloadScript01.commentaires)).modulate = PreloadScript01.white
+			get_node("0_" + str(PreloadScript01.commentaires)).modulate = PreloadScript01.WHITE
 			PreloadScript01.commentaires = current_hpos
 			line_name = "commentaires_value"
 			change_sound_level()
 			play_validation()
 		elif current_vpos == 1:
-			get_node("1_" + str(PreloadScript01.bruitages)).modulate = PreloadScript01.white
+			get_node("1_" + str(PreloadScript01.bruitages)).modulate = PreloadScript01.WHITE
 			PreloadScript01.bruitages = current_hpos
 			line_name = "bruitages_value"
 			change_sound_level()
 			play_validation()
 		else:
-			get_node("2_" + str(PreloadScript01.musique)).modulate = PreloadScript01.white
+			get_node("2_" + str(PreloadScript01.musique)).modulate = PreloadScript01.WHITE
 			PreloadScript01.musique = current_hpos
 			line_name = "musique_value"
 			change_sound_level()
@@ -128,17 +128,17 @@ func validation():
 # Cursor color management
 func turn_on_off():
 	if get_node(previous_node).modulate.a == 1 and get_node(current_node).modulate.a == 1:
-		get_node(previous_node).modulate = PreloadScript01.violet
-		get_node(current_node).modulate = PreloadScript01.black
+		get_node(previous_node).modulate = PreloadScript01.VIOLET
+		get_node(current_node).modulate = PreloadScript01.BLACK
 	elif get_node(previous_node).modulate.a == 1:
-		get_node(previous_node).modulate = PreloadScript01.violet
-		get_node(current_node).modulate = PreloadScript01.half
+		get_node(previous_node).modulate = PreloadScript01.VIOLET
+		get_node(current_node).modulate = PreloadScript01.HALF
 	elif get_node(current_node).modulate.a == 1:
-		get_node(current_node).modulate = PreloadScript01.black
-		get_node(previous_node).modulate = PreloadScript01.white
+		get_node(current_node).modulate = PreloadScript01.BLACK
+		get_node(previous_node).modulate = PreloadScript01.WHITE
 	else:
-		get_node(previous_node).modulate = PreloadScript01.white
-		get_node(current_node).modulate = PreloadScript01.half
+		get_node(previous_node).modulate = PreloadScript01.WHITE
+		get_node(current_node).modulate = PreloadScript01.HALF
 
 func _on_TransitionScreen_transitioned():
 	# warning-ignore:return_value_discarded
@@ -146,13 +146,13 @@ func _on_TransitionScreen_transitioned():
 	
 func change_sound_level():
 	if current_hpos == 0:
-		PreloadScript01.set(line_name, PreloadScript01.no_sound_level)
+		PreloadScript01.set(line_name, PreloadScript01.NO_SOUND_LEVEL)
 	elif current_hpos == 1:
-		PreloadScript01.set(line_name, PreloadScript01.half_level)
+		PreloadScript01.set(line_name, PreloadScript01.HALF_LEVEL)
 	elif current_hpos == 2:
-		PreloadScript01.set(line_name, PreloadScript01.normal_level)
+		PreloadScript01.set(line_name, PreloadScript01.NORMAL_LEVEL)
 	else:
-		PreloadScript01.set(line_name, PreloadScript01.more_than_full_level)
+		PreloadScript01.set(line_name, PreloadScript01.MORE_THAN_FULL_LEVEL)
 
 func play_validation():
 	$AudioValid.volume_db = PreloadScript01.bruitages_value

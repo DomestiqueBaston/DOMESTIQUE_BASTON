@@ -8,21 +8,21 @@ var current_node := "0"
 var previous_node := "3"
 
 #colors!
-const white = Color(1,1,1,0)
-const black = Color(0.45,0.5,0.5,1)
-const violet = Color(1,1,1,1)
-const half = Color(1,0.55,0.84,0.5)
+const WHITE = Color(1,1,1,0)
+const BLACK = Color(0.45,0.5,0.5,1)
+const VIOLET = Color(1,1,1,1)
+const HALF = Color(1,0.55,0.84,0.5)
 
 #Sound levels
-const more_than_full_level: float = 7.5
-const normal_level: float = 0.0
-const half_level: float = -7.5
-const no_sound_level: float = -80.0
+const MORE_THAN_FULL_LEVEL: float = 7.5
+const NORMAL_LEVEL: float = 0.0
+const HALF_LEVEL: float = -7.5
+const NO_SOUND_LEVEL: float = -80.0
 
 #Option Screen variables
-var commentaires_value = normal_level
-var bruitages_value = normal_level
-var musique_value = normal_level
+var commentaires_value = NORMAL_LEVEL
+var bruitages_value = NORMAL_LEVEL
+var musique_value = NORMAL_LEVEL
 
 var commentaires := 2
 var bruitages := 2
