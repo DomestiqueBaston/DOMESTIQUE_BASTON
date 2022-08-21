@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/tout_de_meme.wav-57262537bdc5428ac63a4a63ab9efc2d.sample"
+
+[deps]
+
+source_file="res://ASSETS/SOUNDS/EFFECTS/COMMENTAIRES/tout_de_meme.wav"
+dest_files=[ "res://.import/tout_de_meme.wav-57262537bdc5428ac63a4a63ab9efc2d.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

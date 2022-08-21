@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/scenette 48_part_02.wav-a1046cab7dee0c73ec4c2c0a4f7307cb.sample"
+
+[deps]
+
+source_file="res://ASSETS/SOUNDS/EFFECTS/COMMENTAIRES/scenette 48_part_02.wav"
+dest_files=[ "res://.import/scenette 48_part_02.wav-a1046cab7dee0c73ec4c2c0a4f7307cb.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=true
+compress/mode=0

@@ -1,4 +1,4 @@
-[gd_scene load_steps=86 format=2]
+[gd_scene load_steps=43 format=2]
 
 [ext_resource path="res://ASSETS/GRAPHICS/ANIMATION/MOULUE/Anims_Moulue.png" type="Texture" id=1]
 [ext_resource path="res://ASSETS/GRAPHICS/ANIMATION/MOULUE/Anims_Moulue_Shadows.png" type="Texture" id=2]
@@ -3669,161 +3669,6 @@ tracks/17/keys = {
 "values": [ 0, 1, 2, 3, 4, 5, 6, 7 ]
 }
 
-[sub_resource type="AnimationNodeAnimation" id=62]
-animation = "Crouch"
-
-[sub_resource type="AnimationNodeAnimation" id=63]
-animation = "Get_hit"
-
-[sub_resource type="AnimationNodeAnimation" id=21]
-animation = "Idle"
-
-[sub_resource type="AnimationNodeAnimation" id=64]
-animation = "In"
-
-[sub_resource type="AnimationNodeAnimation" id=65]
-animation = "Insult"
-
-[sub_resource type="AnimationNodeAnimation" id=66]
-animation = "Jump"
-
-[sub_resource type="AnimationNodeAnimation" id=67]
-animation = "Kick"
-
-[sub_resource type="AnimationNodeAnimation" id=68]
-animation = "Ko"
-
-[sub_resource type="AnimationNodeAnimation" id=69]
-animation = "Parry"
-
-[sub_resource type="AnimationNodeAnimation" id=28]
-animation = "Punch"
-
-[sub_resource type="AnimationNodeAnimation" id=70]
-animation = "Slap"
-
-[sub_resource type="AnimationNodeAnimation" id=71]
-animation = "Slash"
-
-[sub_resource type="AnimationNodeAnimation" id=72]
-animation = "Trick"
-
-[sub_resource type="AnimationNodeAnimation" id=32]
-animation = "Walk_backward"
-
-[sub_resource type="AnimationNodeAnimation" id=33]
-animation = "Walk_forward"
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=34]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=35]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=36]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=37]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=52]
-switch_mode = 2
-auto_advance = true
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=53]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=73]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=74]
-switch_mode = 2
-auto_advance = true
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=75]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=76]
-switch_mode = 2
-auto_advance = true
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=77]
-switch_mode = 2
-auto_advance = true
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=78]
-switch_mode = 2
-auto_advance = true
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=79]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=80]
-switch_mode = 2
-auto_advance = true
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=81]
-switch_mode = 2
-auto_advance = true
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=82]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=83]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=84]
-switch_mode = 2
-auto_advance = true
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=85]
-switch_mode = 2
-auto_advance = true
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=86]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=87]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=88]
-switch_mode = 2
-auto_advance = true
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=90]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=91]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=92]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=97]
-
-[sub_resource type="AnimationNodeStateMachine" id=60]
-states/Crouch/node = SubResource( 62 )
-states/Crouch/position = Vector2( -84, 396.352 )
-states/Get_hit/node = SubResource( 63 )
-states/Get_hit/position = Vector2( 948, 253.8 )
-states/Idle/node = SubResource( 21 )
-states/Idle/position = Vector2( 410, 247 )
-states/In/node = SubResource( 64 )
-states/In/position = Vector2( 948, 153.8 )
-states/Insult/node = SubResource( 65 )
-states/Insult/position = Vector2( 34, 146.352 )
-states/Jump/node = SubResource( 66 )
-states/Jump/position = Vector2( -137, 253.8 )
-states/Kick/node = SubResource( 67 )
-states/Kick/position = Vector2( 447, 428.352 )
-states/Ko/node = SubResource( 68 )
-states/Ko/position = Vector2( 920, 363.8 )
-states/Parry/node = SubResource( 69 )
-states/Parry/position = Vector2( -137, 329.8 )
-states/Punch/node = SubResource( 28 )
-states/Punch/position = Vector2( 323, 428.352 )
-states/Slap/node = SubResource( 70 )
-states/Slap/position = Vector2( 567, 428.352 )
-states/Slash/node = SubResource( 71 )
-states/Slash/position = Vector2( 194, 428.352 )
-states/Trick/node = SubResource( 72 )
-states/Trick/position = Vector2( 708, 420.352 )
-states/Walk_backward/node = SubResource( 32 )
-states/Walk_backward/position = Vector2( 291, 119 )
-states/Walk_forward/node = SubResource( 33 )
-states/Walk_forward/position = Vector2( 481, 119 )
-transitions = [ "Idle", "Walk_forward", SubResource( 34 ), "Walk_forward", "Idle", SubResource( 35 ), "Idle", "Walk_backward", SubResource( 36 ), "Walk_backward", "Idle", SubResource( 37 ), "Punch", "Idle", SubResource( 52 ), "Idle", "Punch", SubResource( 53 ), "Idle", "Crouch", SubResource( 73 ), "Crouch", "Idle", SubResource( 74 ), "Idle", "Jump", SubResource( 75 ), "Jump", "Idle", SubResource( 76 ), "Get_hit", "Idle", SubResource( 77 ), "In", "Idle", SubResource( 78 ), "Idle", "Insult", SubResource( 79 ), "Insult", "Idle", SubResource( 80 ), "Kick", "Idle", SubResource( 81 ), "Idle", "Kick", SubResource( 82 ), "Idle", "Parry", SubResource( 83 ), "Parry", "Idle", SubResource( 84 ), "Slap", "Idle", SubResource( 85 ), "Idle", "Slap", SubResource( 86 ), "Idle", "Slash", SubResource( 87 ), "Slash", "Idle", SubResource( 88 ), "Idle", "Trick", SubResource( 90 ), "Idle", "Get_hit", SubResource( 91 ), "Idle", "Ko", SubResource( 92 ), "Trick", "Idle", SubResource( 97 ) ]
-start_node = "Idle"
-end_node = "Ko"
-graph_offset = Vector2( -220, 54.8 )
-
-[sub_resource type="AnimationNodeStateMachinePlayback" id=61]
-
 [sub_resource type="Animation" id=98]
 resource_name = "Flash"
 length = 0.4
@@ -3850,14 +3695,16 @@ backward_speed = 45
 [node name="MoveCollider" type="CollisionShape2D" parent="."]
 position = Vector2( 4, -36 )
 shape = SubResource( 96 )
+disabled = true
 
 [node name="Area2D_Body" type="Area2D" parent="."]
 collision_mask = 32
 
 [node name="BodyCollider" type="CollisionShape2D" parent="Area2D_Body"]
 position = Vector2( 10, -33 )
-scale = Vector2( 1.24, 0.63 )
+scale = Vector2( 1.04, 0.605 )
 shape = SubResource( 94 )
+disabled = true
 
 [node name="Area2D_Roll" type="Area2D" parent="."]
 collision_layer = 2
@@ -3866,7 +3713,6 @@ collision_mask = 80
 [node name="AttackCollider" type="CollisionShape2D" parent="Area2D_Roll"]
 position = Vector2( 20, -41 )
 rotation = -0.645772
-scale = Vector2( 0.383802, 1 )
 shape = SubResource( 93 )
 disabled = true
 
@@ -3887,7 +3733,7 @@ texture = ExtResource( 2 )
 offset = Vector2( -0.5, -53.5 )
 hframes = 13
 vframes = 13
-frame = 13
+frame = 149
 __meta__ = {
 "_edit_lock_": true
 }
@@ -3897,7 +3743,7 @@ texture = ExtResource( 1 )
 offset = Vector2( -0.5, -53.5 )
 hframes = 13
 vframes = 13
-frame = 13
+frame = 149
 __meta__ = {
 "_edit_lock_": true
 }
@@ -3921,14 +3767,8 @@ anims/Trick = SubResource( 13 )
 anims/Walk_backward = SubResource( 5 )
 anims/Walk_forward = SubResource( 3 )
 
-[node name="AnimationTree" type="AnimationTree" parent="."]
-tree_root = SubResource( 60 )
-anim_player = NodePath("../AnimationPlayer")
-active = true
-parameters/playback = SubResource( 61 )
-
 [node name="FXs" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource( 15 )
+stream = ExtResource( 11 )
 bus = "BRUITAGES"
 
 [node name="Flasher" type="AnimationPlayer" parent="."]

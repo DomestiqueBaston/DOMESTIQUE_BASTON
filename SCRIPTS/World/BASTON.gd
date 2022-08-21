@@ -2,6 +2,8 @@ extends Node2D
 export (Array) var portraits
 
 func _ready():
+	
+	set_process_input(false)
 
 	# set up the two players, one on the left and one on the right
 
@@ -21,12 +23,12 @@ func _ready():
 		player1_portrait_index = 1
 
 	player1.player_number = Player.ONE
-	player1.position = Vector2(79, 108)
+	player1.position = Vector2(64, 108)
 	player1.scale = Vector2(1, 1)
 	player1.connect("energy_changed", get_node("UI/Left"), "set_energy_level")
 
 	player2.player_number = Player.TWO
-	player2.position = Vector2(202, 108)
+	player2.position = Vector2(217, 108)
 	player2.scale = Vector2(-1, 1)
 	player2.connect("energy_changed", get_node("UI/Right"), "set_energy_level")
 
@@ -38,33 +40,34 @@ func _ready():
 	var timer = Timer.new()
 	timer.one_shot = true
 	add_child(timer)
-	timer.start(1)
+	timer.start(2)
 	yield(timer, "timeout")
 	var fight = preload("res://SCENES/Fight.tscn").instance()
 	add_child(fight)
-	timer.start(1)
+	timer.start(2)
 	yield(timer, "timeout")
-	$Commentaires_des_voisins.play()
 	fight.queue_free()
 	timer.queue_free()
 	
 	# release players
-
+	
 	player1.start()
 	player2.start()
-
+	set_process_input(true)
+	
+	# release neighbors
+	$Commentaires_des_voisins_01.play()
+	yield($Commentaires_des_voisins_01, "finished")
+	$Commentaires_des_voisins_02.play()
+	
 func _input(event):
 	if event.is_action_pressed("ui_cancel"):
-#		play_cancel() #just for "fun" while coding
-		$Commentaires_des_voisins.stop() #just in case and for "fun" while coding
-#		$Music/Bernard.stop() #just for "fun" while coding
-#		yield($AudioCancel, "finished") #just for "fun" while coding
-#		get_tree().quit()
-###		to get the next 7 lines back, remove the 5 previous lines
+		$Commentaires_des_voisins_01.stop()
+		$Commentaires_des_voisins_02.stop()
 		play_cancel()
-		$Commentaires_des_voisins.stop() #just in case
+		$Tout_de_meme.play()
 		$Music/Bernard.stop()
-		yield($AudioCancel, "finished")
+		yield($Tout_de_meme, "finished")
 		CharacterSelectionManager.reset()
 		MusicController.play_music()
 		$TransitionScreen.transition()
