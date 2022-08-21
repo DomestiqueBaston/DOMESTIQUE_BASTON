@@ -10,8 +10,8 @@ var current_hpos := 0
 var previous_node := ""
 var current_node := "0_0"
 
-var line_name = ""
-
+#var line_name = ""
+var concerned_bus
 
 
 
@@ -108,19 +108,22 @@ func validation():
 		if current_vpos == 0:
 			get_node("0_" + str(PreloadScript01.commentaires)).modulate = PreloadScript01.WHITE
 			PreloadScript01.commentaires = current_hpos
-			line_name = "commentaires_value"
+#			line_name = "commentaires_value"
+			concerned_bus = current_vpos + 1
 			change_sound_level()
 			play_validation()
 		elif current_vpos == 1:
 			get_node("1_" + str(PreloadScript01.bruitages)).modulate = PreloadScript01.WHITE
 			PreloadScript01.bruitages = current_hpos
-			line_name = "bruitages_value"
+#			line_name = "bruitages_value"
+			concerned_bus = current_vpos + 1
 			change_sound_level()
 			play_validation()
 		else:
 			get_node("2_" + str(PreloadScript01.musique)).modulate = PreloadScript01.WHITE
 			PreloadScript01.musique = current_hpos
-			line_name = "musique_value"
+#			line_name = "musique_value"
+			concerned_bus = current_vpos + 1
 			change_sound_level()
 			play_validation()
 			get_node('/root/MusicController/Music').volume_db = PreloadScript01.musique_value
@@ -146,28 +149,32 @@ func _on_TransitionScreen_transitioned():
 	
 func change_sound_level():
 	if current_hpos == 0:
-		PreloadScript01.set(line_name, PreloadScript01.NO_SOUND_LEVEL)
+#		PreloadScript01.set(line_name, PreloadScript01.NO_SOUND_LEVEL)
+		AudioServer.set_bus_volume_db(concerned_bus, PreloadScript01.NO_SOUND_LEVEL)
 	elif current_hpos == 1:
-		PreloadScript01.set(line_name, PreloadScript01.HALF_LEVEL)
+#		PreloadScript01.set(line_name, PreloadScript01.HALF_LEVEL)
+		AudioServer.set_bus_volume_db(concerned_bus, PreloadScript01.HALF_LEVEL)
 	elif current_hpos == 2:
-		PreloadScript01.set(line_name, PreloadScript01.NORMAL_LEVEL)
+#		PreloadScript01.set(line_name, PreloadScript01.NORMAL_LEVEL)
+		AudioServer.set_bus_volume_db(concerned_bus, PreloadScript01.NORMAL_LEVEL)
 	else:
-		PreloadScript01.set(line_name, PreloadScript01.MORE_THAN_FULL_LEVEL)
+#		PreloadScript01.set(line_name, PreloadScript01.MORE_THAN_FULL_LEVEL)
+		AudioServer.set_bus_volume_db(concerned_bus, PreloadScript01.MORE_THAN_FULL_LEVEL)
 
 func play_validation():
-	$AudioValid.volume_db = PreloadScript01.bruitages_value
+#	$AudioValid.volume_db = PreloadScript01.bruitages_value
 	$AudioValid.play()
 	
 func play_cancel():
 	
-	$AudioCancel.volume_db = PreloadScript01.bruitages_value
+#	$AudioCancel.volume_db = PreloadScript01.bruitages_value
 	$AudioCancel.play()
 	yield($AudioCancel, "finished")
 
 func play_wooow():
-	$AudioWooow.volume_db = PreloadScript01.bruitages_value
+#	$AudioWooow.volume_db = PreloadScript01.bruitages_value
 	$AudioWooow.play()
 	
 func play_wooowdown():
-	$AudioWooowDown.volume_db = PreloadScript01.bruitages_value
+#	$AudioWooowDown.volume_db = PreloadScript01.bruitages_value
 	$AudioWooowDown.play()

@@ -82,6 +82,7 @@ script = ExtResource( 4 )
 
 [node name="AudioValid" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 7 )
+bus = "BRUITAGES"
 
 [node name="BlackRect" type="TextureRect" parent="."]
 margin_right = 305.0
@@ -105,6 +106,7 @@ anims/RESET = SubResource( 2 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Title"]
 stream = ExtResource( 6 )
+bus = "BRUITAGES"
 
 [node name="TransitionScreen" parent="." instance=ExtResource( 2 )]
 

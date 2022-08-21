@@ -13,6 +13,6 @@ func stop_music():
 	
 func play_music():
 	$Music.stream = main_music
-	$Music.volume_db = PreloadScript01.musique_value
+#	$Music.volume_db = PreloadScript01.musique_value
 	$Music.play()
 

@@ -3821,7 +3821,7 @@ collision_mask = 32
 
 [node name="BodyCollider" type="CollisionShape2D" parent="Area2D_Body"]
 position = Vector2( 10, -33 )
-scale = Vector2( 1.1, 0.62 )
+scale = Vector2( 1.24, 0.63 )
 shape = SubResource( 94 )
 
 [node name="Area2D_Roll" type="Area2D" parent="."]
@@ -3829,8 +3829,9 @@ collision_layer = 2
 collision_mask = 80
 
 [node name="AttackCollider" type="CollisionShape2D" parent="Area2D_Roll"]
-position = Vector2( 21, -42 )
-rotation = -0.803249
+position = Vector2( 20, -41 )
+rotation = -0.645772
+scale = Vector2( 0.383802, 1 )
 shape = SubResource( 93 )
 disabled = true
 
@@ -3851,7 +3852,7 @@ texture = ExtResource( 2 )
 offset = Vector2( -0.5, -53.5 )
 hframes = 13
 vframes = 13
-frame = 122
+frame = 13
 __meta__ = {
 "_edit_lock_": true
 }
@@ -3861,7 +3862,7 @@ texture = ExtResource( 1 )
 offset = Vector2( -0.5, -53.5 )
 hframes = 13
 vframes = 13
-frame = 122
+frame = 13
 __meta__ = {
 "_edit_lock_": true
 }
@@ -3893,7 +3894,8 @@ active = true
 parameters/playback = SubResource( 61 )
 
 [node name="FXs" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource( 12 )
+stream = ExtResource( 7 )
+bus = "BRUITAGES"
 
 [node name="Flasher" type="AnimationPlayer" parent="."]
 anims/Flash = SubResource( 98 )

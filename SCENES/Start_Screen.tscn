@@ -32,15 +32,19 @@ __meta__ = {
 
 [node name="AudioValid" type="AudioStreamPlayer2D" parent="Control"]
 stream = ExtResource( 7 )
+bus = "BRUITAGES"
 
 [node name="AudioCancel" type="AudioStreamPlayer2D" parent="Control"]
 stream = ExtResource( 9 )
+bus = "BRUITAGES"
 
 [node name="AudioWooow" type="AudioStreamPlayer2D" parent="Control"]
 stream = ExtResource( 11 )
+bus = "BRUITAGES"
 
 [node name="AudioWooowDown" type="AudioStreamPlayer2D" parent="Control"]
 stream = ExtResource( 10 )
+bus = "BRUITAGES"
 
 [node name="0" type="TextureRect" parent="Control"]
 modulate = Color( 1, 1, 1, 0 )

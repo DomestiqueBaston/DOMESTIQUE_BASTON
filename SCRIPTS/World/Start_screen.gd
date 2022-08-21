@@ -46,7 +46,7 @@ func _input(event):
 			PreloadScript01.current_node = "2"
 			play_valid()
 		else:
-			$AudioCancel.volume_db = PreloadScript01.bruitages_value
+#			$AudioCancel.volume_db = PreloadScript01.bruitages_value
 			$AudioCancel.play()
 			yield($AudioCancel, "finished")
 			get_tree().quit()
@@ -73,13 +73,13 @@ func _on_TransitionScreen_transitioned():
 	get_tree().change_scene(choice)
 
 func play_valid():
-	$AudioValid.volume_db = PreloadScript01.bruitages_value
+#	$AudioValid.volume_db = PreloadScript01.bruitages_value
 	$AudioValid.play()
 	
 func play_wooow():
-	$AudioWooow.volume_db = PreloadScript01.bruitages_value
+#	$AudioWooow.volume_db = PreloadScript01.bruitages_value
 	$AudioWooow.play()
 	
 func play_wooowdown():
-	$AudioWooowDown.volume_db = PreloadScript01.bruitages_value
+#	$AudioWooowDown.volume_db = PreloadScript01.bruitages_value
 	$AudioWooowDown.play()

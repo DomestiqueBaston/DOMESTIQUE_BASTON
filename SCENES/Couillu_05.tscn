@@ -3884,7 +3884,8 @@ active = true
 parameters/playback = SubResource( 61 )
 
 [node name="FXs" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource( 7 )
+stream = ExtResource( 6 )
+bus = "BRUITAGES"
 
 [node name="Flasher" type="AnimationPlayer" parent="."]
 anims/Flash = SubResource( 98 )

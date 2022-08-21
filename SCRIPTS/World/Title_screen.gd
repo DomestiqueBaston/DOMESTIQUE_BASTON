@@ -3,7 +3,7 @@ extends Node2D
 
 func _ready():
 	MusicController.play_music()
-	$Title/AudioStreamPlayer.volume_db = PreloadScript01.bruitages_value
+#	$Title/AudioStreamPlayer.volume_db = PreloadScript01.bruitages_value
 
 func _input(event):
 	if event is InputEventKey and event.pressed:
@@ -22,5 +22,5 @@ func _on_TransitionScreen_transitioned():
 	get_tree().change_scene("res://SCENES/Start_Screen.tscn")
 	
 func play_validation():
-	$AudioValid.volume_db = PreloadScript01.bruitages_value
+#	$AudioValid.volume_db = PreloadScript01.bruitages_value
 	$AudioValid.play()

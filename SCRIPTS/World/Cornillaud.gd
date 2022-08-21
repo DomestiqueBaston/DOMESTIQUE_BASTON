@@ -72,18 +72,18 @@ func _on_TransitionScreen_transitioned():
 	get_tree().change_scene(choice)
 	
 func play_validation():
-	$AudioValid.volume_db = PreloadScript01.bruitages_value
+#	$AudioValid.volume_db = PreloadScript01.bruitages_value
 	$AudioValid.play()
 	
 func play_cancel():
-	$AudioCancel.volume_db = PreloadScript01.bruitages_value
+#	$AudioCancel.volume_db = PreloadScript01.bruitages_value
 	$AudioCancel.play()
 	yield($AudioCancel, "finished")
 	
 func play_slide():
-	$AudioSlide.volume_db = PreloadScript01.bruitages_value
+#	$AudioSlide.volume_db = PreloadScript01.bruitages_value
 	$AudioSlide.play()
 	
 func play_counterslide():
-	$AudioCounterSlide.volume_db = PreloadScript01.bruitages_value
+#	$AudioCounterSlide.volume_db = PreloadScript01.bruitages_value
 	$AudioCounterSlide.play()

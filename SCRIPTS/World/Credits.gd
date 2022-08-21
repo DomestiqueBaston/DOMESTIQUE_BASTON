@@ -24,6 +24,6 @@ func _on_TransitionScreen_transitioned() -> void:
 	get_tree().change_scene("res://SCENES/Start_Screen.tscn")
 
 func play_cancel():
-	$AudioCancel.volume_db = PreloadScript01.bruitages_value
+#	$AudioCancel.volume_db = PreloadScript01.bruitages_value
 	$AudioCancel.play()
 	yield($AudioCancel, "finished")

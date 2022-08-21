@@ -47,3 +47,4 @@ anims/Hit_Effect = SubResource( 1 )
 anims/RESET = SubResource( 2 )
 
 [node name="Insult_Miss_Sound" type="AudioStreamPlayer2D" parent="."]
+bus = "BRUITAGES"
