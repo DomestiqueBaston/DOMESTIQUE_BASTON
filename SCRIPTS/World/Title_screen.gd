@@ -12,6 +12,7 @@ func _input(event):
 		elif (Input.is_key_pressed(KEY_ENTER)):
 			pass
 		else:
+			set_process_input(false)
 			play_validation()
 			$TransitionScreen.transition()
 	elif event is InputEventJoypadButton and event.pressed:

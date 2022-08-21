@@ -62,6 +62,7 @@ func _ready():
 	
 func _input(event):
 	if event.is_action_pressed("ui_cancel"):
+		set_process_input(false)
 		$Commentaires_des_voisins_01.stop()
 		$Commentaires_des_voisins_02.stop()
 		play_cancel()

@@ -69,6 +69,7 @@ func _input(event):
 		validation()
 	
 	elif event is InputEventJoypadButton and event.pressed:
+		set_process_input(false)
 		play_cancel()
 		get_node("../TransitionScreen").transition()
 		
@@ -78,6 +79,7 @@ func _input(event):
 		elif (Input.is_key_pressed(KEY_ENTER)):
 			pass
 		else:
+			set_process_input(false)
 			play_cancel()
 			get_node("../TransitionScreen").transition()
 		

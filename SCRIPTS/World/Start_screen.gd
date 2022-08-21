@@ -47,6 +47,7 @@ func _input(event):
 			play_valid()
 		else:
 #			$AudioCancel.volume_db = PreloadScript01.bruitages_value
+			set_process_input(false)
 			$AudioCancel.play()
 			yield($AudioCancel, "finished")
 			get_tree().quit()
