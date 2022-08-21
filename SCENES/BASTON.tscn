@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://SCENES/Music.tscn" type="PackedScene" id=1]
 [ext_resource path="res://ASSETS/GRAPHICS/INTERFACE/Couillu_small_portrait.png" type="Texture" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://ASSETS/SOUNDS/EFFECTS/cancel.wav" type="AudioStream" id=8]
 [ext_resource path="res://SCENES/Moulue_05.tscn" type="PackedScene" id=9]
 [ext_resource path="res://SCENES/Couillu_05.tscn" type="PackedScene" id=10]
+[ext_resource path="res://ASSETS/SOUNDS/EFFECTS/COMMENTAIRES/scenette 48.wav" type="AudioStream" id=11]
 
 [node name="BASTON" type="Node2D"]
 script = ExtResource( 6 )
@@ -30,6 +31,10 @@ position = Vector2( 232, 108 )
 
 [node name="Moulue" parent="." instance=ExtResource( 9 )]
 position = Vector2( 49, 108 )
+
+[node name="Commentaires_des_voisins" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 11 )
+bus = "COMMENTAIRES"
 
 [node name="TransitionScreen" parent="." instance=ExtResource( 5 )]
 

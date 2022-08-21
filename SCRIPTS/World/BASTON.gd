@@ -44,6 +44,7 @@ func _ready():
 	add_child(fight)
 	timer.start(1)
 	yield(timer, "timeout")
+	$Commentaires_des_voisins.play()
 	fight.queue_free()
 	timer.queue_free()
 	
@@ -55,11 +56,13 @@ func _ready():
 func _input(event):
 	if event.is_action_pressed("ui_cancel"):
 #		play_cancel() #just for "fun" while coding
+		$Commentaires_des_voisins.stop() #just in case and for "fun" while coding
 #		$Music/Bernard.stop() #just for "fun" while coding
 #		yield($AudioCancel, "finished") #just for "fun" while coding
 #		get_tree().quit()
-###		to get the next 6 lines back, remove the 4 previous lines
+###		to get the next 7 lines back, remove the 5 previous lines
 		play_cancel()
+		$Commentaires_des_voisins.stop() #just in case
 		$Music/Bernard.stop()
 		yield($AudioCancel, "finished")
 		CharacterSelectionManager.reset()

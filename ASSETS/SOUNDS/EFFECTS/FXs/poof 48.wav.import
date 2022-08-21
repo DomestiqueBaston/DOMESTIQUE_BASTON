@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/poof 48.wav-466a5829f66f8ee32b25dcd92a50d2a4.sample"
+
+[deps]
+
+source_file="res://ASSETS/SOUNDS/EFFECTS/FXs/poof 48.wav"
+dest_files=[ "res://.import/poof 48.wav-466a5829f66f8ee32b25dcd92a50d2a4.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
