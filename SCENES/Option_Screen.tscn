@@ -15,10 +15,10 @@
 [ext_resource path="res://ASSETS/GRAPHICS/MISCS/Option Screen/Musique_0.png" type="Texture" id=13]
 [ext_resource path="res://ASSETS/GRAPHICS/MISCS/Option Screen/Sounds_I.png" type="Texture" id=14]
 [ext_resource path="res://SCENES/Fade_scene.tscn" type="PackedScene" id=15]
-[ext_resource path="res://ASSETS/SOUNDS/EFFECTS/validation.wav" type="AudioStream" id=16]
-[ext_resource path="res://ASSETS/SOUNDS/EFFECTS/cancel.wav" type="AudioStream" id=17]
-[ext_resource path="res://ASSETS/SOUNDS/EFFECTS/wooow_down.wav" type="AudioStream" id=18]
-[ext_resource path="res://ASSETS/SOUNDS/EFFECTS/wooow.wav" type="AudioStream" id=19]
+[ext_resource path="res://ASSETS/SOUNDS/EFFECTS/INTERFACE/validation.wav" type="AudioStream" id=16]
+[ext_resource path="res://ASSETS/SOUNDS/EFFECTS/INTERFACE/cancel.wav" type="AudioStream" id=17]
+[ext_resource path="res://ASSETS/SOUNDS/EFFECTS/INTERFACE/wooow_down.wav" type="AudioStream" id=18]
+[ext_resource path="res://ASSETS/SOUNDS/EFFECTS/INTERFACE/wooow.wav" type="AudioStream" id=19]
 
 [node name="Options" type="Node2D"]
 

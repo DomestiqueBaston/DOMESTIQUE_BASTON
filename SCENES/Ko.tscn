@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://ASSETS/GRAPHICS/MISCS/KO/KO.png" type="Texture" id=1]
-[ext_resource path="res://ASSETS/SOUNDS/EFFECTS/FXs/pignouf 441.wav" type="AudioStream" id=2]
+[ext_resource path="res://ASSETS/SOUNDS/EFFECTS/ANNONCES/pignouf 441.wav" type="AudioStream" id=2]
 
 [node name="KO" type="Node2D"]
 

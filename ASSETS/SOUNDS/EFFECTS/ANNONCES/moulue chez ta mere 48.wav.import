@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/moulue chez ta mere 48.wav-71d2169ad87f94c03f9c33402b1b43a7.sample"
+
+[deps]
+
+source_file="res://ASSETS/SOUNDS/EFFECTS/ANNONCES/moulue chez ta mere 48.wav"
+dest_files=[ "res://.import/moulue chez ta mere 48.wav-71d2169ad87f94c03f9c33402b1b43a7.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
