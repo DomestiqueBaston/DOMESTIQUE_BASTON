@@ -1,7 +1,7 @@
 extends Node2D
 
-
 func _ready():
+	randomize()
 	MusicController.play_music()
 #	$Title/AudioStreamPlayer.volume_db = PreloadScript01.bruitages_value
 
@@ -18,10 +18,11 @@ func _input(event):
 	elif event is InputEventJoypadButton and event.pressed:
 		play_validation()
 		$TransitionScreen.transition()
+
 func _on_TransitionScreen_transitioned():
 	# warning-ignore:return_value_discarded
 	get_tree().change_scene("res://SCENES/Start_Screen.tscn")
-	
+
 func play_validation():
 #	$AudioValid.volume_db = PreloadScript01.bruitages_value
 	$AudioValid.play()

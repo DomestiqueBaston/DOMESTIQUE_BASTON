@@ -156,6 +156,8 @@ func _input(event):
 		if Input.is_action_pressed(my_actions[FORWARD]):
 			if Input.is_action_pressed(my_actions[UP]):
 				play_animation("Insult")
+				var audio_name = "InsultPlayer" + (randi() % 3 + 1) as String
+				get_node(audio_name).play()
 			elif Input.is_action_pressed(my_actions[DOWN]):
 				play_animation("Slash")
 			else:

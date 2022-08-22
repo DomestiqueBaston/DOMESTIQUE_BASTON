@@ -3758,5 +3758,14 @@ bus = "BRUITAGES"
 [node name="Flasher" type="AnimationPlayer" parent="."]
 anims/Flash = SubResource( 98 )
 
+[node name="InsultPlayer1" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 7 )
+
+[node name="InsultPlayer2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 16 )
+
+[node name="InsultPlayer3" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 15 )
+
 [connection signal="area_shape_entered" from="Area2D_Body" to="." method="_on_body_hit"]
 [connection signal="area_shape_entered" from="Area2D_Defense" to="." method="_on_defense_hit"]
