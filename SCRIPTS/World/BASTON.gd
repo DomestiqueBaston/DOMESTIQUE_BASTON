@@ -36,19 +36,15 @@ func _ready():
 	portrait_left.texture = portraits[player1_portrait_index]
 	portrait_right.texture = portraits[1 - player1_portrait_index]
 
-	# wait 2 seconds, display Fight.tscn, wait 2 seconds, remove it
+	# wait, display Fight.tscn, wait again, remove it
 
-	var timer = Timer.new()
-	timer.one_shot = true
-	add_child(timer)
-	timer.start(2)
-	yield(timer, "timeout")
+	$StartTimer.start()
+	yield($StartTimer, "timeout")
 	var fight = preload("res://SCENES/Fight.tscn").instance()
 	add_child(fight)
-	timer.start(2)
-	yield(timer, "timeout")
+	$StartTimer.start()
+	yield($StartTimer, "timeout")
 	fight.queue_free()
-	timer.queue_free()
 
 	# start gameplay
 

@@ -92,9 +92,7 @@ func _ready():
 	# play the In animation, then loop the Idle animation until start() is
 	# called
 
-	set_process_input(false)
-	set_physics_process(false)
-
+	set_state(WAITING)
 	anim_node.play("In")
 	yield(anim_node, "animation_finished")
 	anim_node.get_animation("Idle").loop = true
@@ -104,9 +102,12 @@ func _ready():
 ##
 func start():
 	anim_node.get_animation("Idle").loop = false
-	state = PLAYING
-	set_process_input(true)
-	set_physics_process(true)
+	set_state(PLAYING)
+
+func set_state(new_state):
+	state = new_state
+	set_process_input(new_state == PLAYING)
+	set_physics_process(new_state == PLAYING)
 
 func get_damage_for_attack(attack):
 	var points = attack_damage.get(attack)
@@ -346,9 +347,7 @@ func take_hit(damage):
 
 	if current_energy == 0:
 		play_animation("Ko")
-		state = DEAD
-		set_process_input(false)
-		set_physics_process(false)
+		set_state(DEAD)
 		return
 
 	var defense = anim_node.current_animation

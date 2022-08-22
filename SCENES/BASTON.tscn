@@ -48,6 +48,13 @@ bus = "COMMENTAIRES"
 stream = ExtResource( 13 )
 bus = "COMMENTAIRES"
 
+[node name="StartTimer" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+__meta__ = {
+"_editor_description_": "Timer used to show and then hide Fight.tscn"
+}
+
 [connection signal="energy_changed" from="Couillu" to="." method="somebody_took_a_hit" flags=6]
 [connection signal="energy_changed" from="Moulue" to="." method="somebody_took_a_hit" flags=6]
 [connection signal="finished" from="Commentaires_des_voisins_01" to="." method="initial_chatter_finished" flags=6]
