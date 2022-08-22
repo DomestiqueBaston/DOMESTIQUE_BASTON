@@ -42,7 +42,7 @@ func _input(event):
 		check_current_boundaries()
 		previous_node = str(previous_vpos) + "_" + str(current_hpos)
 		current_node = str(current_vpos) + "_" + str(current_hpos)
-		play_wooowdown()
+		play_wooow()
 		turn_on_off()
 
 	elif (Input.is_action_just_pressed('P1_right')) or (Input.is_action_just_pressed('P2_right')):
