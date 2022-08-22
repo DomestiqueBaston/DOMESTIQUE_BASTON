@@ -70,12 +70,13 @@ func initial_chatter_finished():
 func _input(event):
 	if state > PRE_GAME and state < END_GAME and event.is_action_pressed("ui_cancel"):
 		state = END_GAME
+		play_cancel()
 		$Commentaires_des_voisins_01.stop()
 		$Commentaires_des_voisins_02.stop()
-		play_cancel()
-		$Tout_de_meme.play()
 		$Music/Bernard.stop()
-		yield($Tout_de_meme, "finished")
+		if AudioServer.get_bus_volume_db(1) > -69:
+			$Tout_de_meme.play()
+			yield($Tout_de_meme, "finished")
 		CharacterSelectionManager.reset()
 		MusicController.play_music()
 		$TransitionScreen.transition()

@@ -128,7 +128,7 @@ func validation():
 			concerned_bus = current_vpos + 1
 			change_sound_level()
 			play_validation()
-			get_node('/root/MusicController/Music').volume_db = PreloadScript01.musique_value
+#			get_node('/root/MusicController/Music').volume_db = PreloadScript01.musique_value
 			
 # Cursor color management
 func turn_on_off():
