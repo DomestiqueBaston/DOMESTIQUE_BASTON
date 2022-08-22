@@ -9,7 +9,7 @@ var moulue_alpha = 0.0
 var couillu_alpha = 0.0
 
 func _input(event):
-	if Input.is_action_just_pressed('P1_right') or Input.is_action_just_pressed('P1_left') or Input.is_action_just_pressed('P2_right') or Input.is_action_just_pressed('P2_left'):
+	if Input.is_action_just_pressed('P1_right') or Input.is_action_just_pressed('P1_left') or Input.is_action_just_pressed('P2_right') or Input.is_action_just_pressed('P2_left') or Input.is_action_just_pressed('P1_up') or Input.is_action_just_pressed('P1_down') or Input.is_action_just_pressed('P2_up') or Input.is_action_just_pressed('P2_down'):
 		if moulue_alpha == 1.0 or couillu_alpha == 1.0:
 			return
 		if $AnimatedSprite.animation == "C_M":
@@ -63,6 +63,7 @@ func _input(event):
 		elif (Input.is_key_pressed(KEY_ENTER)):
 			pass
 		else:
+			choice = retour
 			play_cancel()
 			$TransitionScreen.transition()
 	
