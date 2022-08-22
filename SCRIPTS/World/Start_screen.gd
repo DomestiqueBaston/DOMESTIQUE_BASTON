@@ -12,7 +12,7 @@ func _ready():
 	get_node(PreloadScript01.current_node).modulate.a = 1
 
 func _input(event):
-	if event.is_action_pressed('P1_down') or event.is_action_pressed('P2_down'):
+	if event.is_action_pressed('P1_down') or event.is_action_pressed('P2_down') or event.is_action_pressed('P1_right') or event.is_action_pressed('P2_right'):
 		PreloadScript01.previous_pos = PreloadScript01.current_pos
 		check_previous_boundaries()
 		PreloadScript01.current_pos += 1
@@ -22,7 +22,7 @@ func _input(event):
 		play_wooowdown()
 		turn_on_off()
 
-	elif event.is_action_pressed('P1_up') or event.is_action_pressed('P2_up'):
+	elif event.is_action_pressed('P1_up') or event.is_action_pressed('P2_up') or event.is_action_pressed('P1_left') or event.is_action_pressed('P2_left'):
 		PreloadScript01.previous_pos = PreloadScript01.current_pos
 		check_previous_boundaries()
 		PreloadScript01.current_pos -= 1
