@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://ASSETS/GRAPHICS/MISCS/Win/MOULUE/MOULUE_win_left.png" type="Texture" id=1]
 [ext_resource path="res://ASSETS/GRAPHICS/MISCS/Win/COUILLU/COUILLU_win_left.png" type="Texture" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://SCRIPTS/World/Win_Screen.gd" type="Script" id=5]
 [ext_resource path="res://ASSETS/SOUNDS/EFFECTS/ANNONCES/moulue chez ta mere 48.wav" type="AudioStream" id=6]
 [ext_resource path="res://ASSETS/SOUNDS/EFFECTS/ANNONCES/couillu galette 441.wav" type="AudioStream" id=7]
+[ext_resource path="res://ASSETS/SOUNDS/EFFECTS/INTERFACE/victoire.wav" type="AudioStream" id=8]
 
 [node name="Win" type="Node2D"]
 script = ExtResource( 5 )
@@ -29,7 +30,7 @@ margin_right = 40.0
 margin_bottom = 40.0
 texture = ExtResource( 2 )
 
-[node name="Couillu_win_right" type="TextureRect" parent="."]
+[node name="Couillu_Win_right" type="TextureRect" parent="."]
 modulate = Color( 1, 1, 1, 0 )
 margin_right = 40.0
 margin_bottom = 40.0
@@ -42,3 +43,7 @@ bus = "BRUITAGES"
 [node name="Couillu_Sound" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 7 )
 bus = "BRUITAGES"
+
+[node name="Victory_Sound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 8 )
+autoplay = true

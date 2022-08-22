@@ -4,6 +4,8 @@ export (Array) var portraits
 enum { PRE_GAME, SILENCE, CHATTER1, CHATTER2, END_GAME }
 var state = PRE_GAME
 
+var game_aborted = false
+
 func _ready():
 
 	# set up the two players, one on the left and one on the right
@@ -38,12 +40,12 @@ func _ready():
 
 	# wait, display Fight.tscn, wait again, remove it
 
-	$StartTimer.start()
-	yield($StartTimer, "timeout")
+	$Timer.start()
+	yield($Timer, "timeout")
 	var fight = preload("res://SCENES/Fight.tscn").instance()
 	add_child(fight)
-	$StartTimer.start()
-	yield($StartTimer, "timeout")
+	$Timer.start()
+	yield($Timer, "timeout")
 	fight.queue_free()
 
 	# start gameplay
@@ -68,23 +70,59 @@ func initial_chatter_finished():
 		state = CHATTER2
 
 func _input(event):
-	if state > PRE_GAME and state < END_GAME and event.is_action_pressed("ui_cancel"):
-		state = END_GAME
+	if (state > PRE_GAME and state < END_GAME
+		and event.is_action_pressed("ui_cancel")):
+		game_aborted = true
+		var prev_state = state
 		play_cancel()
-		$Commentaires_des_voisins_01.stop()
-		$Commentaires_des_voisins_02.stop()
+		stop_game()
 		$Music/Bernard.stop()
-		if AudioServer.get_bus_volume_db(1) > -69:
+		if prev_state > SILENCE and AudioServer.get_bus_volume_db(1) > -69:
 			$Tout_de_meme.play()
 			yield($Tout_de_meme, "finished")
-		CharacterSelectionManager.reset()
-		MusicController.play_music()
+		$TransitionScreen.transition()
+
+	elif (state == END_GAME and event is InputEventKey and event.pressed
+		  and not event.scancode in [ KEY_ALT, KEY_ENTER ]):
+		$Music/Bernard.stop()
 		$TransitionScreen.transition()
 
 func play_cancel():
 #	$AudioCancel.volume_db = PreloadScript01.bruitages_value
 	$AudioCancel.play()
 
+func stop_game():
+	state = END_GAME
+	$Commentaires_des_voisins_01.stop()
+	$Commentaires_des_voisins_02.stop()
+
 func _on_TransitionScreen_transitioned():
-# warning-ignore:return_value_discarded
-	get_tree().change_scene("res://SCENES/Start_Screen.tscn")
+	var start_screen = preload("res://SCENES/Start_Screen.tscn")
+	var win_screen = preload("res://SCENES/Win_Screen.tscn")
+	var _err
+	if game_aborted:
+		_err = get_tree().change_scene_to(start_screen)
+	else:
+		_err = get_tree().change_scene_to(win_screen)
+
+func _on_moulue_ko():
+	if CharacterSelectionManager.player1 == "Moulue":
+		PreloadScript01.winner = PreloadScript01.COUILLU_RIGHT
+	else:
+		PreloadScript01.winner = PreloadScript01.COUILLU_LEFT
+	game_over()
+
+func _on_couillu_ko():
+	if CharacterSelectionManager.player1 == "Moulue":
+		PreloadScript01.winner = PreloadScript01.MOULUE_LEFT
+	else:
+		PreloadScript01.winner = PreloadScript01.MOULUE_RIGHT
+	game_over()
+
+func game_over():
+	stop_game()
+	var ko = preload("res://SCENES/Ko.tscn").instance()
+	add_child(ko)
+	$Timer.start()
+	yield($Timer, "timeout")
+	ko.queue_free()

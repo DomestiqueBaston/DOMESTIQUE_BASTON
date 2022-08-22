@@ -28,6 +28,9 @@ export var initial_energy = 100
 ## argument whose value is between 0 (dead) and 1.
 signal energy_changed
 
+## Signal emitted when the player has been knocked out.
+signal knockout
+
 # the three states of gameplay
 enum { WAITING, PLAYING, DEAD }
 var state = WAITING
@@ -350,6 +353,8 @@ func take_hit(damage):
 	if current_energy == 0:
 		play_animation("Ko")
 		set_state(DEAD)
+		yield(anim_node, "animation_finished")
+		emit_signal("knockout")
 		return
 
 	var defense = anim_node.current_animation

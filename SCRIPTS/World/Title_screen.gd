@@ -7,11 +7,7 @@ func _ready():
 
 func _input(event):
 	if event is InputEventKey and event.pressed:
-		if (Input.is_key_pressed(KEY_ALT)):
-			pass
-		elif (Input.is_key_pressed(KEY_ENTER)):
-			pass
-		else:
+		if not event.scancode in [ KEY_ALT, KEY_ENTER ]:
 			set_process_input(false)
 			play_validation()
 			$TransitionScreen.transition()

@@ -33,11 +33,8 @@ var musique := 2
 var truth = true
 
 #winners
-var moulue_win_left = false
-var moulue_win_right = false
-var couillu_win_left = false
-var couillu_win_right = false
-	
+enum { MOULUE_LEFT, MOULUE_RIGHT, COUILLU_LEFT, COUILLU_RIGHT }
+var winner = MOULUE_LEFT
 
 func _input(_event):
 	if (Input.is_action_just_pressed('full_screen')):

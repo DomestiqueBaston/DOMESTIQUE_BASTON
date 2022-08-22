@@ -14,7 +14,6 @@
 [ext_resource path="res://ASSETS/SOUNDS/EFFECTS/COMMENTAIRES/scenette 48_part_01.wav" type="AudioStream" id=12]
 [ext_resource path="res://ASSETS/SOUNDS/EFFECTS/COMMENTAIRES/tout_de_meme.wav" type="AudioStream" id=13]
 
-
 [node name="BASTON" type="Node2D"]
 script = ExtResource( 6 )
 portraits = [ ExtResource( 7 ), ExtResource( 2 ) ]
@@ -49,14 +48,16 @@ bus = "COMMENTAIRES"
 stream = ExtResource( 13 )
 bus = "COMMENTAIRES"
 
-[node name="StartTimer" type="Timer" parent="."]
+[node name="Timer" type="Timer" parent="."]
 wait_time = 2.0
 one_shot = true
 __meta__ = {
-"_editor_description_": "Timer used to show and then hide Fight.tscn"
+"_editor_description_": "Timer used to show and hide overlays."
 }
 
 [connection signal="energy_changed" from="Couillu" to="." method="somebody_took_a_hit" flags=6]
+[connection signal="knockout" from="Couillu" to="." method="_on_couillu_ko"]
 [connection signal="energy_changed" from="Moulue" to="." method="somebody_took_a_hit" flags=6]
+[connection signal="knockout" from="Moulue" to="." method="_on_moulue_ko"]
 [connection signal="finished" from="Commentaires_des_voisins_01" to="." method="initial_chatter_finished" flags=6]
 [connection signal="transitioned" from="TransitionScreen" to="." method="_on_TransitionScreen_transitioned"]
