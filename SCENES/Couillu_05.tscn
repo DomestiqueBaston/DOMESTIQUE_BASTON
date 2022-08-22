@@ -1115,59 +1115,17 @@ tracks/15/keys = {
 "update": 1,
 "values": [ false, false ]
 }
-tracks/16/type = "audio"
-tracks/16/path = NodePath("FXs")
+tracks/16/type = "value"
+tracks/16/path = NodePath("Shadow:frame")
 tracks/16/interp = 1
 tracks/16/loop_wrap = true
 tracks/16/imported = false
 tracks/16/enabled = true
 tracks/16/keys = {
-"clips": [ {
-"end_offset": 0.0,
-"start_offset": 0.3,
-"stream": ExtResource( 7 )
-} ],
-"times": PoolRealArray( 0 )
-}
-tracks/17/type = "value"
-tracks/17/path = NodePath("Shadow:frame")
-tracks/17/interp = 1
-tracks/17/loop_wrap = true
-tracks/17/imported = false
-tracks/17/enabled = true
-tracks/17/keys = {
 "times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 1,
 "values": [ 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111 ]
-}
-tracks/18/type = "audio"
-tracks/18/path = NodePath("FXs")
-tracks/18/interp = 1
-tracks/18/loop_wrap = true
-tracks/18/imported = false
-tracks/18/enabled = true
-tracks/18/keys = {
-"clips": [ {
-"end_offset": 0.0,
-"start_offset": 0.25,
-"stream": ExtResource( 16 )
-} ],
-"times": PoolRealArray( 0 )
-}
-tracks/19/type = "audio"
-tracks/19/path = NodePath("FXs")
-tracks/19/interp = 1
-tracks/19/loop_wrap = true
-tracks/19/imported = false
-tracks/19/enabled = true
-tracks/19/keys = {
-"clips": [ {
-"end_offset": 0.0,
-"start_offset": 0.2,
-"stream": ExtResource( 15 )
-} ],
-"times": PoolRealArray( 0 )
 }
 
 [sub_resource type="Animation" id=7]
@@ -3728,7 +3686,7 @@ texture = ExtResource( 1 )
 offset = Vector2( -0.5, -53.5 )
 hframes = 13
 vframes = 13
-frame = 68
+frame = 100
 __meta__ = {
 "_edit_lock_": true
 }

@@ -1115,59 +1115,17 @@ tracks/15/keys = {
 "update": 1,
 "values": [ false, false ]
 }
-tracks/16/type = "audio"
-tracks/16/path = NodePath("FXs")
+tracks/16/type = "value"
+tracks/16/path = NodePath("Shadow:frame")
 tracks/16/interp = 1
 tracks/16/loop_wrap = true
 tracks/16/imported = false
 tracks/16/enabled = true
 tracks/16/keys = {
-"clips": [ {
-"end_offset": 0.109133,
-"start_offset": 0.1,
-"stream": ExtResource( 19 )
-} ],
-"times": PoolRealArray( 0 )
-}
-tracks/17/type = "value"
-tracks/17/path = NodePath("Shadow:frame")
-tracks/17/interp = 1
-tracks/17/loop_wrap = true
-tracks/17/imported = false
-tracks/17/enabled = true
-tracks/17/keys = {
 "times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 1,
 "values": [ 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122 ]
-}
-tracks/18/type = "audio"
-tracks/18/path = NodePath("FXs")
-tracks/18/interp = 1
-tracks/18/loop_wrap = true
-tracks/18/imported = false
-tracks/18/enabled = true
-tracks/18/keys = {
-"clips": [ {
-"end_offset": 0.203954,
-"start_offset": 0.06,
-"stream": ExtResource( 20 )
-} ],
-"times": PoolRealArray( 0 )
-}
-tracks/19/type = "audio"
-tracks/19/path = NodePath("FXs")
-tracks/19/interp = 1
-tracks/19/loop_wrap = true
-tracks/19/imported = false
-tracks/19/enabled = true
-tracks/19/keys = {
-"clips": [ {
-"end_offset": 0.0,
-"start_offset": 0.2,
-"stream": ExtResource( 12 )
-} ],
-"times": PoolRealArray( 0 )
 }
 
 [sub_resource type="Animation" id=7]
@@ -3695,24 +3653,23 @@ backward_speed = 45
 [node name="MoveCollider" type="CollisionShape2D" parent="."]
 position = Vector2( 4, -36 )
 shape = SubResource( 96 )
-disabled = true
 
 [node name="Area2D_Body" type="Area2D" parent="."]
 collision_mask = 32
 
 [node name="BodyCollider" type="CollisionShape2D" parent="Area2D_Body"]
 position = Vector2( 10, -33 )
-scale = Vector2( 1.04, 0.605 )
+scale = Vector2( 1.1, 0.62 )
 shape = SubResource( 94 )
-disabled = true
 
 [node name="Area2D_Roll" type="Area2D" parent="."]
 collision_layer = 2
 collision_mask = 80
 
 [node name="AttackCollider" type="CollisionShape2D" parent="Area2D_Roll"]
-position = Vector2( 20, -41 )
-rotation = -0.645772
+position = Vector2( 11.1391, -50.8298 )
+rotation = -0.648959
+scale = Vector2( 0.663743, 0.600006 )
 shape = SubResource( 93 )
 disabled = true
 
@@ -3733,7 +3690,7 @@ texture = ExtResource( 2 )
 offset = Vector2( -0.5, -53.5 )
 hframes = 13
 vframes = 13
-frame = 149
+frame = 111
 __meta__ = {
 "_edit_lock_": true
 }
@@ -3743,7 +3700,7 @@ texture = ExtResource( 1 )
 offset = Vector2( -0.5, -53.5 )
 hframes = 13
 vframes = 13
-frame = 149
+frame = 111
 __meta__ = {
 "_edit_lock_": true
 }
