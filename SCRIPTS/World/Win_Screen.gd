@@ -16,7 +16,6 @@ func _ready():
 			$Couillu_Sound.play()
 
 func _input(event):
-	if (event is InputEventKey and event.pressed
-		and not event.scancode in [ KEY_ALT, KEY_ENTER ]):
+	if (event is InputEventKey and event.pressed and not event.scancode in [ KEY_ALT, KEY_ENTER ]):
 		var start_screen = preload("res://SCENES/Start_Screen.tscn")
 		var _err = get_tree().change_scene_to(start_screen)

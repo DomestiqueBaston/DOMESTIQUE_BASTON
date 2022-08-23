@@ -676,7 +676,7 @@ tracks/16/path = NodePath("FXs")
 tracks/16/interp = 1
 tracks/16/loop_wrap = true
 tracks/16/imported = false
-tracks/16/enabled = false
+tracks/16/enabled = true
 tracks/16/keys = {
 "clips": [ {
 "end_offset": 0.0,
@@ -3686,7 +3686,7 @@ texture = ExtResource( 1 )
 offset = Vector2( -0.5, -53.5 )
 hframes = 13
 vframes = 13
-frame = 33
+frame = 9
 __meta__ = {
 "_edit_lock_": true
 }
@@ -3710,7 +3710,7 @@ anims/Walk_backward = SubResource( 5 )
 anims/Walk_forward = SubResource( 3 )
 
 [node name="FXs" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource( 5 )
+stream = ExtResource( 12 )
 bus = "BRUITAGES"
 
 [node name="Flasher" type="AnimationPlayer" parent="."]

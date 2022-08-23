@@ -82,8 +82,7 @@ func _input(event):
 			yield($Tout_de_meme, "finished")
 		$TransitionScreen.transition()
 
-	elif (state == END_GAME and event is InputEventKey and event.pressed
-		  and not event.scancode in [ KEY_ALT, KEY_ENTER ]):
+	elif (state == END_GAME and event is InputEventKey and event.pressed and not event.scancode in [ KEY_ALT, KEY_ENTER ]):
 		$Music/Bernard.stop()
 		$TransitionScreen.transition()
 
