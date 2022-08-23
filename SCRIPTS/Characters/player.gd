@@ -61,7 +61,7 @@ var opponent_node
 var opponent_anim_node
 
 # current energy level (starts at initial_energy)
-var current_energy = initial_energy
+var current_energy
 
 # true => player is doing something other than walking or idling
 var busy = false
@@ -91,7 +91,9 @@ func _ready():
 			opponent_anim_node.connect(
 				"animation_finished", self, "_on_opponent_animation_finished")
 			break
-	
+
+	current_energy = initial_energy
+
 	# play the In animation, then loop the Idle animation until start() is
 	# called
 
