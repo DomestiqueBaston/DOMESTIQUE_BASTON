@@ -1,17 +1,17 @@
 extends Node2D
 
+var ignore_input = false
+
 func _ready():
 	randomize()
 	MusicController.play_music()
 #	$Title/AudioStreamPlayer.volume_db = PreloadScript01.bruitages_value
 
 func _input(event):
-	if event is InputEventKey and event.pressed:
-		if not event.scancode in [ KEY_ALT, KEY_ENTER ]:
-			set_process_input(false)
-			play_validation()
-			$TransitionScreen.transition()
-	elif event is InputEventJoypadButton and event.pressed:
+	if PreloadScript01.handle_input_event(event) or ignore_input:
+		return
+	elif PreloadScript01.is_key_or_button_press(event):
+		ignore_input = true
 		play_validation()
 		$TransitionScreen.transition()
 

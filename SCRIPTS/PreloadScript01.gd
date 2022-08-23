@@ -29,14 +29,29 @@ var commentaires := 2
 var bruitages := 2
 var musique := 2
 
-#full screen
-var truth = true
-
 #winners
 enum { MOULUE_LEFT, MOULUE_RIGHT, COUILLU_LEFT, COUILLU_RIGHT }
 var winner = MOULUE_LEFT
 
-func _input(_event):
-	if (Input.is_action_just_pressed('full_screen')):
-		OS.window_fullscreen = truth
-		truth = !truth
+##
+## Handles input events common to all scene trees. Returns true if the event
+## was handled, false if not.
+##
+func handle_input_event(event):
+	if event.is_action_pressed('full_screen'):
+		OS.window_fullscreen = !OS.window_fullscreen
+		return true
+	return false
+
+##
+## Returns true if the given event is a key or button press, false if not.
+## Modifier keypresses (ALT, CTRL, SHIFT, META) are ignored.
+##
+func is_key_or_button_press(event):
+	if not event.pressed:
+		return false
+	if event is InputEventJoypadButton:
+		return true
+	if event is InputEventKey:
+		return not event.scancode in [ KEY_ALT, KEY_CONTROL, KEY_SHIFT, KEY_META ]
+	return false

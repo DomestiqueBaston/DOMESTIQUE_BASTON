@@ -9,7 +9,17 @@ var moulue_alpha = 0.0
 var couillu_alpha = 0.0
 
 func _input(event):
-	if Input.is_action_just_pressed('P1_right') or Input.is_action_just_pressed('P1_left') or Input.is_action_just_pressed('P2_right') or Input.is_action_just_pressed('P2_left') or Input.is_action_just_pressed('P1_up') or Input.is_action_just_pressed('P1_down') or Input.is_action_just_pressed('P2_up') or Input.is_action_just_pressed('P2_down'):
+	if PreloadScript01.handle_input_event(event):
+		return
+		
+	elif (event.is_action_pressed('P1_right') or
+		  event.is_action_pressed('P1_left') or
+		  event.is_action_pressed('P2_right') or
+		  event.is_action_pressed('P2_left') or
+		  event.is_action_pressed('P1_up') or
+		  event.is_action_pressed('P1_down') or
+		  event.is_action_pressed('P2_up') or
+		  event.is_action_pressed('P2_down')):
 		if moulue_alpha == 1.0 or couillu_alpha == 1.0:
 			return
 		if $AnimatedSprite.animation == "C_M":
@@ -20,13 +30,13 @@ func _input(event):
 			play_slide()
 		CharacterSelectionManager.swap()
 			
-	elif Input.is_action_just_pressed('P1_a') or Input.is_action_just_pressed('P2_a'):
+	elif event.is_action_pressed('P1_a') or event.is_action_pressed('P2_a'):
 		choice = baston
 		play_validation()
 		MusicController.stop_music()
 		$TransitionScreen.transition()
 		
-	elif Input.is_action_just_pressed('P1_y') or Input.is_action_just_pressed('P2_y'):
+	elif event.is_action_pressed('P1_y') or event.is_action_pressed('P2_y'):
 		if moulue_alpha == 1.0:
 			pass
 		elif couillu_alpha == 0.0:
@@ -39,7 +49,7 @@ func _input(event):
 			play_cancel()
 		$Couillu_cds.modulate.a = couillu_alpha
 		
-	elif Input.is_action_just_pressed('P1_x') or Input.is_action_just_pressed('P2_x'):
+	elif event.is_action_pressed('P1_x') or event.is_action_pressed('P2_x'):
 		if couillu_alpha == 1.0:
 			pass
 		elif moulue_alpha == 0.0:
@@ -51,22 +61,11 @@ func _input(event):
 			couillu_alpha = 0.0
 			play_cancel()
 		$Moulue_cds.modulate.a = moulue_alpha
-	
-	elif event is InputEventJoypadButton and event.pressed:
+		
+	elif PreloadScript01.is_key_or_button_press(event):
 		choice = retour
 		play_cancel()
 		$TransitionScreen.transition()
-		
-	elif event is InputEventKey and event.pressed:
-		if (Input.is_key_pressed(KEY_ALT)):
-			pass
-		elif (Input.is_key_pressed(KEY_ENTER)):
-			pass
-		else:
-			choice = retour
-			play_cancel()
-			$TransitionScreen.transition()
-	
 
 func _on_TransitionScreen_transitioned():
 # warning-ignore:return_value_discarded

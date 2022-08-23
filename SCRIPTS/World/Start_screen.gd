@@ -1,18 +1,23 @@
 extends Control
 
-
 var reglons = "res://SCENES/Cornillaud.tscn"
 var changer = "res://SCENES/Option_Screen.tscn"
 var chasse = "res://SCENES/Credits.tscn"
 var choice = ""
-
+var ignore_input = false
 
 func _ready():
 	get_node(PreloadScript01.previous_node).modulate.a = 0
 	get_node(PreloadScript01.current_node).modulate.a = 1
 
 func _input(event):
-	if event.is_action_pressed('P1_down') or event.is_action_pressed('P2_down') or event.is_action_pressed('P1_right') or event.is_action_pressed('P2_right'):
+	if PreloadScript01.handle_input_event(event) or ignore_input:
+		return
+
+	elif (event.is_action_pressed('P1_down') or
+		  event.is_action_pressed('P2_down') or
+		  event.is_action_pressed('P1_right') or
+		  event.is_action_pressed('P2_right')):
 		PreloadScript01.previous_pos = PreloadScript01.current_pos
 		check_previous_boundaries()
 		PreloadScript01.current_pos += 1
@@ -22,7 +27,10 @@ func _input(event):
 		play_wooowdown()
 		turn_on_off()
 
-	elif event.is_action_pressed('P1_up') or event.is_action_pressed('P2_up') or event.is_action_pressed('P1_left') or event.is_action_pressed('P2_left'):
+	elif (event.is_action_pressed('P1_up') or
+		  event.is_action_pressed('P2_up') or
+		  event.is_action_pressed('P1_left') or
+		  event.is_action_pressed('P2_left')):
 		PreloadScript01.previous_pos = PreloadScript01.current_pos
 		check_previous_boundaries()
 		PreloadScript01.current_pos -= 1
@@ -33,6 +41,7 @@ func _input(event):
 		turn_on_off()
 		
 	elif event.is_action_pressed('P1_a') or event.is_action_pressed('P2_a'):
+		ignore_input = true
 		if PreloadScript01.current_pos == 0:
 			choice = reglons
 			PreloadScript01.current_node = "0"
@@ -47,7 +56,6 @@ func _input(event):
 			play_valid()
 		else:
 #			$AudioCancel.volume_db = PreloadScript01.bruitages_value
-			set_process_input(false)
 			$AudioCancel.play()
 			yield($AudioCancel, "finished")
 			get_tree().quit()

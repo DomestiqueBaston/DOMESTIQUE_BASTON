@@ -13,7 +13,7 @@ var current_node := "0_0"
 #var line_name = ""
 var concerned_bus
 
-
+var ignore_input = false
 
 func _ready():
 	get_node("0_" + str(PreloadScript01.commentaires)).modulate = PreloadScript01.VIOLET
@@ -25,7 +25,10 @@ func _ready():
 	get_node("2_" + str(PreloadScript01.musique)).modulate = PreloadScript01.VIOLET
 
 func _input(event):
-	if (Input.is_action_just_pressed('P1_down')) or (Input.is_action_just_pressed('P2_down')):
+	if PreloadScript01.handle_input_event(event) or ignore_input:
+		return
+
+	elif event.is_action_pressed('P1_down') or event.is_action_pressed('P2_down'):
 		previous_vpos = current_vpos
 		check_previous_boundaries()
 		current_vpos += 1
@@ -35,7 +38,7 @@ func _input(event):
 		play_wooowdown()
 		turn_on_off()
 
-	elif (Input.is_action_just_pressed('P1_up')) or (Input.is_action_just_pressed('P2_up')):
+	elif event.is_action_pressed('P1_up') or event.is_action_pressed('P2_up'):
 		previous_vpos = current_vpos
 		check_previous_boundaries()
 		current_vpos -= 1
@@ -45,7 +48,7 @@ func _input(event):
 		play_wooow()
 		turn_on_off()
 
-	elif (Input.is_action_just_pressed('P1_right')) or (Input.is_action_just_pressed('P2_right')):
+	elif event.is_action_pressed('P1_right') or event.is_action_pressed('P2_right'):
 		previous_hpos = current_hpos
 		check_previous_boundaries()
 		current_hpos += 1
@@ -55,7 +58,7 @@ func _input(event):
 		play_wooowdown()
 		turn_on_off()
 
-	elif (Input.is_action_just_pressed('P1_left')) or (Input.is_action_just_pressed('P2_left')):
+	elif event.is_action_pressed('P1_left') or event.is_action_pressed('P2_left'):
 		previous_hpos = current_hpos
 		check_previous_boundaries()
 		current_hpos -= 1
@@ -65,24 +68,14 @@ func _input(event):
 		play_wooow()
 		turn_on_off()
 
-	elif (Input.is_action_just_pressed('P1_a')) or (Input.is_action_just_pressed('P2_a')):
+	elif event.is_action_pressed('P1_a') or event.is_action_pressed('P2_a'):
 		validation()
 	
-	elif event is InputEventJoypadButton and event.pressed:
-		set_process_input(false)
+	elif PreloadScript01.is_key_or_button_press(event):
+		ignore_input = true
 		play_cancel()
 		get_node("../TransitionScreen").transition()
-		
-	elif event is InputEventKey and event.pressed:
-		if (Input.is_key_pressed(KEY_ALT)):
-			pass
-		elif (Input.is_key_pressed(KEY_ENTER)):
-			pass
-		else:
-			set_process_input(false)
-			play_cancel()
-			get_node("../TransitionScreen").transition()
-		
+
 func check_previous_boundaries():
 	if previous_vpos < 0:
 		previous_vpos = 2

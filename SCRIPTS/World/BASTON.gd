@@ -70,7 +70,10 @@ func initial_chatter_finished():
 		state = CHATTER2
 
 func _input(event):
-	if (state > PRE_GAME and state < END_GAME
+	if PreloadScript01.handle_input_event(event):
+		return
+
+	elif (state > PRE_GAME and state < END_GAME
 		and event.is_action_pressed("ui_cancel")):
 		game_aborted = true
 		var prev_state = state
@@ -82,7 +85,7 @@ func _input(event):
 			yield($Tout_de_meme, "finished")
 		$TransitionScreen.transition()
 
-	elif (state == END_GAME and event is InputEventKey and event.pressed and not event.scancode in [ KEY_ALT, KEY_ENTER ]):
+	elif state == END_GAME and PreloadScript01.is_key_or_button_press(event):
 		$Music/Bernard.stop()
 		$TransitionScreen.transition()
 

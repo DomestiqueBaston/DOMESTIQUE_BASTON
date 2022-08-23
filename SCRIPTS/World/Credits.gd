@@ -1,24 +1,17 @@
 extends Node2D
 
-
+var ignore_input = false
 
 func _ready() -> void:
 	pass
 	
 func _input(event):
-
-	if event is InputEventJoypadButton and event.pressed:
+	if PreloadScript01.handle_input_event(event) or ignore_input:
+		return
+	elif PreloadScript01.is_key_or_button_press(event):
+		ignore_input = true
 		play_cancel()
 		$TransitionScreen.transition()
-	elif event is InputEventKey and event.pressed:
-		if (Input.is_key_pressed(KEY_ALT)):
-			pass
-		elif (Input.is_key_pressed(KEY_ENTER)):
-			pass
-		else:
-			set_process_input(false)
-			play_cancel()
-			$TransitionScreen.transition()
 
 func _on_TransitionScreen_transitioned() -> void:
 # warning-ignore:return_value_discarded
