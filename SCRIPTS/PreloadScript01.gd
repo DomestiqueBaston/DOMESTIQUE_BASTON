@@ -48,10 +48,8 @@ func handle_input_event(event):
 ## Modifier keypresses (ALT, CTRL, SHIFT, META) are ignored.
 ##
 func is_key_or_button_press(event):
-	if not event.pressed:
-		return false
 	if event is InputEventJoypadButton:
-		return true
+		return event.pressed
 	if event is InputEventKey:
-		return not event.scancode in [ KEY_ALT, KEY_CONTROL, KEY_SHIFT, KEY_META ]
+		return event.pressed and not event.scancode in [ KEY_ALT, KEY_CONTROL, KEY_SHIFT, KEY_META ]
 	return false
