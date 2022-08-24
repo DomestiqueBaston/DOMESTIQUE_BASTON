@@ -7,7 +7,7 @@
 [ext_resource path="res://SCRIPTS/World/Win_Screen.gd" type="Script" id=5]
 [ext_resource path="res://ASSETS/SOUNDS/EFFECTS/ANNONCES/moulue chez ta mere 48.wav" type="AudioStream" id=6]
 [ext_resource path="res://ASSETS/SOUNDS/EFFECTS/ANNONCES/couillu galette 441.wav" type="AudioStream" id=7]
-[ext_resource path="res://ASSETS/SOUNDS/EFFECTS/INTERFACE/victoire.wav" type="AudioStream" id=8]
+[ext_resource path="res://ASSETS/SOUNDS/MUSIC/VICTORY.wav" type="AudioStream" id=8]
 
 [node name="Win" type="Node2D"]
 script = ExtResource( 5 )
