@@ -1,15 +1,13 @@
 extends Node2D
 
-var baston = "res://SCENES/BASTON.tscn"
-var retour = "res://SCENES/Start_Screen.tscn"
-var moulue = "res://SCENES/Moulue_cds.tscn"
-var couillu = "res://SCENES/Couillu_cds.tscn"
-var choice = ""
-var moulue_alpha = 0.0
-var couillu_alpha = 0.0
+var baston = preload("res://SCENES/BASTON.tscn")
+var retour = preload("res://SCENES/Start_Screen.tscn")
+var next_screen
+var cds = ""
+var ignore_input = false
 
 func _input(event):
-	if PreloadScript01.handle_input_event(event):
+	if PreloadScript01.handle_input_event(event) or ignore_input:
 		return
 		
 	elif (event.is_action_pressed('P1_right') or
@@ -20,7 +18,7 @@ func _input(event):
 		  event.is_action_pressed('P1_down') or
 		  event.is_action_pressed('P2_up') or
 		  event.is_action_pressed('P2_down')):
-		if moulue_alpha == 1.0 or couillu_alpha == 1.0:
+		if cds:
 			return
 		if $AnimatedSprite.animation == "C_M":
 			$AnimatedSprite.play("M_C")
@@ -31,46 +29,45 @@ func _input(event):
 		CharacterSelectionManager.swap()
 			
 	elif event.is_action_pressed('P1_a') or event.is_action_pressed('P2_a'):
-		choice = baston
+		ignore_input = true
+		next_screen = baston
 		play_validation()
 		MusicController.stop_music()
 		$TransitionScreen.transition()
 		
-	elif event.is_action_pressed('P1_y') or event.is_action_pressed('P2_y'):
-		if moulue_alpha == 1.0:
-			pass
-		elif couillu_alpha == 0.0:
-			moulue_alpha = 0.0
-			couillu_alpha = 1.0
-			play_validation()
-		elif couillu_alpha == 1.0:
-			couillu_alpha = 0.0
-			moulue_alpha = 0.0
-			play_cancel()
-		$Couillu_cds.modulate.a = couillu_alpha
-		
 	elif event.is_action_pressed('P1_x') or event.is_action_pressed('P2_x'):
-		if couillu_alpha == 1.0:
-			pass
-		elif moulue_alpha == 0.0:
-			couillu_alpha = 0.0
-			moulue_alpha = 1.0
-			play_validation()
-		elif moulue_alpha == 1.0:
-			moulue_alpha = 0.0
-			couillu_alpha = 0.0
+		if cds == CharacterSelectionManager.player1:
 			play_cancel()
-		$Moulue_cds.modulate.a = moulue_alpha
+			hide_cds()
+		elif cds.empty():
+			play_validation()
+			show_cds(CharacterSelectionManager.player1)
+		
+	elif event.is_action_pressed('P1_y') or event.is_action_pressed('P2_y'):
+		if cds == CharacterSelectionManager.player2:
+			play_cancel()
+			hide_cds()
+		elif cds.empty():
+			play_validation()
+			show_cds(CharacterSelectionManager.player2)
 		
 	elif PreloadScript01.is_key_or_button_press(event):
-		choice = retour
+		ignore_input = true
+		next_screen = retour
 		play_cancel()
 		$TransitionScreen.transition()
 
+func show_cds(who):
+	cds = who
+	$Moulue_cds.modulate.a = 1 if who == "Moulue" else 0
+	$Couillu_cds.modulate.a = 1 if who == "Couillu" else 0
+
+func hide_cds():
+	show_cds("")
+
 func _on_TransitionScreen_transitioned():
-# warning-ignore:return_value_discarded
-	get_tree().change_scene(choice)
-	
+	var _err = get_tree().change_scene_to(next_screen)
+
 func play_validation():
 #	$AudioValid.volume_db = PreloadScript01.bruitages_value
 	$AudioValid.play()
