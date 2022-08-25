@@ -73,7 +73,7 @@ func _input(event):
 	if PreloadScript01.handle_input_event(event):
 		return
 
-	elif (state > PRE_GAME and state < END_GAME
+	if (state > PRE_GAME and state < END_GAME
 		and event.is_action_pressed("ui_cancel")):
 		game_aborted = true
 		var prev_state = state
@@ -83,10 +83,6 @@ func _input(event):
 		if prev_state > SILENCE and AudioServer.get_bus_volume_db(1) > -69:
 			$Tout_de_meme.play()
 			yield($Tout_de_meme, "finished")
-		$TransitionScreen.transition()
-
-	elif state == END_GAME and PreloadScript01.is_key_or_button_press(event):
-		$Music/Bernard.stop()
 		$TransitionScreen.transition()
 
 func play_cancel():
@@ -128,3 +124,7 @@ func game_over():
 	$Timer.start()
 	yield($Timer, "timeout")
 	ko.queue_free()
+	$Timer.start()
+	yield($Timer, "timeout")
+	$Music/Bernard.stop()
+	$TransitionScreen.transition()
