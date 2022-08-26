@@ -49,7 +49,6 @@ stream = ExtResource( 13 )
 bus = "COMMENTAIRES"
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 2.0
 one_shot = true
 __meta__ = {
 "_editor_description_": "Timer used to show and hide overlays."

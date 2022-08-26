@@ -40,11 +40,11 @@ func _ready():
 
 	# wait, display Fight.tscn, wait again, remove it
 
-	$Timer.start()
+	$Timer.start(2)
 	yield($Timer, "timeout")
 	var fight = preload("res://SCENES/Fight.tscn").instance()
 	add_child(fight)
-	$Timer.start()
+	$Timer.start(2)
 	yield($Timer, "timeout")
 	fight.queue_free()
 
@@ -121,10 +121,10 @@ func game_over():
 	stop_game()
 	var ko = preload("res://SCENES/Ko.tscn").instance()
 	add_child(ko)
-	$Timer.start()
+	$Timer.start(2)
 	yield($Timer, "timeout")
 	ko.queue_free()
-	$Timer.start(1) #Timer exceptionally set to 1"
+	$Timer.start(1)
 	yield($Timer, "timeout")
 	$Music/Bernard.stop()
 	$TransitionScreen.transition()
