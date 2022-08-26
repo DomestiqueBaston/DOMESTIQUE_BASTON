@@ -166,9 +166,9 @@ func _input(event):
 	if Input.is_action_pressed(my_actions[B]):
 		if Input.is_action_pressed(my_actions[FORWARD]):
 			if Input.is_action_pressed(my_actions[UP]):
-				play_animation("Insult")
-				var audio_name = "InsultPlayer" + (randi() % 3 + 1) as String
-				get_node(audio_name).play()
+				if play_animation("Insult"):
+					var audio_name = "InsultPlayer" + str(randi() % 3 + 1)
+					get_node(audio_name).play()
 			elif Input.is_action_pressed(my_actions[DOWN]):
 				play_animation("Slash")
 			else:
@@ -246,14 +246,15 @@ func _physics_process(delta):
 ## last_animation, last_animation_end_time and animation_repeat_count.
 ##
 ## If the given animation is an attack, and the player has already used the same
-## attack twice in a row, the attack is ignored. The player can use the attack
-## again after taking a hit (anim_name Get_hit) or making a defensive move.
+## attack twice in a row, the attack is ignored and false is returned. The
+## player can use the attack again after taking a hit (anim_name Get_hit) or
+## making a defensive move.
 ##
 func play_animation(anim_name):
 	if last_animation == anim_name:
 		animation_repeat_count += 1
 		if animation_repeat_count > 2 && get_damage_for_attack(anim_name) > 0:
-			return
+			return false
 	else:
 		last_animation = anim_name
 		animation_repeat_count = 1
@@ -262,6 +263,7 @@ func play_animation(anim_name):
 	yield(anim_node, "animation_finished")
 	busy = false
 	last_animation_end_time = OS.get_ticks_msec()
+	return true
 
 func _on_opponent_animation_finished(anim_name):
 	if attack_processed:
