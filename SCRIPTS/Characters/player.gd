@@ -78,6 +78,10 @@ var last_animation
 # the time in milliseconds when last_animation finished
 var last_animation_end_time
 
+# how many times in a row the current animation has played
+var animation_repeat_count = 1
+
+##
 ## Note that the player will Idle until start() is called.
 ##
 func _ready():
@@ -103,6 +107,7 @@ func _ready():
 	anim_node.get_animation("Idle").loop = true
 	anim_node.play("Idle")
 
+##
 ## Start playing. Until this is called, input events and physics are disabled.
 ##
 func start():
@@ -128,6 +133,7 @@ func is_defense_right_for_attack(defense, attack):
 	else:
 		return false
 
+##
 ## Returns the current frame number in the animation being played. This is the
 ## current animation position (in seconds) multiplied by 10, because the
 ## animation sequences are at 10 frames per second, so it is a real number.
@@ -233,16 +239,28 @@ func _physics_process(delta):
 		set_collision_layer(save_layer)
 		set_collision_mask(save_mask)
 
+##
 ## Call this to trigger an animation other than walking or idle. It starts the
 ## animation (if it not playing already) and sets the busy flag, which will be
-## reset when the animation finishes.
+## reset when the animation finishes. It also updates the variables
+## last_animation, last_animation_end_time and animation_repeat_count.
+##
+## If the given animation is an attack, and the player has already used the same
+## attack twice in a row, the attack is ignored. The player can use the attack
+## again after taking a hit (anim_name Get_hit) or making a defensive move.
 ##
 func play_animation(anim_name):
+	if last_animation == anim_name:
+		animation_repeat_count += 1
+		if animation_repeat_count > 2 && get_damage_for_attack(anim_name) > 0:
+			return
+	else:
+		last_animation = anim_name
+		animation_repeat_count = 1
 	anim_node.play(anim_name)
 	busy = true
 	yield(anim_node, "animation_finished")
 	busy = false
-	last_animation = anim_name
 	last_animation_end_time = OS.get_ticks_msec()
 
 func _on_opponent_animation_finished(anim_name):
@@ -290,6 +308,7 @@ func _on_defense_hit(_area_rid, _area, _area_shape_index, _local_shape_index):
 			play_miss_effect()
 		check_for_second_parry()
 
+##
 ## If the last animation was a Parry, and the current Parry started less than
 ## half a second later, push the opponent backwards. (It is assumed that the
 ## current action is also a Parry, and that we just took or thwarted a hit.)
@@ -301,12 +320,14 @@ func check_for_second_parry():
 		if start_time - last_animation_end_time < 500:
 			opponent_node.retreat(parry_push_back)
 
+##
 ## Causes the player to retreat by the given distance (in pixels).
 ##
 func retreat(dist):
 	remaining_retreat_distance += dist
 	pass
 
+##
 ## Adds an instance of the given scene to the tree at the given position, then
 ## deletes it when its AnimationPlayer has finished (it is assumed that the
 ## AnimationPlayer autoplays). Note that the scene is flipped in X for player
@@ -340,6 +361,7 @@ func play_insult_miss_effect():
 		preload("res://SCENES/Insult_Miss_Effect.tscn"),
 		get_node("Area2D_Defense/DefenseCollider").global_position)
 
+##
 ## Subtracts the given number of points from the player's energy level.
 ## Triggers the Get_hit animation unless the player is in the middle of a jump
 ## (in the air) or a crouch (on the ground). In either of those cases, the
