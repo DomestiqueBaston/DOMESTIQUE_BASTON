@@ -26,12 +26,12 @@ func _ready():
 		player1_portrait_index = 1
 
 	player1.player_number = Player.ONE
-	player1.position = Vector2(64, 108)
+	player1.position = Vector2(74, 108)
 	player1.scale = Vector2(1, 1)
 	player1.connect("energy_changed", get_node("UI/Left"), "set_energy_level")
 
 	player2.player_number = Player.TWO
-	player2.position = Vector2(217, 108)
+	player2.position = Vector2(227, 108)
 	player2.scale = Vector2(-1, 1)
 	player2.connect("energy_changed", get_node("UI/Right"), "set_energy_level")
 
