@@ -124,7 +124,7 @@ func game_over():
 	$Timer.start()
 	yield($Timer, "timeout")
 	ko.queue_free()
-	$Timer.start()
+	$Timer.start(1) #Timer exceptionally set to 1"
 	yield($Timer, "timeout")
 	$Music/Bernard.stop()
 	$TransitionScreen.transition()
