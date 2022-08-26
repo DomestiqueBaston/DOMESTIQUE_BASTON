@@ -3,7 +3,7 @@ extends Node2D
 var baston = preload("res://SCENES/BASTON.tscn")
 var retour = preload("res://SCENES/Start_Screen.tscn")
 var next_screen
-var cds = ""
+var cds
 var ignore_input = false
 
 func _input(event):
@@ -36,20 +36,10 @@ func _input(event):
 		$TransitionScreen.transition()
 		
 	elif event.is_action_pressed('P1_x') or event.is_action_pressed('P2_x'):
-		if cds == CharacterSelectionManager.player1:
-			play_cancel()
-			hide_cds()
-		elif cds.empty():
-			play_validation()
-			show_cds(CharacterSelectionManager.player1)
+		toggle_cds(CharacterSelectionManager.player1)
 		
 	elif event.is_action_pressed('P1_y') or event.is_action_pressed('P2_y'):
-		if cds == CharacterSelectionManager.player2:
-			play_cancel()
-			hide_cds()
-		elif cds.empty():
-			play_validation()
-			show_cds(CharacterSelectionManager.player2)
+		toggle_cds(CharacterSelectionManager.player2)
 		
 	elif PreloadScript01.is_key_or_button_press(event):
 		ignore_input = true
@@ -57,13 +47,17 @@ func _input(event):
 		play_cancel()
 		$TransitionScreen.transition()
 
-func show_cds(who):
-	cds = who
-	$Moulue_cds.modulate.a = 1 if who == "Moulue" else 0
-	$Couillu_cds.modulate.a = 1 if who == "Couillu" else 0
-
-func hide_cds():
-	show_cds("")
+func toggle_cds(who):
+	if not cds:
+		cds = who
+		play_validation()
+		$Moulue_cds.modulate.a = 1 if who == "Moulue" else 0
+		$Couillu_cds.modulate.a = 1 if who == "Couillu" else 0
+	elif cds == who:
+		cds = null
+		play_cancel()
+		$Moulue_cds.modulate.a = 0
+		$Couillu_cds.modulate.a = 0
 
 func _on_TransitionScreen_transitioned():
 	var _err = get_tree().change_scene_to(next_screen)
