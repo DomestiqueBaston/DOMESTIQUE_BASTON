@@ -54,20 +54,36 @@ func _ready():
 	player1.start()
 	player2.start()
 
-# The first time a player takes a hit, the neighbors start to complain.
-#
-func somebody_took_a_hit(_damage):
+##
+## The first time either player takes a hit, the neighbors start to complain.
+##
+func somebody_took_a_hit():
 	if state == SILENCE:
 		$Commentaires_des_voisins_01.play()
 		state = CHATTER1
 
-# When the first stream of complaints finishes, the second stream begins and
-# loops.
-#
+##
+## When the first stream of complaints finishes, the second stream begins and
+## loops.
+##
 func initial_chatter_finished():
 	if state == CHATTER1:
 		$Commentaires_des_voisins_02.play()
 		state = CHATTER2
+
+func moulue_took_a_hit(_damage):
+	somebody_took_a_hit()
+	if CharacterSelectionManager.player1 == "Moulue":
+		get_node("UI/Left").flash_energy_bar()
+	else:
+		get_node("UI/Right").flash_energy_bar()
+
+func couillu_took_a_hit(_damage):
+	somebody_took_a_hit()
+	if CharacterSelectionManager.player1 == "Couillu":
+		get_node("UI/Left").flash_energy_bar()
+	else:
+		get_node("UI/Right").flash_energy_bar()
 
 func _input(event):
 	if PreloadScript01.handle_input_event(event):

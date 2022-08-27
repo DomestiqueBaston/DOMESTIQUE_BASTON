@@ -7,6 +7,10 @@ const POS0 = 96.5
 const SIZE = 95
 
 onready var energy_mask = get_node("Frame_right/Energy_mask_right")
+onready var flasher = get_node("Frame_right/Flasher")
 
 func set_energy_level(energy):
 	energy_mask.position.x = POS0 + round(energy * SIZE)
+
+func flash_energy_bar():
+	flasher.play("Flash")

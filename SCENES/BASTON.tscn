@@ -54,9 +54,9 @@ __meta__ = {
 "_editor_description_": "Timer used to show and hide overlays."
 }
 
-[connection signal="energy_changed" from="Couillu" to="." method="somebody_took_a_hit" flags=6]
+[connection signal="energy_changed" from="Couillu" to="." method="couillu_took_a_hit"]
 [connection signal="knockout" from="Couillu" to="." method="_on_couillu_ko"]
-[connection signal="energy_changed" from="Moulue" to="." method="somebody_took_a_hit" flags=6]
+[connection signal="energy_changed" from="Moulue" to="." method="moulue_took_a_hit"]
 [connection signal="knockout" from="Moulue" to="." method="_on_moulue_ko"]
 [connection signal="finished" from="Commentaires_des_voisins_01" to="." method="initial_chatter_finished" flags=6]
 [connection signal="transitioned" from="TransitionScreen" to="." method="_on_TransitionScreen_transitioned"]
