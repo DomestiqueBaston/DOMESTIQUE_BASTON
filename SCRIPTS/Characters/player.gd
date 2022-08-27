@@ -155,7 +155,7 @@ func _input(event):
 	if busy:
 		var can_interrupt = false
 		if anim_node.current_animation == "Trick":
-			can_interrupt = true
+			can_interrupt = (current_anim_frame() >= 4)
 		elif anim_node.current_animation == "Get_hit":
 			can_interrupt = (current_anim_frame() >= 4)
 		if not can_interrupt:
