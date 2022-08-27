@@ -69,6 +69,9 @@ var busy = false
 # true => opponent's move has been detected and either hit home or thwarted
 var attack_processed = false
 
+# true => this player's attacks cannot be thwarted (temporarily)
+var irresistible = false
+
 # distance player has to retreat as a result of a recent hit
 var remaining_retreat_distance = 0
 
@@ -264,12 +267,18 @@ func play_animation(anim_name):
 func _on_opponent_animation_finished(_anim_name):
 	attack_processed = false
 
+##
+## Callback invoked when the other player's attack collider hits this player's
+## body collider (we've been hit).
+##
 func _on_body_hit(_area_rid, _area, _area_shape_index, _local_shape_index):
 	if attack_processed:
 		return
+
 	attack_processed = true
 	var attack = opponent_anim_node.current_animation
 	var damage = get_damage_for_attack(attack)
+
 	if damage > 0:
 		var defense = anim_node.current_animation
 		take_hit(damage)
@@ -281,23 +290,42 @@ func _on_body_hit(_area_rid, _area, _area_shape_index, _local_shape_index):
 		if defense == "Parry":
 			check_for_second_parry()
 
+##
+## Callback invoked when the other player's attack collider hits this player's
+## defense collider (we've blocked an attack).
+##
 func _on_defense_hit(_area_rid, _area, _area_shape_index, _local_shape_index):
-	if attack_processed:
+	if attack_processed or opponent_node.irresistible:
 		return
+
 	attack_processed = true
 	var attack = opponent_anim_node.current_animation
 	var defense = anim_node.current_animation
-	if not is_defense_right_for_attack(defense, attack):
-		var damage = get_damage_for_attack(attack) / 2
-		take_hit(damage)
-		if attack != "Insult":
-			retreat(retreat_distance / 2.0)
+
 	if defense == "Parry":
 		if attack == "Insult":
 			play_insult_miss_effect()
 		else:
 			play_miss_effect()
 		check_for_second_parry()
+
+	if is_defense_right_for_attack(defense, attack):
+		yield(anim_node, "finished")
+		var auto_attack
+		if defense == "Crouch":
+			auto_attack = "Slap"
+		elif defense == "Jump":
+			auto_attack = "Kick"
+		if auto_attack:
+			play_animation(auto_attack)
+			irresistible = true
+			yield(anim_node, "finished")
+			irresistible = false
+	else:
+		var damage = get_damage_for_attack(attack) / 2
+		take_hit(damage)
+		if attack != "Insult":
+			retreat(retreat_distance / 2.0)
 
 ##
 ## If the last animation was a Parry, and the current Parry started less than
@@ -316,7 +344,6 @@ func check_for_second_parry():
 ##
 func retreat(dist):
 	remaining_retreat_distance += dist
-	pass
 
 ##
 ## Adds an instance of the given scene to the tree at the given position, then
