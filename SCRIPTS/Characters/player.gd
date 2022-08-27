@@ -310,7 +310,7 @@ func _on_defense_hit(_area_rid, _area, _area_shape_index, _local_shape_index):
 		check_for_second_parry()
 
 	if is_defense_right_for_attack(defense, attack):
-		yield(anim_node, "finished")
+		yield(anim_node, "animation_finished")
 		var auto_attack
 		if defense == "Crouch":
 			auto_attack = "Slap"
@@ -319,7 +319,7 @@ func _on_defense_hit(_area_rid, _area, _area_shape_index, _local_shape_index):
 		if auto_attack:
 			play_animation(auto_attack)
 			irresistible = true
-			yield(anim_node, "finished")
+			yield(anim_node, "animation_finished")
 			irresistible = false
 	else:
 		var damage = get_damage_for_attack(attack) / 2
