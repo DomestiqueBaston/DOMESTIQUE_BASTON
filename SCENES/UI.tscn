@@ -70,6 +70,14 @@ mode = 3
 range_item_cull_mask = 512
 shadow_item_cull_mask = 512
 
+[node name="Energy_flash_left" type="Sprite" parent="Left/Frame_left"]
+visible = false
+light_mask = 512
+position = Vector2( 48, 4 )
+z_index = 665
+texture = ExtResource( 11 )
+centered = false
+
 [node name="Energy_mask_left" type="Light2D" parent="Left/Frame_left"]
 light_mask = 512
 position = Vector2( 191.5, 6.5 )
@@ -78,14 +86,6 @@ texture = ExtResource( 6 )
 mode = 3
 range_item_cull_mask = 512
 shadow_item_cull_mask = 512
-
-[node name="Energy_flash_left" type="Sprite" parent="Left/Frame_left"]
-visible = false
-light_mask = 0
-position = Vector2( 48, 4 )
-z_index = 665
-texture = ExtResource( 11 )
-centered = false
 
 [node name="Flasher" type="AnimationPlayer" parent="Left/Frame_left"]
 anims/Flash = SubResource( 1 )
@@ -124,6 +124,13 @@ mode = 3
 range_item_cull_mask = 16
 shadow_item_cull_mask = 16
 
+[node name="Energy_flash_right" type="Sprite" parent="Right/Frame_right"]
+visible = false
+light_mask = 16
+position = Vector2( 48, 4 )
+texture = ExtResource( 11 )
+centered = false
+
 [node name="Energy_mask_right" type="Light2D" parent="Right/Frame_right"]
 light_mask = 16
 position = Vector2( 191.5, 6.5 )
@@ -132,13 +139,6 @@ texture = ExtResource( 6 )
 mode = 3
 range_item_cull_mask = 16
 shadow_item_cull_mask = 16
-
-[node name="Energy_flash_right" type="Sprite" parent="Right/Frame_right"]
-visible = false
-light_mask = 0
-position = Vector2( 48, 4 )
-texture = ExtResource( 11 )
-centered = false
 
 [node name="Flasher" type="AnimationPlayer" parent="Right/Frame_right"]
 anims/Flash = SubResource( 2 )
