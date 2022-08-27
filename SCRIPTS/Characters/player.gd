@@ -149,17 +149,13 @@ func _input(event):
 		return
 
 	# most actions cannot be interrupted, but there are two exceptions: Trick
-	# can always be interrupted, and Get_hit can be interrupted starting at
-	# frame 4 of the animation
+	# and Get_hit can be interrupted starting at frame 4 of their respective
+	# animations
 
-	if busy:
-		var can_interrupt = false
-		if anim_node.current_animation == "Trick":
-			can_interrupt = (current_anim_frame() >= 4)
-		elif anim_node.current_animation == "Get_hit":
-			can_interrupt = (current_anim_frame() >= 4)
-		if not can_interrupt:
-			return
+	if (busy
+		and (not anim_node.current_animation in [ "Trick", "Get_hit" ]
+			 or current_anim_frame() < 4)):
+		return
 
 	var my_actions = ui_actions[player_number]
 
@@ -258,7 +254,6 @@ func play_animation(anim_name):
 	else:
 		last_animation = anim_name
 		animation_repeat_count = 1
-	print(name, ": ", anim_name, ' ', animation_repeat_count)
 	anim_node.play(anim_name)
 	busy = true
 	yield(anim_node, "animation_finished")
@@ -266,11 +261,8 @@ func play_animation(anim_name):
 	last_animation_end_time = OS.get_ticks_msec()
 	return true
 
-func _on_opponent_animation_finished(anim_name):
-	if attack_processed:
-		attack_processed = false
-#	elif get_damage_for_attack(anim_name) > 0:
-#		print(name, " was NOT hit by ", anim_name)
+func _on_opponent_animation_finished(_anim_name):
+	attack_processed = false
 
 func _on_body_hit(_area_rid, _area, _area_shape_index, _local_shape_index):
 	if attack_processed:
@@ -280,7 +272,6 @@ func _on_body_hit(_area_rid, _area, _area_shape_index, _local_shape_index):
 	var damage = get_damage_for_attack(attack)
 	if damage > 0:
 		var defense = anim_node.current_animation
-		#print(name, " was hit by ", attack, ", damage: ", damage, " points")
 		take_hit(damage)
 		if attack == "Insult":
 			play_insult_hit_effect()
@@ -296,12 +287,8 @@ func _on_defense_hit(_area_rid, _area, _area_shape_index, _local_shape_index):
 	attack_processed = true
 	var attack = opponent_anim_node.current_animation
 	var defense = anim_node.current_animation
-	if is_defense_right_for_attack(defense, attack):
-		#print(name, " thwarted ", attack, ", no damage")
-		pass
-	else:
+	if not is_defense_right_for_attack(defense, attack):
 		var damage = get_damage_for_attack(attack) / 2
-		#print(name, " thwarted ", attack, ", damage: ", damage, " points")
 		take_hit(damage)
 		if attack != "Insult":
 			retreat(retreat_distance / 2.0)
