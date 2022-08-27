@@ -11,6 +11,4 @@ onready var flasher = get_node("Frame_left/Flasher")
 
 func set_energy_level(energy):
 	energy_mask.position.x = POS0 + round(energy * SIZE)
-
-func flash_energy_bar():
 	flasher.play("Flash")
