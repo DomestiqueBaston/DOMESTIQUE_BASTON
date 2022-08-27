@@ -258,6 +258,7 @@ func play_animation(anim_name):
 	else:
 		last_animation = anim_name
 		animation_repeat_count = 1
+	print(name, ": ", anim_name, ' ', animation_repeat_count)
 	anim_node.play(anim_name)
 	busy = true
 	yield(anim_node, "animation_finished")
@@ -268,8 +269,8 @@ func play_animation(anim_name):
 func _on_opponent_animation_finished(anim_name):
 	if attack_processed:
 		attack_processed = false
-	elif get_damage_for_attack(anim_name) > 0:
-		print(name, " was NOT hit by ", anim_name)
+#	elif get_damage_for_attack(anim_name) > 0:
+#		print(name, " was NOT hit by ", anim_name)
 
 func _on_body_hit(_area_rid, _area, _area_shape_index, _local_shape_index):
 	if attack_processed:
@@ -279,7 +280,7 @@ func _on_body_hit(_area_rid, _area, _area_shape_index, _local_shape_index):
 	var damage = get_damage_for_attack(attack)
 	if damage > 0:
 		var defense = anim_node.current_animation
-		print(name, " was hit by ", attack, ", damage: ", damage, " points")
+		#print(name, " was hit by ", attack, ", damage: ", damage, " points")
 		take_hit(damage)
 		if attack == "Insult":
 			play_insult_hit_effect()
@@ -296,10 +297,11 @@ func _on_defense_hit(_area_rid, _area, _area_shape_index, _local_shape_index):
 	var attack = opponent_anim_node.current_animation
 	var defense = anim_node.current_animation
 	if is_defense_right_for_attack(defense, attack):
-		print(name, " thwarted ", attack, ", no damage")
+		#print(name, " thwarted ", attack, ", no damage")
+		pass
 	else:
 		var damage = get_damage_for_attack(attack) / 2
-		print(name, " thwarted ", attack, ", damage: ", damage, " points")
+		#print(name, " thwarted ", attack, ", damage: ", damage, " points")
 		take_hit(damage)
 		if attack != "Insult":
 			retreat(retreat_distance / 2.0)
