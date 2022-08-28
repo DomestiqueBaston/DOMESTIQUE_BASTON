@@ -11,6 +11,4 @@ Depending on the time and energy we have when "v1.0" is released, we'll eventual
 
 The team
 
-
-
 P.S.: **Assets** are published under **Creative Commons Attribution_NonCommercial_ShareAlike v4.0 International Licence** and **code** under **GNU General Public License v3.0 (GPL) licence**.
