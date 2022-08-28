@@ -3666,6 +3666,7 @@ disabled = true
 [node name="Area2D_Defense" type="Area2D" parent="."]
 collision_layer = 64
 collision_mask = 2
+priority = 1.0
 
 [node name="DefenseCollider" type="CollisionShape2D" parent="Area2D_Defense"]
 position = Vector2( 11, -34 )
