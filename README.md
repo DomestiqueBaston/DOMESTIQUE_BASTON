@@ -10,3 +10,7 @@ It's planned to be released as a free/open source project by good willing people
 Depending on the time and energy we have when "v1.0" is released, we'll eventually add features to that game but, and that's the point of the open source thing, don't wait for us and feel free to add whatever you want to that game. We'd be thrilled to see what you'd come up with...
 
 The team
+
+
+
+P.S.: **Assets** are published under **Creative Commons Attribution_NonCommercial_ShareAlike v4.0 International Licence** and **code** under **GNU General Public License v3.0 (GPL) licence**.
