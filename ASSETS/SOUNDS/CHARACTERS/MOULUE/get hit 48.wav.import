@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/get hit 48.wav-bbe20fcc9d60c16ebbcab2eefe66366d.sample"
+
+[deps]
+
+source_file="res://ASSETS/SOUNDS/CHARACTERS/MOULUE/get hit 48.wav"
+dest_files=[ "res://.import/get hit 48.wav-bbe20fcc9d60c16ebbcab2eefe66366d.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/jump 48.wav-a89725f25362dbbf72d4a29f7ef2cc0d.sample"
+
+[deps]
+
+source_file="res://ASSETS/SOUNDS/CHARACTERS/MOULUE/jump 48.wav"
+dest_files=[ "res://.import/jump 48.wav-a89725f25362dbbf72d4a29f7ef2cc0d.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

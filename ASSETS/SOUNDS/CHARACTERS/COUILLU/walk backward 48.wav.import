@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/walk backward 48.wav-1dfc6255ca60b68562818b39b520f800.sample"
+
+[deps]
+
+source_file="res://ASSETS/SOUNDS/CHARACTERS/COUILLU/walk backward 48.wav"
+dest_files=[ "res://.import/walk backward 48.wav-1dfc6255ca60b68562818b39b520f800.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

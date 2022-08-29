@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/walk 48.wav-ff5b4433fec6c03156b1462ea26c1d2e.sample"
+
+[deps]
+
+source_file="res://ASSETS/SOUNDS/CHARACTERS/MOULUE/walk 48.wav"
+dest_files=[ "res://.import/walk 48.wav-ff5b4433fec6c03156b1462ea26c1d2e.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

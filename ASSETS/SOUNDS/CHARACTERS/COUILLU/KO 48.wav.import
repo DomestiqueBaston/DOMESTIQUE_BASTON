@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/KO 48.wav-537315e0097138e59b09a5d1d6a1c9e3.sample"
+
+[deps]
+
+source_file="res://ASSETS/SOUNDS/CHARACTERS/COUILLU/KO 48.wav"
+dest_files=[ "res://.import/KO 48.wav-537315e0097138e59b09a5d1d6a1c9e3.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

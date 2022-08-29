@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/trick 48.wav-982bbeb60727b97ab0ab8d1259dd7f5c.sample"
+
+[deps]
+
+source_file="res://ASSETS/SOUNDS/CHARACTERS/COUILLU/trick 48.wav"
+dest_files=[ "res://.import/trick 48.wav-982bbeb60727b97ab0ab8d1259dd7f5c.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

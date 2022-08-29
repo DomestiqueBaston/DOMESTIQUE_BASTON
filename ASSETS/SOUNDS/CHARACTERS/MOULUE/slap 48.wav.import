@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/slap 48.wav-5c11dbebb849a6f4c478678fb88a97cb.sample"
+
+[deps]
+
+source_file="res://ASSETS/SOUNDS/CHARACTERS/MOULUE/slap 48.wav"
+dest_files=[ "res://.import/slap 48.wav-5c11dbebb849a6f4c478678fb88a97cb.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
