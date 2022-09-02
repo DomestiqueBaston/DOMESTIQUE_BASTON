@@ -24,6 +24,16 @@ export var parry_push_back = 25
 ## Energy points the player starts out with.
 export var initial_energy = 100
 
+## When transitioning from a Crouch to a Slap auto-attack, stop the Crouch
+## animation at frame A and start the Slap animation at frame B, where A and B
+## are the two array elements.
+export var crouch_to_slap_frames = [ 6, 3 ]
+
+## When transitioning from a Jump to a Kick auto-attack, stop the Jump
+## animation at frame A and start the Kick animation at frame B, where A and B
+## are the two array elements.
+export var jump_to_kick_frames = [ 10, 4 ]
+
 ## Signal emitted when the player's energy level changes. Passes a single
 ## argument whose value is between 0 (dead) and 1.
 signal energy_changed
@@ -84,6 +94,9 @@ var last_animation_end_time
 # how many times in a row the current animation has played
 var animation_repeat_count = 1
 
+# animations are at 10 frames per second
+const FPS = 10.0
+
 ##
 ## Note that the player will Idle until start() is called.
 ##
@@ -138,11 +151,11 @@ func is_defense_right_for_attack(defense, attack):
 
 ##
 ## Returns the current frame number in the animation being played. This is the
-## current animation position (in seconds) multiplied by 10, because the
-## animation sequences are at 10 frames per second, so it is a real number.
+## current animation position (in seconds) multiplied by FPS, because the
+## animation sequences are at FPS frames per second, so it is a real number.
 ##
 func current_anim_frame():
-	return anim_node.current_animation_position * 10
+	return anim_node.current_animation_position * FPS
 
 func _input(event):
 	
@@ -310,17 +323,29 @@ func _on_defense_hit(_area_rid, _area, _area_shape_index, _local_shape_index):
 		check_for_second_parry()
 
 	if is_defense_right_for_attack(defense, attack):
-		yield(anim_node, "animation_finished")
 		var auto_attack
+		var stop_start_frames
+
 		if defense == "Crouch":
 			auto_attack = "Slap"
+			stop_start_frames = crouch_to_slap_frames
 		elif defense == "Jump":
 			auto_attack = "Kick"
+			stop_start_frames = jump_to_kick_frames
+
 		if auto_attack:
+			var anim = anim_node.get_animation(defense)
+			var saved_length = anim.length
+			anim.length = stop_start_frames[0] / FPS
+			yield(anim_node, "animation_finished")
+			anim.length = saved_length
+
 			play_animation(auto_attack)
+			anim_node.seek(stop_start_frames[1] / FPS)
 			irresistible = true
 			yield(anim_node, "animation_finished")
 			irresistible = false
+
 	else:
 		var damage = get_damage_for_attack(attack) / 2
 		take_hit(damage)

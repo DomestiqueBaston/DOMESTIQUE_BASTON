@@ -3639,6 +3639,8 @@ player_number = 1
 forward_speed = 65
 backward_speed = 40
 initial_energy = 120
+crouch_to_slap_frames = [ 7, 2 ]
+jump_to_kick_frames = [ 8, 1 ]
 
 [node name="MoveCollider" type="CollisionShape2D" parent="."]
 position = Vector2( 4, -36 )
