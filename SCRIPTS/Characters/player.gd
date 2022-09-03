@@ -24,6 +24,15 @@ export var parry_push_back = 25
 ## Energy points the player starts out with.
 export var initial_energy = 100
 
+## Damage wreaked by a successful attack.
+export var attack_damage = {
+	"Slap": 4,
+	"Punch": 8,
+	"Kick": 14,
+	"Slash": 22,
+	"Insult": 6
+}
+
 ## When transitioning from a Crouch to a Slap auto-attack, stop the Crouch
 ## animation at frame A and start the Slap animation at frame B, where A and B
 ## are the two array elements.
@@ -51,15 +60,6 @@ var ui_actions = [
 	[ "P1_right", "P1_left", "P1_up", "P1_down", "P1_a", "P1_b"],
 	[ "P2_left", "P2_right", "P2_up", "P2_down", "P2_a", "P2_b"],
 ]
-
-# damage wreaked by a successful attack
-var attack_damage = {
-	"Slap": 4,
-	"Punch": 8,
-	"Kick": 14,
-	"Slash": 22,
-	"Insult": 6
-}
 
 # this player's AnimationPlayer node
 var anim_node
