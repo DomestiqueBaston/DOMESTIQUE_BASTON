@@ -33,6 +33,9 @@ export var attack_damage = {
 	"Insult": 6
 }
 
+## Damage wreaked by an auto-attack following a successful Crouch or Jump.
+export var auto_attack_damage = 30
+
 ## When transitioning from a Crouch to a Slap auto-attack, stop the Crouch
 ## animation at frame A and start the Slap animation at frame B, where A and B
 ## are the two array elements.
@@ -294,6 +297,8 @@ func _on_body_hit(_area_rid, _area, _area_shape_index, _local_shape_index):
 
 	if damage > 0:
 		var defense = anim_node.current_animation
+		if opponent_node.irresistible:
+			damage = auto_attack_damage
 		take_hit(damage)
 		if attack == "Insult":
 			play_insult_hit_effect()
