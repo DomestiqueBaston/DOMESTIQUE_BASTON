@@ -24,7 +24,7 @@ export var parry_push_back = 25
 ## Energy points the player starts out with.
 export var initial_energy = 100
 
-## Damage wreaked by a successful attack.
+## Damage wreaked on this player by a successful attack from the opponent.
 export var attack_damage = {
 	"Slap": 4,
 	"Punch": 8,
@@ -33,7 +33,8 @@ export var attack_damage = {
 	"Insult": 6
 }
 
-## Damage wreaked by an auto-attack following a successful Crouch or Jump.
+## Damage wreaked on this player by an auto-attack following a successful
+## Crouch or Jump from the opponent.
 export var auto_attack_damage = 30
 
 ## When transitioning from a Crouch to a Slap auto-attack, stop the Crouch

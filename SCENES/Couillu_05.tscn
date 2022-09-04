@@ -3639,13 +3639,6 @@ player_number = 1
 forward_speed = 65
 backward_speed = 40
 initial_energy = 120
-attack_damage = {
-"Insult": 8,
-"Kick": 18,
-"Punch": 10,
-"Slap": 6,
-"Slash": 26
-}
 crouch_to_slap_frames = [ 7, 2 ]
 jump_to_kick_frames = [ 8, 1 ]
 

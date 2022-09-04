@@ -3648,6 +3648,13 @@ collision_layer = 8
 collision_mask = 384
 script = ExtResource( 3 )
 backward_speed = 45
+attack_damage = {
+"Insult": 8,
+"Kick": 18,
+"Punch": 10,
+"Slap": 6,
+"Slash": 26
+}
 
 [node name="MoveCollider" type="CollisionShape2D" parent="."]
 position = Vector2( 4, -36 )
