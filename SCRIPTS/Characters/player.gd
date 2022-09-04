@@ -12,13 +12,15 @@ export var forward_speed = 75
 ## Backward walking speed in pixels/second.
 export var backward_speed = 50
 
-## Distance player is pushed backwards by a successful attack.
+## Distance player is pushed backwards by a successful attack from the opponent
+## (other than an Insult).
 export var retreat_distance = 10
 
-## Speed at which player retreats after a successful attack, in pixels/second.
+## Speed at which player retreats after a successful attack from the opponent,
+## in pixels/second.
 export var retreat_speed = 100
 
-## Distance opponent is pushed backwards if player parries twice in a row.
+## Distance opponent is pushed backwards if this player parries twice in a row.
 export var parry_push_back = 25
 
 ## Energy points the player starts out with.
@@ -128,7 +130,8 @@ func _ready():
 	anim_node.play("Idle")
 
 ##
-## Start playing. Until this is called, input events and physics are disabled.
+## Start playing. Until this is called, input event processing and physics
+## processing are disabled.
 ##
 func start():
 	anim_node.get_animation("Idle").loop = false
@@ -156,7 +159,7 @@ func is_defense_right_for_attack(defense, attack):
 ##
 ## Returns the current frame number in the animation being played. This is the
 ## current animation position (in seconds) multiplied by FPS, because the
-## animation sequences are at FPS frames per second, so it is a real number.
+## animation sequences are at FPS frames per second, so it is a float.
 ##
 func current_anim_frame():
 	return anim_node.current_animation_position * FPS
@@ -256,9 +259,9 @@ func _physics_process(delta):
 		set_collision_mask(save_mask)
 
 ##
-## Call this to trigger an animation other than walking or idle. It starts the
-## animation (if it not playing already) and sets the busy flag, which will be
-## reset when the animation finishes. It also updates the variables
+## Call this to trigger an animation other than walking or idling. It starts the
+## animation (if it is not playing already) and sets the busy flag, which will
+## be reset when the animation finishes. It also updates the variables
 ## last_animation, last_animation_end_time and animation_repeat_count.
 ##
 ## If the given animation is an attack, and the player has already used the same
@@ -380,7 +383,7 @@ func retreat(dist):
 ## Adds an instance of the given scene to the tree at the given position, then
 ## deletes it when its AnimationPlayer has finished (it is assumed that the
 ## AnimationPlayer autoplays). Note that the scene is flipped in X for player
-## one.
+## ONE.
 ##
 func play_effect_once(scene, pos):
 	var effect = scene.instance()
