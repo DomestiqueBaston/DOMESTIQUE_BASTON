@@ -3711,7 +3711,7 @@ anims/Trick = SubResource( 13 )
 anims/Walk_backward = SubResource( 5 )
 anims/Walk_forward = SubResource( 3 )
 
-[node name="FXs" type="AudioStreamPlayer2D" parent="."]
+[node name="FXs" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 12 )
 bus = "BRUITAGES"
 

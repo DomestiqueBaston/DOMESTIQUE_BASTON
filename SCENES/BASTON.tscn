@@ -18,7 +18,7 @@
 script = ExtResource( 6 )
 portraits = [ ExtResource( 7 ), ExtResource( 2 ) ]
 
-[node name="AudioCancel" type="AudioStreamPlayer2D" parent="."]
+[node name="AudioCancel" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 8 )
 bus = "BRUITAGES"
 
@@ -33,6 +33,13 @@ position = Vector2( 232, 108 )
 
 [node name="Moulue" parent="." instance=ExtResource( 9 )]
 position = Vector2( 49, 108 )
+attack_damage = {
+"Insult": 8,
+"Kick": 18,
+"Punch": 10,
+"Slap": 6,
+"Slash": 26
+}
 
 [node name="Commentaires_des_voisins_01" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 12 )

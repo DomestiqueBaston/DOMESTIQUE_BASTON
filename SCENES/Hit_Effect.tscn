@@ -61,7 +61,7 @@ autoplay = "Hit_Effect"
 anims/Hit_Effect = SubResource( 1 )
 anims/RESET = SubResource( 2 )
 
-[node name="Hit_Sound" type="AudioStreamPlayer2D" parent="."]
+[node name="Hit_Sound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 2 )
 autoplay = true
 bus = "BRUITAGES"

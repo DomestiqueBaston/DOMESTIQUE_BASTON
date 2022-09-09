@@ -39,27 +39,27 @@ animations = [ {
 [node name="Cornillaud" type="Node2D"]
 script = ExtResource( 1 )
 
-[node name="AudioValid" type="AudioStreamPlayer2D" parent="."]
+[node name="AudioValid" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 15 )
 bus = "BRUITAGES"
 
-[node name="AudioCancel" type="AudioStreamPlayer2D" parent="."]
+[node name="AudioCancel" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 16 )
 bus = "BRUITAGES"
 
-[node name="AudioSlide" type="AudioStreamPlayer2D" parent="."]
+[node name="AudioSlide" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 17 )
 bus = "BRUITAGES"
 
-[node name="AudioCounterSlide" type="AudioStreamPlayer2D" parent="."]
+[node name="AudioCounterSlide" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 22 )
 bus = "BRUITAGES"
 
-[node name="AudioWooow" type="AudioStreamPlayer2D" parent="."]
+[node name="AudioWooow" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 21 )
 bus = "BRUITAGES"
 
-[node name="AudioWooowDown" type="AudioStreamPlayer2D" parent="."]
+[node name="AudioWooowDown" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 20 )
 bus = "BRUITAGES"
 

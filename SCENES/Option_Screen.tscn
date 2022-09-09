@@ -38,19 +38,19 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="AudioCancel" type="AudioStreamPlayer2D" parent="Control"]
+[node name="AudioCancel" type="AudioStreamPlayer" parent="Control"]
 stream = ExtResource( 17 )
 bus = "BRUITAGES"
 
-[node name="AudioValid" type="AudioStreamPlayer2D" parent="Control"]
+[node name="AudioValid" type="AudioStreamPlayer" parent="Control"]
 stream = ExtResource( 16 )
 bus = "BRUITAGES"
 
-[node name="AudioWooow" type="AudioStreamPlayer2D" parent="Control"]
+[node name="AudioWooow" type="AudioStreamPlayer" parent="Control"]
 stream = ExtResource( 19 )
 bus = "BRUITAGES"
 
-[node name="AudioWooowDown" type="AudioStreamPlayer2D" parent="Control"]
+[node name="AudioWooowDown" type="AudioStreamPlayer" parent="Control"]
 stream = ExtResource( 18 )
 bus = "BRUITAGES"
 

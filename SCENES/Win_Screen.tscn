@@ -37,11 +37,11 @@ margin_right = 40.0
 margin_bottom = 40.0
 texture = ExtResource( 3 )
 
-[node name="Moulue_Sound" type="AudioStreamPlayer2D" parent="."]
+[node name="Moulue_Sound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 6 )
 bus = "BRUITAGES"
 
-[node name="Couillu_Sound" type="AudioStreamPlayer2D" parent="."]
+[node name="Couillu_Sound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 7 )
 bus = "BRUITAGES"
 

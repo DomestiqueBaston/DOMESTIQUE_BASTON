@@ -61,7 +61,7 @@ autoplay = "Miss_Effect"
 anims/Miss_Effect = SubResource( 1 )
 anims/RESET = SubResource( 2 )
 
-[node name="Miss_Sound" type="AudioStreamPlayer2D" parent="."]
+[node name="Miss_Sound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 2 )
 autoplay = true
 bus = "BRUITAGES"
