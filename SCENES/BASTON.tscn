@@ -33,13 +33,6 @@ position = Vector2( 232, 108 )
 
 [node name="Moulue" parent="." instance=ExtResource( 9 )]
 position = Vector2( 49, 108 )
-attack_damage = {
-"Insult": 8,
-"Kick": 18,
-"Punch": 10,
-"Slap": 6,
-"Slash": 26
-}
 
 [node name="Commentaires_des_voisins_01" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 12 )
