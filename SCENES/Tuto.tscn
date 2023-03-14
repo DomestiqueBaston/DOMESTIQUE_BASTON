@@ -1,0 +1,62 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://ASSETS/SOUNDS/EFFECTS/INTERFACE/validation.wav" type="AudioStream" id=1]
+[ext_resource path="res://SCRIPTS/World/Tuto.gd" type="Script" id=2]
+[ext_resource path="res://ASSETS/GRAPHICS/MISCS/Tuto/tuto_04.png" type="Texture" id=3]
+[ext_resource path="res://SCENES/Fade_scene.tscn" type="PackedScene" id=4]
+[ext_resource path="res://ASSETS/GRAPHICS/MISCS/Tuto/tuto_06.png" type="Texture" id=5]
+[ext_resource path="res://ASSETS/GRAPHICS/MISCS/Tuto/tuto_01.png" type="Texture" id=6]
+[ext_resource path="res://ASSETS/GRAPHICS/MISCS/Tuto/tuto_03.png" type="Texture" id=7]
+[ext_resource path="res://ASSETS/GRAPHICS/MISCS/Tuto/tuto_05.png" type="Texture" id=8]
+[ext_resource path="res://ASSETS/GRAPHICS/MISCS/Tuto/tuto_02.png" type="Texture" id=9]
+[ext_resource path="res://ASSETS/SOUNDS/EFFECTS/INTERFACE/cancel.wav" type="AudioStream" id=10]
+
+[node name="Tuto" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="AudioValidation" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 1 )
+bus = "BRUITAGES"
+
+[node name="AudioCancel" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 10 )
+bus = "BRUITAGES"
+
+[node name="Tuto_01" type="TextureRect" parent="."]
+margin_right = 305.0
+margin_bottom = 111.0
+texture = ExtResource( 6 )
+
+[node name="Tuto_02" type="TextureRect" parent="."]
+visible = false
+margin_right = 305.0
+margin_bottom = 111.0
+texture = ExtResource( 9 )
+
+[node name="Tuto_03" type="TextureRect" parent="."]
+visible = false
+margin_right = 305.0
+margin_bottom = 111.0
+texture = ExtResource( 7 )
+
+[node name="Tuto_04" type="TextureRect" parent="."]
+visible = false
+margin_right = 305.0
+margin_bottom = 111.0
+texture = ExtResource( 3 )
+
+[node name="Tuto_05" type="TextureRect" parent="."]
+visible = false
+margin_right = 305.0
+margin_bottom = 111.0
+texture = ExtResource( 8 )
+
+[node name="Tuto_06" type="TextureRect" parent="."]
+visible = false
+margin_right = 305.0
+margin_bottom = 111.0
+texture = ExtResource( 5 )
+
+[node name="TransitionScreen" parent="." instance=ExtResource( 4 )]
+
+[connection signal="transitioned" from="TransitionScreen" to="." method="_on_TransitionScreen_transitioned"]

@@ -1,6 +1,7 @@
 extends Control
 
 var reglons = "res://SCENES/Cornillaud.tscn"
+var tuto = "res://SCENES/Tuto.tscn"
 var changer = "res://SCENES/Option_Screen.tscn"
 var chasse = "res://SCENES/Credits.tscn"
 var choice = ""
@@ -47,12 +48,16 @@ func _input(event):
 			PreloadScript01.current_node = "0"
 			play_valid()
 		elif PreloadScript01.current_pos == 1:
-			choice = changer
+			choice = tuto
 			PreloadScript01.current_node = "1"
 			play_valid()
 		elif PreloadScript01.current_pos == 2:
-			choice = chasse
+			choice = changer
 			PreloadScript01.current_node = "2"
+			play_valid()
+		elif PreloadScript01.current_pos == 3:
+			choice = chasse
+			PreloadScript01.current_node = "3"
 			play_valid()
 		else:
 #			$AudioCancel.volume_db = PreloadScript01.bruitages_value
@@ -63,14 +68,14 @@ func _input(event):
 
 func check_current_boundaries():
 	if PreloadScript01.current_pos < 0:
-		PreloadScript01.current_pos = 3
-	elif PreloadScript01.current_pos > 3:
+		PreloadScript01.current_pos = 4
+	elif PreloadScript01.current_pos > 4:
 		PreloadScript01.current_pos = 0
 
 func check_previous_boundaries():
 	if PreloadScript01.previous_pos < 0:
-		PreloadScript01.previous_pos = 3
-	elif PreloadScript01.previous_pos > 3:
+		PreloadScript01.previous_pos = 4
+	elif PreloadScript01.previous_pos > 4:
 		PreloadScript01.previous_pos = 0
 
 func turn_on_off():

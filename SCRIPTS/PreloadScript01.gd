@@ -5,7 +5,7 @@ extends Node2D
 var current_pos := 0
 var previous_pos := 0
 var current_node := "0"
-var previous_node := "3"
+var previous_node := "4"
 
 #colors constants!
 const WHITE = Color(1,1,1,0)
