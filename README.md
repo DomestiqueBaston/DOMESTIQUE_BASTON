@@ -11,4 +11,4 @@ Download it from [itch.io](https://domestique-baston.itch.io/domestique-baston) 
 
 The team
 
-P.S. **Assets** are published under the [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International licence](https://creativecommons.org/licenses/by-nc-sa/4.0/). **Code** is published under the GNU General Public License (GPL) v3.0](https://www.gnu.org/licenses/gpl-3.0.en.html).
+P.S. **Assets** are published under the [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International licence](https://creativecommons.org/licenses/by-nc-sa/4.0/). **Code** is published under the [GNU General Public License (GPL) v3.0](https://www.gnu.org/licenses/gpl-3.0.en.html).
