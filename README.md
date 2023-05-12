@@ -1,6 +1,8 @@
 # DOMESTIQUE BASTON
 A **free/open source/whatever VS Fighting game**...
 
+![screenshot](https://img.itch.zone/aW1hZ2UvMTU5ODg0OS85OTAzNzY1LnBuZw==/original/mzvO1%2F.png)
+
 **DOMESTIQUE BASTON** is a **VERSUS FIGHTING GAME** intended to be quite simple to play for casual gamers. No complicated quarter circle forward + A/B or stuff like that...
 
 In order to limit the amount of work for the project, we thought that the idea of a couple fighting would be an excellent reason for us to have only two playable characters (and we certainly don't care about political correctness).
