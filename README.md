@@ -1,14 +1,14 @@
-# DOMESTIQUE_BASTON
+# DOMESTIQUE BASTON
 A **free/open source/whatever VS Fighting game**...
 
-**DOMESTIQUE BASTON** is a **VERSUS FIGHTING GAME** intended to be a quite simple one for casual gamers... No complicated quarter circle forward + A/B or stuff like that.
+**DOMESTIQUE BASTON** is a **VERSUS FIGHTING GAME** intended to be quite simple to play for casual gamers. No complicated quarter circle forward + A/B or stuff like that...
 
-In order to limit the amount of work for that project, we thought that the idea of a couple fighting would be an excellent reason for us to have only two playable characters (and we certainly don't care about political correctness).
+In order to limit the amount of work for the project, we thought that the idea of a couple fighting would be an excellent reason for us to have only two playable characters (and we certainly don't care about political correctness).
 
-Depending on the time and energy we have when "v1.0" is released, we'll eventually add features to that game but, and that's the point of the open source thing, don't wait for us and feel free to add whatever you want to that game. We'd be thrilled to see what you'd come up with...
+Depending on the time and energy we have after "v1.0" is released, we may add features to the game, but -- and that's the point of the open source thing -- don't wait for us. Feel free to add whatever you want to the game. We'll be thrilled to see what you come up with.
 
-Download it from **itch.io** here: **https://domestique-baston.itch.io/domestique-baston**
+Download it from [itch.io](https://domestique-baston.itch.io/domestique-baston) (all platforms) or from [Flathub](https://flathub.org/apps/io.itch.domestique_baston.domestique_baston) (Linux only).
 
 The team
 
-P.S.: **Assets** are published under **Creative Commons Attribution_NonCommercial_ShareAlike v4.0 International Licence** (https://creativecommons.org/licenses/by-nc-sa/4.0/) and **code** under **GNU General Public License v3.0 (GPL) licence** (https://www.gnu.org/licenses/gpl-3.0.en.html).
+P.S. **Assets** are published under the [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International licence](https://creativecommons.org/licenses/by-nc-sa/4.0/). **Code** is published under the GNU General Public License (GPL) v3.0](https://www.gnu.org/licenses/gpl-3.0.en.html).
