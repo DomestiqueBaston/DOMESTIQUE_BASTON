@@ -15,6 +15,7 @@
   <developer id="io.itch.domestique_baston">
     <name>Domestique Baston</name>
   </developer>
+  <launchable type="desktop-id">io.itch.domestique_baston.domestique_baston.desktop</launchable>
   <summary>A 1 vs. 1 fighting game</summary>
   <description>
     <p>
