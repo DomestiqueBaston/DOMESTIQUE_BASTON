@@ -2,6 +2,6 @@
 Name=Domestique Baston
 Comment=A 1 vs. 1 fighting game
 Type=Application
-Exec=domestique_baston
+Exec=godot-runner
 Icon=io.itch.domestique_baston.domestique_baston
-Categories=Game;
+Categories=Game;ArcadeGame;
