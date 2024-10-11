@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright 2023 Domestique Baston -->
+<component type="desktop-application">
+  <id>io.itch.domestique_baston.domestique_baston</id>
+  <name>Domestique Baston</name>
+  <project_license>GPL-3.0</project_license>
+  <metadata_license>CC-BY-SA-4.0</metadata_license>
+  <releases>
+    <release version="1.1" date="2023-05-05"/>
+  </releases>
+  <url type="homepage">https://domestique-baston.itch.io/domestique-baston</url>
+  <content_rating type="oars-1.0">
+    <content_attribute id="language-humor">mild</content_attribute>
+  </content_rating>
+  <developer id="io.itch.domestique_baston">
+    <name>Domestique Baston</name>
+  </developer>
+  <summary>A 1 vs. 1 fighting game</summary>
+  <description>
+    <p>
+      Domestique Baston is a 1 vs 1 fighting game. Well. You know what that
+      is... It’s intended for casual gamers as the gameplay is simple...
+    </p>
+    <p>
+      It pictures a couple fighting each other at home. That’s the reason why
+      there is only 1 background and 2 playable characters.
+    </p>
+    <p>
+      This game is in French slang just because it’s funny. No other reason.
+      Besides, who really cares about, for instance, the story or even what’s
+      told in such a game?
+    </p>
+    <ul>
+      <li>
+        Use Alt-Enter to enter/exit full screen mode.
+      </li>
+      <li>
+        When playing with a keyboard, the LEFT player uses the E, S, R, D keys
+        for buttons, and the F, C, V, B keys for moving; the RIGHT player uses
+        the O, K, P, L keys for buttons, and the arrow keys for moving.
+      </li>
+      <li>
+        We strongly recommend you <em>do not</em> play on a keyboard as there
+        are "ghosting" issues (some key combinations do not work).
+      </li>
+    </ul>
+  </description>
+  <screenshots>
+    <screenshot>
+      <image type="source" width="915" height="515">https://www.ferdiferdi.com/db/01.png</image>
+    </screenshot>
+    <screenshot type="default">
+      <image type="source" width="915" height="515">https://www.ferdiferdi.com/db/02.png</image>
+    </screenshot>
+    <screenshot>
+      <image type="source" width="915" height="515">https://www.ferdiferdi.com/db/03.png</image>
+    </screenshot>
+    <screenshot>
+      <image type="source" width="915" height="515">https://www.ferdiferdi.com/db/04.png</image>
+    </screenshot>
+    <screenshot>
+      <image type="source" width="915" height="515">https://www.ferdiferdi.com/db/05.png</image>
+    </screenshot>
+  </screenshots>
+</component>
