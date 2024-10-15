@@ -16,6 +16,10 @@
     <name>Domestique Baston</name>
   </developer>
   <launchable type="desktop-id">io.itch.domestique_baston.domestique_baston.desktop</launchable>
+  <branding>
+    <color type="primary" scheme_preference="light">#debaac</color>
+    <color type="primary" scheme_preference="dark">#2a2c46</color>
+  </branding>
   <summary>A 1 vs. 1 fighting game</summary>
   <description>
     <p>
