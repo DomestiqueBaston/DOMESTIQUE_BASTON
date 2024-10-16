@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Domestique Baston
+Comment=A 1 vs. 1 fighting game
+Type=Application
+Exec=godot-runner
+Icon=io.github.domestiquebaston.domestique_baston
+Categories=Game;ArcadeGame;
